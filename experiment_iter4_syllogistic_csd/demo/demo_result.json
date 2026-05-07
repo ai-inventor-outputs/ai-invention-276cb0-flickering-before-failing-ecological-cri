@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it4__opus",
+  "type": "code",
+  "title": "Syllogistic CSD Sampling: 3 Weak LLMs \u00d7 d=2-30 \u00d7 N=50 with Flickering Leading Indicator Test",
+  "summary": "Demo notebook analyzing Critical Slowing Down (CSD) indicators from 3 weak LLMs (ministral-3b, llama-3.1-8b, gemini-2.0-flash-lite) across 22 difficulty levels (d=2-30) on syllogistic logic tasks. Loads 66 pre-computed CSD entries (model x difficulty), runs analysis functions (find critical difficulty d*, variance scaling, Kendall tau trend tests, mixture correlations), tests flickering as a leading indicator of reasoning collapse (SC1), and produces multi-panel visualizations of CSD indicators plus a flickering heatmap. Uses all original analysis thresholds. Data: 66 examples from the full experiment output covering all 3 models and 22 difficulty levels.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_4/gen_art/exp_id1_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id1_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id1_it4__opus/method_code_demo.ipynb"
+}

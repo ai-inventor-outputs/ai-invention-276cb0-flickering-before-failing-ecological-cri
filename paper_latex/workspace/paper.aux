@@ -1,0 +1,115 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Wei2022,Kaplan2020}
+\citation{Scheffer2009,Scheffer2012}
+\citation{Drake2010,Carpenter2006}
+\citation{Dakos2012}
+\citation{Guttal2008}
+\citation{Strogatz2015,Wissel1984}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{Strogatz2015}
+\citation{Wissel1984,Carpenter2006}
+\citation{Scheffer2009}
+\citation{Scheffer2012,Dakos2012}
+\citation{Hartigan1985}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background and Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Critical Slowing Down and Fold Bifurcations}{2}{subsection.2.1}\protected@file@percent }
+\citation{Kadavath2022,Xiong2023,Lin2022}
+\citation{Kuhn2023}
+\citation{Lakshminarayanan2017,Gal2016}
+\citation{Malinin2018}
+\citation{Wang2022}
+\citation{Chen2024,Jiang2023}
+\citation{Kaplan2020}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}LLM Uncertainty Quantification}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Model Routing and Scaling Laws}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Task Families and Difficulty Parameterization}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Task families and their difficulty parameterization. Each level yields 50 problem instances evaluated with 50 independent model responses.}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:tasks}{{1}{3}{Task families and their difficulty parameterization. Each level yields 50 problem instances evaluated with 50 independent model responses}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Models Under Study}{3}{subsection.3.2}\protected@file@percent }
+\citation{Hartigan1985}
+\citation{Gilmore1981,Zeeman1977}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Models and their empirically determined capability boundaries $d^*$, defined as the difficulty level where accuracy first drops below 50\%.}}{4}{table.2}\protected@file@percent }
+\newlabel{tab:models}{{2}{4}{Models and their empirically determined capability boundaries $d^*$, defined as the difficulty level where accuracy first drops below 50\%}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}CSD Indicator Computation}{4}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Theoretical Variance Models}{4}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Boundary Classification}{4}{subsection.3.5}\protected@file@percent }
+\citation{Xiong2023}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the CSD-based boundary detection framework. (a) In ecological systems, a fold bifurcation causes rising variance and flickering as the system approaches a tipping point. (b) Analogously, as task difficulty $d$ approaches an LLM's capability boundary $d^*$, the response distribution transitions from unimodal (competent) to bimodal (flickering) to unimodal (incompetent). (c) Five CSD indicators extracted from the response distribution at each difficulty level are used to classify boundary proximity.}}{5}{figure.1}\protected@file@percent }
+\newlabel{fig:framework}{{1}{5}{Overview of the CSD-based boundary detection framework. (a) In ecological systems, a fold bifurcation causes rising variance and flickering as the system approaches a tipping point. (b) Analogously, as task difficulty $d$ approaches an LLM's capability boundary $d^*$, the response distribution transitions from unimodal (competent) to bimodal (flickering) to unimodal (incompetent). (c) Five CSD indicators extracted from the response distribution at each difficulty level are used to classify boundary proximity}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Routing Simulation}{5}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{5}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Flickering Near Capability Boundaries}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:flickering}{{4.1}{5}{Flickering Near Capability Boundaries}{subsection.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces CSD indicators across difficulty levels for two representative model--task pairs. Left column: Llama-3.1-8B on arithmetic ($d^* = 20$), which exhibits flickering. Right column: Gemini-Flash on arithmetic ($d^* = 15$). Top row: accuracy (black) with 50\% threshold (dashed gray). Middle row: embedding variance (blue) and dip statistic (orange). Bottom row: disagreement rate (green). Vertical red dashed lines mark $d^*$; shaded regions indicate the boundary zone ($d^* \pm 2$). Variance and dip peak near $d^*$, while disagreement rate increases monotonically through the boundary.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:empirical_csd}{{2}{6}{CSD indicators across difficulty levels for two representative model--task pairs. Left column: Llama-3.1-8B on arithmetic ($d^* = 20$), which exhibits flickering. Right column: Gemini-Flash on arithmetic ($d^* = 15$). Top row: accuracy (black) with 50\% threshold (dashed gray). Middle row: embedding variance (blue) and dip statistic (orange). Bottom row: disagreement rate (green). Vertical red dashed lines mark $d^*$; shaded regions indicate the boundary zone ($d^* \pm 2$). Variance and dip peak near $d^*$, while disagreement rate increases monotonically through the boundary}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Boundary Classification Performance}{6}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:classification}{{4.2}{6}{Boundary Classification Performance}{subsection.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces LOPO F1 scores for boundary detection methods. The CSD-RF classifier (z-scored CSD indicators with relative distance features) achieves F1 = 0.949, outperforming the SPUQ baseline (F1 = 0.713) by 33.2\% while requiring zero additional API calls. Error bar on CSD-RF shows 95\% bootstrap confidence interval [0.940, 0.947]. Bars colored by method family: blue for CSD, red for SPUQ, gray for single-feature baselines.}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig:classification}{{3}{7}{LOPO F1 scores for boundary detection methods. The CSD-RF classifier (z-scored CSD indicators with relative distance features) achieves F1 = 0.949, outperforming the SPUQ baseline (F1 = 0.713) by 33.2\% while requiring zero additional API calls. Error bar on CSD-RF shows 95\% bootstrap confidence interval [0.940, 0.947]. Bars colored by method family: blue for CSD, red for SPUQ, gray for single-feature baselines}{figure.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Boundary classification F1 scores for leading methods. CSD-RF outperforms all baselines with zero API overhead. SPUQ requires 1,520 additional API calls (\$0.24).}}{7}{table.3}\protected@file@percent }
+\newlabel{tab:classifier}{{3}{7}{Boundary classification F1 scores for leading methods. CSD-RF outperforms all baselines with zero API overhead. SPUQ requires 1,520 additional API calls (\$0.24)}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Variance Model Fitting}{8}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:variance}{{4.3}{8}{Variance Model Fitting}{subsection.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of theoretical variance models. Left: observed embedding variance (black dots) and fitted model curves for the Gemini-Flash arithmetic series ($d^* = 15$). The mixture-switching model (blue) captures the variance peak better than the fold catastrophe model (red), which diverges unrealistically. Right: model win counts across all 10 model--task series by $R^2$. The fold catastrophe model wins 0/10 series while the mixture model wins 6/10.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:variance_models}{{4}{8}{Comparison of theoretical variance models. Left: observed embedding variance (black dots) and fitted model curves for the Gemini-Flash arithmetic series ($d^* = 15$). The mixture-switching model (blue) captures the variance peak better than the fold catastrophe model (red), which diverges unrealistically. Right: model win counts across all 10 model--task series by $R^2$. The fold catastrophe model wins 0/10 series while the mixture model wins 6/10}{figure.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Variance model comparison across 10 model--task series. The fold catastrophe model, the canonical CSD prediction, consistently fails.}}{8}{table.4}\protected@file@percent }
+\newlabel{tab:models_fit}{{4}{8}{Variance model comparison across 10 model--task series. The fold catastrophe model, the canonical CSD prediction, consistently fails}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Ablation: Decomposing the Predictive Signal}{9}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:ablation}{{4.4}{9}{Ablation: Decomposing the Predictive Signal}{subsection.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Ablation decomposition of classifier performance. The full model (F1 = 0.949) combines CSD indicators with difficulty-position features. CSD alone (F1 = 0.690) substantially exceeds random chance (F1 = 0.509, permutation $p = 0.01$), while difficulty position alone reaches F1 = 0.886. The unique CSD contribution is 14.3\% of the total improvement. Bottom: marginal F1 gains when individual CSD features are added to the difficulty-only baseline, with dip statistic providing the largest gain (+0.027).}}{9}{figure.5}\protected@file@percent }
+\newlabel{fig:ablation}{{5}{9}{Ablation decomposition of classifier performance. The full model (F1 = 0.949) combines CSD indicators with difficulty-position features. CSD alone (F1 = 0.690) substantially exceeds random chance (F1 = 0.509, permutation $p = 0.01$), while difficulty position alone reaches F1 = 0.886. The unique CSD contribution is 14.3\% of the total improvement. Bottom: marginal F1 gains when individual CSD features are added to the difficulty-only baseline, with dip statistic providing the largest gain (+0.027)}{figure.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Ablation decomposition. Best F1 across classifier and CV combinations for each feature set. CSD provides 14.3\% unique contribution but exceeds random chance with $p = 0.01$.}}{9}{table.5}\protected@file@percent }
+\newlabel{tab:ablation}{{5}{9}{Ablation decomposition. Best F1 across classifier and CV combinations for each feature set. CSD provides 14.3\% unique contribution but exceeds random chance with $p = 0.01$}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Cross-Task Transfer}{10}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:transfer}{{4.5}{10}{Cross-Task Transfer}{subsection.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Practical Application: CSD-Based Model Routing}{10}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:routing}{{4.6}{10}{Practical Application: CSD-Based Model Routing}{subsection.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Routing simulation results averaged over 100 Monte Carlo runs (1,000 queries each). CSD routing captures 53.7\% of oracle improvement at 58.5\% of capable-model cost.}}{10}{table.6}\protected@file@percent }
+\newlabel{tab:routing}{{6}{10}{Routing simulation results averaged over 100 Monte Carlo runs (1,000 queries each). CSD routing captures 53.7\% of oracle improvement at 58.5\% of capable-model cost}{table.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{11}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Theoretical Implications}{11}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The Ablation Paradox}{11}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Limitations}{11}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{11}{section.6}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Carpenter2006}{{1}{2006}{{Carpenter and Brock}}{{}}}
+\bibcite{Chen2024}{{2}{2024}{{Chen et~al.}}{{Chen, Zaharia, and Zou}}}
+\bibcite{Dakos2012}{{3}{2012}{{Dakos et~al.}}{{Dakos, Carpenter, Brock, Ellison, Guttal, Ives, K{\'e}fi, Livina, Seekell, van Nes, and Scheffer}}}
+\bibcite{Drake2010}{{4}{2010}{{Drake and Griffen}}{{}}}
+\bibcite{Gal2016}{{5}{2016}{{Gal and Ghahramani}}{{}}}
+\bibcite{Gilmore1981}{{6}{1981}{{Gilmore}}{{}}}
+\bibcite{Guttal2008}{{7}{2008}{{Guttal and Jayaprakash}}{{}}}
+\bibcite{Hartigan1985}{{8}{1985}{{Hartigan and Hartigan}}{{}}}
+\bibcite{Jiang2023}{{9}{2023}{{Jiang et~al.}}{{Jiang, Ren, and Lin}}}
+\bibcite{Kadavath2022}{{10}{2022}{{Kadavath et~al.}}{{Kadavath, Conerly, Askell, Henighan, Drain, Perez, Schiefer, Hatfield-Dodds, DasSarma, Tran-Johnson, Johnston, El-Showk, Jones, Elhage, Hume, Chen, Bai, Bowman, Fort, Ganguli, Hernandez, Jacobson, Kernion, Kravec, Lovitt, Ndousse, Olsson, Ringer, Amodei, Brown, Clark, Joseph, Mann, McCandlish, Olah, and Kaplan}}}
+\bibcite{Kaplan2020}{{11}{2020}{{Kaplan et~al.}}{{Kaplan, McCandlish, Henighan, Brown, Chess, Child, Gray, Radford, Wu, and Amodei}}}
+\bibcite{Kuhn2023}{{12}{2023}{{Kuhn et~al.}}{{Kuhn, Gal, and Farquhar}}}
+\bibcite{Lakshminarayanan2017}{{13}{2017}{{Lakshminarayanan et~al.}}{{Lakshminarayanan, Pritzel, and Blundell}}}
+\bibcite{Lin2022}{{14}{2022}{{Lin et~al.}}{{Lin, Hilton, and Evans}}}
+\bibcite{Malinin2018}{{15}{2018}{{Malinin and Gales}}{{}}}
+\bibcite{Scheffer2009}{{16}{2009}{{Scheffer et~al.}}{{Scheffer, Bascompte, Brock, Brovkin, Carpenter, Dakos, Held, van Nes, Rietkerk, and Sugihara}}}
+\bibcite{Scheffer2012}{{17}{2012}{{Scheffer et~al.}}{{Scheffer, Carpenter, Lenton, Bascompte, Brock, Dakos, van~de Koppel, van~de Leemput, Levin, van Nes, Pascual, and Vandermeer}}}
+\bibcite{Strogatz2015}{{18}{2015}{{Strogatz}}{{}}}
+\bibcite{Wang2022}{{19}{2022}{{Wang et~al.}}{{Wang, Wei, Schuurmans, Le, Chi, and Zhou}}}
+\bibcite{Wei2022}{{20}{2022}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and Zhou}}}
+\bibcite{Wissel1984}{{21}{1984}{{Wissel}}{{}}}
+\bibcite{Xiong2023}{{22}{2023}{{Xiong et~al.}}{{Xiong, Hu, Lu, Li, Fu, He, and Hooi}}}
+\bibcite{Zeeman1977}{{23}{1977}{{Zeeman}}{{}}}
+\gdef \@abspage@last{13}

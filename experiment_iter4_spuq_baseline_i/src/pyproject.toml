@@ -1,0 +1,33 @@
+[project]
+name = "csd-vs-spuq-comparison"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+description = "SPUQ Baseline Implementation + CSD Classifier with Task-Normalized Features"
+
+dependencies = [
+    "aiohappyeyeballs==2.6.1",
+    "aiohttp==3.13.3",
+    "aiosignal==1.4.0",
+    "attrs==26.1.0",
+    "certifi==2026.2.25",
+    "charset-normalizer==3.4.6",
+    "frozenlist==1.8.0",
+    "idna==3.11",
+    "joblib==1.5.3",
+    "loguru==0.7.3",
+    "multidict==6.7.1",
+    "numpy==2.4.3",
+    "pandas==3.0.1",
+    "propcache==0.4.1",
+    "python-dateutil==2.9.0.post0",
+    "python-dotenv==1.2.2",
+    "requests==2.32.5",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "six==1.17.0",
+    "tenacity==9.1.4",
+    "threadpoolctl==3.6.0",
+    "typing-extensions==4.15.0",
+    "urllib3==2.6.3",
+    "yarl==1.23.0",
+]

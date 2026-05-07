@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "method_name": "CSD_sampling_syllogistic_extended",
+    "description": "Critical Slowing Down indicators computed from LLM response distributions across 22 difficulty levels (d=2-30) of syllogistic logic tasks with 3 weak LLMs. Tests flickering as leading indicator of reasoning collapse (SC1).",
+    "task_family": "syllogistic_logic",
+    "difficulty_range": [
+      2,
+      30
+    ],
+    "experiment_config": {
+      "models": [
+        "mistralai/ministral-3b-2512",
+        "meta-llama/llama-3.1-8b-instruct",
+        "google/gemini-2.0-flash-lite-001"
+      ],
+      "model_tiers": {
+        "mistralai/ministral-3b-2512": "small",
+        "meta-llama/llama-3.1-8b-instruct": "medium",
+        "google/gemini-2.0-flash-lite-001": "weak"
+      },
+      "n_difficulty_levels": 22,
+      "n_problems_per_level": 5,
+      "n_responses_per_problem": 10,
+      "n_total_per_model_level": 50,
+      "temperature": 0.8,
+      "embed_model": "all-MiniLM-L6-v2"
+    },
+    "total_cost": 0.4145986599999999,
+    "cost_by_model": {
+      "mistralai/ministral-3b-2512": 0.13300399999999996,
+      "google/gemini-2.0-flash-lite-001": 0.22370000000000018,
+      "meta-llama/llama-3.1-8b-instruct": 0.05789465999999993
+    },
+    "model_summaries": {
+      "mistralai/ministral-3b-2512": {
+        "tier": "small",
+        "d_star": 22,
+        "scaling": {
+          "alpha": 0.046009008746363246,
+          "r_squared": 0.08210820491649895,
+          "consistent_with_fold": false,
+          "theoretical_prediction": -0.5
+        },
+        "flickering": {
+          "flickering_dip": true,
+          "flickering_sil": false,
+          "flickering_bc": true,
+          "flickering_consensus": true,
+          "earliest_flickering_level": 2,
+          "lead_time": 20,
+          "n_high_acc_levels": 14
+        },
+        "mixture_corr": {
+          "pearson_r": -0.18651919300122807,
+          "p_value": 0.4059081063735147,
+          "n_levels": 22
+        },
+        "leading_var": {
+          "kendall_tau": -0.4725274725274726,
+          "p_value": 0.01927860024400203,
+          "is_leading": "False",
+          "lead_distance": 6,
+          "levels_tested": 14,
+          "accuracy_at_last_preboundary": 0.86
+        },
+        "leading_dip": {
+          "kendall_tau": 0.16483516483516486,
+          "p_value": 0.4505630133066889,
+          "is_leading": "False",
+          "lead_distance": 6,
+          "levels_tested": 14,
+          "accuracy_at_last_preboundary": 0.86
+        },
+        "leading_sil": {
+          "kendall_tau": -0.7142857142857144,
+          "p_value": 0.00014457073918879473,
+          "is_leading": "False",
+          "lead_distance": 6,
+          "levels_tested": 14,
+          "accuracy_at_last_preboundary": 0.86
+        },
+        "leading_dis": {
+          "kendall_tau": 0.2005001397084073,
+          "p_value": 0.33814269473405,
+          "is_leading": "False",
+          "lead_distance": 6,
+          "levels_tested": 14,
+          "accuracy_at_last_preboundary": 0.86
+        }
+      },
+      "meta-llama/llama-3.1-8b-instruct": {
+        "tier": "medium",
+        "d_star": null,
+        "scaling": {
+          "alpha": null,
+          "r_squared": null,
+          "consistent_with_fold": null,
+          "theoretical_prediction": -0.5
+        },
+        "flickering": {
+          "flickering_dip": true,
+          "flickering_sil": false,
+          "flickering_bc": true,
+          "flickering_consensus": true,
+          "earliest_flickering_level": 2,
+          "lead_time": 29,
+          "n_high_acc_levels": 8
+        },
+        "mixture_corr": {
+          "pearson_r": -0.21133185647817787,
+          "p_value": 0.3451202598640658,
+          "n_levels": 22
+        },
+        "leading_var": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        },
+        "leading_dip": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        },
+        "leading_sil": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        },
+        "leading_dis": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        }
+      },
+      "google/gemini-2.0-flash-lite-001": {
+        "tier": "weak",
+        "d_star": null,
+        "scaling": {
+          "alpha": null,
+          "r_squared": null,
+          "consistent_with_fold": null,
+          "theoretical_prediction": -0.5
+        },
+        "flickering": {
+          "flickering_dip": true,
+          "flickering_sil": true,
+          "flickering_bc": true,
+          "flickering_consensus": true,
+          "earliest_flickering_level": 2,
+          "lead_time": 29,
+          "n_high_acc_levels": 22
+        },
+        "mixture_corr": {
+          "pearson_r": -0.29928475980313735,
+          "p_value": 0.17602807247682178,
+          "n_levels": 22
+        },
+        "leading_var": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        },
+        "leading_dip": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        },
+        "leading_sil": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        },
+        "leading_dis": {
+          "is_leading": null,
+          "lead_distance": 0,
+          "kendall_tau": null,
+          "p_value": null,
+          "levels_tested": 0
+        }
+      }
+    },
+    "sc1_results": {
+      "any_flickering_detected": true,
+      "per_model": {
+        "mistralai/ministral-3b-2512": {
+          "flickering_dip": true,
+          "flickering_sil": false,
+          "flickering_bc": true,
+          "flickering_consensus": true,
+          "earliest_flickering_level": 2,
+          "lead_time": 20,
+          "n_high_acc_levels": 14
+        },
+        "meta-llama/llama-3.1-8b-instruct": {
+          "flickering_dip": true,
+          "flickering_sil": false,
+          "flickering_bc": true,
+          "flickering_consensus": true,
+          "earliest_flickering_level": 2,
+          "lead_time": 29,
+          "n_high_acc_levels": 8
+        },
+        "google/gemini-2.0-flash-lite-001": {
+          "flickering_dip": true,
+          "flickering_sil": true,
+          "flickering_bc": true,
+          "flickering_consensus": true,
+          "earliest_flickering_level": 2,
+          "lead_time": 29,
+          "n_high_acc_levels": 22
+        }
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "syllogistic_logic_csd_extended",
+      "examples": [
+        {
+          "input": "CSD analysis at difficulty=2 for model=mistralai/ministral-3b-2512",
+          "output": "1.0",
+          "predict_accuracy": "1.0",
+          "predict_csd_variance": "0.45731118948163746",
+          "predict_dip_statistic": "0.07988417850048533",
+          "predict_dip_pvalue": "0.012930042151964138",
+          "predict_silhouette_k2": "0.25682106614112854",
+          "predict_bimodality_coefficient": "0.7877773510279076",
+          "predict_ashman_d": "10.27053282179326",
+          "predict_disagreement_rate": "0.4",
+          "predict_answer_balance": "0.4",
+          "predict_chain_autocorrelation": "-0.13727867592655985",
+          "predict_bimodality_consensus": "True",
+          "predict_mean_cosine_distance": "0.45731115341186523",
+          "metadata_difficulty": 2,
+          "metadata_model": "mistralai/ministral-3b-2512",
+          "metadata_tier": "small",
+          "metadata_n_responses": 50,
+          "metadata_n_valid_answers": 50,
+          "metadata_d_star": 22,
+          "metadata_scaling_alpha": 0.046009008746363246,
+          "metadata_scaling_r2": 0.08210820491649895,
+          "metadata_consistent_with_fold": false,
+          "metadata_flickering_leading": true,
+          "metadata_sil_leading": false,
+          "metadata_bc_leading": true,
+          "metadata_consensus_leading": true,
+          "metadata_earliest_flickering_level": 2,
+          "metadata_lead_time": 20,
+          "metadata_variance_mixture_corr": -0.18651919300122807,
+          "metadata_tau_variance": -0.4725274725274726,
+          "metadata_p_tau_variance": 0.01927860024400203,
+          "metadata_tau_dip": 0.16483516483516486,
+          "metadata_p_tau_dip": 0.4505630133066889,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD analysis at difficulty=3 for model=mistralai/ministral-3b-2512",
+          "output": "0.98",
+          "predict_accuracy": "0.98",
+          "predict_csd_variance": "0.492645963847704",
+          "predict_dip_statistic": "0.0759342839080664",
+          "predict_dip_pvalue": "0.023614024330065098",
+          "predict_silhouette_k2": "0.2852185368537903",
+          "predict_bimodality_coefficient": "0.5640605341682702",
+          "predict_ashman_d": "5.576531723999194",
+          "predict_disagreement_rate": "0.42000000000000004",
+          "predict_answer_balance": "0.42",
+          "predict_chain_autocorrelation": "-0.16705850697414998",
+          "predict_bimodality_consensus": "True",
+          "predict_mean_cosine_distance": "0.49264588952064514",
+          "metadata_difficulty": 3,
+          "metadata_model": "mistralai/ministral-3b-2512",
+          "metadata_tier": "small",
+          "metadata_n_responses": 50,
+          "metadata_n_valid_answers": 50,
+          "metadata_d_star": 22,
+          "metadata_scaling_alpha": 0.046009008746363246,
+          "metadata_scaling_r2": 0.08210820491649895,
+          "metadata_consistent_with_fold": false,
+          "metadata_flickering_leading": true,
+          "metadata_sil_leading": false,
+          "metadata_bc_leading": true,
+          "metadata_consensus_leading": true,
+          "metadata_earliest_flickering_level": 2,
+          "metadata_lead_time": 20,
+          "metadata_variance_mixture_corr": -0.18651919300122807,
+          "metadata_tau_variance": -0.4725274725274726,
+          "metadata_p_tau_variance": 0.01927860024400203,
+          "metadata_tau_dip": 0.16483516483516486,
+          "metadata_p_tau_dip": 0.4505630133066889,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD analysis at difficulty=4 for model=mistralai/ministral-3b-2512",
+          "output": "0.96",
+          "predict_accuracy": "0.96",
+          "predict_csd_variance": "0.38529747564868216",
+          "predict_dip_statistic": "0.06887991235019225",
+          "predict_dip_pvalue": "0.06300219198105106",
+          "predict_silhouette_k2": "0.2628653049468994",
+          "predict_bimodality_coefficient": "0.6558962449876193",
+          "predict_ashman_d": "6.54085130470318",
+          "predict_disagreement_rate": "0.36",
+          "predict_answer_balance": "0.36",
+          "predict_chain_autocorrelation": "-0.08525269828391768",
+          "predict_bimodality_consensus": "False",
+          "predict_mean_cosine_distance": "0.38529741764068604",
+          "metadata_difficulty": 4,
+          "metadata_model": "mistralai/ministral-3b-2512",
+          "metadata_tier": "small",
+          "metadata_n_responses": 50,
+          "metadata_n_valid_answers": 50,
+          "metadata_d_star": 22,
+          "metadata_scaling_alpha": 0.046009008746363246,
+          "metadata_scaling_r2": 0.08210820491649895,
+          "metadata_consistent_with_fold": false,
+          "metadata_flickering_leading": true,
+          "metadata_sil_leading": false,
+          "metadata_bc_leading": true,
+          "metadata_consensus_leading": true,
+          "metadata_earliest_flickering_level": 2,
+          "metadata_lead_time": 20,
+          "metadata_variance_mixture_corr": -0.18651919300122807,
+          "metadata_tau_variance": -0.4725274725274726,
+          "metadata_p_tau_variance": 0.01927860024400203,
+          "metadata_tau_dip": 0.16483516483516486,
+          "metadata_p_tau_dip": 0.4505630133066889,
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Carpenter and Brock(2006)]{Carpenter2006}
+Stephen~R. Carpenter and William~A. Brock.
+\newblock Rising variance: a leading indicator of ecological transition.
+\newblock \emph{Ecology Letters}, 9\penalty0 (3):\penalty0 311--318, 2006.
+\newblock \doi{10.1111/j.1461-0248.2005.00877.x}.
+
+\bibitem[Chen et~al.(2024)Chen, Zaharia, and Zou]{Chen2024}
+Lingjiao Chen, Matei Zaharia, and James Zou.
+\newblock {FrugalGPT}: How to use large language models while reducing cost and
+  improving performance.
+\newblock \emph{Transactions on Machine Learning Research}, 2024.
+\newblock \doi{10.48550/arXiv.2305.05176}.
+
+\bibitem[Dakos et~al.(2012)Dakos, Carpenter, Brock, Ellison, Guttal, Ives,
+  K{\'e}fi, Livina, Seekell, van Nes, and Scheffer]{Dakos2012}
+Vasilis Dakos, Stephen~R. Carpenter, William~A. Brock, Aaron~M. Ellison,
+  Vishwesha Guttal, Anthony~R. Ives, S{\'e}bastien K{\'e}fi, Valerie Livina,
+  David~A. Seekell, Egbert~H. van Nes, and Marten Scheffer.
+\newblock Methods for detecting early warnings of critical transitions in time
+  series illustrated using simulated ecological data.
+\newblock \emph{PLoS ONE}, 7\penalty0 (7):\penalty0 e41010, 2012.
+\newblock \doi{10.1371/journal.pone.0041010}.
+
+\bibitem[Drake and Griffen(2010)]{Drake2010}
+John~M. Drake and Blaine~D. Griffen.
+\newblock Early warning signals of extinction in deteriorating environments.
+\newblock \emph{Nature}, 467:\penalty0 456--459, 2010.
+\newblock \doi{10.1038/nature09389}.
+
+\bibitem[Gal and Ghahramani(2016)]{Gal2016}
+Yarin Gal and Zoubin Ghahramani.
+\newblock Dropout as a {Bayesian} approximation: Representing model uncertainty
+  in deep learning.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  1050--1059, 2016.
+
+\bibitem[Gilmore(1981)]{Gilmore1981}
+Robert Gilmore.
+\newblock \emph{Catastrophe Theory for Scientists and Engineers}.
+\newblock John Wiley \& Sons, 1981.
+
+\bibitem[Guttal and Jayaprakash(2008)]{Guttal2008}
+Vishwesha Guttal and Ciriyam Jayaprakash.
+\newblock Changing skewness: an early warning signal of regime shifts in
+  ecosystems.
+\newblock \emph{Ecology Letters}, 11\penalty0 (5):\penalty0 450--460, 2008.
+\newblock \doi{10.1111/j.1461-0248.2008.01160.x}.
+
+\bibitem[Hartigan and Hartigan(1985)]{Hartigan1985}
+John~A. Hartigan and Pamela~M. Hartigan.
+\newblock The dip test of unimodality.
+\newblock \emph{The Annals of Statistics}, 13\penalty0 (1):\penalty0 70--84,
+  1985.
+\newblock \doi{10.1214/aos/1176346577}.
+
+\bibitem[Jiang et~al.(2023)Jiang, Ren, and Lin]{Jiang2023}
+Dongfu Jiang, Xiang Ren, and Bill~Yuchen Lin.
+\newblock {LLM-Blender}: Ensembling large language models with pairwise ranking
+  and generative fusion.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, pages 14165--14178, 2023.
+\newblock \doi{10.48550/arXiv.2306.02561}.
+
+\bibitem[Kadavath et~al.(2022)Kadavath, Conerly, Askell, Henighan, Drain,
+  Perez, Schiefer, Hatfield-Dodds, DasSarma, Tran-Johnson, Johnston, El-Showk,
+  Jones, Elhage, Hume, Chen, Bai, Bowman, Fort, Ganguli, Hernandez, Jacobson,
+  Kernion, Kravec, Lovitt, Ndousse, Olsson, Ringer, Amodei, Brown, Clark,
+  Joseph, Mann, McCandlish, Olah, and Kaplan]{Kadavath2022}
+Saurav Kadavath, Tom Conerly, Amanda Askell, Tom Henighan, Dawn Drain, Ethan
+  Perez, Nicholas Schiefer, Zac Hatfield-Dodds, Nova DasSarma, Eli
+  Tran-Johnson, Scott Johnston, Sheer El-Showk, Andy Jones, Nelson Elhage,
+  Tristan Hume, Anna Chen, Yuntao Bai, Sam Bowman, Stanislav Fort, Deep
+  Ganguli, Danny Hernandez, Josh Jacobson, Jackson Kernion, Shauna Kravec,
+  Liane Lovitt, Kamal Ndousse, Catherine Olsson, Sam Ringer, Dario Amodei, Tom
+  Brown, Jack Clark, Nicholas Joseph, Ben Mann, Sam McCandlish, Chris Olah, and
+  Jared Kaplan.
+\newblock Language models (mostly) know what they know.
+\newblock \emph{ArXiv}, abs/2207.05221, 2022.
+\newblock \doi{10.48550/arXiv.2207.05221}.
+
+\bibitem[Kaplan et~al.(2020)Kaplan, McCandlish, Henighan, Brown, Chess, Child,
+  Gray, Radford, Wu, and Amodei]{Kaplan2020}
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom~B. Brown, Benjamin Chess, Rewon
+  Child, Scott Gray, Alec Radford, Jeff Wu, and Dario Amodei.
+\newblock Scaling laws for neural language models.
+\newblock \emph{ArXiv}, abs/2001.08361, 2020.
+
+\bibitem[Kuhn et~al.(2023)Kuhn, Gal, and Farquhar]{Kuhn2023}
+Lorenz Kuhn, Yarin Gal, and Sebastian Farquhar.
+\newblock Semantic uncertainty: Linguistic invariances for uncertainty
+  estimation in natural language generation.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+\newblock \doi{10.48550/arXiv.2302.09664}.
+
+\bibitem[Lakshminarayanan et~al.(2017)Lakshminarayanan, Pritzel, and
+  Blundell]{Lakshminarayanan2017}
+Balaji Lakshminarayanan, Alexander Pritzel, and Charles Blundell.
+\newblock Simple and scalable predictive uncertainty estimation using deep
+  ensembles.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  6402--6413, 2017.
+
+\bibitem[Lin et~al.(2022)Lin, Hilton, and Evans]{Lin2022}
+Stephanie Lin, Jacob Hilton, and Owain Evans.
+\newblock Teaching models to express their uncertainty in words.
+\newblock \emph{Transactions on Machine Learning Research}, 2022.
+\newblock \doi{10.48550/arXiv.2205.14334}.
+
+\bibitem[Malinin and Gales(2018)]{Malinin2018}
+Andrey Malinin and Mark Gales.
+\newblock Predictive uncertainty estimation via prior networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  7047--7058, 2018.
+\newblock \doi{10.17863/CAM.35237}.
+
+\bibitem[Scheffer et~al.(2009)Scheffer, Bascompte, Brock, Brovkin, Carpenter,
+  Dakos, Held, van Nes, Rietkerk, and Sugihara]{Scheffer2009}
+Marten Scheffer, Jordi Bascompte, William~A. Brock, Victor Brovkin, Stephen~R.
+  Carpenter, Vasilis Dakos, Hermann Held, Egbert~H. van Nes, Max Rietkerk, and
+  George Sugihara.
+\newblock Early-warning signals for critical transitions.
+\newblock \emph{Nature}, 461:\penalty0 53--59, 2009.
+\newblock \doi{10.1038/nature08227}.
+
+\bibitem[Scheffer et~al.(2012)Scheffer, Carpenter, Lenton, Bascompte, Brock,
+  Dakos, van~de Koppel, van~de Leemput, Levin, van Nes, Pascual, and
+  Vandermeer]{Scheffer2012}
+Marten Scheffer, Stephen~R. Carpenter, Timothy~M. Lenton, Jordi Bascompte,
+  William Brock, Vasilis Dakos, Johan van~de Koppel, Ingrid~A. van~de Leemput,
+  Simon~A. Levin, Egbert~H. van Nes, Mercedes Pascual, and John Vandermeer.
+\newblock Anticipating critical transitions.
+\newblock \emph{Science}, 338:\penalty0 344--348, 2012.
+\newblock \doi{10.1126/science.1225244}.
+
+\bibitem[Strogatz(2015)]{Strogatz2015}
+Steven~H. Strogatz.
+\newblock \emph{Nonlinear Dynamics and Chaos: With Applications to Physics,
+  Biology, Chemistry, and Engineering}.
+\newblock Westview Press, 2nd edition, 2015.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Le, Chi, and Zhou]{Wang2022}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~H. Chi, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and
+  Zhou]{Wei2022}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed~H. Chi, F.~Xia, Quoc
+  Le, and Denny Zhou.
+\newblock Chain of thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Neural Information Processing Systems}, 2022.
+\newblock \doi{10.52202/068431-1800}.
+
+\bibitem[Wissel(1984)]{Wissel1984}
+Christian Wissel.
+\newblock A universal law of the characteristic return time near thresholds.
+\newblock \emph{Oecologia}, 65:\penalty0 101--107, 1984.
+\newblock \doi{10.1007/BF00384470}.
+
+\bibitem[Xiong et~al.(2023)Xiong, Hu, Lu, Li, Fu, He, and Hooi]{Xiong2023}
+Miao Xiong, Zhiyuan Hu, Xinyang Lu, Yifei Li, Jie Fu, Junxian He, and Bryan
+  Hooi.
+\newblock Can {LLMs} express their uncertainty? an empirical evaluation of
+  confidence elicitation in {LLMs}.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+\newblock \doi{10.48550/arXiv.2306.13063}.
+
+\bibitem[Zeeman(1977)]{Zeeman1977}
+Erik~Christopher Zeeman.
+\newblock \emph{Catastrophe Theory: Selected Papers, 1972--1977}.
+\newblock Addison-Wesley, 1977.
+
+\end{thebibliography}
