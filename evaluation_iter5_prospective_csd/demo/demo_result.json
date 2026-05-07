@@ -1,0 +1,13 @@
+{
+  "id": "eval_id1_it5__opus",
+  "type": "code",
+  "title": "Prospective CSD Boundary Detection: Sequential Protocols Without Prior Knowledge of d*",
+  "summary": "Demonstrates three sequential protocols for detecting LLM capability boundaries without prior knowledge of the critical difficulty d*. Uses per-level CSD indicator data (variance, dip statistic, silhouette, bimodality, disagreement rate) from 5 model-task pairs across arithmetic and graph coloring experiments. Protocol A (threshold-based), Protocol B (CUSUM/EWMA change-point detection), and Protocol C (d*-free LOPO classifier) are evaluated on F1, sensitivity, false alarm rate, deployment readiness score, and retention ratio vs. a prior d*-aware classifier (F1=0.949). The notebook loads 108 data points from mini_demo_data.json, runs all protocol variants, and produces comparison visualizations.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_5/gen_art/eval_id1_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id1_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id1_it5__opus/eval_code_demo.ipynb"
+}

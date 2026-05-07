@@ -1,0 +1,13 @@
+{
+  "id": "eval_id4_it6__opus",
+  "type": "code",
+  "title": "Compile NeurIPS Paper PDF from Experiment Data + Manuscript Text",
+  "summary": "Demo notebook that regenerates 8 publication figures from the NeurIPS 2026 paper compilation evaluation. Loads 88 curated experiment examples from 5 dependency datasets (arithmetic CSD, graph coloring CSD, classifier comparison, temperature manipulation, model fitting) and generates: accuracy profiles, CSD indicator panels, classifier comparison bars, temperature effects, theoretical model R\u00b2 comparison, and cost-performance scatter. Displays full evaluation metrics (PDF compiled, 25 pages, 8/8 figures, 0 missing citations, 919 total data points) and a quality dashboard. All 24 cells execute successfully in under 2 minutes.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_6/gen_art/eval_id4_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id4_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id4_it6__opus/eval_code_demo.ipynb"
+}

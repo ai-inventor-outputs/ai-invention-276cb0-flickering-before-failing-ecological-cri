@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "description": "Multi-Hop Factual Reasoning Task Family Dataset (1-6 Hops)",
+    "total_examples": 180,
+    "hop_levels": "1-6",
+    "target_per_level": 30,
+    "sources": [
+      "musique_decomposition",
+      "musique",
+      "hotpotqa",
+      "synthetic"
+    ],
+    "seed": 42
+  },
+  "datasets": [
+    {
+      "dataset": "multi_hop_reasoning_1to6",
+      "examples": [
+        {
+          "input": "Yorke Bay >> country",
+          "output": "Falkland Islands",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 1,
+          "metadata_source": "musique_decomposition",
+          "metadata_id": "1hop_389060",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Yorke Bay >> country\", \"answer\": \"Falkland Islands\", \"paragraph_title\": \"Yorke Bay\"}]"
+        },
+        {
+          "input": "Where in London are the Albert Memorial and Royal Albert Hall located?",
+          "output": "in Kensington",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 1,
+          "metadata_source": "musique_decomposition",
+          "metadata_id": "1hop_26310",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Where in London are the Albert Memorial and Royal Albert Hall located?\", \"answer\": \"in Kensington\", \"paragraph_title\": \"London\"}]"
+        },
+        {
+          "input": "Jimmy Olsen >> present in work",
+          "output": "Smallville",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 1,
+          "metadata_source": "musique_decomposition",
+          "metadata_id": "1hop_669456",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Jimmy Olsen >> present in work\", \"answer\": \"Smallville\", \"paragraph_title\": \"Aaron Ashmore\"}]"
+        }
+      ]
+    }
+  ]
+}

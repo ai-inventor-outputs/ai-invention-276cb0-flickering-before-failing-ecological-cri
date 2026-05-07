@@ -1,0 +1,87 @@
+{
+  "datasets": [
+    {
+      "dataset": "syllogistic_logic",
+      "examples": [
+        {
+          "input": "Consider the following statements:\n1. Every scholar is a turbine.\n2. All glasses are scholars.\n\nBased on the above statements, is it true that all glasses are turbines? Answer TRUE or FALSE.",
+          "output": "TRUE",
+          "metadata_fold": "test",
+          "metadata_difficulty": 2,
+          "metadata_num_premises": 2,
+          "metadata_chain_depth": 2,
+          "metadata_quantifier_pattern": "All-All",
+          "metadata_template": "A",
+          "metadata_conclusion_type": "all",
+          "metadata_conclusion_truth": true,
+          "metadata_entities": [
+            "glasses",
+            "scholars",
+            "turbines"
+          ],
+          "metadata_query_subject": "glasses",
+          "metadata_query_object": "turbines",
+          "metadata_chain_order": [
+            "glasses",
+            "scholars",
+            "turbines"
+          ],
+          "metadata_premise_order_shuffled": true,
+          "metadata_problem_id": 0
+        },
+        {
+          "input": "Consider the following statements:\n1. All vegetables are devices.\n2. All dogs are vegetables.\n\nBased on the above statements, is it true that every dog is a device? Answer TRUE or FALSE.",
+          "output": "TRUE",
+          "metadata_fold": "test",
+          "metadata_difficulty": 2,
+          "metadata_num_premises": 2,
+          "metadata_chain_depth": 2,
+          "metadata_quantifier_pattern": "All-All",
+          "metadata_template": "A",
+          "metadata_conclusion_type": "all",
+          "metadata_conclusion_truth": true,
+          "metadata_entities": [
+            "dogs",
+            "vegetables",
+            "devices"
+          ],
+          "metadata_query_subject": "dogs",
+          "metadata_query_object": "devices",
+          "metadata_chain_order": [
+            "dogs",
+            "vegetables",
+            "devices"
+          ],
+          "metadata_premise_order_shuffled": true,
+          "metadata_problem_id": 1
+        },
+        {
+          "input": "Consider the following statements:\n1. All machines are Australians.\n2. Every teacher is a machine.\n\nBased on the above statements, is it true that all teachers are Australians? Answer TRUE or FALSE.",
+          "output": "TRUE",
+          "metadata_fold": "test",
+          "metadata_difficulty": 2,
+          "metadata_num_premises": 2,
+          "metadata_chain_depth": 2,
+          "metadata_quantifier_pattern": "All-All",
+          "metadata_template": "A",
+          "metadata_conclusion_type": "all",
+          "metadata_conclusion_truth": true,
+          "metadata_entities": [
+            "teachers",
+            "machines",
+            "Australians"
+          ],
+          "metadata_query_subject": "teachers",
+          "metadata_query_object": "Australians",
+          "metadata_chain_order": [
+            "teachers",
+            "machines",
+            "Australians"
+          ],
+          "metadata_premise_order_shuffled": true,
+          "metadata_problem_id": 2
+        }
+      ]
+    }
+  ]
+}

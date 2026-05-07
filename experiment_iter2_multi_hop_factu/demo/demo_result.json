@@ -1,0 +1,13 @@
+{
+  "id": "exp_id4_it2__opus",
+  "type": "code",
+  "title": "Multi-Hop Factual Reasoning CSD Sampling Experiment (6 Difficulty Levels)",
+  "summary": "Demo notebook analyzing pre-computed LLM responses to multi-hop factual reasoning questions across 6 difficulty levels for 3 models (Llama-3.1-8B, GPT-4o-mini, Gemini-2.0-Flash). Demonstrates the full CSD (Critical Slowing Down) analysis pipeline: answer extraction via fuzzy matching, sentence embedding computation, CSD indicator battery (variance trace, Hartigan dip, silhouette, bimodality coefficient, Ashman D, self-consistency disagreement), cross-level Kendall tau trend analysis, and multi-panel visualization. Uses 18 curated examples (1 per model\u00d7level) with 10 responses each from the full experiment output.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_2/gen_art/exp_id4_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id4_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id4_it2__opus/method_code_demo.ipynb"
+}

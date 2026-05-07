@@ -1,0 +1,106 @@
+{
+  "metrics_agg": {
+    "total_figures_generated": 8,
+    "total_figures_attempted": 8,
+    "all_figures_pass_size_check": 1,
+    "neurips_dimension_compliance": 1,
+    "scaling_stage_mini": 1,
+    "scaling_stage_medium": 1,
+    "scaling_stage_full": 1,
+    "total_data_points_plotted": 856,
+    "mean_filesize_png_kb": 159.06,
+    "min_filesize_png_kb": 45.88,
+    "max_filesize_png_kb": 356.81
+  },
+  "datasets": [
+    {
+      "dataset": "figure_generation_results",
+      "examples": [
+        {
+          "input": "Figure 1: Conceptual Overview",
+          "output": "Generated successfully",
+          "predict_figure_generated": "true",
+          "predict_filesize_png_kb": "164.3",
+          "predict_filesize_pdf_kb": "32.3",
+          "predict_width_inches": "6.75",
+          "predict_height_inches": "3.00",
+          "predict_n_data_points": "0",
+          "eval_figure_generated": 1,
+          "eval_filesize_png_kb": 164.35,
+          "eval_width_inches": 6.75,
+          "eval_height_inches": 3.0,
+          "eval_n_data_points": 0,
+          "eval_size_check_pass": 1,
+          "eval_dimension_compliance": 1,
+          "metadata_figure_id": "fig1",
+          "metadata_figure_type": "conceptual",
+          "metadata_column_type": "double",
+          "metadata_filepath_png": "figures/fig1_conceptual_overview.png",
+          "metadata_filepath_pdf": "figures/fig1_conceptual_overview.pdf",
+          "metadata_scaling_stage": "medium",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Figure 2: Accuracy Profiles",
+          "output": "Generated successfully",
+          "predict_figure_generated": "true",
+          "predict_filesize_png_kb": "356.8",
+          "predict_filesize_pdf_kb": "28.5",
+          "predict_width_inches": "6.75",
+          "predict_height_inches": "4.00",
+          "predict_n_data_points": "132",
+          "eval_figure_generated": 1,
+          "eval_filesize_png_kb": 356.81,
+          "eval_width_inches": 6.75,
+          "eval_height_inches": 4.0,
+          "eval_n_data_points": 132,
+          "eval_size_check_pass": 1,
+          "eval_dimension_compliance": 1,
+          "metadata_figure_id": "fig2",
+          "metadata_figure_type": "empirical",
+          "metadata_column_type": "double",
+          "metadata_filepath_png": "figures/fig2_accuracy_profiles.png",
+          "metadata_filepath_pdf": "figures/fig2_accuracy_profiles.pdf",
+          "metadata_scaling_stage": "mini",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Figure 3: CSD Indicator Dashboard",
+          "output": "Generated successfully",
+          "predict_figure_generated": "true",
+          "predict_filesize_png_kb": "178.0",
+          "predict_filesize_pdf_kb": "25.2",
+          "predict_width_inches": "3.25",
+          "predict_height_inches": "5.50",
+          "predict_n_data_points": "100",
+          "eval_figure_generated": 1,
+          "eval_filesize_png_kb": 177.99,
+          "eval_width_inches": 3.25,
+          "eval_height_inches": 5.5,
+          "eval_n_data_points": 100,
+          "eval_size_check_pass": 1,
+          "eval_dimension_compliance": 1,
+          "metadata_figure_id": "fig3",
+          "metadata_figure_type": "empirical",
+          "metadata_column_type": "single",
+          "metadata_filepath_png": "figures/fig3_csd_dashboard.png",
+          "metadata_filepath_pdf": "figures/fig3_csd_dashboard.pdf",
+          "metadata_scaling_stage": "mini",
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "evaluation_name": "CSD-LLM Publication Figures",
+    "scaling_stage_reached": "full",
+    "output_directory": "figures/",
+    "style_config": {
+      "dpi": 300,
+      "font_family": "serif",
+      "palette": "seaborn colorblind",
+      "single_col_width": 3.25,
+      "double_col_width": 6.75
+    }
+  }
+}

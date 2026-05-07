@@ -1,0 +1,576 @@
+{
+  "metadata": {
+    "source": "synthetic_generation",
+    "description": "Graph Coloring Constraint Satisfaction Dataset with Parameterized Difficulty",
+    "generation_method": "Erdos-Renyi random graphs with exact backtracking k-coloring solver",
+    "total_problems": 10,
+    "difficulty_levels": 20,
+    "problems_per_level": 20,
+    "node_range": "4-12",
+    "color_range": "3-4",
+    "note": "Curated mini subset for demo (10 examples across difficulty levels)"
+  },
+  "datasets": [
+    {
+      "dataset": "graph_coloring_full",
+      "examples": [
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 2), (Node 0, Node 3), (Node 1, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Red, Node 2: Green, Node 3: Green",
+          "metadata_difficulty_level": 1,
+          "metadata_num_nodes": 4,
+          "metadata_num_edges": 3,
+          "metadata_num_colors": 4,
+          "metadata_edge_density": 0.3,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "metadata_fold": "level_01",
+          "metadata_row_index": 0,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 2), (Node 0, Node 3), (Node 1, Node 2), (Node 1, Node 3), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Red, Node 2: Green, Node 3: Blue",
+          "metadata_difficulty_level": 3,
+          "metadata_num_nodes": 4,
+          "metadata_num_edges": 5,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.6,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "metadata_fold": "level_03",
+          "metadata_row_index": 40,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 5 nodes (labeled Node 0 through Node 4) and the following edges:\n(Node 0, Node 2), (Node 0, Node 4), (Node 1, Node 4), (Node 2, Node 3), (Node 3, Node 4)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Red, Node 2: Green, Node 3: Red, Node 4: Green",
+          "metadata_difficulty_level": 5,
+          "metadata_num_nodes": 5,
+          "metadata_num_edges": 5,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.4,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "metadata_fold": "level_05",
+          "metadata_row_index": 80,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 6 nodes (labeled Node 0 through Node 5) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 3), (Node 1, Node 4), (Node 3, Node 5), (Node 4, Node 5)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Green, Node 3: Red, Node 4: Red, Node 5: Green",
+          "metadata_difficulty_level": 7,
+          "metadata_num_nodes": 6,
+          "metadata_num_edges": 6,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.3,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "metadata_fold": "level_07",
+          "metadata_row_index": 120,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 7 nodes (labeled Node 0 through Node 6) and the following edges:\n(Node 0, Node 1), (Node 0, Node 3), (Node 0, Node 6), (Node 1, Node 4), (Node 1, Node 5), (Node 2, Node 3), (Node 2, Node 4), (Node 2, Node 6)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Red, Node 3: Green, Node 4: Blue, Node 5: Red, Node 6: Green",
+          "metadata_difficulty_level": 10,
+          "metadata_num_nodes": 7,
+          "metadata_num_edges": 8,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.4,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "metadata_fold": "level_10",
+          "metadata_row_index": 180,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 8 nodes (labeled Node 0 through Node 7) and the following edges:\n(Node 0, Node 2), (Node 0, Node 6), (Node 1, Node 3), (Node 1, Node 4), (Node 1, Node 6), (Node 2, Node 3), (Node 2, Node 5), (Node 2, Node 7), (Node 3, Node 5), (Node 5, Node 6), (Node 6, Node 7)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Red, Node 2: Green, Node 3: Blue, Node 4: Green, Node 5: Red, Node 6: Green, Node 7: Red",
+          "metadata_difficulty_level": 13,
+          "metadata_num_nodes": 8,
+          "metadata_num_edges": 11,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.4,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "metadata_fold": "level_13",
+          "metadata_row_index": 240,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 9 nodes (labeled Node 0 through Node 8) and the following edges:\n(Node 0, Node 1), (Node 0, Node 6), (Node 0, Node 8), (Node 1, Node 3), (Node 1, Node 4), (Node 1, Node 7), (Node 2, Node 4), (Node 2, Node 5), (Node 3, Node 5), (Node 3, Node 6), (Node 3, Node 8), (Node 6, Node 7), (Node 7, Node 8)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Red, Node 3: Red, Node 4: Blue, Node 5: Green, Node 6: Green, Node 7: Red, Node 8: Green",
+          "metadata_difficulty_level": 15,
+          "metadata_num_nodes": 9,
+          "metadata_num_edges": 13,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.35,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "metadata_fold": "level_15",
+          "metadata_row_index": 280,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 10 nodes (labeled Node 0 through Node 9) and the following edges:\n(Node 0, Node 3), (Node 0, Node 9), (Node 1, Node 2), (Node 1, Node 3), (Node 1, Node 9), (Node 2, Node 5), (Node 2, Node 7), (Node 3, Node 9), (Node 4, Node 6), (Node 5, Node 7), (Node 5, Node 8), (Node 6, Node 7)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Red, Node 2: Green, Node 3: Green, Node 4: Red, Node 5: Red, Node 6: Green, Node 7: Blue, Node 8: Green, Node 9: Blue",
+          "metadata_difficulty_level": 17,
+          "metadata_num_nodes": 10,
+          "metadata_num_edges": 12,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.3,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              9
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "metadata_fold": "level_17",
+          "metadata_row_index": 320,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 11 nodes (labeled Node 0 through Node 10) and the following edges:\n(Node 0, Node 4), (Node 0, Node 5), (Node 0, Node 6), (Node 1, Node 2), (Node 1, Node 4), (Node 1, Node 7), (Node 1, Node 9), (Node 2, Node 3), (Node 2, Node 8), (Node 2, Node 9), (Node 2, Node 10), (Node 3, Node 4), (Node 3, Node 8), (Node 4, Node 6), (Node 4, Node 7), (Node 4, Node 9), (Node 4, Node 10), (Node 5, Node 9), (Node 6, Node 10), (Node 9, Node 10)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Red, Node 2: Green, Node 3: Red, Node 4: Green, Node 5: Green, Node 6: Blue, Node 7: Blue, Node 8: Blue, Node 9: Blue, Node 10: Red",
+          "metadata_difficulty_level": 19,
+          "metadata_num_nodes": 11,
+          "metadata_num_edges": 20,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.35,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              4,
+              10
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              10
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "metadata_fold": "level_19",
+          "metadata_row_index": 360,
+          "metadata_task_type": "constraint_satisfaction"
+        },
+        {
+          "input": "Given a graph with 12 nodes (labeled Node 0 through Node 11) and the following edges:\n(Node 0, Node 1), (Node 1, Node 4), (Node 1, Node 10), (Node 2, Node 4), (Node 2, Node 5), (Node 2, Node 9), (Node 2, Node 11), (Node 3, Node 4), (Node 3, Node 5), (Node 3, Node 6), (Node 3, Node 8), (Node 3, Node 10), (Node 3, Node 11), (Node 4, Node 6), (Node 4, Node 7), (Node 5, Node 11), (Node 6, Node 8), (Node 6, Node 9), (Node 7, Node 11), (Node 8, Node 10), (Node 9, Node 11)\n\nColor each node using exactly one of these colors: Red, Green, Blue.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Green, Node 3: Green, Node 4: Red, Node 5: Red, Node 6: Blue, Node 7: Green, Node 8: Red, Node 9: Red, Node 10: Blue, Node 11: Blue",
+          "metadata_difficulty_level": 20,
+          "metadata_num_nodes": 12,
+          "metadata_num_edges": 21,
+          "metadata_num_colors": 3,
+          "metadata_edge_density": 0.35,
+          "metadata_graph_adjacency": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              3,
+              11
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              11
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "metadata_fold": "level_20",
+          "metadata_row_index": 380,
+          "metadata_task_type": "constraint_satisfaction"
+        }
+      ]
+    }
+  ]
+}

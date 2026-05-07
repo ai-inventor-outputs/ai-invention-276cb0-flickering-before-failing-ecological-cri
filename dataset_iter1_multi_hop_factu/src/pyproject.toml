@@ -1,0 +1,8 @@
+[project]
+name = "multi-hop-reasoning-dataset"
+version = "1.0.0"
+requires-python = ">=3.10,<3.12"
+description = "Multi-Hop Factual Reasoning Task Family Dataset (1-6 Hops) builder"
+dependencies = [
+    "loguru==0.7.3",
+]

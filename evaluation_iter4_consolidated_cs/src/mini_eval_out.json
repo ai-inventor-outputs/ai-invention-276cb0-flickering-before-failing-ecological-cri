@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "evaluation_name": "Consolidated_CSD_Evidence_Evaluation",
+    "description": "Paper-ready evaluation of all CSD evidence across 4 task families, 9 LLMs, 6 experiments",
+    "hypothesis_verdict": "PARTIALLY_CONFIRMED",
+    "n_criteria_passed": 2,
+    "sc1_flickering": {
+      "pass": true,
+      "n_pairs_detected": 2,
+      "n_tasks": 2,
+      "n_models": 2
+    },
+    "sc2_mixture_variance": {
+      "pass": false,
+      "mean_r2": 0.1323,
+      "n_pairs_pass": 0
+    },
+    "sc3_classifier": {
+      "pass": true,
+      "csd_f1": 0.8139,
+      "baseline_f1": 0.6994,
+      "improvement_pct": 16.38
+    },
+    "best_indicator": "disagreement_rate",
+    "best_indicator_composite": 0.6691,
+    "fleiss_kappa": 0.0892,
+    "false_positive_rate": 0.0,
+    "temperature_evidence_score": 0.5,
+    "positive_pairs": [
+      {
+        "task": "arithmetic",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "d_star": 20
+      },
+      {
+        "task": "arithmetic",
+        "model": "google/gemini-2.0-flash-001",
+        "d_star": 15
+      },
+      {
+        "task": "graph_coloring",
+        "model": "openai/gpt-4o-mini",
+        "d_star": 10
+      },
+      {
+        "task": "graph_coloring",
+        "model": "google/gemini-2.0-flash-001",
+        "d_star": 14
+      },
+      {
+        "task": "graph_coloring",
+        "model": "google/gemini-2.0-flash-lite-001",
+        "d_star": 11
+      }
+    ],
+    "experiments_evaluated": [
+      "exp_id1_it2",
+      "exp_id2_it2",
+      "exp_id3_it2",
+      "exp_id4_it2",
+      "exp_id2_it3",
+      "exp_id3_it3"
+    ]
+  },
+  "metrics_agg": {
+    "eval_sc1_pass": 1.0,
+    "eval_sc1_n_pairs_detected": 2.0,
+    "eval_sc2_revised_pass": 0.0,
+    "eval_sc2_n_pairs_pass": 0.0,
+    "eval_mixture_var_mean_r2": 0.13228199999999998,
+    "eval_sc3_pass": 1.0,
+    "eval_classifier_best_f1": 0.8139364661103791,
+    "eval_classifier_best_auroc": 0.8969187062937063,
+    "eval_classifier_baseline_f1": 0.6993746993746994,
+    "eval_classifier_f1_improvement_pct": 16.38059924645653,
+    "eval_n_criteria_passed": 2.0,
+    "eval_hypothesis_verdict": 1.0,
+    "eval_best_indicator_composite": 0.6691,
+    "eval_fleiss_kappa": 0.0892,
+    "eval_neg_ctrl_false_positive_rate": 0.0,
+    "eval_neg_ctrl_null_dip_95th": 0.06030400974328464,
+    "eval_temp_evidence_score": 0.5,
+    "eval_temp_variance_frac_positive": 0.9166666666666666,
+    "eval_temp_disagreement_frac_positive": 0.7916666666666666,
+    "eval_temp_dip_frac_positive": 0.25
+  },
+  "datasets": [
+    {
+      "dataset": "sc1_flickering_results",
+      "examples": [
+        {
+          "input": "SC1 flickering test: arithmetic x meta-llama/llama-3.1-8b-instruct (d*=20)",
+          "output": "detected",
+          "eval_flickering_detected": 1.0,
+          "eval_d_star": 20.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct"
+        },
+        {
+          "input": "SC1 flickering test: arithmetic x google/gemini-2.0-flash-001 (d*=15)",
+          "output": "not_detected",
+          "eval_flickering_detected": 0.0,
+          "eval_d_star": 15.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "google/gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC1 flickering test: graph_coloring x openai/gpt-4o-mini (d*=10)",
+          "output": "not_detected",
+          "eval_flickering_detected": 0.0,
+          "eval_d_star": 10.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "openai/gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "dataset": "sc2_mixture_variance_results",
+      "examples": [
+        {
+          "input": "SC2 mixture variance: arithmetic x meta-llama/llama-3.1-8b-instruct",
+          "output": "R2=0.0069",
+          "eval_mixture_var_r2": 0.006925,
+          "metadata_task": "arithmetic",
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct"
+        },
+        {
+          "input": "SC2 mixture variance: arithmetic x google/gemini-2.0-flash-001",
+          "output": "R2=0.1559",
+          "eval_mixture_var_r2": 0.155932,
+          "metadata_task": "arithmetic",
+          "metadata_model": "google/gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture variance: graph_coloring x openai/gpt-4o-mini",
+          "output": "R2=0.0069",
+          "eval_mixture_var_r2": 0.006877,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "openai/gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "dataset": "indicator_effectiveness_ranking",
+      "examples": [
+        {
+          "input": "Indicator ranking #1: disagreement_rate",
+          "output": "composite=0.6691",
+          "eval_sensitivity": 0.6,
+          "eval_specificity": 1.0,
+          "eval_mean_lead_time": 12.4,
+          "eval_mean_effect_size": 0.5155,
+          "eval_composite_score": 0.6691,
+          "metadata_indicator": "disagreement_rate",
+          "metadata_rank": 1
+        },
+        {
+          "input": "Indicator ranking #2: embedding_variance",
+          "output": "composite=0.5820",
+          "eval_sensitivity": 0.6,
+          "eval_specificity": 1.0,
+          "eval_mean_lead_time": 7.0,
+          "eval_mean_effect_size": 0.4852,
+          "eval_composite_score": 0.582,
+          "metadata_indicator": "embedding_variance",
+          "metadata_rank": 2
+        },
+        {
+          "input": "Indicator ranking #3: dip_statistic",
+          "output": "composite=0.4473",
+          "eval_sensitivity": 0.0,
+          "eval_specificity": 1.0,
+          "eval_mean_lead_time": 13.67,
+          "eval_mean_effect_size": 0.2115,
+          "eval_composite_score": 0.4473,
+          "metadata_indicator": "dip_statistic",
+          "metadata_rank": 3
+        }
+      ]
+    },
+    {
+      "dataset": "negative_control_analysis",
+      "examples": [
+        {
+          "input": "Negative control: syllogistic x mistralai/ministral-3b-2512",
+          "output": "mean_dip=0.0902, mean_sil=0.2249",
+          "eval_mean_dip": 0.09024016470165099,
+          "eval_mean_silhouette": 0.22490798469100678,
+          "eval_within_null": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "mistralai/ministral-3b-2512",
+          "metadata_control_type": "no_d_star"
+        },
+        {
+          "input": "Negative control: syllogistic x mistralai/ministral-8b-2512",
+          "output": "mean_dip=0.0941, mean_sil=0.2468",
+          "eval_mean_dip": 0.09414335972520742,
+          "eval_mean_silhouette": 0.24684130187545503,
+          "eval_within_null": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "mistralai/ministral-8b-2512",
+          "metadata_control_type": "no_d_star"
+        },
+        {
+          "input": "Negative control: syllogistic x deepseek/deepseek-v3.2",
+          "output": "mean_dip=0.0855, mean_sil=0.2301",
+          "eval_mean_dip": 0.0855425863340826,
+          "eval_mean_silhouette": 0.2301235401204654,
+          "eval_within_null": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "deepseek/deepseek-v3.2",
+          "metadata_control_type": "no_d_star"
+        }
+      ]
+    },
+    {
+      "dataset": "temperature_synthesis",
+      "examples": [
+        {
+          "input": "Temperature prediction (confirmed): d* stability across temperatures",
+          "output": "confirmed",
+          "eval_confirmed": 1.0,
+          "metadata_prediction_type": "confirmed",
+          "metadata_prediction_idx": 0
+        },
+        {
+          "input": "Temperature prediction (confirmed): Embedding variance increases with temperature (frac=0.917)",
+          "output": "confirmed",
+          "eval_confirmed": 1.0,
+          "metadata_prediction_type": "confirmed",
+          "metadata_prediction_idx": 1
+        },
+        {
+          "input": "Temperature prediction (confirmed): Disagreement rate increases with temperature (frac=0.792)",
+          "output": "confirmed",
+          "eval_confirmed": 1.0,
+          "metadata_prediction_type": "confirmed",
+          "metadata_prediction_idx": 2
+        }
+      ]
+    },
+    {
+      "dataset": "cross_experiment_consistency",
+      "examples": [
+        {
+          "input": "Cross-task concordance: arithmetic vs graph_coloring",
+          "output": "concordance=0.3333",
+          "eval_concordance": 0.3333,
+          "metadata_task1": "arithmetic",
+          "metadata_task2": "graph_coloring"
+        },
+        {
+          "input": "Cross-task concordance: arithmetic vs multi_hop",
+          "output": "concordance=0.5000",
+          "eval_concordance": 0.5,
+          "metadata_task1": "arithmetic",
+          "metadata_task2": "multi_hop"
+        },
+        {
+          "input": "Cross-task concordance: arithmetic vs syllogistic",
+          "output": "concordance=0.8333",
+          "eval_concordance": 0.8333,
+          "metadata_task1": "arithmetic",
+          "metadata_task2": "syllogistic"
+        }
+      ]
+    },
+    {
+      "dataset": "paper_figure_specifications",
+      "examples": [
+        {
+          "input": "Figure spec: fig1_accuracy_curves - Accuracy vs Difficulty Across Tasks and Models",
+          "output": "All 5 positive pairs show sigmoid-like accuracy decline with identifiable d*",
+          "eval_has_spec": 1.0,
+          "metadata_figure_id": "fig1_accuracy_curves",
+          "metadata_plot_type": "line_plot_grid",
+          "metadata_data_source": "exp_id1_it2 + exp_id3_it2 (predict_accuracy, metadata_difficulty_level)",
+          "metadata_x_axis": "difficulty_level",
+          "metadata_y_axis": "accuracy"
+        },
+        {
+          "input": "Figure spec: fig2_csd_indicator_heatmap - CSD Indicator Values Across Difficulty Gradient",
+          "output": "Variance and dip show coherent patterns near d*; ashman_d and bimodality are noisier",
+          "eval_has_spec": 1.0,
+          "metadata_figure_id": "fig2_csd_indicator_heatmap",
+          "metadata_plot_type": "heatmap_grid",
+          "metadata_data_source": "exp_id1_it2 + exp_id3_it2 (all predict_csd_* fields)",
+          "metadata_x_axis": "difficulty_level",
+          "metadata_y_axis": "indicator (6 CSD indicators)"
+        },
+        {
+          "input": "Figure spec: fig3_flickering_leading_indicator - Flickering Detection at High-Accuracy Levels",
+          "output": "SC1: flickering appears before accuracy drops below 80% in multiple pairs",
+          "eval_has_spec": 1.0,
+          "metadata_figure_id": "fig3_flickering_leading_indicator",
+          "metadata_plot_type": "scatter_with_threshold",
+          "metadata_data_source": "exp_id1_it2 + exp_id3_it2 (predict_dip_pvalue, predict_silhouette_k2, predict_accuracy)",
+          "metadata_x_axis": "difficulty_level",
+          "metadata_y_axis": "dip_pvalue (log scale) and silhouette_k2"
+        }
+      ]
+    }
+  ]
+}

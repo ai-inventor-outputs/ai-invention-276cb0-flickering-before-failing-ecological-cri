@@ -1,0 +1,13 @@
+{
+  "id": "data_id2_it1__opus",
+  "type": "code",
+  "title": "Multi-Step Arithmetic Chain Dataset with Parameterized Difficulty",
+  "summary": "Demo notebook for the Multi-Step Arithmetic Chain Dataset. Loads 24 curated examples (one per difficulty level 2-25) from a synthetic dataset of multi-step arithmetic problems. The notebook replicates the data.py transformation pipeline: loading raw data, converting to exp_sel_data_out schema with metadata_ prefixed fields, validating structure, and displaying results. Includes a summary table of all examples and 4-panel visualization showing answer magnitude vs difficulty, operation frequency distribution, intermediate value spread, and difficulty level distribution.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_1/gen_art/data_id2_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id2_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id2_it1__opus/data_code_demo.ipynb"
+}

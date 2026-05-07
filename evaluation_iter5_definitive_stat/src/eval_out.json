@@ -1,0 +1,1190 @@
+{
+  "metrics_agg": {
+    "sc1_flickering_pairs_meeting": 2.0,
+    "sc1_total_pairs_with_dstar": 6.0,
+    "sc1_fraction": 0.3333333333333333,
+    "sc1_fraction_ci_lower": 0.043271868292741676,
+    "sc1_fraction_ci_upper": 0.7772219044964879,
+    "sc2_mean_mixture_r2": 0.19215,
+    "sc2_mean_mixture_r2_ci_lower": 0.083958,
+    "sc2_mean_mixture_r2_ci_upper": 0.32164000000000004,
+    "sc2_n_series": 10.0,
+    "sc2_best_series_r2": 0.6611,
+    "sc3_csd_lopo_f1": 0.9493174197215117,
+    "sc3_csd_lopo_f1_ci_lower": 0.9404830917874397,
+    "sc3_csd_lopo_f1_ci_upper": 0.9474081943442556,
+    "sc3_best_baseline_f1": 0.7125305070957245,
+    "sc3_f1_improvement": 0.23678691262578722,
+    "sc3_f1_improvement_ci_lower": 0.22396938206720818,
+    "sc3_f1_improvement_ci_upper": 0.2616328990841851,
+    "sc3_improvement_pct": 33.231828008449924,
+    "effect_size_mean_cohen_d_variance": -0.21148516996827862,
+    "effect_size_mean_cliff_delta_variance": -0.08558201058201058,
+    "effect_size_mean_cohen_d_dip_statistic": -0.5292050834783951,
+    "effect_size_mean_cliff_delta_dip_statistic": -0.21296296296296294,
+    "effect_size_mean_cohen_d_silhouette_k2": -0.7080525830089437,
+    "effect_size_mean_cliff_delta_silhouette_k2": -0.32447089947089947,
+    "effect_size_mean_cohen_d_bimodality_coefficient": -0.5378750837857874,
+    "effect_size_mean_cliff_delta_bimodality_coefficient": -0.20264550264550266,
+    "effect_size_mean_cohen_d_disagreement_rate": 0.8803295925094252,
+    "effect_size_mean_cliff_delta_disagreement_rate": 0.45701058201058203,
+    "consistency_fraction_significant": 0.26666666666666666,
+    "consistency_fraction_correct_direction": 0.13333333333333333,
+    "negative_control_pass_rate": 0.13333333333333333,
+    "consistency_n_cells": 30.0,
+    "ablation_full_f1": 0.9419100123141042,
+    "ablation_minimum_viable_feature_count": 1.0,
+    "ablation_min_set_f1": 0.9597749360613811,
+    "ablation_most_important_feature_idx": 5.0,
+    "sensitivity_minimum_viable_N": 15.0,
+    "sensitivity_f1_at_N10": 0.8119777518318894,
+    "sensitivity_f1_at_N15": 0.8655915705283226,
+    "sensitivity_f1_at_N20": 0.8848273698844639,
+    "sensitivity_f1_at_N25": 0.9006312501801951,
+    "sensitivity_f1_at_N30": 0.9175126280438424,
+    "sensitivity_f1_at_N40": 0.9410633320291929,
+    "sensitivity_f1_at_N50": 0.9419100123141042,
+    "sensitivity_dip_rate_at_N10": 0.1402349688000022,
+    "sensitivity_dip_rate_at_N15": 0.1583739322581702,
+    "sensitivity_dip_rate_at_N20": 0.17264949839372135,
+    "sensitivity_dip_rate_at_N25": 0.1846028173536899,
+    "sensitivity_dip_rate_at_N30": 0.19498118191911248,
+    "sensitivity_dip_rate_at_N40": 0.21255646541423212,
+    "sensitivity_dip_rate_at_N50": 0.22727272727272727
+  },
+  "datasets": [
+    {
+      "dataset": "success_criteria_bootstrap",
+      "examples": [
+        {
+          "input": "SC1 flickering: arithmetic/llama-3.1-8b-instruct",
+          "output": "d*=20, earliest_flicker=2, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.6,
+          "eval_sc1_ci_lower": 0.4618143774758936,
+          "eval_sc1_ci_upper": 0.7239161026974346,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_d_star": 20
+        },
+        {
+          "input": "SC1 flickering: arithmetic/gemini-2.0-flash-001",
+          "output": "d*=15, earliest_flicker=2, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.5,
+          "eval_sc1_ci_lower": 0.3664451431682858,
+          "eval_sc1_ci_upper": 0.6335548568317142,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_d_star": 15
+        },
+        {
+          "input": "SC1 flickering: graph_coloring/gpt-4o-mini",
+          "output": "d*=10, earliest_flicker=None, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.0,
+          "eval_sc1_ci_lower": 0.0,
+          "eval_sc1_ci_upper": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_d_star": 10
+        },
+        {
+          "input": "SC1 flickering: graph_coloring/gemini-2.0-flash-001",
+          "output": "d*=14, earliest_flicker=4, meets=True",
+          "eval_sc1_meets_criterion": 1.0,
+          "eval_sc1_accuracy_at_flickering": 1.0,
+          "eval_sc1_ci_lower": 0.9286524008666414,
+          "eval_sc1_ci_upper": 1.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_d_star": 14
+        },
+        {
+          "input": "SC1 flickering: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "d*=11, earliest_flicker=7, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.74,
+          "eval_sc1_ci_lower": 0.6044684273515117,
+          "eval_sc1_ci_upper": 0.8412847250644762,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_d_star": 11
+        },
+        {
+          "input": "SC1 flickering: syllogistic/ministral-3b-2512",
+          "output": "d*=22, earliest_flicker=2, meets=True",
+          "eval_sc1_meets_criterion": 1.0,
+          "eval_sc1_accuracy_at_flickering": 1.0,
+          "eval_sc1_ci_lower": 0.9286524008666414,
+          "eval_sc1_ci_upper": 1.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_d_star": 22
+        },
+        {
+          "input": "SC2 mixture R2: arithmetic__gemini-2.0-flash-001",
+          "output": "R2=0.1559",
+          "eval_sc2_mixture_r2": 0.1559,
+          "metadata_series": "arithmetic__gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture R2: arithmetic__gpt-4o-mini",
+          "output": "R2=0.2469",
+          "eval_sc2_mixture_r2": 0.2469,
+          "metadata_series": "arithmetic__gpt-4o-mini"
+        },
+        {
+          "input": "SC2 mixture R2: arithmetic__llama-3.1-8b-instruct",
+          "output": "R2=-0.0000",
+          "eval_sc2_mixture_r2": -0.0,
+          "metadata_series": "arithmetic__llama-3.1-8b-instruct"
+        },
+        {
+          "input": "SC2 mixture R2: graph_coloring__gemini-2.0-flash-001",
+          "output": "R2=0.6611",
+          "eval_sc2_mixture_r2": 0.6611,
+          "metadata_series": "graph_coloring__gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture R2: graph_coloring__gemini-2.0-flash-lite-001",
+          "output": "R2=0.1091",
+          "eval_sc2_mixture_r2": 0.1091,
+          "metadata_series": "graph_coloring__gemini-2.0-flash-lite-001"
+        },
+        {
+          "input": "SC2 mixture R2: graph_coloring__gpt-4o-mini",
+          "output": "R2=0.3973",
+          "eval_sc2_mixture_r2": 0.3973,
+          "metadata_series": "graph_coloring__gpt-4o-mini"
+        },
+        {
+          "input": "SC2 mixture R2: temp_sweep__gemini-2.0-flash-001",
+          "output": "R2=0.0273",
+          "eval_sc2_mixture_r2": 0.0273,
+          "metadata_series": "temp_sweep__gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture R2: temp_sweep__gemini-2.0-flash-001",
+          "output": "R2=0.1886",
+          "eval_sc2_mixture_r2": 0.1886,
+          "metadata_series": "temp_sweep__gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture R2: temp_sweep__gemini-2.0-flash-001",
+          "output": "R2=0.1353",
+          "eval_sc2_mixture_r2": 0.1353,
+          "metadata_series": "temp_sweep__gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture R2: temp_sweep__gemini-2.0-flash-001",
+          "output": "R2=0.0000",
+          "eval_sc2_mixture_r2": 0.0,
+          "metadata_series": "temp_sweep__gemini-2.0-flash-001"
+        }
+      ]
+    },
+    {
+      "dataset": "effect_sizes",
+      "examples": [
+        {
+          "input": "Effect variance: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=-0.483, delta=-0.286",
+          "eval_cohen_d": -0.48253894512981405,
+          "eval_cohen_d_ci_lower": -1.580652649608047,
+          "eval_cohen_d_ci_upper": 0.5566548504026345,
+          "eval_cliff_delta": -0.2857142857142857,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=-0.308, delta=0.000",
+          "eval_cohen_d": -0.3078875812178042,
+          "eval_cohen_d_ci_lower": -1.1298781754311957,
+          "eval_cohen_d_ci_upper": 0.7293731967830678,
+          "eval_cliff_delta": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=0.518, delta=0.214",
+          "eval_cohen_d": 0.5177715675119242,
+          "eval_cohen_d_ci_lower": -0.8143461367062981,
+          "eval_cohen_d_ci_upper": 2.212547113078771,
+          "eval_cliff_delta": 0.21428571428571427,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "silhouette_k2"
+        },
+        {
+          "input": "Effect bimodality_coefficient: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=0.734, delta=0.429",
+          "eval_cohen_d": 0.7337481329225087,
+          "eval_cohen_d_ci_lower": -0.44170073978266616,
+          "eval_cohen_d_ci_upper": 2.3832418262263375,
+          "eval_cliff_delta": 0.42857142857142855,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "bimodality_coefficient"
+        },
+        {
+          "input": "Effect disagreement_rate: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=-0.137, delta=-0.036",
+          "eval_cohen_d": -0.13732665402794522,
+          "eval_cohen_d_ci_lower": -1.1818295896940172,
+          "eval_cohen_d_ci_upper": 0.9855028925257011,
+          "eval_cliff_delta": -0.03571428571428571,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "disagreement_rate"
+        },
+        {
+          "input": "Effect variance: arithmetic/gemini-2.0-flash-001",
+          "output": "d=-1.248, delta=-0.667",
+          "eval_cohen_d": -1.247501455551098,
+          "eval_cohen_d_ci_lower": -2.877974583832703,
+          "eval_cohen_d_ci_upper": -0.3531472498344828,
+          "eval_cliff_delta": -0.6666666666666666,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: arithmetic/gemini-2.0-flash-001",
+          "output": "d=-0.918, delta=-0.389",
+          "eval_cohen_d": -0.9179239758571051,
+          "eval_cohen_d_ci_lower": -2.479541796174067,
+          "eval_cohen_d_ci_upper": 0.2044937673409602,
+          "eval_cliff_delta": -0.3888888888888889,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: arithmetic/gemini-2.0-flash-001",
+          "output": "d=-1.175, delta=-0.611",
+          "eval_cohen_d": -1.175024088398728,
+          "eval_cohen_d_ci_lower": -2.4652949057983555,
+          "eval_cohen_d_ci_upper": -0.34230941635114726,
+          "eval_cliff_delta": -0.6111111111111112,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "silhouette_k2"
+        },
+        {
+          "input": "Effect bimodality_coefficient: arithmetic/gemini-2.0-flash-001",
+          "output": "d=-0.208, delta=-0.167",
+          "eval_cohen_d": -0.2081504193436674,
+          "eval_cohen_d_ci_lower": -1.714365998353866,
+          "eval_cohen_d_ci_upper": 1.008357099187769,
+          "eval_cliff_delta": -0.16666666666666666,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "bimodality_coefficient"
+        },
+        {
+          "input": "Effect disagreement_rate: arithmetic/gemini-2.0-flash-001",
+          "output": "d=-0.271, delta=-0.333",
+          "eval_cohen_d": -0.2714568568364897,
+          "eval_cohen_d_ci_lower": -3.287348584468014,
+          "eval_cohen_d_ci_upper": 1.1602391848934885,
+          "eval_cliff_delta": -0.3333333333333333,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "disagreement_rate"
+        },
+        {
+          "input": "Effect variance: graph_coloring/gpt-4o-mini",
+          "output": "d=0.457, delta=0.300",
+          "eval_cohen_d": 0.45694616538809124,
+          "eval_cohen_d_ci_lower": -0.9489829917710709,
+          "eval_cohen_d_ci_upper": 2.8161887164162076,
+          "eval_cliff_delta": 0.3,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: graph_coloring/gpt-4o-mini",
+          "output": "d=-0.010, delta=0.000",
+          "eval_cohen_d": -0.009661514408256007,
+          "eval_cohen_d_ci_lower": -2.523363893641553,
+          "eval_cohen_d_ci_upper": 1.3604172450270402,
+          "eval_cliff_delta": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: graph_coloring/gpt-4o-mini",
+          "output": "d=-0.593, delta=-0.300",
+          "eval_cohen_d": -0.5927541064640814,
+          "eval_cohen_d_ci_lower": -3.4144065410260525,
+          "eval_cohen_d_ci_upper": 0.699528402739985,
+          "eval_cliff_delta": -0.3,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "silhouette_k2"
+        },
+        {
+          "input": "Effect bimodality_coefficient: graph_coloring/gpt-4o-mini",
+          "output": "d=-0.683, delta=-0.200",
+          "eval_cohen_d": -0.6827049644930075,
+          "eval_cohen_d_ci_lower": -2.632392336518237,
+          "eval_cohen_d_ci_upper": 1.2637026924689851,
+          "eval_cliff_delta": -0.2,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "bimodality_coefficient"
+        },
+        {
+          "input": "Effect disagreement_rate: graph_coloring/gpt-4o-mini",
+          "output": "d=1.243, delta=0.800",
+          "eval_cohen_d": 1.2430819280879057,
+          "eval_cohen_d_ci_lower": 0.5631663505605197,
+          "eval_cohen_d_ci_upper": 3.097306424397524,
+          "eval_cliff_delta": 0.8,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "disagreement_rate"
+        },
+        {
+          "input": "Effect variance: graph_coloring/gemini-2.0-flash-001",
+          "output": "d=1.714, delta=0.889",
+          "eval_cohen_d": 1.7137488803567982,
+          "eval_cohen_d_ci_lower": 1.1503370284420338,
+          "eval_cohen_d_ci_upper": 3.869548178777543,
+          "eval_cliff_delta": 0.8888888888888888,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: graph_coloring/gemini-2.0-flash-001",
+          "output": "d=-0.030, delta=0.111",
+          "eval_cohen_d": -0.02990042485547014,
+          "eval_cohen_d_ci_lower": -1.1138330283888986,
+          "eval_cohen_d_ci_upper": 1.2431763572769612,
+          "eval_cliff_delta": 0.1111111111111111,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: graph_coloring/gemini-2.0-flash-001",
+          "output": "d=-0.980, delta=-0.500",
+          "eval_cohen_d": -0.9801838548540308,
+          "eval_cohen_d_ci_lower": -1.916466220092684,
+          "eval_cohen_d_ci_upper": -0.35127096121467416,
+          "eval_cliff_delta": -0.5,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "silhouette_k2"
+        },
+        {
+          "input": "Effect bimodality_coefficient: graph_coloring/gemini-2.0-flash-001",
+          "output": "d=-0.703, delta=-0.278",
+          "eval_cohen_d": -0.7025330242151617,
+          "eval_cohen_d_ci_lower": -2.169033149485648,
+          "eval_cohen_d_ci_upper": 0.387118147066286,
+          "eval_cliff_delta": -0.2777777777777778,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "bimodality_coefficient"
+        },
+        {
+          "input": "Effect disagreement_rate: graph_coloring/gemini-2.0-flash-001",
+          "output": "d=0.842, delta=0.528",
+          "eval_cohen_d": 0.841952236138641,
+          "eval_cohen_d_ci_lower": 0.32799383649884895,
+          "eval_cohen_d_ci_upper": 1.723450461454635,
+          "eval_cliff_delta": 0.5277777777777778,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "disagreement_rate"
+        },
+        {
+          "input": "Effect variance: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "d=-1.462, delta=-0.750",
+          "eval_cohen_d": -1.462046565193749,
+          "eval_cohen_d_ci_lower": -4.634907770799649,
+          "eval_cohen_d_ci_upper": -0.4801693214860992,
+          "eval_cliff_delta": -0.75,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "d=-0.006, delta=0.000",
+          "eval_cohen_d": -0.005640942580929738,
+          "eval_cohen_d_ci_lower": -1.6751188012036404,
+          "eval_cohen_d_ci_upper": 1.4087232357177861,
+          "eval_cliff_delta": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "d=0.318, delta=0.250",
+          "eval_cohen_d": 0.3183475301946066,
+          "eval_cohen_d_ci_lower": -1.1680546841397215,
+          "eval_cohen_d_ci_upper": 2.2094622517822944,
+          "eval_cliff_delta": 0.25,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "silhouette_k2"
+        },
+        {
+          "input": "Effect bimodality_coefficient: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "d=0.003, delta=0.000",
+          "eval_cohen_d": 0.002754807251936065,
+          "eval_cohen_d_ci_lower": -1.7356448257539205,
+          "eval_cohen_d_ci_upper": 1.7562354059682637,
+          "eval_cliff_delta": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "bimodality_coefficient"
+        },
+        {
+          "input": "Effect disagreement_rate: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "d=1.926, delta=0.917",
+          "eval_cohen_d": 1.9261736493723065,
+          "eval_cohen_d_ci_lower": 1.1320106662806768,
+          "eval_cohen_d_ci_upper": 4.997560380435396,
+          "eval_cliff_delta": 0.9166666666666666,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "disagreement_rate"
+        },
+        {
+          "input": "Effect variance: syllogistic/ministral-3b-2512",
+          "output": "d=-0.248, delta=0.000",
+          "eval_cohen_d": -0.24751909967990027,
+          "eval_cohen_d_ci_lower": -1.1784587582790844,
+          "eval_cohen_d_ci_upper": 1.1410413711732337,
+          "eval_cliff_delta": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: syllogistic/ministral-3b-2512",
+          "output": "d=-1.904, delta=-1.000",
+          "eval_cohen_d": -1.9042160619508057,
+          "eval_cohen_d_ci_lower": -2.9124071118370125,
+          "eval_cohen_d_ci_upper": -1.5316031499472327,
+          "eval_cliff_delta": -1.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: syllogistic/ministral-3b-2512",
+          "output": "d=-2.336, delta=-1.000",
+          "eval_cohen_d": -2.336472546043353,
+          "eval_cohen_d_ci_lower": -4.241559163771238,
+          "eval_cohen_d_ci_upper": -1.5369979810024978,
+          "eval_cliff_delta": -1.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "silhouette_k2"
+        },
+        {
+          "input": "Effect bimodality_coefficient: syllogistic/ministral-3b-2512",
+          "output": "d=-2.370, delta=-1.000",
+          "eval_cohen_d": -2.370365034837333,
+          "eval_cohen_d_ci_lower": -4.4093735286794775,
+          "eval_cohen_d_ci_upper": -1.7613364392385158,
+          "eval_cliff_delta": -1.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "bimodality_coefficient"
+        },
+        {
+          "input": "Effect disagreement_rate: syllogistic/ministral-3b-2512",
+          "output": "d=1.680, delta=0.867",
+          "eval_cohen_d": 1.6795532523221324,
+          "eval_cohen_d_ci_lower": 1.1528287895158247,
+          "eval_cohen_d_ci_upper": 2.7961185118880816,
+          "eval_cliff_delta": 0.8666666666666667,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "disagreement_rate"
+        }
+      ]
+    },
+    {
+      "dataset": "feature_ablation",
+      "examples": [
+        {
+          "input": "LOFO remove variance_zt",
+          "output": "F1=0.9611, deg=-0.0192",
+          "eval_f1_without": 0.9610821256038647,
+          "eval_degradation": -0.01917211328976054,
+          "metadata_feature": "variance_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove dip_statistic_zt",
+          "output": "F1=0.9493, deg=-0.0074",
+          "eval_f1_without": 0.9493174197215117,
+          "eval_degradation": -0.007407407407407529,
+          "metadata_feature": "dip_statistic_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove silhouette_k2_zt",
+          "output": "F1=0.9493, deg=-0.0074",
+          "eval_f1_without": 0.9493174197215117,
+          "eval_degradation": -0.007407407407407529,
+          "metadata_feature": "silhouette_k2_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove bimodality_coefficient_zt",
+          "output": "F1=0.9611, deg=-0.0192",
+          "eval_f1_without": 0.9610821256038647,
+          "eval_degradation": -0.01917211328976054,
+          "metadata_feature": "bimodality_coefficient_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove disagreement_rate_zt",
+          "output": "F1=0.9419, deg=+0.0000",
+          "eval_f1_without": 0.9419100123141042,
+          "eval_degradation": 0.0,
+          "metadata_feature": "disagreement_rate_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove relative_dist_to_dstar",
+          "output": "F1=0.5993, deg=+0.3427",
+          "eval_f1_without": 0.5992569169960473,
+          "eval_degradation": 0.3426530953180569,
+          "metadata_feature": "relative_dist_to_dstar",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "Forward select 1 features",
+          "output": "F1=0.9598",
+          "eval_forward_f1": 0.9597749360613811,
+          "eval_n_features": 1.0,
+          "metadata_features": "['relative_dist_to_dstar']",
+          "metadata_type": "forward"
+        }
+      ]
+    },
+    {
+      "dataset": "sample_size_sensitivity",
+      "examples": [
+        {
+          "input": "Sample size N=10",
+          "output": "F1=0.8120, ratio=0.862",
+          "eval_mean_f1": 0.8119777518318894,
+          "eval_std_f1": 0.045535282066034855,
+          "eval_f1_ratio": 0.8620544863272082,
+          "metadata_N": 10
+        },
+        {
+          "input": "Sample size N=15",
+          "output": "F1=0.8656, ratio=0.919",
+          "eval_mean_f1": 0.8655915705283226,
+          "eval_std_f1": 0.03024732799415348,
+          "eval_f1_ratio": 0.9189748056735474,
+          "metadata_N": 15
+        },
+        {
+          "input": "Sample size N=20",
+          "output": "F1=0.8848, ratio=0.939",
+          "eval_mean_f1": 0.8848273698844639,
+          "eval_std_f1": 0.03599163891866814,
+          "eval_f1_ratio": 0.9393969257324291,
+          "metadata_N": 20
+        },
+        {
+          "input": "Sample size N=25",
+          "output": "F1=0.9006, ratio=0.956",
+          "eval_mean_f1": 0.9006312501801951,
+          "eval_std_f1": 0.027899163242855688,
+          "eval_f1_ratio": 0.9561754715479724,
+          "metadata_N": 25
+        },
+        {
+          "input": "Sample size N=30",
+          "output": "F1=0.9175, ratio=0.974",
+          "eval_mean_f1": 0.9175126280438424,
+          "eval_std_f1": 0.02530008543292888,
+          "eval_f1_ratio": 0.9740979669487515,
+          "metadata_N": 30
+        },
+        {
+          "input": "Sample size N=40",
+          "output": "F1=0.9411, ratio=0.999",
+          "eval_mean_f1": 0.9410633320291929,
+          "eval_std_f1": 0.020614982809731466,
+          "eval_f1_ratio": 0.999101102787058,
+          "metadata_N": 40
+        },
+        {
+          "input": "Sample size N=50",
+          "output": "F1=0.9419, ratio=1.000",
+          "eval_mean_f1": 0.9419100123141042,
+          "eval_std_f1": 0.0,
+          "eval_f1_ratio": 1.0,
+          "metadata_N": 50
+        }
+      ]
+    },
+    {
+      "dataset": "cross_experiment_consistency",
+      "examples": [
+        {
+          "input": "Consistency variance: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.464, p=0.0067, sig=True",
+          "eval_kendall_tau": -0.46405228758169936,
+          "eval_p_value": 0.006652816887103086,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "variance",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency dip_statistic: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.320, p=0.0685, sig=False",
+          "eval_kendall_tau": -0.32026143790849676,
+          "eval_p_value": 0.06849691078121536,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.020, p=0.9405, sig=False",
+          "eval_kendall_tau": -0.019607843137254905,
+          "eval_p_value": 0.9405163052956534,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.007, p=1.0000, sig=False",
+          "eval_kendall_tau": -0.006535947712418302,
+          "eval_p_value": 1.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency disagreement_rate: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=0.000, p=1.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 1.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency variance: arithmetic/gemini-2.0-flash-001",
+          "output": "tau=-0.462, p=0.0305, sig=True",
+          "eval_kendall_tau": -0.46153846153846145,
+          "eval_p_value": 0.030482440656051768,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "variance",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency dip_statistic: arithmetic/gemini-2.0-flash-001",
+          "output": "tau=-0.359, p=0.1000, sig=False",
+          "eval_kendall_tau": -0.3589743589743589,
+          "eval_p_value": 0.0999802599021349,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: arithmetic/gemini-2.0-flash-001",
+          "output": "tau=-0.462, p=0.0305, sig=True",
+          "eval_kendall_tau": -0.46153846153846145,
+          "eval_p_value": 0.030482440656051768,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: arithmetic/gemini-2.0-flash-001",
+          "output": "tau=-0.179, p=0.4354, sig=False",
+          "eval_kendall_tau": -0.17948717948717946,
+          "eval_p_value": 0.4353804483839206,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency disagreement_rate: arithmetic/gemini-2.0-flash-001",
+          "output": "tau=-0.072, p=0.7481, sig=False",
+          "eval_kendall_tau": -0.07248660933577357,
+          "eval_p_value": 0.7480656191655699,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency variance: arithmetic/gpt-4o-mini",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "variance",
+          "metadata_direction": "insufficient"
+        },
+        {
+          "input": "Consistency dip_statistic: arithmetic/gpt-4o-mini",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "insufficient"
+        },
+        {
+          "input": "Consistency silhouette_k2: arithmetic/gpt-4o-mini",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "insufficient"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: arithmetic/gpt-4o-mini",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "insufficient"
+        },
+        {
+          "input": "Consistency disagreement_rate: arithmetic/gpt-4o-mini",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "insufficient"
+        },
+        {
+          "input": "Consistency variance: graph_coloring/gpt-4o-mini",
+          "output": "tau=0.111, p=0.7614, sig=False",
+          "eval_kendall_tau": 0.1111111111111111,
+          "eval_p_value": 0.761414241622575,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "variance",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency dip_statistic: graph_coloring/gpt-4o-mini",
+          "output": "tau=-0.056, p=0.9195, sig=False",
+          "eval_kendall_tau": -0.05555555555555555,
+          "eval_p_value": 0.919455467372134,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: graph_coloring/gpt-4o-mini",
+          "output": "tau=-0.389, p=0.1802, sig=False",
+          "eval_kendall_tau": -0.3888888888888889,
+          "eval_p_value": 0.18018077601410934,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: graph_coloring/gpt-4o-mini",
+          "output": "tau=-0.333, p=0.2595, sig=False",
+          "eval_kendall_tau": -0.3333333333333333,
+          "eval_p_value": 0.25951829805996474,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency disagreement_rate: graph_coloring/gpt-4o-mini",
+          "output": "tau=0.704, p=0.0088, sig=True",
+          "eval_kendall_tau": 0.7042952122737639,
+          "eval_p_value": 0.008774633060101168,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 1.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency variance: graph_coloring/gemini-2.0-flash-001",
+          "output": "tau=0.590, p=0.0043, sig=True",
+          "eval_kendall_tau": 0.5897435897435896,
+          "eval_p_value": 0.0042892835687974576,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 1.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "variance",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency dip_statistic: graph_coloring/gemini-2.0-flash-001",
+          "output": "tau=-0.026, p=0.9524, sig=False",
+          "eval_kendall_tau": -0.025641025641025637,
+          "eval_p_value": 0.9523619079608663,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: graph_coloring/gemini-2.0-flash-001",
+          "output": "tau=-0.359, p=0.1000, sig=False",
+          "eval_kendall_tau": -0.3589743589743589,
+          "eval_p_value": 0.0999802599021349,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: graph_coloring/gemini-2.0-flash-001",
+          "output": "tau=-0.231, p=0.3062, sig=False",
+          "eval_kendall_tau": -0.23076923076923073,
+          "eval_p_value": 0.306184939674523,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency disagreement_rate: graph_coloring/gemini-2.0-flash-001",
+          "output": "tau=0.517, p=0.0162, sig=True",
+          "eval_kendall_tau": 0.5168397117784516,
+          "eval_p_value": 0.01617941402549757,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 1.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency variance: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "tau=-0.244, p=0.3807, sig=False",
+          "eval_kendall_tau": -0.24444444444444444,
+          "eval_p_value": 0.38071979717813054,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "variance",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency dip_statistic: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "tau=-0.244, p=0.3807, sig=False",
+          "eval_kendall_tau": -0.24444444444444444,
+          "eval_p_value": 0.38071979717813054,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "tau=-0.022, p=1.0000, sig=False",
+          "eval_kendall_tau": -0.022222222222222223,
+          "eval_p_value": 1.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "tau=0.200, p=0.4843, sig=False",
+          "eval_kendall_tau": 0.19999999999999998,
+          "eval_p_value": 0.4843127204585538,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency disagreement_rate: graph_coloring/gemini-2.0-flash-lite-001",
+          "output": "tau=0.719, p=0.0041, sig=True",
+          "eval_kendall_tau": 0.7191465199607916,
+          "eval_p_value": 0.004057136032371292,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 1.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency variance: syllogistic/ministral-3b-2512",
+          "output": "tau=-0.309, p=0.0914, sig=False",
+          "eval_kendall_tau": -0.30882352941176466,
+          "eval_p_value": 0.09138624889203259,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "variance",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency dip_statistic: syllogistic/ministral-3b-2512",
+          "output": "tau=-0.103, p=0.5976, sig=False",
+          "eval_kendall_tau": -0.10294117647058822,
+          "eval_p_value": 0.5976439315443395,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: syllogistic/ministral-3b-2512",
+          "output": "tau=-0.691, p=0.0000, sig=True",
+          "eval_kendall_tau": -0.6911764705882353,
+          "eval_p_value": 3.209019424470449e-05,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: syllogistic/ministral-3b-2512",
+          "output": "tau=-0.074, p=0.7150, sig=False",
+          "eval_kendall_tau": -0.07352941176470587,
+          "eval_p_value": 0.7150317752938318,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency disagreement_rate: syllogistic/ministral-3b-2512",
+          "output": "tau=0.233, p=0.2081, sig=False",
+          "eval_kendall_tau": 0.23290128526670129,
+          "eval_p_value": 0.2081126830719362,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "ministral-3b-2512",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "increasing"
+        },
+        {
+          "input": "Consistency variance: syllogistic/llama-3.1-8b-instruct",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "variance",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency dip_statistic: syllogistic/llama-3.1-8b-instruct",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency silhouette_k2: syllogistic/llama-3.1-8b-instruct",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: syllogistic/llama-3.1-8b-instruct",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency disagreement_rate: syllogistic/llama-3.1-8b-instruct",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency variance: syllogistic/gemini-2.0-flash-lite-001",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "variance",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency dip_statistic: syllogistic/gemini-2.0-flash-lite-001",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency silhouette_k2: syllogistic/gemini-2.0-flash-lite-001",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency bimodality_coefficient: syllogistic/gemini-2.0-flash-lite-001",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "bimodality_coefficient",
+          "metadata_direction": "none"
+        },
+        {
+          "input": "Consistency disagreement_rate: syllogistic/gemini-2.0-flash-lite-001",
+          "output": "tau=0.000, p=0.0000, sig=False",
+          "eval_kendall_tau": 0.0,
+          "eval_p_value": 0.0,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "syllogistic",
+          "metadata_model": "gemini-2.0-flash-lite-001",
+          "metadata_indicator": "disagreement_rate",
+          "metadata_direction": "none"
+        }
+      ]
+    }
+  ]
+}

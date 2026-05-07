@@ -1,0 +1,13 @@
+{
+  "id": "data_id5_it1__opus",
+  "type": "code",
+  "title": "Multi-Hop Factual Reasoning Task Family Dataset (1\u20136 Hops)",
+  "summary": "Demo notebook for the Multi-Hop Factual Reasoning Task Family Dataset (1-6 Hops). Loads a curated 18-example mini subset (3 per hop level) via GitHub URL with local fallback. Validates all examples against the dataset schema, computes distribution statistics across hop levels and sources, displays sample questions with reasoning chains, and visualizes the dataset structure with 4 matplotlib plots: examples per hop level, examples by source, question length distribution, and reasoning chain length vs hop level.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_1/gen_art/data_id5_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id5_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id5_it1__opus/data_code_demo.ipynb"
+}

@@ -1,0 +1,8 @@
+[project]
+name = "manuscript-integrity-audit"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "loguru==0.7.3",
+    "numpy==2.4.3",
+]

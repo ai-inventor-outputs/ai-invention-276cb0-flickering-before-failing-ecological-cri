@@ -1,0 +1,22 @@
+[project]
+name = "csd-sampling-experiment"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "diptest==0.10.0",
+    "httpx==0.28.1",
+    "huggingface-hub==1.7.1",
+    "joblib==1.5.3",
+    "loguru==0.7.3",
+    "numpy==1.26.4",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "sentence-transformers==5.3.0",
+    "tenacity==9.1.4",
+    "tokenizers==0.22.2",
+    "torch==2.10.0",
+    "transformers==5.3.0",
+    "tqdm==4.67.3",
+    "safetensors==0.7.0",
+    "regex==2026.2.28",
+]

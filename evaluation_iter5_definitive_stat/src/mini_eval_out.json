@@ -1,0 +1,232 @@
+{
+  "metrics_agg": {
+    "sc1_flickering_pairs_meeting": 2.0,
+    "sc1_total_pairs_with_dstar": 6.0,
+    "sc1_fraction": 0.3333333333333333,
+    "sc1_fraction_ci_lower": 0.043271868292741676,
+    "sc1_fraction_ci_upper": 0.7772219044964879,
+    "sc2_mean_mixture_r2": 0.19215,
+    "sc2_mean_mixture_r2_ci_lower": 0.083958,
+    "sc2_mean_mixture_r2_ci_upper": 0.32164000000000004,
+    "sc2_n_series": 10.0,
+    "sc2_best_series_r2": 0.6611,
+    "sc3_csd_lopo_f1": 0.9493174197215117,
+    "sc3_csd_lopo_f1_ci_lower": 0.9404830917874397,
+    "sc3_csd_lopo_f1_ci_upper": 0.9474081943442556,
+    "sc3_best_baseline_f1": 0.7125305070957245,
+    "sc3_f1_improvement": 0.23678691262578722,
+    "sc3_f1_improvement_ci_lower": 0.22396938206720818,
+    "sc3_f1_improvement_ci_upper": 0.2616328990841851,
+    "sc3_improvement_pct": 33.231828008449924,
+    "effect_size_mean_cohen_d_variance": -0.21148516996827862,
+    "effect_size_mean_cliff_delta_variance": -0.08558201058201058,
+    "effect_size_mean_cohen_d_dip_statistic": -0.5292050834783951,
+    "effect_size_mean_cliff_delta_dip_statistic": -0.21296296296296294,
+    "effect_size_mean_cohen_d_silhouette_k2": -0.7080525830089437,
+    "effect_size_mean_cliff_delta_silhouette_k2": -0.32447089947089947,
+    "effect_size_mean_cohen_d_bimodality_coefficient": -0.5378750837857874,
+    "effect_size_mean_cliff_delta_bimodality_coefficient": -0.20264550264550266,
+    "effect_size_mean_cohen_d_disagreement_rate": 0.8803295925094252,
+    "effect_size_mean_cliff_delta_disagreement_rate": 0.45701058201058203,
+    "consistency_fraction_significant": 0.26666666666666666,
+    "consistency_fraction_correct_direction": 0.13333333333333333,
+    "negative_control_pass_rate": 0.13333333333333333,
+    "consistency_n_cells": 30.0,
+    "ablation_full_f1": 0.9419100123141042,
+    "ablation_minimum_viable_feature_count": 1.0,
+    "ablation_min_set_f1": 0.9597749360613811,
+    "ablation_most_important_feature_idx": 5.0,
+    "sensitivity_minimum_viable_N": 15.0,
+    "sensitivity_f1_at_N10": 0.8119777518318894,
+    "sensitivity_f1_at_N15": 0.8655915705283226,
+    "sensitivity_f1_at_N20": 0.8848273698844639,
+    "sensitivity_f1_at_N25": 0.9006312501801951,
+    "sensitivity_f1_at_N30": 0.9175126280438424,
+    "sensitivity_f1_at_N40": 0.9410633320291929,
+    "sensitivity_f1_at_N50": 0.9419100123141042,
+    "sensitivity_dip_rate_at_N10": 0.1402349688000022,
+    "sensitivity_dip_rate_at_N15": 0.1583739322581702,
+    "sensitivity_dip_rate_at_N20": 0.17264949839372135,
+    "sensitivity_dip_rate_at_N25": 0.1846028173536899,
+    "sensitivity_dip_rate_at_N30": 0.19498118191911248,
+    "sensitivity_dip_rate_at_N40": 0.21255646541423212,
+    "sensitivity_dip_rate_at_N50": 0.22727272727272727
+  },
+  "datasets": [
+    {
+      "dataset": "success_criteria_bootstrap",
+      "examples": [
+        {
+          "input": "SC1 flickering: arithmetic/llama-3.1-8b-instruct",
+          "output": "d*=20, earliest_flicker=2, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.6,
+          "eval_sc1_ci_lower": 0.4618143774758936,
+          "eval_sc1_ci_upper": 0.7239161026974346,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_d_star": 20
+        },
+        {
+          "input": "SC1 flickering: arithmetic/gemini-2.0-flash-001",
+          "output": "d*=15, earliest_flicker=2, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.5,
+          "eval_sc1_ci_lower": 0.3664451431682858,
+          "eval_sc1_ci_upper": 0.6335548568317142,
+          "metadata_task": "arithmetic",
+          "metadata_model": "gemini-2.0-flash-001",
+          "metadata_d_star": 15
+        },
+        {
+          "input": "SC1 flickering: graph_coloring/gpt-4o-mini",
+          "output": "d*=10, earliest_flicker=None, meets=False",
+          "eval_sc1_meets_criterion": 0.0,
+          "eval_sc1_accuracy_at_flickering": 0.0,
+          "eval_sc1_ci_lower": 0.0,
+          "eval_sc1_ci_upper": 0.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "gpt-4o-mini",
+          "metadata_d_star": 10
+        }
+      ]
+    },
+    {
+      "dataset": "effect_sizes",
+      "examples": [
+        {
+          "input": "Effect variance: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=-0.483, delta=-0.286",
+          "eval_cohen_d": -0.48253894512981405,
+          "eval_cohen_d_ci_lower": -1.580652649608047,
+          "eval_cohen_d_ci_upper": 0.5566548504026345,
+          "eval_cliff_delta": -0.2857142857142857,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "variance"
+        },
+        {
+          "input": "Effect dip_statistic: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=-0.308, delta=0.000",
+          "eval_cohen_d": -0.3078875812178042,
+          "eval_cohen_d_ci_lower": -1.1298781754311957,
+          "eval_cohen_d_ci_upper": 0.7293731967830678,
+          "eval_cliff_delta": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "dip_statistic"
+        },
+        {
+          "input": "Effect silhouette_k2: arithmetic/llama-3.1-8b-instruct",
+          "output": "d=0.518, delta=0.214",
+          "eval_cohen_d": 0.5177715675119242,
+          "eval_cohen_d_ci_lower": -0.8143461367062981,
+          "eval_cohen_d_ci_upper": 2.212547113078771,
+          "eval_cliff_delta": 0.21428571428571427,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "silhouette_k2"
+        }
+      ]
+    },
+    {
+      "dataset": "feature_ablation",
+      "examples": [
+        {
+          "input": "LOFO remove variance_zt",
+          "output": "F1=0.9611, deg=-0.0192",
+          "eval_f1_without": 0.9610821256038647,
+          "eval_degradation": -0.01917211328976054,
+          "metadata_feature": "variance_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove dip_statistic_zt",
+          "output": "F1=0.9493, deg=-0.0074",
+          "eval_f1_without": 0.9493174197215117,
+          "eval_degradation": -0.007407407407407529,
+          "metadata_feature": "dip_statistic_zt",
+          "metadata_type": "lofo"
+        },
+        {
+          "input": "LOFO remove silhouette_k2_zt",
+          "output": "F1=0.9493, deg=-0.0074",
+          "eval_f1_without": 0.9493174197215117,
+          "eval_degradation": -0.007407407407407529,
+          "metadata_feature": "silhouette_k2_zt",
+          "metadata_type": "lofo"
+        }
+      ]
+    },
+    {
+      "dataset": "sample_size_sensitivity",
+      "examples": [
+        {
+          "input": "Sample size N=10",
+          "output": "F1=0.8120, ratio=0.862",
+          "eval_mean_f1": 0.8119777518318894,
+          "eval_std_f1": 0.045535282066034855,
+          "eval_f1_ratio": 0.8620544863272082,
+          "metadata_N": 10
+        },
+        {
+          "input": "Sample size N=15",
+          "output": "F1=0.8656, ratio=0.919",
+          "eval_mean_f1": 0.8655915705283226,
+          "eval_std_f1": 0.03024732799415348,
+          "eval_f1_ratio": 0.9189748056735474,
+          "metadata_N": 15
+        },
+        {
+          "input": "Sample size N=20",
+          "output": "F1=0.8848, ratio=0.939",
+          "eval_mean_f1": 0.8848273698844639,
+          "eval_std_f1": 0.03599163891866814,
+          "eval_f1_ratio": 0.9393969257324291,
+          "metadata_N": 20
+        }
+      ]
+    },
+    {
+      "dataset": "cross_experiment_consistency",
+      "examples": [
+        {
+          "input": "Consistency variance: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.464, p=0.0067, sig=True",
+          "eval_kendall_tau": -0.46405228758169936,
+          "eval_p_value": 0.006652816887103086,
+          "eval_significant": 1.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "variance",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency dip_statistic: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.320, p=0.0685, sig=False",
+          "eval_kendall_tau": -0.32026143790849676,
+          "eval_p_value": 0.06849691078121536,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "dip_statistic",
+          "metadata_direction": "decreasing"
+        },
+        {
+          "input": "Consistency silhouette_k2: arithmetic/llama-3.1-8b-instruct",
+          "output": "tau=-0.020, p=0.9405, sig=False",
+          "eval_kendall_tau": -0.019607843137254905,
+          "eval_p_value": 0.9405163052956534,
+          "eval_significant": 0.0,
+          "eval_correct_direction": 0.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "llama-3.1-8b-instruct",
+          "metadata_indicator": "silhouette_k2",
+          "metadata_direction": "decreasing"
+        }
+      ]
+    }
+  ]
+}

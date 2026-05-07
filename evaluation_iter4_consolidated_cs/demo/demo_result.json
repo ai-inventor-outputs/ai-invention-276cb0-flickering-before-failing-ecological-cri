@@ -1,0 +1,13 @@
+{
+  "id": "eval_id4_it4__opus",
+  "type": "code",
+  "title": "Consolidated CSD Evidence Evaluation: Revised Success Criteria, Indicator Ranking, and Final Hypothesis Verdict",
+  "summary": "Demo notebook for the Consolidated CSD Evidence Evaluation, which evaluates Critical Slowing Down indicators across 4 task families, 9 LLMs, and 6 experiments. The notebook runs 6 analysis blocks (success criteria SC1-SC3, indicator ranking, negative controls with random null distribution, temperature synthesis, cross-experiment consistency via Fleiss' kappa, and paper figure specs) on a curated mini dataset. Produces a 3-panel visualization showing indicator ranking, success criteria pass/fail, and CSD indicator trends vs difficulty. Overall verdict: PARTIALLY_CONFIRMED (2/3 criteria passed).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_4/gen_art/eval_id4_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id4_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id4_it4__opus/eval_code_demo.ipynb"
+}

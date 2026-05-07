@@ -1,0 +1,81 @@
+{
+  "datasets": [
+    {
+      "dataset": "arithmetic_chains",
+      "examples": [
+        {
+          "input": "Compute the following step by step, showing your work for each operation. What is the final result?\n\nStart with 83.\nStep 1: Add 17\nStep 2: Multiply by 3\n\nProvide your final numerical answer.",
+          "output": "300",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 2,
+          "metadata_difficulty_param_name": "num_operations",
+          "metadata_all_intermediate_answers": [
+            83,
+            100,
+            300
+          ],
+          "metadata_operations": [
+            "+",
+            "×"
+          ],
+          "metadata_operands": [
+            17,
+            3
+          ],
+          "metadata_seed": 420200,
+          "metadata_row_index": 0,
+          "metadata_task_type": "arithmetic_chain",
+          "metadata_num_operations": 2
+        },
+        {
+          "input": "Compute the following step by step, showing your work for each operation. What is the final result?\n\nStart with 43.\nStep 1: Add 89\nStep 2: Subtract 21\n\nProvide your final numerical answer.",
+          "output": "111",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 2,
+          "metadata_difficulty_param_name": "num_operations",
+          "metadata_all_intermediate_answers": [
+            43,
+            132,
+            111
+          ],
+          "metadata_operations": [
+            "+",
+            "-"
+          ],
+          "metadata_operands": [
+            89,
+            21
+          ],
+          "metadata_seed": 420201,
+          "metadata_row_index": 1,
+          "metadata_task_type": "arithmetic_chain",
+          "metadata_num_operations": 2
+        },
+        {
+          "input": "Compute the following step by step, showing your work for each operation. What is the final result?\n\nStart with 84.\nStep 1: Subtract 69\nStep 2: Add 32\n\nProvide your final numerical answer.",
+          "output": "47",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 2,
+          "metadata_difficulty_param_name": "num_operations",
+          "metadata_all_intermediate_answers": [
+            84,
+            15,
+            47
+          ],
+          "metadata_operations": [
+            "-",
+            "+"
+          ],
+          "metadata_operands": [
+            69,
+            32
+          ],
+          "metadata_seed": 420202,
+          "metadata_row_index": 2,
+          "metadata_task_type": "arithmetic_chain",
+          "metadata_num_operations": 2
+        }
+      ]
+    }
+  ]
+}

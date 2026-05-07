@@ -1,0 +1,271 @@
+\begin{thebibliography}{36}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arnold and Lorch(2025)]{arnold2025}
+S.~Arnold and F.~Lorch.
+\newblock Decomposing behavioral phase transitions in {LLMs}: Order parameters
+  for emergent misalignment.
+\newblock \emph{arXiv preprint arXiv:2508.20015}, 2025.
+
+\bibitem[Ashman et~al.(1994)Ashman, Bird, and Zepf]{ashman1994}
+K.~M. Ashman, C.~M. Bird, and S.~E. Zepf.
+\newblock Detecting bimodality in astronomical datasets.
+\newblock \emph{The Astronomical Journal}, 108:\penalty0 2348--2361, 1994.
+\newblock \doi{10.1086/117248}.
+
+\bibitem[Belem et~al.(2024)]{cycles2024}
+D.~Belem et~al.
+\newblock Cycles of thought: Measuring {LLM} confidence through stable
+  explanations.
+\newblock \emph{arXiv preprint arXiv:2406.03441}, 2024.
+
+\bibitem[Boettiger and Hastings(2012)]{boettiger2012}
+C.~Boettiger and A.~Hastings.
+\newblock Quantifying limits to detection of early warning for critical
+  transitions.
+\newblock \emph{Journal of the Royal Society Interface}, 9\penalty0
+  (75):\penalty0 2527--2539, 2012.
+\newblock \doi{10.1098/rsif.2012.0125}.
+
+\bibitem[Bury et~al.(2021)Bury, Sujith, Pavithran, Scheffer, Lenton, Anand, and
+  Bauch]{bury2021}
+T.~M. Bury, R.~I. Sujith, I.~Pavithran, M.~Scheffer, T.~M. Lenton, M.~Anand,
+  and C.~T. Bauch.
+\newblock Deep learning for early warning signals of tipping points.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 118\penalty0
+  (39):\penalty0 e2106140118, 2021.
+\newblock \doi{10.1073/pnas.2106140118}.
+
+\bibitem[Carpenter and Brock(2006)]{carpenter2006}
+S.~R. Carpenter and W.~A. Brock.
+\newblock Rising variance: a leading indicator of ecological transition.
+\newblock \emph{Ecology Letters}, 9\penalty0 (3):\penalty0 311--318, 2006.
+\newblock \doi{10.1111/j.1461-0248.2005.00877.x}.
+
+\bibitem[Chen et~al.(2022{\natexlab{a}})Chen, Lio, and Jiang]{chen2022cusp}
+D.-G. Chen, Y.~Lio, and X.~Jiang.
+\newblock Stochastic cusp catastrophe model and its {Bayesian} computations.
+\newblock \emph{Journal of Applied Statistics}, 49\penalty0 (8):\penalty0
+  2036--2053, 2022{\natexlab{a}}.
+\newblock \doi{10.1080/02664763.2021.1891999}.
+
+\bibitem[Chen et~al.(2022{\natexlab{b}})Chen, Ghadami, and
+  Epureanu]{ghadami2022}
+S.~Chen, A.~Ghadami, and B.~I. Epureanu.
+\newblock Practical guide to using {Kendall's} $\tau$ in the context of
+  forecasting critical transitions.
+\newblock \emph{Royal Society Open Science}, 9\penalty0 (7):\penalty0 211346,
+  2022{\natexlab{b}}.
+\newblock \doi{10.1098/rsos.211346}.
+
+\bibitem[Chen et~al.(2024)]{chen2024reasoning}
+Z.~Chen et~al.
+\newblock Unlocking the capabilities of thought: A reasoning boundary framework
+  for quantifying and finding the limits of {LLM} reasoning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2024.
+
+\bibitem[Dakos et~al.(2012{\natexlab{a}})Dakos, Carpenter, Brock, Ellison,
+  Guttal, Ives, K{\'e}fi, Livina, Seekell, van Nes, et~al.]{dakos2012methods}
+V.~Dakos, S.~R. Carpenter, W.~A. Brock, A.~M. Ellison, V.~Guttal, A.~R. Ives,
+  S.~K{\'e}fi, V.~Livina, D.~A. Seekell, E.~H. van Nes, et~al.
+\newblock Methods for detecting early warnings of critical transitions in time
+  series illustrated using simulated ecological data.
+\newblock \emph{PLoS ONE}, 7\penalty0 (7):\penalty0 e41010, 2012{\natexlab{a}}.
+\newblock \doi{10.1371/journal.pone.0041010}.
+
+\bibitem[Dakos et~al.(2012{\natexlab{b}})Dakos, van Nes, D'Odorico, and
+  Scheffer]{dakos2012robustness}
+V.~Dakos, E.~H. van Nes, P.~D'Odorico, and M.~Scheffer.
+\newblock Robustness of variance and autocorrelation as indicators of critical
+  slowing down.
+\newblock \emph{Ecology}, 93\penalty0 (2):\penalty0 264--271,
+  2012{\natexlab{b}}.
+\newblock \doi{10.1890/11-0889.1}.
+
+\bibitem[Dakos et~al.(2013)Dakos, van Nes, and Scheffer]{dakos2013}
+V.~Dakos, E.~H. van Nes, and M.~Scheffer.
+\newblock Flickering as an early warning signal.
+\newblock \emph{Theoretical Ecology}, 6\penalty0 (3):\penalty0 309--317, 2013.
+\newblock \doi{10.1007/s12080-013-0186-4}.
+
+\bibitem[Ding et~al.(2025)]{ding2025bestroute}
+B.~Ding et~al.
+\newblock {BEST-Route}: Adaptive {LLM} routing with test-time optimal compute.
+\newblock In \emph{Proceedings of the International Conference on Machine
+  Learning (ICML)}, 2025.
+
+\bibitem[Freeman and Dale(2013)]{freeman2013}
+J.~B. Freeman and R.~Dale.
+\newblock Assessing bimodality to detect the presence of a dual cognitive
+  process.
+\newblock \emph{Behavior Research Methods}, 45\penalty0 (1):\penalty0 83--97,
+  2013.
+\newblock \doi{10.3758/s13428-012-0225-x}.
+
+\bibitem[Gao et~al.(2024)Gao, Zhang, Mouatadid, and Das]{gao2024spuq}
+X.~Gao, J.~Zhang, L.~Mouatadid, and K.~Das.
+\newblock {SPUQ}: Perturbation-based uncertainty quantification for large
+  language models.
+\newblock In \emph{Proceedings of the 18th Conference of the European Chapter
+  of the Association for Computational Linguistics (EACL)}, pages 2336--2346,
+  2024.
+\newblock \doi{10.18653/v1/2024.eacl-long.143}.
+
+\bibitem[Ghasemabadi and Niu(2025)]{ghasemabadi2025gnosis}
+A.~Ghasemabadi and D.~Niu.
+\newblock Gnosis: Can {LLMs} predict their own failures? self-awareness via
+  internal circuits.
+\newblock \emph{arXiv preprint arXiv:2512.20578}, 2025.
+
+\bibitem[Hartigan and Hartigan(1985)]{hartigan1985}
+J.~A. Hartigan and P.~M. Hartigan.
+\newblock The dip test of unimodality.
+\newblock \emph{The Annals of Statistics}, 13\penalty0 (1):\penalty0 70--84,
+  1985.
+\newblock \doi{10.1214/aos/1176346577}.
+
+\bibitem[Hazra et~al.(2025)]{hazra2025}
+T.~Hazra et~al.
+\newblock Have large language models learned to reason? a characterization via
+  3-{SAT} phase transition.
+\newblock In \emph{Proceedings of the Conference on Language Modeling (COLM)},
+  2025.
+
+\bibitem[Huang et~al.(2025)]{huang2025survey}
+J.~Huang et~al.
+\newblock A survey on uncertainty quantification of large language models:
+  Taxonomy, open research challenges, and future directions.
+\newblock \emph{ACM Computing Surveys}, 57\penalty0 (9):\penalty0 1--38, 2025.
+\newblock \doi{10.1145/3744238}.
+
+\bibitem[Kang et~al.(2019)Kang, Shin, and Kim]{kang2019}
+K.~Kang, D.~Shin, and S.~Kim.
+\newblock Development of {Hartigan's} dip statistic with bimodality coefficient
+  to assess multimodality of distributions.
+\newblock \emph{Mathematical Problems in Engineering}, 2019:\penalty0 4819475,
+  2019.
+\newblock \doi{10.1155/2019/4819475}.
+
+\bibitem[Kuehn(2011)]{kuehn2011}
+C.~Kuehn.
+\newblock A mathematical framework for critical transitions: bifurcations,
+  fast--slow systems and stochastic dynamics.
+\newblock \emph{Physica D: Nonlinear Phenomena}, 240\penalty0 (12):\penalty0
+  1020--1035, 2011.
+\newblock \doi{10.1016/j.physd.2011.02.012}.
+
+\bibitem[Liu et~al.(2025)Liu, Liu, and Gore]{liu2025superposition}
+Z.~Liu, Z.~Liu, and J.~Gore.
+\newblock Superposition yields robust neural scaling.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2025.
+\newblock Best Paper Runner-Up.
+
+\bibitem[O'Brien et~al.(2023)O'Brien, Deb, Gal, Thackeray, Dutta, Matsuzaki,
+  May, and Clements]{obrien2023}
+D.~A. O'Brien, S.~Deb, G.~Gal, S.~J. Thackeray, P.~S. Dutta, S.-i. Matsuzaki,
+  L.~May, and C.~F. Clements.
+\newblock Early warning signals have limited applicability to empirical lake
+  data.
+\newblock \emph{Nature Communications}, 14\penalty0 (1):\penalty0 7942, 2023.
+\newblock \doi{10.1038/s41467-023-43744-8}.
+
+\bibitem[Pres et~al.(2025)Pres, Mazzolini, Metzner, Walczak, and
+  Mora]{pres2025phase}
+J.~Pres, A.~Mazzolini, M.~Metzner, A.~Walczak, and T.~Mora.
+\newblock Phase transitions in the output distribution of large language
+  models.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}, 2025.
+
+\bibitem[Ratcliff and McKoon(2008)]{ratcliff2008}
+R.~Ratcliff and G.~McKoon.
+\newblock The diffusion decision model: theory and data for two-choice decision
+  tasks.
+\newblock \emph{Neural Computation}, 20\penalty0 (4):\penalty0 873--922, 2008.
+\newblock \doi{10.1162/neco.2008.12-06-420}.
+
+\bibitem[Reimers and Gurevych(2019)]{reimers2019}
+N.~Reimers and I.~Gurevych.
+\newblock Sentence-{BERT}: Sentence embeddings using siamese {BERT}-networks.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 3982--3992, 2019.
+\newblock \doi{10.18653/v1/D19-1410}.
+
+\bibitem[Sam et~al.(2025)Sam, Kishore, et~al.]{sam2025predicting}
+F.~A. Sam, A.~Kishore, et~al.
+\newblock Predicting the performance of black-box {LLMs} through follow-up
+  queries.
+\newblock \emph{arXiv preprint arXiv:2501.01558}, 2025.
+
+\bibitem[Scheffer et~al.(2009)Scheffer, Bascompte, Brock, Brovkin, Carpenter,
+  Dakos, Held, van Nes, Rietkerk, and Sugihara]{scheffer2009}
+M.~Scheffer, J.~Bascompte, W.~A. Brock, V.~Brovkin, S.~R. Carpenter, V.~Dakos,
+  H.~Held, E.~H. van Nes, M.~Rietkerk, and G.~Sugihara.
+\newblock Early-warning signals for critical transitions.
+\newblock \emph{Nature}, 461\penalty0 (7260):\penalty0 53--59, 2009.
+\newblock \doi{10.1038/nature08227}.
+
+\bibitem[Scheffer et~al.(2012)Scheffer, Carpenter, Lenton, Bascompte, Brock,
+  Dakos, van~de Koppel, van~de Leemput, Levin, van Nes, et~al.]{scheffer2012}
+M.~Scheffer, S.~R. Carpenter, T.~M. Lenton, J.~Bascompte, W.~Brock, V.~Dakos,
+  J.~van~de Koppel, I.~A. van~de Leemput, S.~A. Levin, E.~H. van Nes, et~al.
+\newblock Anticipating critical transitions.
+\newblock \emph{Science}, 338\penalty0 (6105):\penalty0 344--348, 2012.
+\newblock \doi{10.1126/science.1225244}.
+
+\bibitem[Wang et~al.(2012)Wang, Dearing, Langdon, Zhang, Yang, Dakos, and
+  Scheffer]{wang2012flickering}
+R.~Wang, J.~A. Dearing, P.~G. Langdon, E.~Zhang, X.~Yang, V.~Dakos, and
+  M.~Scheffer.
+\newblock Flickering gives early warning signals of a critical transition to a
+  eutrophic lake state.
+\newblock \emph{Nature}, 492\penalty0 (7429):\penalty0 419--422, 2012.
+\newblock \doi{10.1038/nature11655}.
+
+\bibitem[Wang et~al.(2023)Wang, Wei, Schuurmans, Le, Chi, Narang, Chowdhery,
+  and Zhou]{wang2023selfconsistency}
+X.~Wang, J.~Wei, D.~Schuurmans, Q.~Le, E.~Chi, S.~Narang, A.~Chowdhery, and
+  D.~Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}, 2023.
+
+\bibitem[Wu et~al.(2025)]{wu2025modec}
+J.~Wu et~al.
+\newblock Mode-conditioning unlocks superior test-time scaling.
+\newblock \emph{arXiv preprint arXiv:2512.01127}, 2025.
+
+\bibitem[Yang et~al.(2024)]{yang2024verbalized}
+S.~Yang et~al.
+\newblock On verbalized confidence scores for {LLMs}.
+\newblock \emph{arXiv preprint arXiv:2412.14737}, 2024.
+
+\bibitem[Zhang et~al.(2025)]{zhang2025verbalized}
+T.~Zhang et~al.
+\newblock Verbalized sampling: How to mitigate mode collapse and unlock {LLM}
+  diversity.
+\newblock \emph{arXiv preprint arXiv:2510.01171}, 2025.
+
+\bibitem[Zhang et~al.(2026)]{zhang2026logical}
+X.~Zhang et~al.
+\newblock Logical phase transitions: Understanding collapse in {LLM} logical
+  reasoning.
+\newblock \emph{arXiv preprint arXiv:2601.02902}, 2026.
+
+\bibitem[Zhuo et~al.(2024)Zhuo, Huang, Huang, Hu, Chen, Xiao, Luu, Kamp, Wang,
+  and Suri]{zhuo2024prosa}
+T.~Y. Zhuo, Z.~Huang, C.~Huang, J.~Hu, W.~Chen, Y.~Xiao, A.~T. Luu, M.~Kamp,
+  R.~Wang, and M.~Suri.
+\newblock {ProSA}: Assessing and understanding the prompt sensitivity of
+  {LLMs}.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2024}, 2024.
+
+\end{thebibliography}

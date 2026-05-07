@@ -1,0 +1,13 @@
+{
+  "id": "eval_id1_it3__opus",
+  "type": "code",
+  "title": "Cross-Task CSD Leading Indicator Evaluation with Bootstrap CIs, Alternative Variance Models, and Negative Controls",
+  "summary": "Demo notebook evaluating CSD (Critical Slowing Down) indicators as leading indicators of LLM reasoning collapse across multiple task families. Implements 6 analysis blocks: leading indicator detection with bootstrap CIs, alternative variance model comparison (AIC/BIC), cross-task consistency via Fisher's method, Cohen's d effect sizes, negative controls, and 3-criterion hypothesis verdict. Uses 64 curated examples from 4 datasets (2 positive pairs: arithmetic/llama and graph_coloring/gpt-4o-mini; 2 negative controls: syllogistic/ministral-3b and multi_hop/llama).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_3/gen_art/eval_id1_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id1_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id1_it3__opus/eval_code_demo.ipynb"
+}

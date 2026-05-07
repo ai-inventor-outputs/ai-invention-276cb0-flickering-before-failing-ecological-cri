@@ -1,0 +1,13 @@
+{
+  "id": "eval_id2_it6__opus",
+  "type": "code",
+  "title": "CSD Predictive Independence Ablation: Do Ecological Indicators Carry Signal Beyond Difficulty Position?",
+  "summary": "Demo notebook running a 5-ablation study testing whether CSD ecological indicators carry predictive signal beyond difficulty position. Uses 100 examples from the csd_features_unified dataset across 5 model-task pairs. Evaluates 3 classifiers (LogReg/RF/SVM) x 3 CV schemes (LOPO/LOTO/LOMO) with 500-bootstrap CIs and 50-iteration permutation test. Key findings: CSD contribution ratio ~0.24 (modest unique signal), pure CSD F1 ~0.70 beats random (0.47), difficulty-only F1 ~0.84 is strong, dynamics add meaningful lift. Produces grouped bar chart of ablation F1s and horizontal bar chart of marginal CSD feature contributions.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_6/gen_art/eval_id2_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id2_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id2_it6__opus/eval_code_demo.ipynb"
+}

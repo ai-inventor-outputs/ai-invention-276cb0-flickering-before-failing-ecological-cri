@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it4__opus",
+  "type": "code",
+  "title": "SPUQ Baseline Implementation + CSD Classifier with Task-Normalized Features",
+  "summary": "Demo notebook comparing CSD (Critical Slowing Down) indicators vs SPUQ (paraphrase-based uncertainty) for detecting LLM capability boundaries. Loads pre-computed CSD features for 108 data points across 5 model-task pairs (arithmetic and graph coloring), applies 4 normalization strategies (z-score, relative difficulty, percentile-rank, delta features), trains LogReg/RF/SVM classifiers with LOPO/LOTO/LOMO cross-validation, and visualizes results. Reproduces the key finding: CSD with z-score normalization + relative difficulty achieves LOPO F1=0.949 at zero extra API cost.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id2_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id2_it4__opus/method_code_demo.ipynb"
+}

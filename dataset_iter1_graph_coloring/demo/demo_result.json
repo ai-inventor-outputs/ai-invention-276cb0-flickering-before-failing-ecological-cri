@@ -1,0 +1,13 @@
+{
+  "id": "data_id4_it1__opus",
+  "type": "code",
+  "title": "Graph Coloring Constraint Satisfaction Dataset with Parameterized Difficulty",
+  "summary": "Demo notebook for the Graph Coloring Constraint Satisfaction Dataset. Loads a curated 10-example subset spanning difficulty levels 1-20, explores the data structure, verifies all colorings using an exact backtracking solver, regenerates 400 new problems across all 20 difficulty levels (full original parameters), and visualizes a sample graph coloring alongside the difficulty progression (nodes/edges vs level). Runs in ~2m10s. Uses networkx for graph operations and matplotlib for visualization.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_1/gen_art/data_id4_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id4_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id4_it1__opus/data_code_demo.ipynb"
+}

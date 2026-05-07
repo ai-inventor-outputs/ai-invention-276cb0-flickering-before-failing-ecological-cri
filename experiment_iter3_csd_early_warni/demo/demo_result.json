@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it3__opus",
+  "type": "code",
+  "title": "CSD Early Warning Classifier: Boundary Prediction with Cross-Task/Cross-Model Evaluation",
+  "summary": "Demo notebook for the CSD Early Warning Classifier experiment. Builds binary classifiers predicting capability boundary proximity using 6 CSD indicator features plus delta/trend extensions. Evaluates via LOPO, LOTO, and LOMO cross-validation across 5 model-task pairs (91 rows). Compares 11 feature set variants with LogReg and RF classifiers against single-feature baselines. Includes feature importance analysis and 3-panel visualization (F1 comparison, cross-CV-scheme results, feature importances). Data: curated subset of arithmetic and graph coloring CSD indicators.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id2_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id2_it3__opus/method_code_demo.ipynb"
+}

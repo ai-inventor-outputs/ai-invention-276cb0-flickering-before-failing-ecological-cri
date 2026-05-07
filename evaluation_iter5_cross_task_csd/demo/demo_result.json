@@ -1,0 +1,13 @@
+{
+  "id": "eval_id5_it5__opus",
+  "type": "code",
+  "title": "Cross-Task CSD Classifier Transfer Failure Diagnosis & Task-Agnostic Feature Engineering",
+  "summary": "Demo notebook reproducing the cross-task CSD classifier transfer failure diagnosis evaluation. Loads 108 CSD feature rows (5 model-task pairs across arithmetic and graph coloring tasks) and runs 4 analyses: (1) feature distribution shift metrics (Wasserstein, KS, Cohen's d, KL divergence), (2) 5 task-agnostic normalization strategies tested with 3 classifiers, (3) directional LOTO transfer diagnosis with few-shot calibration curves, (4) deployment recommendations with method ranking. Visualization includes feature shift bar charts, method ranking, top normalization strategies, and calibration curves. Uses original full parameters (108 rows is small enough to run within 5 min).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_5/gen_art/eval_id5_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id5_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id5_it5__opus/eval_code_demo.ipynb"
+}

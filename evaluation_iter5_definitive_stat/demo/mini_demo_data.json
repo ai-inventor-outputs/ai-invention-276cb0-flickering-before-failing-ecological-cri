@@ -1,0 +1,2278 @@
+{
+  "arith_data": {
+    "datasets": [
+      {
+        "dataset": "csd_indicators__llama-3.1-8b-instruct",
+        "examples": [
+          {
+            "predict_accuracy": "0.6",
+            "predict_csd_variance": "0.310874",
+            "predict_dip_statistic": "0.124337",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.3512",
+            "predict_bimodality_coefficient": "0.6224",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 2,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.62",
+            "predict_csd_variance": "0.22555",
+            "predict_dip_statistic": "0.15034",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.2998",
+            "predict_bimodality_coefficient": "0.7329",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 3,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.78",
+            "predict_csd_variance": "0.249351",
+            "predict_dip_statistic": "0.103236",
+            "predict_dip_pvalue": "0.0002",
+            "predict_silhouette_k2": "0.2513",
+            "predict_bimodality_coefficient": "0.647",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 4,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.64",
+            "predict_csd_variance": "0.196748",
+            "predict_dip_statistic": "0.070435",
+            "predict_dip_pvalue": "0.0493",
+            "predict_silhouette_k2": "0.2432",
+            "predict_bimodality_coefficient": "0.6249",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 5,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.78",
+            "predict_csd_variance": "0.253758",
+            "predict_dip_statistic": "0.063093",
+            "predict_dip_pvalue": "0.1299",
+            "predict_silhouette_k2": "0.2948",
+            "predict_bimodality_coefficient": "0.3968",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 6,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.217531",
+            "predict_dip_statistic": "0.07298",
+            "predict_dip_pvalue": "0.0374",
+            "predict_silhouette_k2": "0.3125",
+            "predict_bimodality_coefficient": "0.6417",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 7,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.76",
+            "predict_csd_variance": "0.241725",
+            "predict_dip_statistic": "0.110365",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.2501",
+            "predict_bimodality_coefficient": "0.6613",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 8,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.78",
+            "predict_csd_variance": "0.207435",
+            "predict_dip_statistic": "0.073996",
+            "predict_dip_pvalue": "0.0326",
+            "predict_silhouette_k2": "0.2335",
+            "predict_bimodality_coefficient": "0.5718",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 9,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.68",
+            "predict_csd_variance": "0.171845",
+            "predict_dip_statistic": "0.069885",
+            "predict_dip_pvalue": "0.0536",
+            "predict_silhouette_k2": "0.2906",
+            "predict_bimodality_coefficient": "0.6429",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 10,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.6",
+            "predict_csd_variance": "0.1604",
+            "predict_dip_statistic": "0.076278",
+            "predict_dip_pvalue": "0.022",
+            "predict_silhouette_k2": "0.2505",
+            "predict_bimodality_coefficient": "0.5909",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 11,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.201062",
+            "predict_dip_statistic": "0.090494",
+            "predict_dip_pvalue": "0.002",
+            "predict_silhouette_k2": "0.2489",
+            "predict_bimodality_coefficient": "0.6034",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 12,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.56",
+            "predict_csd_variance": "0.164475",
+            "predict_dip_statistic": "0.06135",
+            "predict_dip_pvalue": "0.1585",
+            "predict_silhouette_k2": "0.2009",
+            "predict_bimodality_coefficient": "0.5526",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 13,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.7143",
+            "predict_csd_variance": "0.185122",
+            "predict_dip_statistic": "0.065051",
+            "predict_dip_pvalue": "0.1763",
+            "predict_silhouette_k2": "0.258",
+            "predict_bimodality_coefficient": "0.6192",
+            "predict_disagreement_rate": "0.8095",
+            "metadata_difficulty_level": 14,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 42,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.78",
+            "predict_csd_variance": "0.162721",
+            "predict_dip_statistic": "0.067596",
+            "predict_dip_pvalue": "0.075",
+            "predict_silhouette_k2": "0.2751",
+            "predict_bimodality_coefficient": "0.5327",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 15,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.7",
+            "predict_csd_variance": "0.174117",
+            "predict_dip_statistic": "0.068969",
+            "predict_dip_pvalue": "0.0622",
+            "predict_silhouette_k2": "0.2895",
+            "predict_bimodality_coefficient": "0.5594",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 16,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.7",
+            "predict_csd_variance": "0.14107",
+            "predict_dip_statistic": "0.085341",
+            "predict_dip_pvalue": "0.005",
+            "predict_silhouette_k2": "0.36",
+            "predict_bimodality_coefficient": "0.6602",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 17,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.6",
+            "predict_csd_variance": "0.192244",
+            "predict_dip_statistic": "0.051454",
+            "predict_dip_pvalue": "0.4058",
+            "predict_silhouette_k2": "0.2931",
+            "predict_bimodality_coefficient": "0.7161",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 18,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.7",
+            "predict_csd_variance": "0.238074",
+            "predict_dip_statistic": "0.07867",
+            "predict_dip_pvalue": "0.0156",
+            "predict_silhouette_k2": "0.2891",
+            "predict_bimodality_coefficient": "0.7292",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 19,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.46",
+            "predict_csd_variance": "0.189244",
+            "predict_dip_statistic": "0.09581",
+            "predict_dip_pvalue": "0.0007",
+            "predict_silhouette_k2": "0.2199",
+            "predict_bimodality_coefficient": "0.5384",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 20,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.64",
+            "predict_csd_variance": "0.183859",
+            "predict_dip_statistic": "0.106894",
+            "predict_dip_pvalue": "0.0001",
+            "predict_silhouette_k2": "0.234",
+            "predict_bimodality_coefficient": "0.4572",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 21,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.58",
+            "predict_csd_variance": "0.200673",
+            "predict_dip_statistic": "0.054482",
+            "predict_dip_pvalue": "0.3103",
+            "predict_silhouette_k2": "0.2313",
+            "predict_bimodality_coefficient": "0.6315",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 22,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.18808",
+            "predict_dip_statistic": "0.086664",
+            "predict_dip_pvalue": "0.0042",
+            "predict_silhouette_k2": "0.2588",
+            "predict_bimodality_coefficient": "0.667",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 23,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.82",
+            "predict_csd_variance": "0.182621",
+            "predict_dip_statistic": "0.07224",
+            "predict_dip_pvalue": "0.0408",
+            "predict_silhouette_k2": "0.2161",
+            "predict_bimodality_coefficient": "0.5336",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 24,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          },
+          {
+            "predict_accuracy": "0.8",
+            "predict_csd_variance": "0.193169",
+            "predict_dip_statistic": "0.05437",
+            "predict_dip_pvalue": "0.3138",
+            "predict_silhouette_k2": "0.2629",
+            "predict_bimodality_coefficient": "0.5458",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 25,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 20
+          }
+        ]
+      },
+      {
+        "dataset": "csd_indicators__gemini-2.0-flash-001",
+        "examples": [
+          {
+            "predict_accuracy": "0.5",
+            "predict_csd_variance": "0.305137",
+            "predict_dip_statistic": "0.155132",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.4149",
+            "predict_bimodality_coefficient": "0.7056",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 2,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.56",
+            "predict_csd_variance": "0.220639",
+            "predict_dip_statistic": "0.115005",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.3119",
+            "predict_bimodality_coefficient": "0.7454",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 3,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.62",
+            "predict_csd_variance": "0.226287",
+            "predict_dip_statistic": "0.130964",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.3252",
+            "predict_bimodality_coefficient": "0.6426",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 4,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.52",
+            "predict_csd_variance": "0.1868",
+            "predict_dip_statistic": "0.077822",
+            "predict_dip_pvalue": "0.0175",
+            "predict_silhouette_k2": "0.2543",
+            "predict_bimodality_coefficient": "0.6919",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 5,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.56",
+            "predict_csd_variance": "0.248603",
+            "predict_dip_statistic": "0.087524",
+            "predict_dip_pvalue": "0.0037",
+            "predict_silhouette_k2": "0.3574",
+            "predict_bimodality_coefficient": "0.5",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 6,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.58",
+            "predict_csd_variance": "0.203621",
+            "predict_dip_statistic": "0.085822",
+            "predict_dip_pvalue": "0.0047",
+            "predict_silhouette_k2": "0.3806",
+            "predict_bimodality_coefficient": "0.7358",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 7,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.66",
+            "predict_csd_variance": "0.244",
+            "predict_dip_statistic": "0.10584",
+            "predict_dip_pvalue": "0.0001",
+            "predict_silhouette_k2": "0.2703",
+            "predict_bimodality_coefficient": "0.5117",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 8,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.62",
+            "predict_csd_variance": "0.211878",
+            "predict_dip_statistic": "0.084387",
+            "predict_dip_pvalue": "0.0061",
+            "predict_silhouette_k2": "0.2756",
+            "predict_bimodality_coefficient": "0.5956",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 9,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.54",
+            "predict_csd_variance": "0.175533",
+            "predict_dip_statistic": "0.089268",
+            "predict_dip_pvalue": "0.0027",
+            "predict_silhouette_k2": "0.2697",
+            "predict_bimodality_coefficient": "0.6971",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 10,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.54",
+            "predict_csd_variance": "0.175544",
+            "predict_dip_statistic": "0.067992",
+            "predict_dip_pvalue": "0.0713",
+            "predict_silhouette_k2": "0.2938",
+            "predict_bimodality_coefficient": "0.8548",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 11,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.52",
+            "predict_csd_variance": "0.218563",
+            "predict_dip_statistic": "0.112989",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.2387",
+            "predict_bimodality_coefficient": "0.6381",
+            "predict_disagreement_rate": "0.88",
+            "metadata_difficulty_level": 12,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.7",
+            "predict_csd_variance": "0.139631",
+            "predict_dip_statistic": "0.057734",
+            "predict_dip_pvalue": "0.2271",
+            "predict_silhouette_k2": "0.2026",
+            "predict_bimodality_coefficient": "0.4734",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 13,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.64",
+            "predict_csd_variance": "0.188312",
+            "predict_dip_statistic": "0.09092",
+            "predict_dip_pvalue": "0.0019",
+            "predict_silhouette_k2": "0.2747",
+            "predict_bimodality_coefficient": "0.6548",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 14,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.45",
+            "predict_csd_variance": "0.166589",
+            "predict_dip_statistic": "0.055669",
+            "predict_dip_pvalue": "0.4425",
+            "predict_silhouette_k2": "0.3045",
+            "predict_bimodality_coefficient": "0.7413",
+            "predict_disagreement_rate": "0.825",
+            "metadata_difficulty_level": 15,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 40,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.62",
+            "predict_csd_variance": "0.146898",
+            "predict_dip_statistic": "0.048373",
+            "predict_dip_pvalue": "0.5187",
+            "predict_silhouette_k2": "0.1817",
+            "predict_bimodality_coefficient": "0.4858",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 16,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.165487",
+            "predict_dip_statistic": "0.075826",
+            "predict_dip_pvalue": "0.0241",
+            "predict_silhouette_k2": "0.2482",
+            "predict_bimodality_coefficient": "0.4812",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 17,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.17105",
+            "predict_dip_statistic": "0.072337",
+            "predict_dip_pvalue": "0.0404",
+            "predict_silhouette_k2": "0.2481",
+            "predict_bimodality_coefficient": "0.5588",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 18,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.52",
+            "predict_csd_variance": "0.231772",
+            "predict_dip_statistic": "0.07191",
+            "predict_dip_pvalue": "0.0424",
+            "predict_silhouette_k2": "0.3162",
+            "predict_bimodality_coefficient": "0.7805",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 19,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.54",
+            "predict_csd_variance": "0.181084",
+            "predict_dip_statistic": "0.07643",
+            "predict_dip_pvalue": "0.0213",
+            "predict_silhouette_k2": "0.2067",
+            "predict_bimodality_coefficient": "0.4961",
+            "predict_disagreement_rate": "0.86",
+            "metadata_difficulty_level": 20,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.52",
+            "predict_csd_variance": "0.173433",
+            "predict_dip_statistic": "0.078282",
+            "predict_dip_pvalue": "0.0165",
+            "predict_silhouette_k2": "0.2549",
+            "predict_bimodality_coefficient": "0.5684",
+            "predict_disagreement_rate": "0.88",
+            "metadata_difficulty_level": 21,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.76",
+            "predict_csd_variance": "0.161123",
+            "predict_dip_statistic": "0.070183",
+            "predict_dip_pvalue": "0.0508",
+            "predict_silhouette_k2": "0.3175",
+            "predict_bimodality_coefficient": "0.5254",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 22,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.5",
+            "predict_csd_variance": "0.169557",
+            "predict_dip_statistic": "0.070987",
+            "predict_dip_pvalue": "0.0467",
+            "predict_silhouette_k2": "0.2459",
+            "predict_bimodality_coefficient": "0.6085",
+            "predict_disagreement_rate": "0.82",
+            "metadata_difficulty_level": 23,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.64",
+            "predict_csd_variance": "0.160545",
+            "predict_dip_statistic": "0.071012",
+            "predict_dip_pvalue": "0.0466",
+            "predict_silhouette_k2": "0.2173",
+            "predict_bimodality_coefficient": "0.53",
+            "predict_disagreement_rate": "0.84",
+            "metadata_difficulty_level": 24,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          },
+          {
+            "predict_accuracy": "0.68",
+            "predict_csd_variance": "0.169776",
+            "predict_dip_statistic": "0.064827",
+            "predict_dip_pvalue": "0.1014",
+            "predict_silhouette_k2": "0.248",
+            "predict_bimodality_coefficient": "0.6191",
+            "predict_disagreement_rate": "0.8",
+            "metadata_difficulty_level": 25,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_num_responses": 50,
+            "metadata_d_star": 15
+          }
+        ]
+      }
+    ]
+  },
+  "gc_data": {
+    "metadata": {
+      "analysis": {
+        "models": [
+          {
+            "model": "openai/gpt-4o-mini",
+            "d_star": 10,
+            "scaling_exponent": 0.0887,
+            "scaling_r_squared": 0.5124,
+            "theoretical_exponent": -0.5,
+            "exponent_in_range": false,
+            "leading_indicators": {
+              "variance_kendall_tau": -0.4444,
+              "variance_kendall_pval": 0.119439
+            }
+          },
+          {
+            "model": "google/gemini-2.0-flash-001",
+            "d_star": 14,
+            "scaling_exponent": -0.1147,
+            "scaling_r_squared": 0.1811,
+            "theoretical_exponent": -0.5,
+            "exponent_in_range": false,
+            "leading_indicators": {
+              "dip_first_significant": 4,
+              "dip_lead_time": 10,
+              "variance_kendall_tau": 0.0256,
+              "variance_kendall_pval": 0.952362
+            }
+          },
+          {
+            "model": "google/gemini-2.0-flash-lite-001",
+            "d_star": 11,
+            "scaling_exponent": 0.0051,
+            "scaling_r_squared": 0.0004,
+            "theoretical_exponent": -0.5,
+            "exponent_in_range": false,
+            "leading_indicators": {
+              "variance_kendall_tau": -0.1111,
+              "variance_kendall_pval": 0.72749
+            }
+          }
+        ]
+      }
+    },
+    "datasets": [
+      {
+        "dataset": "graph_coloring_csd_gemini-2.0-flash-001",
+        "examples": [
+          {
+            "metadata_difficulty_level": 1,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.125211,
+            "metadata_csd_dip_statistic": 0.056718,
+            "metadata_csd_dip_pvalue": 0.252485,
+            "metadata_csd_silhouette_score": 0.212257,
+            "metadata_csd_bimodality_coefficient": 0.6885,
+            "metadata_csd_disagreement_rate": 0.52
+          },
+          {
+            "metadata_difficulty_level": 2,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.137834,
+            "metadata_csd_dip_statistic": 0.047733,
+            "metadata_csd_dip_pvalue": 0.543704,
+            "metadata_csd_silhouette_score": 0.207687,
+            "metadata_csd_bimodality_coefficient": 0.558391,
+            "metadata_csd_disagreement_rate": 0.72
+          },
+          {
+            "metadata_difficulty_level": 3,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.94,
+            "metadata_csd_embedding_variance": 0.142042,
+            "metadata_csd_dip_statistic": 0.047672,
+            "metadata_csd_dip_pvalue": 0.54607,
+            "metadata_csd_silhouette_score": 0.155088,
+            "metadata_csd_bimodality_coefficient": 0.471968,
+            "metadata_csd_disagreement_rate": 0.7
+          },
+          {
+            "metadata_difficulty_level": 4,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.138483,
+            "metadata_csd_dip_statistic": 0.072636,
+            "metadata_csd_dip_pvalue": 0.038991,
+            "metadata_csd_silhouette_score": 0.163096,
+            "metadata_csd_bimodality_coefficient": 0.572122,
+            "metadata_csd_disagreement_rate": 0.86
+          },
+          {
+            "metadata_difficulty_level": 5,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.94,
+            "metadata_csd_embedding_variance": 0.13768,
+            "metadata_csd_dip_statistic": 0.069165,
+            "metadata_csd_dip_pvalue": 0.06034,
+            "metadata_csd_silhouette_score": 0.192659,
+            "metadata_csd_bimodality_coefficient": 0.610032,
+            "metadata_csd_disagreement_rate": 0.84
+          },
+          {
+            "metadata_difficulty_level": 6,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.78,
+            "metadata_csd_embedding_variance": 0.146421,
+            "metadata_csd_dip_statistic": 0.046281,
+            "metadata_csd_dip_pvalue": 0.600454,
+            "metadata_csd_silhouette_score": 0.149244,
+            "metadata_csd_bimodality_coefficient": 0.548179,
+            "metadata_csd_disagreement_rate": 0.76
+          },
+          {
+            "metadata_difficulty_level": 7,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.88,
+            "metadata_csd_embedding_variance": 0.132343,
+            "metadata_csd_dip_statistic": 0.077791,
+            "metadata_csd_dip_pvalue": 0.017591,
+            "metadata_csd_silhouette_score": 0.167784,
+            "metadata_csd_bimodality_coefficient": 0.523335,
+            "metadata_csd_disagreement_rate": 0.82
+          },
+          {
+            "metadata_difficulty_level": 8,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.72,
+            "metadata_csd_embedding_variance": 0.154102,
+            "metadata_csd_dip_statistic": 0.042458,
+            "metadata_csd_dip_pvalue": 0.748601,
+            "metadata_csd_silhouette_score": 0.244173,
+            "metadata_csd_bimodality_coefficient": 0.514133,
+            "metadata_csd_disagreement_rate": 0.82
+          },
+          {
+            "metadata_difficulty_level": 9,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.140336,
+            "metadata_csd_dip_statistic": 0.059391,
+            "metadata_csd_dip_pvalue": 0.190669,
+            "metadata_csd_silhouette_score": 0.161283,
+            "metadata_csd_bimodality_coefficient": 0.642723,
+            "metadata_csd_disagreement_rate": 0.88
+          },
+          {
+            "metadata_difficulty_level": 10,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.74,
+            "metadata_csd_embedding_variance": 0.146155,
+            "metadata_csd_dip_statistic": 0.050639,
+            "metadata_csd_dip_pvalue": 0.435305,
+            "metadata_csd_silhouette_score": 0.157171,
+            "metadata_csd_bimodality_coefficient": 0.627696,
+            "metadata_csd_disagreement_rate": 0.9
+          },
+          {
+            "metadata_difficulty_level": 11,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.58,
+            "metadata_csd_embedding_variance": 0.148716,
+            "metadata_csd_dip_statistic": 0.048149,
+            "metadata_csd_dip_pvalue": 0.52743,
+            "metadata_csd_silhouette_score": 0.141126,
+            "metadata_csd_bimodality_coefficient": 0.474102,
+            "metadata_csd_disagreement_rate": 0.82
+          },
+          {
+            "metadata_difficulty_level": 12,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.86,
+            "metadata_csd_embedding_variance": 0.152553,
+            "metadata_csd_dip_statistic": 0.066964,
+            "metadata_csd_dip_pvalue": 0.080873,
+            "metadata_csd_silhouette_score": 0.165157,
+            "metadata_csd_bimodality_coefficient": 0.582209,
+            "metadata_csd_disagreement_rate": 0.88
+          },
+          {
+            "metadata_difficulty_level": 13,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.54,
+            "metadata_csd_embedding_variance": 0.198909,
+            "metadata_csd_dip_statistic": 0.049711,
+            "metadata_csd_dip_pvalue": 0.468872,
+            "metadata_csd_silhouette_score": 0.15406,
+            "metadata_csd_bimodality_coefficient": 0.46193,
+            "metadata_csd_disagreement_rate": 0.84
+          },
+          {
+            "metadata_difficulty_level": 14,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.4,
+            "metadata_csd_embedding_variance": 0.154417,
+            "metadata_csd_dip_statistic": 0.064769,
+            "metadata_csd_dip_pvalue": 0.102375,
+            "metadata_csd_silhouette_score": 0.164238,
+            "metadata_csd_bimodality_coefficient": 0.574446,
+            "metadata_csd_disagreement_rate": 0.86
+          },
+          {
+            "metadata_difficulty_level": 15,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.82,
+            "metadata_csd_embedding_variance": 0.166802,
+            "metadata_csd_dip_statistic": 0.075774,
+            "metadata_csd_dip_pvalue": 0.024363,
+            "metadata_csd_silhouette_score": 0.177937,
+            "metadata_csd_bimodality_coefficient": 0.563216,
+            "metadata_csd_disagreement_rate": 0.94
+          },
+          {
+            "metadata_difficulty_level": 16,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.58,
+            "metadata_csd_embedding_variance": 0.160293,
+            "metadata_csd_dip_statistic": 0.037301,
+            "metadata_csd_dip_pvalue": 0.908793,
+            "metadata_csd_silhouette_score": 0.137943,
+            "metadata_csd_bimodality_coefficient": 0.455884,
+            "metadata_csd_disagreement_rate": 0.86
+          },
+          {
+            "metadata_difficulty_level": 17,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.54,
+            "metadata_csd_embedding_variance": 0.17878,
+            "metadata_csd_dip_statistic": 0.060956,
+            "metadata_csd_dip_pvalue": 0.164976,
+            "metadata_csd_silhouette_score": 0.124737,
+            "metadata_csd_bimodality_coefficient": 0.493712,
+            "metadata_csd_disagreement_rate": 0.92
+          },
+          {
+            "metadata_difficulty_level": 18,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.36,
+            "metadata_csd_embedding_variance": 0.179218,
+            "metadata_csd_dip_statistic": 0.044657,
+            "metadata_csd_dip_pvalue": 0.664864,
+            "metadata_csd_silhouette_score": 0.175242,
+            "metadata_csd_bimodality_coefficient": 0.520251,
+            "metadata_csd_disagreement_rate": 0.94
+          },
+          {
+            "metadata_difficulty_level": 19,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.48,
+            "metadata_csd_embedding_variance": 0.17121,
+            "metadata_csd_dip_statistic": 0.034457,
+            "metadata_csd_dip_pvalue": 0.960566,
+            "metadata_csd_silhouette_score": 0.156878,
+            "metadata_csd_bimodality_coefficient": 0.499828,
+            "metadata_csd_disagreement_rate": 0.88
+          },
+          {
+            "metadata_difficulty_level": 20,
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_csd_accuracy": 0.26,
+            "metadata_csd_embedding_variance": 0.19918,
+            "metadata_csd_dip_statistic": 0.035944,
+            "metadata_csd_dip_pvalue": 0.936781,
+            "metadata_csd_silhouette_score": 0.130354,
+            "metadata_csd_bimodality_coefficient": 0.440966,
+            "metadata_csd_disagreement_rate": 0.96
+          }
+        ]
+      },
+      {
+        "dataset": "graph_coloring_csd_gemini-2.0-flash-lite-001",
+        "examples": [
+          {
+            "metadata_difficulty_level": 1,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.062511,
+            "metadata_csd_dip_statistic": 0.061213,
+            "metadata_csd_dip_pvalue": 0.160754,
+            "metadata_csd_silhouette_score": 0.270186,
+            "metadata_csd_bimodality_coefficient": 0.689635,
+            "metadata_csd_disagreement_rate": 0.56
+          },
+          {
+            "metadata_difficulty_level": 2,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.081018,
+            "metadata_csd_dip_statistic": 0.048325,
+            "metadata_csd_dip_pvalue": 0.520566,
+            "metadata_csd_silhouette_score": 0.242395,
+            "metadata_csd_bimodality_coefficient": 0.732526,
+            "metadata_csd_disagreement_rate": 0.72
+          },
+          {
+            "metadata_difficulty_level": 3,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.86,
+            "metadata_csd_embedding_variance": 0.081452,
+            "metadata_csd_dip_statistic": 0.038325,
+            "metadata_csd_dip_pvalue": 0.882142,
+            "metadata_csd_silhouette_score": 0.18896,
+            "metadata_csd_bimodality_coefficient": 0.550276,
+            "metadata_csd_disagreement_rate": 0.62
+          },
+          {
+            "metadata_difficulty_level": 4,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 1.0,
+            "metadata_csd_embedding_variance": 0.067285,
+            "metadata_csd_dip_statistic": 0.037073,
+            "metadata_csd_dip_pvalue": 0.913495,
+            "metadata_csd_silhouette_score": 0.107127,
+            "metadata_csd_bimodality_coefficient": 0.477512,
+            "metadata_csd_disagreement_rate": 0.78
+          },
+          {
+            "metadata_difficulty_level": 5,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.9,
+            "metadata_csd_embedding_variance": 0.085995,
+            "metadata_csd_dip_statistic": 0.031416,
+            "metadata_csd_dip_pvalue": 0.990025,
+            "metadata_csd_silhouette_score": 0.064605,
+            "metadata_csd_bimodality_coefficient": 0.791736,
+            "metadata_csd_disagreement_rate": 0.68
+          },
+          {
+            "metadata_difficulty_level": 6,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.64,
+            "metadata_csd_embedding_variance": 0.074176,
+            "metadata_csd_dip_statistic": 0.043683,
+            "metadata_csd_dip_pvalue": 0.703222,
+            "metadata_csd_silhouette_score": 0.136239,
+            "metadata_csd_bimodality_coefficient": 0.569626,
+            "metadata_csd_disagreement_rate": 0.84
+          },
+          {
+            "metadata_difficulty_level": 7,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.74,
+            "metadata_csd_embedding_variance": 0.071471,
+            "metadata_csd_dip_statistic": 0.036768,
+            "metadata_csd_dip_pvalue": 0.919787,
+            "metadata_csd_silhouette_score": 0.348517,
+            "metadata_csd_bimodality_coefficient": 0.705848,
+            "metadata_csd_disagreement_rate": 0.82
+          },
+          {
+            "metadata_difficulty_level": 8,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.78,
+            "metadata_csd_embedding_variance": 0.067032,
+            "metadata_csd_dip_statistic": 0.032693,
+            "metadata_csd_dip_pvalue": 0.981422,
+            "metadata_csd_silhouette_score": 0.282053,
+            "metadata_csd_bimodality_coefficient": 0.768071,
+            "metadata_csd_disagreement_rate": 0.82
+          },
+          {
+            "metadata_difficulty_level": 9,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.74,
+            "metadata_csd_embedding_variance": 0.059693,
+            "metadata_csd_dip_statistic": 0.064117,
+            "metadata_csd_dip_pvalue": 0.113081,
+            "metadata_csd_silhouette_score": 0.10685,
+            "metadata_csd_bimodality_coefficient": 0.537484,
+            "metadata_csd_disagreement_rate": 0.88
+          },
+          {
+            "metadata_difficulty_level": 10,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.6,
+            "metadata_csd_embedding_variance": 0.069658,
+            "metadata_csd_dip_statistic": 0.037432,
+            "metadata_csd_dip_pvalue": 0.906094,
+            "metadata_csd_silhouette_score": 0.273664,
+            "metadata_csd_bimodality_coefficient": 0.792358,
+            "metadata_csd_disagreement_rate": 0.86
+          },
+          {
+            "metadata_difficulty_level": 11,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.24,
+            "metadata_csd_embedding_variance": 0.059132,
+            "metadata_csd_dip_statistic": 0.038844,
+            "metadata_csd_dip_pvalue": 0.866606,
+            "metadata_csd_silhouette_score": 0.119806,
+            "metadata_csd_bimodality_coefficient": 0.444527,
+            "metadata_csd_disagreement_rate": 0.88
+          },
+          {
+            "metadata_difficulty_level": 12,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.62,
+            "metadata_csd_embedding_variance": 0.065463,
+            "metadata_csd_dip_statistic": 0.030388,
+            "metadata_csd_dip_pvalue": 0.991098,
+            "metadata_csd_silhouette_score": 0.433994,
+            "metadata_csd_bimodality_coefficient": 0.807108,
+            "metadata_csd_disagreement_rate": 0.84
+          },
+          {
+            "metadata_difficulty_level": 13,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.24,
+            "metadata_csd_embedding_variance": 0.054108,
+            "metadata_csd_dip_statistic": 0.041218,
+            "metadata_csd_dip_pvalue": 0.794532,
+            "metadata_csd_silhouette_score": 0.105699,
+            "metadata_csd_bimodality_coefficient": 0.459871,
+            "metadata_csd_disagreement_rate": 0.84
+          },
+          {
+            "metadata_difficulty_level": 14,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.14,
+            "metadata_csd_embedding_variance": 0.089022,
+            "metadata_csd_dip_statistic": 0.04598,
+            "metadata_csd_dip_pvalue": 0.612402,
+            "metadata_csd_silhouette_score": 0.262841,
+            "metadata_csd_bimodality_coefficient": 0.700842,
+            "metadata_csd_disagreement_rate": 0.92
+          },
+          {
+            "metadata_difficulty_level": 15,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.64,
+            "metadata_csd_embedding_variance": 0.072955,
+            "metadata_csd_dip_statistic": 0.043951,
+            "metadata_csd_dip_pvalue": 0.692845,
+            "metadata_csd_silhouette_score": 0.129231,
+            "metadata_csd_bimodality_coefficient": 0.496663,
+            "metadata_csd_disagreement_rate": 0.9
+          },
+          {
+            "metadata_difficulty_level": 16,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.46,
+            "metadata_csd_embedding_variance": 0.081687,
+            "metadata_csd_dip_statistic": 0.040724,
+            "metadata_csd_dip_pvalue": 0.81036,
+            "metadata_csd_silhouette_score": 0.104588,
+            "metadata_csd_bimodality_coefficient": 0.633433,
+            "metadata_csd_disagreement_rate": 0.9
+          },
+          {
+            "metadata_difficulty_level": 17,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.6,
+            "metadata_csd_embedding_variance": 0.092714,
+            "metadata_csd_dip_statistic": 0.033401,
+            "metadata_csd_dip_pvalue": 0.973755,
+            "metadata_csd_silhouette_score": 0.148303,
+            "metadata_csd_bimodality_coefficient": 0.306768,
+            "metadata_csd_disagreement_rate": 0.92
+          },
+          {
+            "metadata_difficulty_level": 18,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.3,
+            "metadata_csd_embedding_variance": 0.087492,
+            "metadata_csd_dip_statistic": 0.036494,
+            "metadata_csd_dip_pvalue": 0.92543,
+            "metadata_csd_silhouette_score": 0.344434,
+            "metadata_csd_bimodality_coefficient": 0.771021,
+            "metadata_csd_disagreement_rate": 0.88
+          },
+          {
+            "metadata_difficulty_level": 19,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.16,
+            "metadata_csd_embedding_variance": 0.093645,
+            "metadata_csd_dip_statistic": 0.038925,
+            "metadata_csd_dip_pvalue": 0.864185,
+            "metadata_csd_silhouette_score": 0.359851,
+            "metadata_csd_bimodality_coefficient": 0.55996,
+            "metadata_csd_disagreement_rate": 0.94
+          },
+          {
+            "metadata_difficulty_level": 20,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_csd_accuracy": 0.18,
+            "metadata_csd_embedding_variance": 0.113074,
+            "metadata_csd_dip_statistic": 0.063993,
+            "metadata_csd_dip_pvalue": 0.115119,
+            "metadata_csd_silhouette_score": 0.347232,
+            "metadata_csd_bimodality_coefficient": 0.787622,
+            "metadata_csd_disagreement_rate": 0.94
+          }
+        ]
+      }
+    ]
+  },
+  "syl_data": {
+    "metadata": {
+      "method_name": "CSD_sampling_syllogistic_extended",
+      "description": "Critical Slowing Down indicators computed from LLM response distributions across 22 difficulty levels (d=2-30) of syllogistic logic tasks with 3 weak LLMs. Tests flickering as leading indicator of reasoning collapse (SC1).",
+      "task_family": "syllogistic_logic",
+      "difficulty_range": [
+        2,
+        30
+      ],
+      "experiment_config": {
+        "models": [
+          "mistralai/ministral-3b-2512",
+          "meta-llama/llama-3.1-8b-instruct",
+          "google/gemini-2.0-flash-lite-001"
+        ],
+        "model_tiers": {
+          "mistralai/ministral-3b-2512": "small",
+          "meta-llama/llama-3.1-8b-instruct": "medium",
+          "google/gemini-2.0-flash-lite-001": "weak"
+        },
+        "n_difficulty_levels": 22,
+        "n_problems_per_level": 5,
+        "n_responses_per_problem": 10,
+        "n_total_per_model_level": 50,
+        "temperature": 0.8,
+        "embed_model": "all-MiniLM-L6-v2"
+      },
+      "total_cost": 0.4145986599999999,
+      "cost_by_model": {
+        "mistralai/ministral-3b-2512": 0.13300399999999996,
+        "google/gemini-2.0-flash-lite-001": 0.22370000000000018,
+        "meta-llama/llama-3.1-8b-instruct": 0.05789465999999993
+      },
+      "model_summaries": {
+        "mistralai/ministral-3b-2512": {
+          "tier": "small",
+          "d_star": 22,
+          "scaling": {
+            "alpha": 0.046009008746363246,
+            "r_squared": 0.08210820491649895,
+            "consistent_with_fold": false,
+            "theoretical_prediction": -0.5
+          },
+          "flickering": {
+            "flickering_dip": true,
+            "flickering_sil": false,
+            "flickering_bc": true,
+            "flickering_consensus": true,
+            "earliest_flickering_level": 2,
+            "lead_time": 20,
+            "n_high_acc_levels": 14
+          },
+          "mixture_corr": {
+            "pearson_r": -0.18651919300122807,
+            "p_value": 0.4059081063735147,
+            "n_levels": 22
+          },
+          "leading_var": {
+            "kendall_tau": -0.4725274725274726,
+            "p_value": 0.01927860024400203,
+            "is_leading": "False",
+            "lead_distance": 6,
+            "levels_tested": 14,
+            "accuracy_at_last_preboundary": 0.86
+          },
+          "leading_dip": {
+            "kendall_tau": 0.16483516483516486,
+            "p_value": 0.4505630133066889,
+            "is_leading": "False",
+            "lead_distance": 6,
+            "levels_tested": 14,
+            "accuracy_at_last_preboundary": 0.86
+          },
+          "leading_sil": {
+            "kendall_tau": -0.7142857142857144,
+            "p_value": 0.00014457073918879473,
+            "is_leading": "False",
+            "lead_distance": 6,
+            "levels_tested": 14,
+            "accuracy_at_last_preboundary": 0.86
+          },
+          "leading_dis": {
+            "kendall_tau": 0.2005001397084073,
+            "p_value": 0.33814269473405,
+            "is_leading": "False",
+            "lead_distance": 6,
+            "levels_tested": 14,
+            "accuracy_at_last_preboundary": 0.86
+          }
+        },
+        "meta-llama/llama-3.1-8b-instruct": {
+          "tier": "medium",
+          "d_star": null,
+          "scaling": {
+            "alpha": null,
+            "r_squared": null,
+            "consistent_with_fold": null,
+            "theoretical_prediction": -0.5
+          },
+          "flickering": {
+            "flickering_dip": true,
+            "flickering_sil": false,
+            "flickering_bc": true,
+            "flickering_consensus": true,
+            "earliest_flickering_level": 2,
+            "lead_time": 29,
+            "n_high_acc_levels": 8
+          },
+          "mixture_corr": {
+            "pearson_r": -0.21133185647817787,
+            "p_value": 0.3451202598640658,
+            "n_levels": 22
+          },
+          "leading_var": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          },
+          "leading_dip": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          },
+          "leading_sil": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          },
+          "leading_dis": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          }
+        },
+        "google/gemini-2.0-flash-lite-001": {
+          "tier": "weak",
+          "d_star": null,
+          "scaling": {
+            "alpha": null,
+            "r_squared": null,
+            "consistent_with_fold": null,
+            "theoretical_prediction": -0.5
+          },
+          "flickering": {
+            "flickering_dip": true,
+            "flickering_sil": true,
+            "flickering_bc": true,
+            "flickering_consensus": true,
+            "earliest_flickering_level": 2,
+            "lead_time": 29,
+            "n_high_acc_levels": 22
+          },
+          "mixture_corr": {
+            "pearson_r": -0.29928475980313735,
+            "p_value": 0.17602807247682178,
+            "n_levels": 22
+          },
+          "leading_var": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          },
+          "leading_dip": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          },
+          "leading_sil": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          },
+          "leading_dis": {
+            "is_leading": null,
+            "lead_distance": 0,
+            "kendall_tau": null,
+            "p_value": null,
+            "levels_tested": 0
+          }
+        }
+      },
+      "sc1_results": {
+        "any_flickering_detected": true,
+        "per_model": {
+          "mistralai/ministral-3b-2512": {
+            "flickering_dip": true,
+            "flickering_sil": false,
+            "flickering_bc": true,
+            "flickering_consensus": true,
+            "earliest_flickering_level": 2,
+            "lead_time": 20,
+            "n_high_acc_levels": 14
+          },
+          "meta-llama/llama-3.1-8b-instruct": {
+            "flickering_dip": true,
+            "flickering_sil": false,
+            "flickering_bc": true,
+            "flickering_consensus": true,
+            "earliest_flickering_level": 2,
+            "lead_time": 29,
+            "n_high_acc_levels": 8
+          },
+          "google/gemini-2.0-flash-lite-001": {
+            "flickering_dip": true,
+            "flickering_sil": true,
+            "flickering_bc": true,
+            "flickering_consensus": true,
+            "earliest_flickering_level": 2,
+            "lead_time": 29,
+            "n_high_acc_levels": 22
+          }
+        }
+      }
+    },
+    "datasets": [
+      {
+        "dataset": "syllogistic_logic_csd_extended",
+        "examples": [
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.45731118948163746",
+            "predict_dip_statistic": "0.07988417850048533",
+            "predict_dip_pvalue": "0.012930042151964138",
+            "predict_silhouette_k2": "0.25682106614112854",
+            "predict_bimodality_coefficient": "0.7877773510279076",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 2,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.492645963847704",
+            "predict_dip_statistic": "0.0759342839080664",
+            "predict_dip_pvalue": "0.023614024330065098",
+            "predict_silhouette_k2": "0.2852185368537903",
+            "predict_bimodality_coefficient": "0.5640605341682702",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 3,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.96",
+            "predict_csd_variance": "0.38529747564868216",
+            "predict_dip_statistic": "0.06887991235019225",
+            "predict_dip_pvalue": "0.06300219198105106",
+            "predict_silhouette_k2": "0.2628653049468994",
+            "predict_bimodality_coefficient": "0.6558962449876193",
+            "predict_disagreement_rate": "0.36",
+            "metadata_difficulty": 4,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.39430552169528466",
+            "predict_dip_statistic": "0.0676176232694877",
+            "predict_dip_pvalue": "0.0747769354973592",
+            "predict_silhouette_k2": "0.2299986034631729",
+            "predict_bimodality_coefficient": "0.6026228653641444",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 5,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.40135768782621983",
+            "predict_dip_statistic": "0.13669159621453925",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.2237524539232254",
+            "predict_bimodality_coefficient": "0.5701886953357264",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 6,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.38521537147136303",
+            "predict_dip_statistic": "0.08115412438976659",
+            "predict_dip_pvalue": "0.010101814188558156",
+            "predict_silhouette_k2": "0.22484125196933746",
+            "predict_bimodality_coefficient": "0.5829694155962689",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 7,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.3595420658967507",
+            "predict_dip_statistic": "0.0737248935999086",
+            "predict_dip_pvalue": "0.033912930463126933",
+            "predict_silhouette_k2": "0.21796585619449615",
+            "predict_bimodality_coefficient": "0.583022689768688",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 8,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.96",
+            "predict_csd_variance": "0.36036679464870436",
+            "predict_dip_statistic": "0.09492665305633897",
+            "predict_dip_pvalue": "0.0008773125708414486",
+            "predict_silhouette_k2": "0.22312676906585693",
+            "predict_bimodality_coefficient": "0.622943410256431",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 9,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.94",
+            "predict_csd_variance": "0.36204861298055546",
+            "predict_dip_statistic": "0.11027876426147071",
+            "predict_dip_pvalue": "2.8666095516216572e-05",
+            "predict_silhouette_k2": "0.21089749038219452",
+            "predict_bimodality_coefficient": "0.5668389773746054",
+            "predict_disagreement_rate": "0.33999999999999997",
+            "metadata_difficulty": 10,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.88",
+            "predict_csd_variance": "0.3468751143253943",
+            "predict_dip_statistic": "0.0747826046101013",
+            "predict_dip_pvalue": "0.02898249043645562",
+            "predict_silhouette_k2": "0.22897537052631378",
+            "predict_bimodality_coefficient": "0.704058977556759",
+            "predict_disagreement_rate": "0.43999999999999995",
+            "metadata_difficulty": 11,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.35754782982533334",
+            "predict_dip_statistic": "0.11009672255217012",
+            "predict_dip_pvalue": "3.0062056222246447e-05",
+            "predict_silhouette_k2": "0.20475198328495026",
+            "predict_bimodality_coefficient": "0.5505353364028648",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 12,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.88",
+            "predict_csd_variance": "0.34616391825579496",
+            "predict_dip_statistic": "0.09417490932071011",
+            "predict_dip_pvalue": "0.0009879469477016567",
+            "predict_silhouette_k2": "0.18548858165740967",
+            "predict_bimodality_coefficient": "0.6097424333503754",
+            "predict_disagreement_rate": "0.48",
+            "metadata_difficulty": 13,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.86",
+            "predict_csd_variance": "0.3345264567386353",
+            "predict_dip_statistic": "0.090968258673956",
+            "predict_dip_pvalue": "0.0018660073764827922",
+            "predict_silhouette_k2": "0.2076651155948639",
+            "predict_bimodality_coefficient": "0.6532139822736246",
+            "predict_disagreement_rate": "0.44897959183673475",
+            "metadata_difficulty": 14,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.9",
+            "predict_csd_variance": "0.38701252021058963",
+            "predict_dip_statistic": "0.07058347061967206",
+            "predict_dip_pvalue": "0.04855643653728703",
+            "predict_silhouette_k2": "0.2118729054927826",
+            "predict_bimodality_coefficient": "0.5577170934013026",
+            "predict_disagreement_rate": "0.45999999999999996",
+            "metadata_difficulty": 15,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.86",
+            "predict_csd_variance": "0.38751881839631663",
+            "predict_dip_statistic": "0.10240741879460666",
+            "predict_dip_pvalue": "0.00019485839260202642",
+            "predict_silhouette_k2": "0.18422608077526093",
+            "predict_bimodality_coefficient": "0.6305131683542065",
+            "predict_disagreement_rate": "0.33999999999999997",
+            "metadata_difficulty": 16,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.3700643752893076",
+            "predict_dip_statistic": "0.061372476748548774",
+            "predict_dip_pvalue": "0.15814147849574922",
+            "predict_silhouette_k2": "0.21334850788116455",
+            "predict_bimodality_coefficient": "0.7132116269498615",
+            "predict_disagreement_rate": "0.36734693877551017",
+            "metadata_difficulty": 18,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.3972812473249765",
+            "predict_dip_statistic": "0.05353639271324176",
+            "predict_dip_pvalue": "0.33989864676056947",
+            "predict_silhouette_k2": "0.1758858561515808",
+            "predict_bimodality_coefficient": "0.44613188182465846",
+            "predict_disagreement_rate": "0.4693877551020408",
+            "metadata_difficulty": 20,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.38",
+            "predict_csd_variance": "0.34967267322808937",
+            "predict_dip_statistic": "0.052015346702540134",
+            "predict_dip_pvalue": "0.38746695999089376",
+            "predict_silhouette_k2": "0.14591842889785767",
+            "predict_bimodality_coefficient": "0.48950817698079957",
+            "predict_disagreement_rate": "0.47916666666666663",
+            "metadata_difficulty": 22,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.68",
+            "predict_csd_variance": "0.3738429596295981",
+            "predict_dip_statistic": "0.051250971774338384",
+            "predict_dip_pvalue": "0.4131581918310825",
+            "predict_silhouette_k2": "0.18314945697784424",
+            "predict_bimodality_coefficient": "0.4352121992042203",
+            "predict_disagreement_rate": "0.28",
+            "metadata_difficulty": 24,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.41110702818691625",
+            "predict_dip_statistic": "0.06504323100336117",
+            "predict_dip_pvalue": "0.0987910928780823",
+            "predict_silhouette_k2": "0.17648212611675262",
+            "predict_bimodality_coefficient": "0.3865803935452531",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 26,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.62",
+            "predict_csd_variance": "0.4104983555074162",
+            "predict_dip_statistic": "0.1017296527984341",
+            "predict_dip_pvalue": "0.00023470451291485173",
+            "predict_silhouette_k2": "0.1678275614976883",
+            "predict_bimodality_coefficient": "0.5877433404858411",
+            "predict_disagreement_rate": "0.44897959183673475",
+            "metadata_difficulty": 28,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.46",
+            "predict_csd_variance": "0.41430705429596587",
+            "predict_dip_statistic": "0.06319165218153619",
+            "predict_dip_pvalue": "0.12827282555077058",
+            "predict_silhouette_k2": "0.15147753059864044",
+            "predict_bimodality_coefficient": "0.48842482520055114",
+            "predict_disagreement_rate": "0.26530612244897955",
+            "metadata_difficulty": 30,
+            "metadata_model": "mistralai/ministral-3b-2512",
+            "metadata_d_star": 22
+          },
+          {
+            "predict_accuracy": "0.92",
+            "predict_csd_variance": "0.5437660182488406",
+            "predict_dip_statistic": "0.0841425106538359",
+            "predict_dip_pvalue": "0.006398751152316362",
+            "predict_silhouette_k2": "0.29991617798805237",
+            "predict_bimodality_coefficient": "0.7257757034452923",
+            "predict_disagreement_rate": "0.31999999999999995",
+            "metadata_difficulty": 2,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.76",
+            "predict_csd_variance": "0.5395368682077955",
+            "predict_dip_statistic": "0.08650003605682068",
+            "predict_dip_pvalue": "0.004299193833925186",
+            "predict_silhouette_k2": "0.315321683883667",
+            "predict_bimodality_coefficient": "0.7378220585470077",
+            "predict_disagreement_rate": "0.36",
+            "metadata_difficulty": 3,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.86",
+            "predict_csd_variance": "0.42815194520820665",
+            "predict_dip_statistic": "0.11562353181333297",
+            "predict_dip_pvalue": "5.202593716613357e-06",
+            "predict_silhouette_k2": "0.293485552072525",
+            "predict_bimodality_coefficient": "0.6230983069170564",
+            "predict_disagreement_rate": "0.33999999999999997",
+            "metadata_difficulty": 4,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.8",
+            "predict_csd_variance": "0.44647836762072646",
+            "predict_dip_statistic": "0.15069888290931477",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.2423078566789627",
+            "predict_bimodality_coefficient": "0.7047954784307366",
+            "predict_disagreement_rate": "0.43999999999999995",
+            "metadata_difficulty": 5,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.94",
+            "predict_csd_variance": "0.4534832941926154",
+            "predict_dip_statistic": "0.13050326525840006",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.24840766191482544",
+            "predict_bimodality_coefficient": "0.6199730777063402",
+            "predict_disagreement_rate": "0.38",
+            "metadata_difficulty": 6,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.9",
+            "predict_csd_variance": "0.4539050106146084",
+            "predict_dip_statistic": "0.07386695125302488",
+            "predict_dip_pvalue": "0.03325073943715673",
+            "predict_silhouette_k2": "0.2148306518793106",
+            "predict_bimodality_coefficient": "0.538507931877279",
+            "predict_disagreement_rate": "0.40816326530612246",
+            "metadata_difficulty": 7,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.86",
+            "predict_csd_variance": "0.41161849606025563",
+            "predict_dip_statistic": "0.07268705111522951",
+            "predict_dip_pvalue": "0.038750754858005276",
+            "predict_silhouette_k2": "0.2097080647945404",
+            "predict_bimodality_coefficient": "0.4423377675960044",
+            "predict_disagreement_rate": "0.3877551020408163",
+            "metadata_difficulty": 8,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.88",
+            "predict_csd_variance": "0.43265796231063314",
+            "predict_dip_statistic": "0.07221289171094117",
+            "predict_dip_pvalue": "0.040961013126471046",
+            "predict_silhouette_k2": "0.22235074639320374",
+            "predict_bimodality_coefficient": "0.5759750818985804",
+            "predict_disagreement_rate": "0.4375",
+            "metadata_difficulty": 9,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.7",
+            "predict_csd_variance": "0.41330287467960924",
+            "predict_dip_statistic": "0.08318349019266293",
+            "predict_dip_pvalue": "0.007572403775811143",
+            "predict_silhouette_k2": "0.19955821335315704",
+            "predict_bimodality_coefficient": "0.5448956677304838",
+            "predict_disagreement_rate": "0.40816326530612246",
+            "metadata_difficulty": 10,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.88",
+            "predict_csd_variance": "0.4004294282883856",
+            "predict_dip_statistic": "0.0757787423833625",
+            "predict_dip_pvalue": "0.024339069405534097",
+            "predict_silhouette_k2": "0.17624424397945404",
+            "predict_bimodality_coefficient": "0.4566097346525176",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 11,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.64",
+            "predict_csd_variance": "0.44966918734774414",
+            "predict_dip_statistic": "0.10101745298022806",
+            "predict_dip_pvalue": "0.0002792748520671351",
+            "predict_silhouette_k2": "0.1720322221517563",
+            "predict_bimodality_coefficient": "0.5663713612804698",
+            "predict_disagreement_rate": "0.4042553191489362",
+            "metadata_difficulty": 12,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.88",
+            "predict_csd_variance": "0.38862456505693",
+            "predict_dip_statistic": "0.049099168701804106",
+            "predict_dip_pvalue": "0.49102517492387643",
+            "predict_silhouette_k2": "0.16678614914417267",
+            "predict_bimodality_coefficient": "0.5882893020483543",
+            "predict_disagreement_rate": "0.36",
+            "metadata_difficulty": 13,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.76",
+            "predict_csd_variance": "0.3918420744322926",
+            "predict_dip_statistic": "0.07951036841106672",
+            "predict_dip_pvalue": "0.01376253443121811",
+            "predict_silhouette_k2": "0.17209064960479736",
+            "predict_bimodality_coefficient": "0.5923420241588384",
+            "predict_disagreement_rate": "0.375",
+            "metadata_difficulty": 14,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.8",
+            "predict_csd_variance": "0.42072031789028164",
+            "predict_dip_statistic": "0.0556982720883803",
+            "predict_dip_pvalue": "0.27790798060691535",
+            "predict_silhouette_k2": "0.14988604187965393",
+            "predict_bimodality_coefficient": "0.6154665905649915",
+            "predict_disagreement_rate": "0.3125",
+            "metadata_difficulty": 15,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.3842657256827238",
+            "predict_dip_statistic": "0.06355525957619396",
+            "predict_dip_pvalue": "0.12230283338710879",
+            "predict_silhouette_k2": "0.18582621216773987",
+            "predict_bimodality_coefficient": "0.7995638607655081",
+            "predict_disagreement_rate": "0.45833333333333337",
+            "metadata_difficulty": 16,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.4098283651976356",
+            "predict_dip_statistic": "0.038577960018732094",
+            "predict_dip_pvalue": "0.8745672525084498",
+            "predict_silhouette_k2": "0.17865844070911407",
+            "predict_bimodality_coefficient": "0.7522695799637088",
+            "predict_disagreement_rate": "0.33333333333333337",
+            "metadata_difficulty": 18,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.408173954261321",
+            "predict_dip_statistic": "0.0818037336541105",
+            "predict_dip_pvalue": "0.009260954695022416",
+            "predict_silhouette_k2": "0.14351515471935272",
+            "predict_bimodality_coefficient": "0.5832650051582292",
+            "predict_disagreement_rate": "0.4565217391304348",
+            "metadata_difficulty": 20,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.74",
+            "predict_csd_variance": "0.35103647822770195",
+            "predict_dip_statistic": "0.04885559131758752",
+            "predict_dip_pvalue": "0.4998394741042569",
+            "predict_silhouette_k2": "0.1049184799194336",
+            "predict_bimodality_coefficient": "0.47877021876528825",
+            "predict_disagreement_rate": "0.37777777777777777",
+            "metadata_difficulty": 22,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.52",
+            "predict_csd_variance": "0.4297889552522943",
+            "predict_dip_statistic": "0.06152910584603116",
+            "predict_dip_pvalue": "0.15556981879270215",
+            "predict_silhouette_k2": "0.13570962846279144",
+            "predict_bimodality_coefficient": "0.6318426572323509",
+            "predict_disagreement_rate": "0.4545454545454546",
+            "metadata_difficulty": 24,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.7",
+            "predict_csd_variance": "0.4924044632898543",
+            "predict_dip_statistic": "0.051519680973494124",
+            "predict_dip_pvalue": "0.4034344513389305",
+            "predict_silhouette_k2": "0.13931885361671448",
+            "predict_bimodality_coefficient": "0.43239304423470915",
+            "predict_disagreement_rate": "0.5",
+            "metadata_difficulty": 26,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.72",
+            "predict_csd_variance": "0.43903825069878705",
+            "predict_dip_statistic": "0.073767546302997",
+            "predict_dip_pvalue": "0.03371410810756259",
+            "predict_silhouette_k2": "0.13166147470474243",
+            "predict_bimodality_coefficient": "0.5410232118625502",
+            "predict_disagreement_rate": "0.4893617021276596",
+            "metadata_difficulty": 28,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.58",
+            "predict_csd_variance": "0.4087328687410732",
+            "predict_dip_statistic": "0.055139456448836915",
+            "predict_dip_pvalue": "0.29184056177979445",
+            "predict_silhouette_k2": "0.11601251363754272",
+            "predict_bimodality_coefficient": "0.49483671163307025",
+            "predict_disagreement_rate": "0.38636363636363635",
+            "metadata_difficulty": 30,
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.49983184975894024",
+            "predict_dip_statistic": "0.09226004429538595",
+            "predict_dip_pvalue": "0.001507996283244828",
+            "predict_silhouette_k2": "0.3590974509716034",
+            "predict_bimodality_coefficient": "0.7625552710978787",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 2,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.5099180168500905",
+            "predict_dip_statistic": "0.08885436230617728",
+            "predict_dip_pvalue": "0.0029407505466384487",
+            "predict_silhouette_k2": "0.3640448749065399",
+            "predict_bimodality_coefficient": "0.7012212938604329",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 3,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.3834437680573682",
+            "predict_dip_statistic": "0.07302065745145406",
+            "predict_dip_pvalue": "0.03719567410586955",
+            "predict_silhouette_k2": "0.3101988732814789",
+            "predict_bimodality_coefficient": "0.605758849318914",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 4,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.42766283718508336",
+            "predict_dip_statistic": "0.14354280963239957",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.27692893147468567",
+            "predict_bimodality_coefficient": "0.5330637751907726",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 5,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.3914923957127871",
+            "predict_dip_statistic": "0.1542636200924568",
+            "predict_dip_pvalue": "0.0",
+            "predict_silhouette_k2": "0.2722645699977875",
+            "predict_bimodality_coefficient": "0.5868272351061777",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 6,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.4089598597798393",
+            "predict_dip_statistic": "0.06778763999477451",
+            "predict_dip_pvalue": "0.07319100453722016",
+            "predict_silhouette_k2": "0.25516390800476074",
+            "predict_bimodality_coefficient": "0.5121806778238595",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 7,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.4366304394180816",
+            "predict_dip_statistic": "0.07116037639013649",
+            "predict_dip_pvalue": "0.04586723383928615",
+            "predict_silhouette_k2": "0.21552921831607819",
+            "predict_bimodality_coefficient": "0.48405971866552516",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 8,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.41724038558566234",
+            "predict_dip_statistic": "0.07859846151516703",
+            "predict_dip_pvalue": "0.015793393072341733",
+            "predict_silhouette_k2": "0.23157235980033875",
+            "predict_bimodality_coefficient": "0.615447154585955",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 9,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.4235999242251809",
+            "predict_dip_statistic": "0.059422766747937505",
+            "predict_dip_pvalue": "0.19015335063057637",
+            "predict_silhouette_k2": "0.1809729039669037",
+            "predict_bimodality_coefficient": "0.6905921207722836",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 10,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.4175860400756796",
+            "predict_dip_statistic": "0.07271912341527277",
+            "predict_dip_pvalue": "0.038601252252513873",
+            "predict_silhouette_k2": "0.19203241169452667",
+            "predict_bimodality_coefficient": "0.5411634128658354",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 11,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.92",
+            "predict_csd_variance": "0.4146617984303612",
+            "predict_dip_statistic": "0.07159471397154667",
+            "predict_dip_pvalue": "0.04384260199198975",
+            "predict_silhouette_k2": "0.21777212619781494",
+            "predict_bimodality_coefficient": "0.6114160642871427",
+            "predict_disagreement_rate": "0.4693877551020408",
+            "metadata_difficulty": 12,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.41575147203904383",
+            "predict_dip_statistic": "0.041201633989420186",
+            "predict_dip_pvalue": "0.7951254423272055",
+            "predict_silhouette_k2": "0.19311858713626862",
+            "predict_bimodality_coefficient": "0.534546047005435",
+            "predict_disagreement_rate": "0.38",
+            "metadata_difficulty": 13,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.4085515824131296",
+            "predict_dip_statistic": "0.07436003140218371",
+            "predict_dip_pvalue": "0.03095228354481727",
+            "predict_silhouette_k2": "0.21935924887657166",
+            "predict_bimodality_coefficient": "0.5325649806161892",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 14,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.4162700314776897",
+            "predict_dip_statistic": "0.04444866402091959",
+            "predict_dip_pvalue": "0.6731095922379224",
+            "predict_silhouette_k2": "0.18823033571243286",
+            "predict_bimodality_coefficient": "0.49930872842015034",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 15,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.4257961242513397",
+            "predict_dip_statistic": "0.07677110449425988",
+            "predict_dip_pvalue": "0.01986300128894114",
+            "predict_silhouette_k2": "0.24183858931064606",
+            "predict_bimodality_coefficient": "0.8376877259570655",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 16,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.94",
+            "predict_csd_variance": "0.40495065507442474",
+            "predict_dip_statistic": "0.05046142170160394",
+            "predict_dip_pvalue": "0.44172952484443273",
+            "predict_silhouette_k2": "0.16849328577518463",
+            "predict_bimodality_coefficient": "0.4808375871084489",
+            "predict_disagreement_rate": "0.45999999999999996",
+            "metadata_difficulty": 18,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.41142882950134135",
+            "predict_dip_statistic": "0.0679947462649106",
+            "predict_dip_pvalue": "0.0712590990420775",
+            "predict_silhouette_k2": "0.16625365614891052",
+            "predict_bimodality_coefficient": "0.6156358929464211",
+            "predict_disagreement_rate": "0.40816326530612246",
+            "metadata_difficulty": 20,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.94",
+            "predict_csd_variance": "0.39004895908047565",
+            "predict_dip_statistic": "0.05970309244690161",
+            "predict_dip_pvalue": "0.1855507428435047",
+            "predict_silhouette_k2": "0.15144869685173035",
+            "predict_bimodality_coefficient": "0.5403844204706728",
+            "predict_disagreement_rate": "0.45999999999999996",
+            "metadata_difficulty": 22,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.3800499431584649",
+            "predict_dip_statistic": "0.08599775868041942",
+            "predict_dip_pvalue": "0.004589007248915866",
+            "predict_silhouette_k2": "0.22486242651939392",
+            "predict_bimodality_coefficient": "0.6886617870380453",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 24,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "1.0",
+            "predict_csd_variance": "0.4201945975608068",
+            "predict_dip_statistic": "0.06943087337654924",
+            "predict_dip_pvalue": "0.05786277909061033",
+            "predict_silhouette_k2": "0.19531860947608948",
+            "predict_bimodality_coefficient": "0.6456758623703631",
+            "predict_disagreement_rate": "0.4",
+            "metadata_difficulty": 26,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.39564439345032426",
+            "predict_dip_statistic": "0.06681027293462845",
+            "predict_dip_pvalue": "0.08230797039743709",
+            "predict_silhouette_k2": "0.18387547135353088",
+            "predict_bimodality_coefficient": "0.6606047727795071",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 28,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          },
+          {
+            "predict_accuracy": "0.98",
+            "predict_csd_variance": "0.3637586258005189",
+            "predict_dip_statistic": "0.0564982681209292",
+            "predict_dip_pvalue": "0.25796220802514547",
+            "predict_silhouette_k2": "0.18099159002304077",
+            "predict_bimodality_coefficient": "0.5300639047061876",
+            "predict_disagreement_rate": "0.42000000000000004",
+            "metadata_difficulty": 30,
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": null
+          }
+        ]
+      }
+    ]
+  },
+  "clf_data": {
+    "metadata": {
+      "classifier_comparison": {
+        "csd_zt_reldist_rf": {
+          "lopo_f1": 0.9493174197215117,
+          "lopo_auroc": 0.9956043956043956,
+          "lopo_precision": 0.96,
+          "lopo_recall": 0.9457264957264957,
+          "loto_f1": 0.9435897435897436,
+          "loto_auroc": 0.9848931025401614,
+          "lomo_f1": 0.9404830917874396,
+          "lomo_auroc": 0.9945054945054945,
+          "model_type": "rf",
+          "classifier_variant": "csd_zt_reldist"
+        },
+        "spuq_accuracy_rf": {
+          "lopo_f1": 0.7125305070957245,
+          "lopo_auroc": 0.6450631833444334,
+          "lopo_precision": 0.6556492527080763,
+          "lopo_recall": 0.8262820512820512,
+          "loto_f1": 0.6695338512763596,
+          "loto_auroc": 0.6309463956522781,
+          "lomo_f1": 0.7165137097202314,
+          "lomo_auroc": 0.7312093387199922,
+          "model_type": "rf",
+          "classifier_variant": "spuq_accuracy"
+        },
+        "disagreement_only_logreg": {
+          "lopo_f1": 0.680411791048708,
+          "lopo_auroc": 0.6942499340936841,
+          "lopo_precision": 0.6247435897435898,
+          "lopo_recall": 0.7519230769230769,
+          "loto_f1": 0.21452009844134537,
+          "loto_auroc": 0.22912925854102323,
+          "lomo_f1": 0.6895798319327731,
+          "lomo_auroc": 0.732179426870478,
+          "model_type": "logreg",
+          "classifier_variant": "disagreement_only"
+        }
+      }
+    },
+    "datasets": []
+  },
+  "mfit_data": {
+    "datasets": [
+      {
+        "dataset": "model_comparison_all_series",
+        "examples": [
+          {
+            "predict_mixture_R2": "0.1559",
+            "metadata_task": "arithmetic",
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_d_star": 15
+          },
+          {
+            "predict_mixture_R2": "0.2469",
+            "metadata_task": "arithmetic",
+            "metadata_model": "openai/gpt-4o-mini",
+            "metadata_d_star": 2
+          },
+          {
+            "predict_mixture_R2": "-0.0",
+            "metadata_task": "arithmetic",
+            "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+            "metadata_d_star": 20
+          },
+          {
+            "predict_mixture_R2": "0.6611",
+            "metadata_task": "graph_coloring",
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_d_star": 14
+          },
+          {
+            "predict_mixture_R2": "0.1091",
+            "metadata_task": "graph_coloring",
+            "metadata_model": "google/gemini-2.0-flash-lite-001",
+            "metadata_d_star": 11
+          },
+          {
+            "predict_mixture_R2": "0.3973",
+            "metadata_task": "graph_coloring",
+            "metadata_model": "openai/gpt-4o-mini",
+            "metadata_d_star": 10
+          },
+          {
+            "predict_mixture_R2": "0.0273",
+            "metadata_task": "temp_sweep",
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_d_star": 5
+          },
+          {
+            "predict_mixture_R2": "0.1886",
+            "metadata_task": "temp_sweep",
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_d_star": 2
+          },
+          {
+            "predict_mixture_R2": "0.1353",
+            "metadata_task": "temp_sweep",
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_d_star": 2
+          },
+          {
+            "predict_mixture_R2": "0.0",
+            "metadata_task": "temp_sweep",
+            "metadata_model": "google/gemini-2.0-flash-001",
+            "metadata_d_star": 2
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "metadata": {
+    "evaluation_name": "cross_task_transfer_diagnosis",
+    "n_model_task_pairs": 5,
+    "n_total_rows": 108,
+    "tasks": [
+      "arithmetic",
+      "graph_coloring"
+    ],
+    "csd_features": [
+      "csd_variance",
+      "dip_statistic",
+      "silhouette_k2"
+    ],
+    "baseline_loto_f1_zt_rf": 0.448,
+    "best_loto_f1_reldist_rf": 0.944,
+    "analysis_1_feature_shift": {
+      "per_feature": {
+        "csd_variance": {
+          "raw": {
+            "wasserstein_distance": 0.084258,
+            "ks_statistic": 0.8375,
+            "ks_pvalue": 0.0,
+            "cohens_d": 2.286182,
+            "kl_arith_to_graph": 0.540193,
+            "kl_graph_to_arith": 0.552018,
+            "overlap_coefficient": 0.17953,
+            "arith_mean": 0.197367,
+            "arith_std": 0.037326,
+            "graph_mean": 0.113109,
+            "graph_std": 0.035849
+          }
+        },
+        "dip_statistic": {
+          "raw": {
+            "wasserstein_distance": 0.036861,
+            "ks_statistic": 0.75,
+            "ks_pvalue": 0.0,
+            "cohens_d": 1.993859,
+            "kl_arith_to_graph": 0.457981,
+            "kl_graph_to_arith": 0.559013,
+            "overlap_coefficient": 0.237557,
+            "arith_mean": 0.082741,
+            "arith_std": 0.023806,
+            "graph_mean": 0.04588,
+            "graph_std": 0.012265
+          }
+        },
+        "silhouette_k2": {
+          "raw": {
+            "wasserstein_distance": 0.095741,
+            "ks_statistic": 0.7625,
+            "ks_pvalue": 0.0,
+            "cohens_d": 1.504242,
+            "kl_arith_to_graph": 0.549798,
+            "kl_graph_to_arith": 0.598454,
+            "overlap_coefficient": 0.178882,
+            "arith_mean": 0.272371,
+            "arith_std": 0.048057,
+            "graph_mean": 0.177267,
+            "graph_std": 0.07221
+          }
+        },
+        "bimodality_coefficient": {
+          "raw": {
+            "wasserstein_distance": 0.041332,
+            "ks_statistic": 0.1875,
+            "ks_pvalue": 0.27199,
+            "cohens_d": 0.23929,
+            "kl_arith_to_graph": 0.19483,
+            "kl_graph_to_arith": 0.188238,
+            "overlap_coefficient": 0.611456,
+            "arith_mean": 0.61085,
+            "arith_std": 0.093786,
+            "graph_mean": 0.583256,
+            "graph_std": 0.12828
+          }
+        },
+        "disagreement_rate": {
+          "raw": {
+            "wasserstein_distance": 0.06926,
+            "ks_statistic": 0.458333,
+            "ks_pvalue": 1.5e-05,
+            "cohens_d": -0.065193,
+            "kl_arith_to_graph": 0.387688,
+            "kl_graph_to_arith": 0.440079,
+            "overlap_coefficient": 0.170752,
+            "arith_mean": 0.831969,
+            "arith_std": 0.021631,
+            "graph_mean": 0.837667,
+            "graph_std": 0.114548
+          }
+        }
+      },
+      "feature_shift_ranking": [
+        {
+          "feature": "silhouette_k2",
+          "wasserstein_distance": 0.09574058333333331,
+          "cohens_d": 1.5042421021978984
+        },
+        {
+          "feature": "csd_variance",
+          "wasserstein_distance": 0.08425815833333333,
+          "cohens_d": 2.2861824161658024
+        },
+        {
+          "feature": "disagreement_rate",
+          "wasserstein_distance": 0.0692604166666667,
+          "cohens_d": 0.06519258932961146
+        }
+      ],
+      "top3_worst_offenders": [
+        "silhouette_k2",
+        "csd_variance",
+        "disagreement_rate"
+      ]
+    },
+    "analysis_2_normalization_loto": {
+      "best_new_normalization": "D_trend_derivative_reldiff_svm",
+      "best_new_loto_f1": 0.913194
+    },
+    "analysis_3_transfer_diagnosis": {
+      "min_k_for_f1_ge_08": 1,
+      "directional_loto_summary": {
+        "best_new_rf": 0.880184,
+        "best_new_logreg": 0.889431,
+        "best_new_svm": 0.913194,
+        "csd_zt_reldist_rf": 0.94359,
+        "csd_zt_reldist_logreg": 0.79912,
+        "csd_zt_reldist_svm": 0.656566,
+        "csd_zt_rf": 0.448161,
+        "csd_zt_logreg": 0.427426,
+        "csd_zt_svm": 0.436752
+      }
+    },
+    "analysis_4_deployment_recommendation": {
+      "best_no_dstar_method": "Best new normalization (D_trend_derivative_reldiff_svm)",
+      "composite_threshold_f1": 0.673178,
+      "recommendation": "For deployment without knowing d*: Use Best new normalization (D_trend_derivative_reldiff_svm) (LOTO F1=0.913). If 5 labeled target-task samples are available, few-shot calibration improves LOTO F1 to..."
+    }
+  },
+  "metrics_agg": {
+    "best_new_loto_f1": 0.913194,
+    "baseline_loto_f1_zt_rf": 0.448,
+    "delta_best_new_vs_baseline": 0.465194,
+    "best_existing_loto_f1_reldist_rf": 0.944,
+    "composite_threshold_loto_f1": 0.673178,
+    "best_single_threshold_loto_f1": 0.66605,
+    "min_calibration_k_for_f1_08": 1.0,
+    "n_model_task_pairs": 5,
+    "n_total_rows": 108,
+    "avg_wasserstein_distance": 0.06549,
+    "n_normalization_strategies_tested": 5,
+    "n_classifier_types_tested": 3
+  },
+  "datasets": [
+    {
+      "dataset": "feature_shift_metrics",
+      "examples": [
+        {
+          "input": "Feature distribution shift for csd_variance between arithmetic and graph_coloring",
+          "output": "Wasserstein=0.084258, Cohen_d=2.286182",
+          "predict_wasserstein_distance": "0.084258",
+          "predict_ks_statistic": "0.8375",
+          "predict_ks_pvalue": "0.0",
+          "predict_cohens_d": "2.286182",
+          "predict_kl_arith_to_graph": "0.540193",
+          "predict_kl_graph_to_arith": "0.552018",
+          "predict_overlap_coefficient": "0.17953",
+          "eval_wasserstein_distance": 0.084258,
+          "eval_cohens_d_abs": 2.286182,
+          "eval_ks_statistic": 0.8375,
+          "metadata_feature": "csd_variance",
+          "metadata_normalization": "raw",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Feature distribution shift for dip_statistic between arithmetic and graph_coloring",
+          "output": "Wasserstein=0.036861, Cohen_d=1.993859",
+          "predict_wasserstein_distance": "0.036861",
+          "predict_ks_statistic": "0.75",
+          "predict_ks_pvalue": "0.0",
+          "predict_cohens_d": "1.993859",
+          "predict_kl_arith_to_graph": "0.457981",
+          "predict_kl_graph_to_arith": "0.559013",
+          "predict_overlap_coefficient": "0.237557",
+          "eval_wasserstein_distance": 0.036861,
+          "eval_cohens_d_abs": 1.993859,
+          "eval_ks_statistic": 0.75,
+          "metadata_feature": "dip_statistic",
+          "metadata_normalization": "raw",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Feature distribution shift for silhouette_k2 between arithmetic and graph_coloring",
+          "output": "Wasserstein=0.095741, Cohen_d=1.504242",
+          "predict_wasserstein_distance": "0.095741",
+          "predict_ks_statistic": "0.7625",
+          "predict_ks_pvalue": "0.0",
+          "predict_cohens_d": "1.504242",
+          "predict_kl_arith_to_graph": "0.549798",
+          "predict_kl_graph_to_arith": "0.598454",
+          "predict_overlap_coefficient": "0.178882",
+          "eval_wasserstein_distance": 0.095741,
+          "eval_cohens_d_abs": 1.504242,
+          "eval_ks_statistic": 0.7625,
+          "metadata_feature": "silhouette_k2",
+          "metadata_normalization": "raw",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "normalization_comparison",
+      "examples": [
+        {
+          "input": "Normalization: A_rank_slope, Classifier: rf",
+          "output": "LOTO_F1=0.3575, LOPO_F1=0.6052",
+          "predict_loto_f1": "0.35755",
+          "predict_loto_auroc": "0.339911",
+          "predict_lopo_f1": "0.605195",
+          "predict_lopo_auroc": "0.683845",
+          "predict_delta_vs_baseline": "-0.09045",
+          "eval_loto_f1": 0.35755,
+          "eval_lopo_f1": 0.605195,
+          "eval_delta_vs_baseline": -0.09045,
+          "metadata_strategy": "A_rank_slope",
+          "metadata_classifier": "rf",
+          "metadata_n_features": 10,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Normalization: A_rank_slope, Classifier: logreg",
+          "output": "LOTO_F1=0.4097, LOPO_F1=0.6128",
+          "predict_loto_f1": "0.409677",
+          "predict_loto_auroc": "0.326935",
+          "predict_lopo_f1": "0.612836",
+          "predict_lopo_auroc": "0.666215",
+          "predict_delta_vs_baseline": "-0.038323",
+          "eval_loto_f1": 0.409677,
+          "eval_lopo_f1": 0.612836,
+          "eval_delta_vs_baseline": -0.038323,
+          "metadata_strategy": "A_rank_slope",
+          "metadata_classifier": "logreg",
+          "metadata_n_features": 10,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Normalization: A_rank_slope, Classifier: svm",
+          "output": "LOTO_F1=0.4353, LOPO_F1=0.6266",
+          "predict_loto_f1": "0.435294",
+          "predict_loto_auroc": "0.407938",
+          "predict_lopo_f1": "0.626587",
+          "predict_lopo_auroc": "0.70801",
+          "predict_delta_vs_baseline": "-0.012706",
+          "eval_loto_f1": 0.435294,
+          "eval_lopo_f1": 0.626587,
+          "eval_delta_vs_baseline": -0.012706,
+          "metadata_strategy": "A_rank_slope",
+          "metadata_classifier": "svm",
+          "metadata_n_features": 10,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "calibration_curve",
+      "examples": [
+        {
+          "input": "Few-shot calibration: config=best_new, k=1 target-task samples",
+          "output": "Mean LOTO F1=0.9127 +/- 0.0036",
+          "predict_mean_f1": "0.912667",
+          "predict_ci_95_lower": "0.911079",
+          "predict_ci_95_upper": "0.914255",
+          "eval_mean_f1": 0.912667,
+          "eval_ci_width": 0.003176,
+          "metadata_config": "best_new",
+          "metadata_k": 1,
+          "metadata_n_seeds": 20,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Few-shot calibration: config=best_new, k=3 target-task samples",
+          "output": "Mean LOTO F1=0.9125 +/- 0.0096",
+          "predict_mean_f1": "0.912483",
+          "predict_ci_95_lower": "0.90829",
+          "predict_ci_95_upper": "0.916677",
+          "eval_mean_f1": 0.912483,
+          "eval_ci_width": 0.008387,
+          "metadata_config": "best_new",
+          "metadata_k": 3,
+          "metadata_n_seeds": 20,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Few-shot calibration: config=best_new, k=5 target-task samples",
+          "output": "Mean LOTO F1=0.9095 +/- 0.0095",
+          "predict_mean_f1": "0.909475",
+          "predict_ci_95_lower": "0.905311",
+          "predict_ci_95_upper": "0.913639",
+          "eval_mean_f1": 0.909475,
+          "eval_ci_width": 0.008328,
+          "metadata_config": "best_new",
+          "metadata_k": 5,
+          "metadata_n_seeds": 20,
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ]
+}

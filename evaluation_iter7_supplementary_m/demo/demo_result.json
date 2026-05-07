@@ -1,0 +1,13 @@
+{
+  "id": "eval_id2_it7__opus",
+  "type": "code",
+  "title": "Supplementary Materials PDF: Compile All Extended Results into LaTeX Appendices",
+  "summary": "Demo notebook for the Supplementary Materials PDF evaluation pipeline. Loads 9 data sources (arithmetic, graph coloring, syllogistic, classifier experiments + ablation, routing, transfer, sensitivity, prospective evaluations) from a curated mini JSON dataset. Builds all 8 appendices (A-H) with printed tables showing CSD profiles, ablation matrices, routing simulations, cross-task transfer, syllogistic analysis, sample-size sensitivity, negative controls, and temperature configuration. Generates a 4-panel matplotlib visualization: CSD embedding variance profiles, feature ablation bar chart, F1 vs sample-size sensitivity curve, and appendix completion status. Computes completeness metrics mirroring the original eval_out.json output.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_7/gen_art/eval_id2_it7__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id2_it7__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id2_it7__opus/eval_code_demo.ipynb"
+}

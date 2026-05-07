@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it2__opus",
+  "type": "code",
+  "title": "Syllogistic Logic CSD Sampling Experiment",
+  "summary": "Demo notebook for the Syllogistic Logic CSD Sampling Experiment. Loads pre-computed LLM responses (42 examples across 3 models and 7 difficulty levels), re-runs the full analysis pipeline: answer extraction via regex patterns, semantic embedding with all-MiniLM-L6-v2, and computation of 9 CSD indicators (embedding variance, dip test, silhouette score, bimodality coefficient, disagreement rate, chain autocorrelation, etc.). Visualizes CSD indicator trends across difficulty levels for each model. Uses mini subset of the original 2078-response dataset.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_2/gen_art/exp_id2_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id2_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id2_it2__opus/method_code_demo.ipynb"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it2__opus",
+  "type": "code",
+  "title": "CSD Sampling Experiment: Multi-Step Arithmetic \u00d7 3 LLMs \u00d7 CSD Indicator Extraction",
+  "summary": "Demo notebook analyzing Critical Slowing Down (CSD) indicators across 3 LLMs (LLaMA-3.1-8B, Gemini-2.0-Flash, GPT-4o-mini) on multi-step arithmetic at 24 difficulty levels. Loads 72 pre-computed examples, computes capability boundaries (d*), fits variance scaling laws, tests leading indicators (flickering, silhouette, bimodality), and Kendall Tau trends. Produces summary tables and multi-panel visualizations of CSD indicator trajectories.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id1_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id1_it2__opus/method_code_demo.ipynb"
+}

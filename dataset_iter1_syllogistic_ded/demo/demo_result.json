@@ -1,0 +1,13 @@
+{
+  "id": "data_id3_it1__opus",
+  "type": "code",
+  "title": "Syllogistic/Deductive Logic Task Family with Parameterized Premise-Count Difficulty",
+  "summary": "Demo notebook that generates a 280-problem syllogistic deductive logic dataset with difficulty parameterized by premise count (d=2 to d=15). Uses Z3 SMT solver for formal verification of ground truth, randomized entity names from 8 semantic categories, and 4 chain templates (A/B/C/D). The notebook loads a 48-example curated subset from GitHub for comparison, generates all 280 problems with Z3 verification in ~1s, validates TRUE/FALSE balance and template distribution, evaluates a keyword heuristic baseline, and produces visualizations of accuracy vs difficulty, chain reconstruction complexity, and problem distribution.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_1/gen_art/data_id3_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id3_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id3_it1__opus/data_code_demo.ipynb"
+}

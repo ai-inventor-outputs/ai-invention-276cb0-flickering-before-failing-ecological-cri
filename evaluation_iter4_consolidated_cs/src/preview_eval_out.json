@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "evaluation_name": "Consolidated_CSD_Evidence_Evaluation",
+    "description": "Paper-ready evaluation of all CSD evidence across 4 task families, 9 LLMs, 6 experiments",
+    "hypothesis_verdict": "PARTIALLY_CONFIRMED",
+    "n_criteria_passed": 2,
+    "sc1_flickering": {
+      "pass": true,
+      "n_pairs_detected": 2,
+      "n_tasks": 2,
+      "n_models": 2
+    },
+    "sc2_mixture_variance": {
+      "pass": false,
+      "mean_r2": 0.1323,
+      "n_pairs_pass": 0
+    },
+    "sc3_classifier": {
+      "pass": true,
+      "csd_f1": 0.8139,
+      "baseline_f1": 0.6994,
+      "improvement_pct": 16.38
+    },
+    "best_indicator": "disagreement_rate",
+    "best_indicator_composite": 0.6691,
+    "fleiss_kappa": 0.0892,
+    "false_positive_rate": 0.0,
+    "temperature_evidence_score": 0.5,
+    "positive_pairs": [
+      {
+        "task": "arithmetic",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "d_star": 20
+      },
+      {
+        "task": "arithmetic",
+        "model": "google/gemini-2.0-flash-001",
+        "d_star": 15
+      },
+      {
+        "task": "graph_coloring",
+        "model": "openai/gpt-4o-mini",
+        "d_star": 10
+      }
+    ],
+    "experiments_evaluated": [
+      "exp_id1_it2",
+      "exp_id2_it2",
+      "exp_id3_it2"
+    ]
+  },
+  "metrics_agg": {
+    "eval_sc1_pass": 1.0,
+    "eval_sc1_n_pairs_detected": 2.0,
+    "eval_sc2_revised_pass": 0.0,
+    "eval_sc2_n_pairs_pass": 0.0,
+    "eval_mixture_var_mean_r2": 0.13228199999999998,
+    "eval_sc3_pass": 1.0,
+    "eval_classifier_best_f1": 0.8139364661103791,
+    "eval_classifier_best_auroc": 0.8969187062937063,
+    "eval_classifier_baseline_f1": 0.6993746993746994,
+    "eval_classifier_f1_improvement_pct": 16.38059924645653,
+    "eval_n_criteria_passed": 2.0,
+    "eval_hypothesis_verdict": 1.0,
+    "eval_best_indicator_composite": 0.6691,
+    "eval_fleiss_kappa": 0.0892,
+    "eval_neg_ctrl_false_positive_rate": 0.0,
+    "eval_neg_ctrl_null_dip_95th": 0.06030400974328464,
+    "eval_temp_evidence_score": 0.5,
+    "eval_temp_variance_frac_positive": 0.9166666666666666,
+    "eval_temp_disagreement_frac_positive": 0.7916666666666666,
+    "eval_temp_dip_frac_positive": 0.25
+  },
+  "datasets": [
+    {
+      "dataset": "sc1_flickering_results",
+      "examples": [
+        {
+          "input": "SC1 flickering test: arithmetic x meta-llama/llama-3.1-8b-instruct (d*=20)",
+          "output": "detected",
+          "eval_flickering_detected": 1.0,
+          "eval_d_star": 20.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct"
+        },
+        {
+          "input": "SC1 flickering test: arithmetic x google/gemini-2.0-flash-001 (d*=15)",
+          "output": "not_detected",
+          "eval_flickering_detected": 0.0,
+          "eval_d_star": 15.0,
+          "metadata_task": "arithmetic",
+          "metadata_model": "google/gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC1 flickering test: graph_coloring x openai/gpt-4o-mini (d*=10)",
+          "output": "not_detected",
+          "eval_flickering_detected": 0.0,
+          "eval_d_star": 10.0,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "openai/gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "dataset": "sc2_mixture_variance_results",
+      "examples": [
+        {
+          "input": "SC2 mixture variance: arithmetic x meta-llama/llama-3.1-8b-instruct",
+          "output": "R2=0.0069",
+          "eval_mixture_var_r2": 0.006925,
+          "metadata_task": "arithmetic",
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct"
+        },
+        {
+          "input": "SC2 mixture variance: arithmetic x google/gemini-2.0-flash-001",
+          "output": "R2=0.1559",
+          "eval_mixture_var_r2": 0.155932,
+          "metadata_task": "arithmetic",
+          "metadata_model": "google/gemini-2.0-flash-001"
+        },
+        {
+          "input": "SC2 mixture variance: graph_coloring x openai/gpt-4o-mini",
+          "output": "R2=0.0069",
+          "eval_mixture_var_r2": 0.006877,
+          "metadata_task": "graph_coloring",
+          "metadata_model": "openai/gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "dataset": "indicator_effectiveness_ranking",
+      "examples": [
+        {
+          "input": "Indicator ranking #1: disagreement_rate",
+          "output": "composite=0.6691",
+          "eval_sensitivity": 0.6,
+          "eval_specificity": 1.0,
+          "eval_mean_lead_time": 12.4,
+          "eval_mean_effect_size": 0.5155,
+          "eval_composite_score": 0.6691,
+          "metadata_indicator": "disagreement_rate",
+          "metadata_rank": 1
+        },
+        {
+          "input": "Indicator ranking #2: embedding_variance",
+          "output": "composite=0.5820",
+          "eval_sensitivity": 0.6,
+          "eval_specificity": 1.0,
+          "eval_mean_lead_time": 7.0,
+          "eval_mean_effect_size": 0.4852,
+          "eval_composite_score": 0.582,
+          "metadata_indicator": "embedding_variance",
+          "metadata_rank": 2
+        },
+        {
+          "input": "Indicator ranking #3: dip_statistic",
+          "output": "composite=0.4473",
+          "eval_sensitivity": 0.0,
+          "eval_specificity": 1.0,
+          "eval_mean_lead_time": 13.67,
+          "eval_mean_effect_size": 0.2115,
+          "eval_composite_score": 0.4473,
+          "metadata_indicator": "dip_statistic",
+          "metadata_rank": 3
+        }
+      ]
+    }
+  ]
+}

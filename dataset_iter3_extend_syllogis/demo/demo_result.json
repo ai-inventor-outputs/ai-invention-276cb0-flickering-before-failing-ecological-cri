@@ -1,0 +1,13 @@
+{
+  "id": "data_id4_it3__opus",
+  "type": "code",
+  "title": "Extend Syllogistic Logic Dataset to Premise Count 16-30",
+  "summary": "Demo notebook for the extended syllogistic logic dataset (d=16-30). Loads a curated 32-example subset balanced across 8 difficulty levels, 4 chain templates (A/B/C/D), and TRUE/FALSE labels. Analyzes dataset structure with balance verification tables, runs the original heuristic baseline evaluator (keyword-based, achieving 75% accuracy), and produces a 4-panel visualization showing input length scaling, quadratic chain reconstruction complexity, heuristic accuracy by difficulty, and template/answer distribution.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_3/gen_art/data_id4_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id4_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/data_id4_it3__opus/data_code_demo.ipynb"
+}

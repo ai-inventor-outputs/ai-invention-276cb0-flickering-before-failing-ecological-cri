@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "evaluation_name": "Supplementary Materials PDF Compilation",
+    "description": "Comprehensive supplementary materials document with 8 appendices, 9 tables, 4 figures",
+    "n_data_sources": 9,
+    "n_data_loaded": 9,
+    "compile_engine": "pdflatex"
+  },
+  "metrics_agg": {
+    "n_appendices_generated": 8,
+    "n_tables_generated": 21,
+    "n_figures_generated": 4,
+    "pdf_compiled": 1,
+    "pdf_page_count": 19,
+    "data_completeness_fraction": 1.0,
+    "appendix_a_complete": 1,
+    "appendix_b_complete": 1,
+    "appendix_c_complete": 1,
+    "appendix_d_complete": 1,
+    "appendix_e_complete": 1,
+    "appendix_f_complete": 1,
+    "appendix_g_complete": 1,
+    "appendix_h_complete": 1,
+    "ablation_cells_reported": 27,
+    "routing_cells_reported": 120,
+    "csd_profile_pairs_reported": 6,
+    "feature_shift_pairs_reported": 5,
+    "latex_warnings_count": 34,
+    "latex_errors_count": 0,
+    "figures_all_rendered": 1
+  },
+  "datasets": [
+    {
+      "dataset": "appendix_completion",
+      "examples": [
+        {
+          "input": "Appendix A generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "A"
+        },
+        {
+          "input": "Appendix B generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "B"
+        },
+        {
+          "input": "Appendix C generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "C"
+        },
+        {
+          "input": "Appendix D generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "D"
+        },
+        {
+          "input": "Appendix E generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "E"
+        },
+        {
+          "input": "Appendix F generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "F"
+        },
+        {
+          "input": "Appendix G generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "G"
+        },
+        {
+          "input": "Appendix H generation status",
+          "output": "complete=1",
+          "predict_status": "complete",
+          "eval_complete": 1,
+          "metadata_appendix": "H"
+        }
+      ]
+    },
+    {
+      "dataset": "figure_rendering",
+      "examples": [
+        {
+          "input": "Figure S1 rendering: figure_s1",
+          "output": "rendered=yes",
+          "predict_status": "rendered",
+          "eval_rendered": 1,
+          "metadata_figure_name": "figure_s1"
+        },
+        {
+          "input": "Figure S2 rendering: figure_s2",
+          "output": "rendered=yes",
+          "predict_status": "rendered",
+          "eval_rendered": 1,
+          "metadata_figure_name": "figure_s2"
+        },
+        {
+          "input": "Figure S3 rendering: figure_s3",
+          "output": "rendered=yes",
+          "predict_status": "rendered",
+          "eval_rendered": 1,
+          "metadata_figure_name": "figure_s3"
+        },
+        {
+          "input": "Figure S4 rendering: figure_s4",
+          "output": "rendered=yes",
+          "predict_status": "rendered",
+          "eval_rendered": 1,
+          "metadata_figure_name": "figure_s4"
+        }
+      ]
+    },
+    {
+      "dataset": "data_sources",
+      "examples": [
+        {
+          "input": "Load data source: dep1_arithmetic",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "dep1_arithmetic"
+        },
+        {
+          "input": "Load data source: dep2_graph_coloring",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "dep2_graph_coloring"
+        },
+        {
+          "input": "Load data source: dep3_classifier",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "dep3_classifier"
+        },
+        {
+          "input": "Load data source: dep4_syllogistic",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "dep4_syllogistic"
+        },
+        {
+          "input": "Load data source: eval_ablation",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "eval_ablation"
+        },
+        {
+          "input": "Load data source: eval_routing",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "eval_routing"
+        },
+        {
+          "input": "Load data source: eval_transfer",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "eval_transfer"
+        },
+        {
+          "input": "Load data source: eval_sc_criteria",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "eval_sc_criteria"
+        },
+        {
+          "input": "Load data source: eval_prospective",
+          "output": "loaded=yes",
+          "predict_status": "loaded",
+          "eval_loaded": 1,
+          "metadata_source": "eval_prospective"
+        }
+      ]
+    }
+  ]
+}

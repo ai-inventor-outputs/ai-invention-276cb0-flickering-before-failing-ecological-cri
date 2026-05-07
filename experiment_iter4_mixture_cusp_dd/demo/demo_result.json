@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it4__opus",
+  "type": "code",
+  "title": "Mixture/Cusp/DDM Model Fitting to Empirical CSD Variance and Bimodality Data",
+  "summary": "Demo notebook that fits 4 competing theoretical models (mixture, cusp catastrophe, drift-diffusion, fold bifurcation) to per-level accuracy and variance profiles from 3 CSD series (arithmetic, graph-coloring, temperature-sweep). Uses scipy optimization on pre-extracted empirical data. Produces model comparison tables (R2, AIC wins) and visualizations of observed vs predicted variance. Full original parameters used; notebook completes in ~3 minutes.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_4/gen_art/exp_id3_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id3_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id3_it4__opus/method_code_demo.ipynb"
+}

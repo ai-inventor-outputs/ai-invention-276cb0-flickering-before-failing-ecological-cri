@@ -1,0 +1,104 @@
+{
+  "all_level_data": {
+    "exp_id1_it2": {
+      "meta-llama/llama-3.1-8b-instruct": {
+        "5": {"accuracy": 0.98, "embedding_variance": 0.012, "dip_statistic": 0.03, "dip_pvalue": 0.80, "silhouette_k2": 0.05, "bimodality_coefficient": 0.35, "disagreement_rate": 0.02, "ashman_d": 0.0},
+        "10": {"accuracy": 0.95, "embedding_variance": 0.025, "dip_statistic": 0.06, "dip_pvalue": 0.03, "silhouette_k2": 0.35, "bimodality_coefficient": 0.45, "disagreement_rate": 0.15, "ashman_d": 0.0},
+        "15": {"accuracy": 0.82, "embedding_variance": 0.045, "dip_statistic": 0.08, "dip_pvalue": 0.02, "silhouette_k2": 0.42, "bimodality_coefficient": 0.58, "disagreement_rate": 0.52, "ashman_d": 0.0},
+        "20": {"accuracy": 0.48, "embedding_variance": 0.068, "dip_statistic": 0.11, "dip_pvalue": 0.01, "silhouette_k2": 0.55, "bimodality_coefficient": 0.62, "disagreement_rate": 0.78, "ashman_d": 0.0},
+        "25": {"accuracy": 0.15, "embedding_variance": 0.035, "dip_statistic": 0.05, "dip_pvalue": 0.15, "silhouette_k2": 0.18, "bimodality_coefficient": 0.40, "disagreement_rate": 0.85, "ashman_d": 0.0}
+      },
+      "google/gemini-2.0-flash-001": {
+        "5": {"accuracy": 0.99, "embedding_variance": 0.008, "dip_statistic": 0.02, "dip_pvalue": 0.90, "silhouette_k2": 0.04, "bimodality_coefficient": 0.33, "disagreement_rate": 0.01, "ashman_d": 0.0},
+        "10": {"accuracy": 0.96, "embedding_variance": 0.015, "dip_statistic": 0.04, "dip_pvalue": 0.60, "silhouette_k2": 0.12, "bimodality_coefficient": 0.38, "disagreement_rate": 0.08, "ashman_d": 0.0},
+        "15": {"accuracy": 0.52, "embedding_variance": 0.055, "dip_statistic": 0.09, "dip_pvalue": 0.08, "silhouette_k2": 0.28, "bimodality_coefficient": 0.52, "disagreement_rate": 0.45, "ashman_d": 0.0},
+        "20": {"accuracy": 0.18, "embedding_variance": 0.032, "dip_statistic": 0.04, "dip_pvalue": 0.40, "silhouette_k2": 0.10, "bimodality_coefficient": 0.36, "disagreement_rate": 0.72, "ashman_d": 0.0}
+      }
+    },
+    "exp_id3_it2": {
+      "openai/gpt-4o-mini": {
+        "4": {"accuracy": 0.92, "embedding_variance": 0.018, "dip_statistic": 0.05, "dip_pvalue": 0.04, "silhouette_k2": 0.32, "bimodality_coefficient": 0.48, "disagreement_rate": 0.55, "ashman_d": 0.8},
+        "6": {"accuracy": 0.88, "embedding_variance": 0.028, "dip_statistic": 0.07, "dip_pvalue": 0.03, "silhouette_k2": 0.38, "bimodality_coefficient": 0.52, "disagreement_rate": 0.62, "ashman_d": 1.2},
+        "8": {"accuracy": 0.72, "embedding_variance": 0.042, "dip_statistic": 0.10, "dip_pvalue": 0.01, "silhouette_k2": 0.48, "bimodality_coefficient": 0.60, "disagreement_rate": 0.75, "ashman_d": 1.8},
+        "10": {"accuracy": 0.45, "embedding_variance": 0.058, "dip_statistic": 0.12, "dip_pvalue": 0.005, "silhouette_k2": 0.52, "bimodality_coefficient": 0.65, "disagreement_rate": 0.88, "ashman_d": 2.1},
+        "12": {"accuracy": 0.20, "embedding_variance": 0.030, "dip_statistic": 0.06, "dip_pvalue": 0.20, "silhouette_k2": 0.22, "bimodality_coefficient": 0.42, "disagreement_rate": 0.90, "ashman_d": 1.5}
+      },
+      "google/gemini-2.0-flash-001": {
+        "5": {"accuracy": 0.95, "embedding_variance": 0.010, "dip_statistic": 0.03, "dip_pvalue": 0.70, "silhouette_k2": 0.08, "bimodality_coefficient": 0.34, "disagreement_rate": 0.05, "ashman_d": 0.3},
+        "8": {"accuracy": 0.90, "embedding_variance": 0.020, "dip_statistic": 0.05, "dip_pvalue": 0.30, "silhouette_k2": 0.18, "bimodality_coefficient": 0.42, "disagreement_rate": 0.20, "ashman_d": 0.7},
+        "11": {"accuracy": 0.68, "embedding_variance": 0.038, "dip_statistic": 0.08, "dip_pvalue": 0.06, "silhouette_k2": 0.35, "bimodality_coefficient": 0.55, "disagreement_rate": 0.55, "ashman_d": 1.5},
+        "14": {"accuracy": 0.35, "embedding_variance": 0.050, "dip_statistic": 0.10, "dip_pvalue": 0.02, "silhouette_k2": 0.45, "bimodality_coefficient": 0.60, "disagreement_rate": 0.80, "ashman_d": 2.0}
+      },
+      "google/gemini-2.0-flash-lite-001": {
+        "4": {"accuracy": 0.90, "embedding_variance": 0.014, "dip_statistic": 0.04, "dip_pvalue": 0.50, "silhouette_k2": 0.10, "bimodality_coefficient": 0.36, "disagreement_rate": 0.10, "ashman_d": 0.4},
+        "7": {"accuracy": 0.75, "embedding_variance": 0.030, "dip_statistic": 0.06, "dip_pvalue": 0.15, "silhouette_k2": 0.25, "bimodality_coefficient": 0.48, "disagreement_rate": 0.35, "ashman_d": 1.0},
+        "10": {"accuracy": 0.50, "embedding_variance": 0.048, "dip_statistic": 0.09, "dip_pvalue": 0.04, "silhouette_k2": 0.40, "bimodality_coefficient": 0.58, "disagreement_rate": 0.65, "ashman_d": 1.6},
+        "13": {"accuracy": 0.22, "embedding_variance": 0.028, "dip_statistic": 0.05, "dip_pvalue": 0.25, "silhouette_k2": 0.15, "bimodality_coefficient": 0.38, "disagreement_rate": 0.82, "ashman_d": 1.2}
+      }
+    },
+    "exp_id2_it2": {
+      "mistralai/ministral-3b-2512": {
+        "1": {"accuracy": 0.72, "embedding_variance": 0.035, "dip_statistic": 0.09, "dip_pvalue": 0.40, "silhouette_k2": 0.22, "bimodality_coefficient": 0.42, "disagreement_rate": 0.30, "ashman_d": 0.0},
+        "2": {"accuracy": 0.70, "embedding_variance": 0.032, "dip_statistic": 0.10, "dip_pvalue": 0.35, "silhouette_k2": 0.20, "bimodality_coefficient": 0.44, "disagreement_rate": 0.28, "ashman_d": 0.0},
+        "3": {"accuracy": 0.68, "embedding_variance": 0.038, "dip_statistic": 0.07, "dip_pvalue": 0.30, "silhouette_k2": 0.24, "bimodality_coefficient": 0.40, "disagreement_rate": 0.32, "ashman_d": 0.0},
+        "4": {"accuracy": 0.65, "embedding_variance": 0.033, "dip_statistic": 0.08, "dip_pvalue": 0.50, "silhouette_k2": 0.21, "bimodality_coefficient": 0.43, "disagreement_rate": 0.26, "ashman_d": 0.0}
+      },
+      "mistralai/ministral-8b-2512": {
+        "1": {"accuracy": 0.78, "embedding_variance": 0.030, "dip_statistic": 0.08, "dip_pvalue": 0.45, "silhouette_k2": 0.25, "bimodality_coefficient": 0.45, "disagreement_rate": 0.22, "ashman_d": 0.0},
+        "2": {"accuracy": 0.75, "embedding_variance": 0.032, "dip_statistic": 0.09, "dip_pvalue": 0.40, "silhouette_k2": 0.23, "bimodality_coefficient": 0.43, "disagreement_rate": 0.25, "ashman_d": 0.0},
+        "3": {"accuracy": 0.73, "embedding_variance": 0.028, "dip_statistic": 0.07, "dip_pvalue": 0.55, "silhouette_k2": 0.26, "bimodality_coefficient": 0.41, "disagreement_rate": 0.20, "ashman_d": 0.0},
+        "4": {"accuracy": 0.70, "embedding_variance": 0.031, "dip_statistic": 0.08, "dip_pvalue": 0.42, "silhouette_k2": 0.22, "bimodality_coefficient": 0.44, "disagreement_rate": 0.24, "ashman_d": 0.0}
+      },
+      "deepseek/deepseek-v3.2": {
+        "1": {"accuracy": 0.82, "embedding_variance": 0.025, "dip_statistic": 0.07, "dip_pvalue": 0.50, "silhouette_k2": 0.20, "bimodality_coefficient": 0.40, "disagreement_rate": 0.18, "ashman_d": 0.0},
+        "2": {"accuracy": 0.80, "embedding_variance": 0.028, "dip_statistic": 0.06, "dip_pvalue": 0.60, "silhouette_k2": 0.22, "bimodality_coefficient": 0.42, "disagreement_rate": 0.20, "ashman_d": 0.0},
+        "3": {"accuracy": 0.78, "embedding_variance": 0.024, "dip_statistic": 0.08, "dip_pvalue": 0.45, "silhouette_k2": 0.19, "bimodality_coefficient": 0.38, "disagreement_rate": 0.22, "ashman_d": 0.0},
+        "4": {"accuracy": 0.75, "embedding_variance": 0.027, "dip_statistic": 0.07, "dip_pvalue": 0.48, "silhouette_k2": 0.21, "bimodality_coefficient": 0.41, "disagreement_rate": 0.19, "ashman_d": 0.0}
+      }
+    },
+    "exp_id4_it2": {
+      "meta-llama/llama-3.1-8b-instruct": {
+        "2": {"accuracy": 0.88, "embedding_variance": 0.040, "dip_statistic": 0.12, "dip_pvalue": 0.02, "silhouette_k2": 0.35, "bimodality_coefficient": 0.55, "disagreement_rate": 0.15, "ashman_d": 1.5},
+        "3": {"accuracy": 0.85, "embedding_variance": 0.038, "dip_statistic": 0.13, "dip_pvalue": 0.01, "silhouette_k2": 0.33, "bimodality_coefficient": 0.56, "disagreement_rate": 0.20, "ashman_d": 1.4},
+        "4": {"accuracy": 0.80, "embedding_variance": 0.042, "dip_statistic": 0.11, "dip_pvalue": 0.03, "silhouette_k2": 0.36, "bimodality_coefficient": 0.54, "disagreement_rate": 0.14, "ashman_d": 1.6},
+        "5": {"accuracy": 0.75, "embedding_variance": 0.039, "dip_statistic": 0.12, "dip_pvalue": 0.02, "silhouette_k2": 0.34, "bimodality_coefficient": 0.53, "disagreement_rate": 0.22, "ashman_d": 1.5}
+      },
+      "openai/gpt-4o-mini": {
+        "2": {"accuracy": 0.92, "embedding_variance": 0.035, "dip_statistic": 0.10, "dip_pvalue": 0.04, "silhouette_k2": 0.30, "bimodality_coefficient": 0.50, "disagreement_rate": 0.12, "ashman_d": 1.3},
+        "3": {"accuracy": 0.90, "embedding_variance": 0.038, "dip_statistic": 0.11, "dip_pvalue": 0.03, "silhouette_k2": 0.28, "bimodality_coefficient": 0.52, "disagreement_rate": 0.15, "ashman_d": 1.4},
+        "4": {"accuracy": 0.85, "embedding_variance": 0.034, "dip_statistic": 0.10, "dip_pvalue": 0.04, "silhouette_k2": 0.32, "bimodality_coefficient": 0.49, "disagreement_rate": 0.11, "ashman_d": 1.3},
+        "5": {"accuracy": 0.80, "embedding_variance": 0.037, "dip_statistic": 0.12, "dip_pvalue": 0.02, "silhouette_k2": 0.29, "bimodality_coefficient": 0.51, "disagreement_rate": 0.18, "ashman_d": 1.5}
+      },
+      "google/gemini-2.0-flash-001": {
+        "2": {"accuracy": 0.95, "embedding_variance": 0.032, "dip_statistic": 0.09, "dip_pvalue": 0.05, "silhouette_k2": 0.28, "bimodality_coefficient": 0.48, "disagreement_rate": 0.10, "ashman_d": 1.2},
+        "3": {"accuracy": 0.92, "embedding_variance": 0.034, "dip_statistic": 0.10, "dip_pvalue": 0.04, "silhouette_k2": 0.26, "bimodality_coefficient": 0.50, "disagreement_rate": 0.12, "ashman_d": 1.3},
+        "4": {"accuracy": 0.88, "embedding_variance": 0.031, "dip_statistic": 0.09, "dip_pvalue": 0.05, "silhouette_k2": 0.30, "bimodality_coefficient": 0.47, "disagreement_rate": 0.09, "ashman_d": 1.2},
+        "5": {"accuracy": 0.82, "embedding_variance": 0.035, "dip_statistic": 0.11, "dip_pvalue": 0.03, "silhouette_k2": 0.27, "bimodality_coefficient": 0.49, "disagreement_rate": 0.15, "ashman_d": 1.4}
+      }
+    }
+  },
+  "classifier_data": {
+    "metadata": {
+      "classifier_comparison": {
+        "csd_logreg_full": {"lopo_f1": 0.8139, "lopo_auroc": 0.8969},
+        "variance_only": {"lopo_f1": 0.6994},
+        "dip_only": {"lopo_f1": 0.55},
+        "disagreement_only": {"lopo_f1": 0.62},
+        "bimodality_only": {"lopo_f1": 0.48}
+      }
+    }
+  },
+  "temperature_data": {
+    "metadata": {
+      "dose_response_analysis": {
+        "d_star_analysis": {"d_star_stable": true},
+        "variance_temperature_effect": {"frac_positive_trend": 0.917},
+        "disagreement_temperature_effect": {"frac_positive_trend": 0.792},
+        "dip_temperature_effect": {"frac_positive_trend": 0.25},
+        "bimodal_zone_widening": {"spearman_rho": 0.3},
+        "evidence_checks": {},
+        "csd_evidence_score": 0.5
+      }
+    }
+  }
+}

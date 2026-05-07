@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "description": "Multi-Hop Factual Reasoning Task Family Dataset (1-6 Hops)",
+    "total_examples": 18,
+    "hop_levels": "1-6",
+    "target_per_level": 3,
+    "sources": [
+      "musique_decomposition",
+      "musique",
+      "hotpotqa",
+      "synthetic"
+    ],
+    "seed": 42
+  },
+  "datasets": [
+    {
+      "dataset": "multi_hop_reasoning_1to6",
+      "examples": [
+        {
+          "input": "Yorke Bay >> country",
+          "output": "Falkland Islands",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 1,
+          "metadata_source": "musique_decomposition",
+          "metadata_id": "1hop_389060",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Yorke Bay >> country\", \"answer\": \"Falkland Islands\", \"paragraph_title\": \"Yorke Bay\"}]"
+        },
+        {
+          "input": "Eric Anthony >> member of sports team",
+          "output": "Houston Astros",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 1,
+          "metadata_source": "musique_decomposition",
+          "metadata_id": "1hop_194976",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Eric Anthony >> member of sports team\", \"answer\": \"Houston Astros\", \"paragraph_title\": \"Eric Anthony\"}]"
+        },
+        {
+          "input": "Palisadoes >> country",
+          "output": "Jamaica",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 1,
+          "metadata_source": "musique_decomposition",
+          "metadata_id": "1hop_779548",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Palisadoes >> country\", \"answer\": \"Jamaica\", \"paragraph_title\": \"Palisadoes\"}]"
+        },
+        {
+          "input": "Who is the child of the president under whom prohibition occurred?",
+          "output": "Jessie Woodrow Wilson",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 2,
+          "metadata_source": "musique",
+          "metadata_id": "2hop__63214_319330",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[\"Jessie Woodrow Wilson Sayre\"]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"who was president the prohibition of alcohol went into effect\", \"answer\": \"Woodrow Wilson\", \"paragraph_title\": \"Prohibition in the United States\"}, {\"hop\": 2, \"question\": \"#1 >> child\", \"answer\": \"Jessie Woodrow Wilson\", \"paragraph_title\": \"Jessie Woodrow Wilson Sayre\"}]"
+        },
+        {
+          "input": "At the end of which year did the tribes from the location of the Lusatia invade the Roman Empire?",
+          "output": "406",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 2,
+          "metadata_source": "musique",
+          "metadata_id": "2hop__818302_25719",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Lusatia >> located on terrain feature\", \"answer\": \"Central Europe\", \"paragraph_title\": \"Lower Lusatia\"}, {\"hop\": 2, \"question\": \"At the end of which year did #1 tribes invade the Roman Empire?\", \"answer\": \"406\", \"paragraph_title\": \"Galicia (Spain)\"}]"
+        },
+        {
+          "input": "What type of media do Peter Filkins and The New Criterion have in common?",
+          "output": "journal",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 2,
+          "metadata_source": "hotpotqa",
+          "metadata_id": "hotpot_5a7a6ec05542990783324f49",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Information from: Peter Filkins\", \"answer\": \"(intermediate fact)\", \"paragraph_title\": \"Peter Filkins\"}, {\"hop\": 2, \"question\": \"Information from: The New Criterion\", \"answer\": \"journal\", \"paragraph_title\": \"The New Criterion\"}]"
+        },
+        {
+          "input": "When did the location of the basilica that is named after the same saint as the San Pietro in Ciel d'Oro become its own country?",
+          "output": "11 February 1929",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 3,
+          "metadata_source": "musique",
+          "metadata_id": "3hop1__603558_87694_64412",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"San Pietro in Ciel d'Oro >> named after\", \"answer\": \"Peter\", \"paragraph_title\": \"San Pietro in Ciel d'Oro\"}, {\"hop\": 2, \"question\": \"st. #1 ’s basilica the head of the catholic religion is located in\", \"answer\": \"Vatican City\", \"paragraph_title\": \"St. Peter's Basilica\"}, {\"hop\": 3, \"question\": \"when did #2 become its own country\", \"answer\": \"11 February 1929\", \"paragraph_title\": \"Vatican City\"}]"
+        },
+        {
+          "input": "Who was a prominent figure at the radio division of the network that created the version of The Biggest Loser set in the country where Seria is?",
+          "output": "Walter Sabo",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 3,
+          "metadata_source": "musique",
+          "metadata_id": "3hop1__321720_650651_7262",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Seria >> country\", \"answer\": \"Brunei\", \"paragraph_title\": \"Seria, Belait\"}, {\"hop\": 2, \"question\": \"The Biggest Loser #1 (season 3): The Final Chance >> creator\", \"answer\": \"NBC\", \"paragraph_title\": \"The Biggest Loser Brunei: Lose It All\"}, {\"hop\": 3, \"question\": \"Who was a prominent figure at #2 's radio division?\", \"answer\": \"Walter Sabo\", \"paragraph_title\": \"Adult contemporary music\"}]"
+        },
+        {
+          "input": "In what region of the country where Mount Can is located is the city where Zone 5 Military Museum is found?",
+          "output": "South Central Coast",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 3,
+          "metadata_source": "musique",
+          "metadata_id": "3hop2__565959_467331_162182",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Mount Can >> country\", \"answer\": \"Vietnam\", \"paragraph_title\": \"Mount Cẩn\"}, {\"hop\": 2, \"question\": \"Zone 5 Military Museum >> located in the administrative territorial entity\", \"answer\": \"Da Nang\", \"paragraph_title\": \"Zone 5 Military Museum, Danang\"}, {\"hop\": 3, \"question\": \"In what region of #1 is #2 located?\", \"answer\": \"South Central Coast\", \"paragraph_title\": \"South Central Coast\"}]"
+        },
+        {
+          "input": "What country is between Lithuania and the country many expelled French Jews relocated to, along with the country of citizenship of Marie Antoinette's mother?",
+          "output": "Kaliningrad Oblast",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 4,
+          "metadata_source": "musique",
+          "metadata_id": "4hop1__370129_621192_10659_59955",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Marie Antoinette >> mother\", \"answer\": \"Maria Theresa\", \"paragraph_title\": \"Florimond Claude, Comte de Mercy-Argenteau\"}, {\"hop\": 2, \"question\": \"#1 of Austria >> country of citizenship\", \"answer\": \"Hungary\", \"paragraph_title\": \"César Gabriel de Choiseul\"}, {\"hop\": 3, \"question\": \"Along with #2 , where did many expelled French Jews relocate to?\", \"answer\": \"Poland\", \"paragraph_title\": \"Middle Ages\"}, {\"hop\": 4, \"question\": \"what country is in between #3 and lithuania\", \"answer\": \"Kaliningrad Oblast\", \"paragraph_title\": \"Kaliningrad\"}]"
+        },
+        {
+          "input": "When was the most recent Bicycle Friendly Community Award given to the city where the only group larger than the record label of Desde El Principio is headquartered?",
+          "output": "2013",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 4,
+          "metadata_source": "musique",
+          "metadata_id": "4hop1__151650_5274_458768_33677",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"What was the record label of Desde El Principio?\", \"answer\": \"Sony Music Entertainment\", \"paragraph_title\": \"Desde El Principio\"}, {\"hop\": 2, \"question\": \"What company is the only group larger than #1 ?\", \"answer\": \"Universal Music Group.\", \"paragraph_title\": \"Sony Music\"}, {\"hop\": 3, \"question\": \"#2 >> headquarters location\", \"answer\": \"Santa Monica\", \"paragraph_title\": \"The Right Stuff Records\"}, {\"hop\": 4, \"question\": \"When was the most recent Bicycle Friendly Community Award given to #3 ?\", \"answer\": \"2013\", \"paragraph_title\": \"Santa Monica, California\"}]"
+        },
+        {
+          "input": "Who won more national championships between the university that contains Fort Hill and the university of the state where Edwards won the primary besides the state where WSFN is located?",
+          "output": "University of South Carolina",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 4,
+          "metadata_source": "musique",
+          "metadata_id": "4hop3__129682_29339_508306_70744",
+          "metadata_task_type": "multi_hop_qa",
+          "metadata_answer_aliases": "[\"USC\", \"SC\"]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"In which state is WSFN located?\", \"answer\": \"Georgia\", \"paragraph_title\": \"WSFN\"}, {\"hop\": 2, \"question\": \"Besides #1 , what other state primary did Edwards win?\", \"answer\": \"South Carolina\", \"paragraph_title\": \"2004 United States presidential election\"}, {\"hop\": 3, \"question\": \"Fort Hill >> located in the administrative territorial entity\", \"answer\": \"Clemson\", \"paragraph_title\": \"Fort Hill (Clemson, South Carolina)\"}, {\"hop\": 4, \"question\": \"who has more national championships #3 or #2\", \"answer\": \"University of South Carolina\", \"paragraph_title\": \"Clemson–South Carolina rivalry\"}]"
+        },
+        {
+          "input": "On what continent is the country whose official name is the same as the country of origin for the team of Jörg van Nieuwenhuijzen, as depicted on its coat of arms?",
+          "output": "Europe",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 5,
+          "metadata_source": "synthetic",
+          "metadata_id": "5hop_synth_0",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"What is the name of J\\u00f6rg van Nieuwenhuijzen's team?\", \"answer\": \"FC Lienden\", \"paragraph_title\": \"\"}, {\"hop\": 2, \"question\": \"#1 >> country\", \"answer\": \"Holland\", \"paragraph_title\": \"\"}, {\"hop\": 3, \"question\": \"what is the official name of the country sometimes known as #2\", \"answer\": \"Netherlands\", \"paragraph_title\": \"\"}, {\"hop\": 4, \"question\": \"coat of arms of the #3 >> country\", \"answer\": \"Kingdom of the Netherlands\", \"paragraph_title\": \"\"}, {\"hop\": 5, \"question\": \"Kingdom of the Netherlands >> continent\", \"answer\": \"Europe\", \"paragraph_title\": \"\"}]"
+        },
+        {
+          "input": "Who wrote the screenplay for the film by the same director as the one who examined two ethnic minorities differently in Santa Monica, the headquarters of the company larger than Sony Music Entertainment, the record label of Desde El Principio?",
+          "output": "Satyajit Ray",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 5,
+          "metadata_source": "synthetic",
+          "metadata_id": "5hop_synth_15",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"What was the record label of Desde El Principio?\", \"answer\": \"Sony Music Entertainment\", \"paragraph_title\": \"\"}, {\"hop\": 2, \"question\": \"What company is the only group larger than #1 ?\", \"answer\": \"Universal Music Group.\", \"paragraph_title\": \"\"}, {\"hop\": 3, \"question\": \"#2 >> headquarters location\", \"answer\": \"Santa Monica\", \"paragraph_title\": \"\"}, {\"hop\": 4, \"question\": \"How many ethnic minorities were looked at differently in #3 ?\", \"answer\": \"two\", \"paragraph_title\": \"\"}, {\"hop\": 5, \"question\": \"Two >> screenwriter\", \"answer\": \"Satyajit Ray\", \"paragraph_title\": \"\"}]"
+        },
+        {
+          "input": "Who is a performer associated with the year that the first McDonaldization-named restaurant opened in the country of citizenship of the author of Milton's 1645 Poems?",
+          "output": "Amy Grant",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 5,
+          "metadata_source": "synthetic",
+          "metadata_id": "5hop_synth_29",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Milton's 1645 Poems >> author\", \"answer\": \"John Milton\", \"paragraph_title\": \"\"}, {\"hop\": 2, \"question\": \"#1 >> country of citizenship\", \"answer\": \"England\", \"paragraph_title\": \"\"}, {\"hop\": 3, \"question\": \"McDonaldization >> named after\", \"answer\": \"McDonald's\", \"paragraph_title\": \"\"}, {\"hop\": 4, \"question\": \"when did the first #3 open in #2\", \"answer\": \"1974\", \"paragraph_title\": \"\"}, {\"hop\": 5, \"question\": \"1974 >> performer\", \"answer\": \"Amy Grant\", \"paragraph_title\": \"\"}]"
+        },
+        {
+          "input": "What river flows through the capital city of the country directly north of the body of water that the river running through the capital of France empties into?",
+          "output": "Thames",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 6,
+          "metadata_source": "synthetic",
+          "metadata_id": "6hop_fallback_0",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"What is the capital of France?\", \"answer\": \"Paris\", \"paragraph_title\": \"\"}, {\"hop\": 2, \"question\": \"What major river flows through Paris?\", \"answer\": \"Seine\", \"paragraph_title\": \"\"}, {\"hop\": 3, \"question\": \"Into what body of water does the Seine River primarily empty?\", \"answer\": \"English Channel\", \"paragraph_title\": \"\"}, {\"hop\": 4, \"question\": \"What country lies directly north of the English Channel?\", \"answer\": \"England\", \"paragraph_title\": \"\"}, {\"hop\": 5, \"question\": \"What is the capital city of England?\", \"answer\": \"London\", \"paragraph_title\": \"\"}, {\"hop\": 6, \"question\": \"What river runs through London?\", \"answer\": \"Thames\", \"paragraph_title\": \"\"}]"
+        },
+        {
+          "input": "What country was the artist who painted the Mona Lisa, which is housed in the Louvre museum located on the banks of the Seine river that flows through the city where the Eiffel Tower is located, from?",
+          "output": "Italy",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 6,
+          "metadata_source": "synthetic",
+          "metadata_id": "6hop_fallback_15",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Which city is home to the Eiffel Tower?\", \"answer\": \"Paris\", \"paragraph_title\": \"\"}, {\"hop\": 2, \"question\": \"What river flows through Paris?\", \"answer\": \"Seine\", \"paragraph_title\": \"\"}, {\"hop\": 3, \"question\": \"What large museum is located on the banks of the Seine?\", \"answer\": \"Louvre\", \"paragraph_title\": \"\"}, {\"hop\": 4, \"question\": \"What famous artwork is housed in the Louvre?\", \"answer\": \"Mona Lisa\", \"paragraph_title\": \"\"}, {\"hop\": 5, \"question\": \"Who painted the Mona Lisa?\", \"answer\": \"Da Vinci\", \"paragraph_title\": \"\"}, {\"hop\": 6, \"question\": \"What country was Da Vinci from?\", \"answer\": \"Italy\", \"paragraph_title\": \"\"}]"
+        },
+        {
+          "input": "In what year did the siege that was a major battle during the Alamo begin, given that the Alamo was fought in the same state as the city where the US president who delivered the \"I Have a Dream\" speech was assassinated in 1963?",
+          "output": "1836",
+          "metadata_fold": "test",
+          "metadata_difficulty_level": 6,
+          "metadata_source": "synthetic",
+          "metadata_id": "6hop_fallback_29",
+          "metadata_answer_aliases": "[]",
+          "metadata_supporting_facts": "[{\"hop\": 1, \"question\": \"Which US president delivered the 'I Have a Dream' speech?\", \"answer\": \"Kennedy\", \"paragraph_title\": \"\"}, {\"hop\": 2, \"question\": \"What year was Kennedy assassinated?\", \"answer\": \"1963\", \"paragraph_title\": \"\"}, {\"hop\": 3, \"question\": \"Which city was he assassinated in?\", \"answer\": \"Dallas\", \"paragraph_title\": \"\"}, {\"hop\": 4, \"question\": \"Which state is Dallas located in?\", \"answer\": \"Texas\", \"paragraph_title\": \"\"}, {\"hop\": 5, \"question\": \"What major battle during the Alamo was fought in Texas?\", \"answer\": \"Siege\", \"paragraph_title\": \"\"}, {\"hop\": 6, \"question\": \"What year did the Alamo siege begin?\", \"answer\": \"1836\", \"paragraph_title\": \"\"}]"
+        }
+      ]
+    }
+  ]
+}

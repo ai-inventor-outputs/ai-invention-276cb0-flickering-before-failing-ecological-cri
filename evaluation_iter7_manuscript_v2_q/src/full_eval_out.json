@@ -1,0 +1,544 @@
+{
+  "metadata": {
+    "evaluation_name": "Manuscript v2 Quantitative Integrity Audit",
+    "description": "Automated integrity audit that extracts every quantitative claim from the v2 manuscript and cross-references it against source experiment/evaluation JSON files.",
+    "paper_file": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_6/gen_art/eval_id4_it6__opus/paper.tex",
+    "supplementary_file": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_7/gen_art/eval_id2_it7__opus/supplementary.tex",
+    "dependency_files": [
+      "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/full_method_out.json",
+      "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus/full_method_out.json",
+      "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/full_method_out.json"
+    ],
+    "audit_categories": [
+      "mismatches",
+      "stale_numbers",
+      "ci_anomalies",
+      "arithmetic_errors",
+      "consistency_errors",
+      "unsourced_claims"
+    ]
+  },
+  "metrics_agg": {
+    "total_claims_checked": 19,
+    "verified_count": 19,
+    "overall_integrity_score": 1.0,
+    "n_mismatches": 0,
+    "n_stale_numbers": 18,
+    "n_unsourced": 0,
+    "n_rounding_issues": 0,
+    "n_ci_anomalies": 0,
+    "n_arithmetic_errors": 1,
+    "n_consistency_errors": 4,
+    "critical_error_count": 19,
+    "submission_ready": 0,
+    "paper_claims_count": 175,
+    "supp_claims_count": 287
+  },
+  "datasets": [
+    {
+      "dataset": "verified_claims",
+      "examples": [
+        {
+          "input": "Verify claim: Fig5: best CSD LOPO F1 = 0.949",
+          "output": "VERIFIED: paper=0.949, source=0.949317",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.949",
+          "predict_source_value": "0.949317",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_f1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: Fig5: best CSD LOPO AUROC",
+          "output": "VERIFIED: paper=0.996, source=0.995604",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.996",
+          "predict_source_value": "0.995604",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_auroc",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOPO precision",
+          "output": "VERIFIED: paper=0.96, source=0.96",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.96",
+          "predict_source_value": "0.96",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_precision",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOPO recall",
+          "output": "VERIFIED: paper=0.946, source=0.945726",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.946",
+          "predict_source_value": "0.945726",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_recall",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOTO F1",
+          "output": "VERIFIED: paper=0.944, source=0.94359",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.944",
+          "predict_source_value": "0.94359",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.loto_f1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOMO F1",
+          "output": "VERIFIED: paper=0.94, source=0.940483",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.94",
+          "predict_source_value": "0.940483",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lomo_f1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: improvement over SPUQ LOPO %",
+          "output": "VERIFIED: paper=33.23, source=33.23",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "33.23",
+          "predict_source_value": "33.23",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "metadata.improvement_csd_over_spuq_lopo_pct",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: improvement over SPUQ LOTO %",
+          "output": "VERIFIED: paper=34.99, source=34.99",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "34.99",
+          "predict_source_value": "34.99",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "metadata.improvement_csd_over_spuq_loto_pct",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: SPUQ required 1520 API calls",
+          "output": "VERIFIED: paper=1520, source=1520.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "1520",
+          "predict_source_value": "1520.0",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "metadata.spuq_api_cost.total_calls",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: d* Llama arithmetic = 20",
+          "output": "VERIFIED: paper=20, source=20.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "20",
+          "predict_source_value": "20.0",
+          "metadata_source_file": "dep2/full_method_out.json",
+          "metadata_source_key": "model_summaries.meta-llama/llama-3.1-8b-instruct.d_star",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: d* Gemini Flash arithmetic = 15",
+          "output": "VERIFIED: paper=15, source=15.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "15",
+          "predict_source_value": "15.0",
+          "metadata_source_file": "dep2/full_method_out.json",
+          "metadata_source_key": "model_summaries.google/gemini-2.0-flash-001.d_star",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: d* GPT-4o-mini arithmetic = 2",
+          "output": "VERIFIED: paper=2, source=2.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "2",
+          "predict_source_value": "2.0",
+          "metadata_source_file": "dep2/full_method_out.json",
+          "metadata_source_key": "model_summaries.openai/gpt-4o-mini.d_star",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: d* GPT-4o-mini graph coloring = 10",
+          "output": "VERIFIED: paper=10, source=10.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "10",
+          "predict_source_value": "10.0",
+          "metadata_source_file": "dep3/full_method_out.json",
+          "metadata_source_key": "analysis.models[gpt-4o-mini].d_star",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: d* Gemini Flash graph coloring = 14",
+          "output": "VERIFIED: paper=14, source=14.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "14",
+          "predict_source_value": "14.0",
+          "metadata_source_file": "dep3/full_method_out.json",
+          "metadata_source_key": "analysis.models[gemini-2.0-flash-001].d_star",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: d* Flash Lite graph coloring = 11",
+          "output": "VERIFIED: paper=11, source=11.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "11",
+          "predict_source_value": "11.0",
+          "metadata_source_file": "dep3/full_method_out.json",
+          "metadata_source_key": "analysis.models[gemini-2.0-flash-lite-001].d_star",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: Graph coloring total API calls = 3000",
+          "output": "VERIFIED: paper=3000, source=3000.0",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "3000",
+          "predict_source_value": "3000.0",
+          "metadata_source_file": "dep3/full_method_out.json",
+          "metadata_source_key": "metadata.total_api_calls",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: Graph coloring total cost ~$0.90",
+          "output": "VERIFIED: paper=0.9, source=0.902",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.9",
+          "predict_source_value": "0.902",
+          "metadata_source_file": "dep3/full_method_out.json",
+          "metadata_source_key": "metadata.total_cost_usd",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: disagreement_only logreg LOPO F1",
+          "output": "VERIFIED: paper=0.68, source=0.680412",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.68",
+          "predict_source_value": "0.680412",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "classifier_comparison.disagreement_only_logreg.lopo_f1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: spuq_accuracy_rf LOPO F1",
+          "output": "VERIFIED: paper=0.713, source=0.712531",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.713",
+          "predict_source_value": "0.712531",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "classifier_comparison.spuq_accuracy_rf.lopo_f1",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "mismatches",
+      "examples": [
+        {
+          "input": "No mismatches detected",
+          "output": "All checked claims match source data",
+          "predict_status": "none",
+          "eval_is_mismatch": 0,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "stale_numbers",
+      "examples": [
+        {
+          "input": "Check stale: ficient, and disagreement rate) achieves leave-one-pair-out F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897) for predicting boundary proximity, ou",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "abstract",
+          "metadata_line_no": 9,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: reement rate) achieves leave-one-pair-out F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897) for predicting boundary proximity, outperforming the best ",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "abstract",
+          "metadata_line_no": 9,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: ximity, outperforming the best single-indicator baseline by 16.38\\%, at zero additional API cost. However, the fold bifurcation",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "abstract",
+          "metadata_line_no": 9,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: rks regardless of the theoretical mechanism, achieving LOPO F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897), beating the best baseline by 16.38\\%",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Introduction",
+          "metadata_line_no": 27,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: the theoretical mechanism, achieving LOPO F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897), beating the best baseline by 16.38\\%, at zero additional ",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Introduction",
+          "metadata_line_no": 27,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: ,$0.814 (AUROC$\\,{=}\\,$0.897), beating the best baseline by 16.38\\%, at zero additional API cost.",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Introduction",
+          "metadata_line_no": 27,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: y classifier.} Logistic regression on CSD features achieves F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897), outperforming all single-indicator b",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Introduction",
+          "metadata_line_no": 34,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: istic regression on CSD features achieves F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897), outperforming all single-indicator baselines by 16.38\\% i",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Introduction",
+          "metadata_line_no": 34,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: }\\,$0.897), outperforming all single-indicator baselines by 16.38\\% in F1, using only the $N=50$ samples already generated for ",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Introduction",
+          "metadata_line_no": 34,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: \\textbf{LOPO performance.} CSD-LogReg-Full achieves F1$\\,{=}\\,$0.814 and AUROC$\\,{=}\\,$0.897, outperforming the best single-indi",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "SC3: Classifier Comparison",
+          "metadata_line_no": 243,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: performance.} CSD-LogReg-Full achieves F1$\\,{=}\\,$0.814 and AUROC$\\,{=}\\,$0.897, outperforming the best single-indicator baseline (variance",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "SC3: Classifier Comparison",
+          "metadata_line_no": 243,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: gle-indicator baseline (variance-only, F1$\\,{=}\\,$0.699) by 16.38\\%. The improvement over disagreement-only (F1$\\,{=}\\,$0.684) ",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "SC3: Classifier Comparison",
+          "metadata_line_no": 243,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale:  \\textbf{Met}. CSD-LogReg-Full exceeds the best baseline by 16.38\\% in F1 ($> 15\\%$ threshold).",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "SC3: Classifier Comparison",
+          "metadata_line_no": 251,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: model internals. Our method is fully black-box and achieves AUROC 0.897 on the related but distinct task of \\emph{boundary proximit",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Related Work",
+          "metadata_line_no": 342,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: cal assumptions \\cite{boettiger2012}. Our partial success---F1 = 0.814 for a well-defined binary prediction task on structured dat",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Discussion",
+          "metadata_line_no": 369,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: g tasks with four LLMs. A zero-cost CSD classifier achieves F1 = 0.814 (AUROC = 0.897) for boundary proximity prediction, outperfo",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Conclusion",
+          "metadata_line_no": 417,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale:  four LLMs. A zero-cost CSD classifier achieves F1 = 0.814 (AUROC = 0.897) for boundary proximity prediction, outperforming all singl",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Conclusion",
+          "metadata_line_no": 417,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: prediction, outperforming all single-indicator baselines by 16.38\\% and the self-consistency disagreement baseline by 19.0\\%.",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "Conclusion",
+          "metadata_line_no": 417,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "ci_anomalies",
+      "examples": [
+        {
+          "input": "No CI anomalies detected",
+          "output": "All confidence intervals are valid",
+          "predict_status": "none",
+          "eval_is_ci_anomaly": 0,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "arithmetic_errors",
+      "examples": [
+        {
+          "input": "Check arithmetic: iter_3: F1=0.814 from P=0.786, R=0.88",
+          "output": "ARITHMETIC_ERROR: expected=0.8303, got=0.814",
+          "eval_is_arithmetic_error": 1,
+          "eval_delta": 0.0163,
+          "predict_expected_result": "0.8303",
+          "predict_actual_paper_value": "0.814",
+          "metadata_formula": "2 * 0.786 * 0.88 / (0.786 + 0.88)",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "consistency_errors",
+      "examples": [
+        {
+          "input": "Check consistency: improvement_pct",
+          "output": "INCONSISTENT: abstract=16.38; abstract=16.38; Introduction=16.38; Introduction=16.38; Introduction=16.38; Introduction=16.38; SC3: Classifier Comparison=16.38; SC3: Classifier Comparison=16.38; SC3: Classifier Comp",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "improvement_pct",
+          "metadata_n_occurrences": 14,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check consistency: best_csd_lopo_f1",
+          "output": "INCONSISTENT: Introduction=0.814; SC3: Classifier Comparison=0.814; SC3: Classifier Comparison=0.949",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "best_csd_lopo_f1",
+          "metadata_n_occurrences": 3,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check consistency: best_csd_lopo_f1",
+          "output": "INCONSISTENT: abstract/body/table=0.814; figure_5_caption=0.949",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "best_csd_lopo_f1",
+          "metadata_n_occurrences": 2,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check consistency: improvement_percentage",
+          "output": "INCONSISTENT: abstract/body=16.38%; iter_4_source=33.23%",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "improvement_percentage",
+          "metadata_n_occurrences": 2,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "unsourced_claims",
+      "examples": [
+        {
+          "input": "No unsourced claims detected",
+          "output": "All claims have source data",
+          "predict_status": "none",
+          "eval_is_unsourced": 0,
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ]
+}

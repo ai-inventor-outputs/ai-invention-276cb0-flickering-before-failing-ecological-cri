@@ -1,0 +1,13 @@
+{
+  "id": "eval_id3_it5__opus",
+  "type": "code",
+  "title": "Definitive Statistical Summary: Bootstrap CIs, Effect Sizes, Feature Ablation, Sample-Size Sensitivity, and Cross-Experiment Consistency for CSD Paper Claims",
+  "summary": "Demo notebook computing a comprehensive 5-block statistical evaluation of Critical Slowing Down (CSD) indicators across LLM experiments. Block 1: Bootstrap CIs for success criteria (SC1 flickering detection, SC2 mixture model R\u00b2, SC3 classifier LOPO F1=0.949 with 33% improvement over baseline). Block 2: Cohen's d and Cliff's delta effect sizes for near- vs far-boundary zones across 5 CSD indicators. Block 3: LOFO feature ablation and forward selection identifying relative_dist_to_dstar as the dominant feature. Block 4: Sample-size sensitivity curves via variance inflation, finding minimum viable N=15. Block 5: Cross-experiment consistency via Kendall tau matrix with negative controls. Uses data from arithmetic, graph coloring, and syllogistic reasoning tasks across multiple LLMs. Runs with full original parameters (10000 bootstrap iterations) in ~57s.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_5/gen_art/eval_id3_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id3_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id3_it5__opus/eval_code_demo.ipynb"
+}

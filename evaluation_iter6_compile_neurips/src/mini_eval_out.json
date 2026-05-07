@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "evaluation_name": "neurips_paper_compilation",
+    "description": "Compile NeurIPS 2026 submission PDF from experiment data + manuscript text",
+    "manuscript_source": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_5/gen_art/research_id4_it5__opus/research_out.json",
+    "n_dependency_experiments": 5,
+    "n_figures_target": 8,
+    "n_tables_target": 3,
+    "n_bib_entries_target": 38,
+    "compilation_tool": "pdflatex + bibtex",
+    "scaling_stage_reached": "full",
+    "total_runtime_seconds": 14.05
+  },
+  "metrics_agg": {
+    "pdf_compiled": 1,
+    "page_count": 25,
+    "main_body_pages": 22,
+    "total_figures_included": 8,
+    "total_tables_included": 1,
+    "bibliography_entries_total": 38,
+    "bibliography_entries_resolved": 37,
+    "missing_citations": 0,
+    "latex_warnings_count": 2,
+    "overfull_hbox_count": 3,
+    "all_figures_pass_size_check": 1,
+    "neurips_dimension_compliance": 1,
+    "no_placeholder_text": 1,
+    "compilation_success_rate": 0.3333333333333333,
+    "total_data_points_in_figures": 919
+  },
+  "datasets": [
+    {
+      "dataset": "figure_quality",
+      "examples": [
+        {
+          "input": "Generate figure: fig1",
+          "output": "Generated successfully: fig1",
+          "eval_figure_generated": 1,
+          "eval_figure_included_in_pdf": 1,
+          "eval_filesize_png_kb": 202.24,
+          "eval_width_inches": 6.75,
+          "eval_height_inches": 3.5,
+          "eval_dimension_compliance": 1,
+          "eval_n_data_points": 72,
+          "eval_size_check_pass": 1,
+          "metadata_figure_name": "fig1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Generate figure: fig2",
+          "output": "Generated successfully: fig2",
+          "eval_figure_generated": 1,
+          "eval_figure_included_in_pdf": 1,
+          "eval_filesize_png_kb": 494.66,
+          "eval_width_inches": 6.75,
+          "eval_height_inches": 5.0,
+          "eval_dimension_compliance": 1,
+          "eval_n_data_points": 288,
+          "eval_size_check_pass": 1,
+          "metadata_figure_name": "fig2",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Generate figure: fig3",
+          "output": "Generated successfully: fig3",
+          "eval_figure_generated": 1,
+          "eval_figure_included_in_pdf": 1,
+          "eval_filesize_png_kb": 222.71,
+          "eval_width_inches": 6.75,
+          "eval_height_inches": 3.5,
+          "eval_dimension_compliance": 1,
+          "eval_n_data_points": 60,
+          "eval_size_check_pass": 1,
+          "metadata_figure_name": "fig3",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "compilation_summary",
+      "examples": [
+        {
+          "input": "Compile NeurIPS paper PDF from experiment data and manuscript",
+          "output": "PDF compiled=YES, pages=25, figures=8/8",
+          "eval_pdf_compiled": 1,
+          "eval_page_count": 25,
+          "eval_main_body_pages": 22,
+          "eval_total_figures": 8,
+          "eval_total_tables": 1,
+          "eval_bib_resolved": 37,
+          "eval_missing_citations": 0,
+          "eval_warnings": 2,
+          "eval_overfull_hbox": 3,
+          "eval_compilation_success_rate": 0.3333333333333333,
+          "eval_no_placeholder_text": 1,
+          "metadata_scaling_stage": "full",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "cost_comparison",
+      "examples": [
+        {
+          "input": "Cost analysis: CSD (all variants)",
+          "output": "Extra calls=0, Cost=$0.0000",
+          "predict_best_lopo_f1": "0.949317",
+          "predict_best_loto_f1": "0.94359",
+          "predict_extra_api_calls": "0",
+          "predict_extra_cost_usd": "0.0",
+          "eval_cost_effectiveness": 949.317,
+          "metadata_method": "CSD (all variants)",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Cost analysis: SPUQ (paraphrase)",
+          "output": "Extra calls=1520, Cost=$0.2414",
+          "predict_best_lopo_f1": "0.712531",
+          "predict_best_loto_f1": "0.698997",
+          "predict_extra_api_calls": "1520",
+          "predict_extra_cost_usd": "0.2414",
+          "eval_cost_effectiveness": 0.4685,
+          "metadata_method": "SPUQ (paraphrase)",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Cost analysis: CSD+SPUQ combined",
+          "output": "Extra calls=1520, Cost=$0.2414",
+          "predict_best_lopo_f1": "0.862025",
+          "predict_best_loto_f1": "0.767145",
+          "predict_extra_api_calls": "1520",
+          "predict_extra_cost_usd": "0.2414",
+          "eval_cost_effectiveness": 0.5667,
+          "metadata_method": "CSD+SPUQ combined",
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ]
+}

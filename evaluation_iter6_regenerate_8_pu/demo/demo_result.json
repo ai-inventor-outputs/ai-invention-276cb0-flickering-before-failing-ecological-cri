@@ -1,0 +1,13 @@
+{
+  "id": "eval_id3_it6__opus",
+  "type": "code",
+  "title": "Regenerate 8 Publication Figures with Updated Fig 5 (Classifier Comparison) and Fig 8 (Prospective Protocol)",
+  "summary": "Demonstrates regeneration of 8 NeurIPS publication-quality figures from CSD (Critical Slowing Down) experiments on LLM capability boundaries. Combines data from 5 experiment dependencies (arithmetic CSD, graph coloring CSD, classifier comparison, temperature manipulation, model fitting) into a unified pipeline that generates figures with NeurIPS dimension compliance. Evaluates each figure for file size, dimension compliance, and data points plotted. Includes prospective protocol computation (any-1, CUSUM, d*-free Logistic Regression) and a classifier comparison (CSD vs SPUQ). Uses mini_demo_data.json (64KB) containing curated preview data from all 5 dependencies. Runs in ~5 seconds producing 8 PNG+PDF figure pairs.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_6/gen_art/eval_id3_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id3_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id3_it6__opus/eval_code_demo.ipynb"
+}

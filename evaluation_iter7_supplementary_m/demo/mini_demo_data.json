@@ -1,0 +1,210 @@
+{
+  "dep1_arithmetic": {
+    "metadata": {
+      "sampling_params": {"temperature": 0.7, "top_p": 0.95, "max_tokens": 256},
+      "models": ["gpt-4o-mini", "claude-3-haiku", "gemini-1.5-flash"],
+      "difficulty_levels": 10,
+      "responses_per_level_target": 50
+    },
+    "datasets": [
+      {
+        "dataset": "arithmetic_csd_gpt4o_mini",
+        "examples": [
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 1, "predict_accuracy": 0.98, "predict_csd_variance": 0.012, "predict_dip_statistic": 0.031, "predict_silhouette_k2": 0.15, "predict_bimodality_coefficient": 0.35, "predict_disagreement_rate": 0.02},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 2, "predict_accuracy": 0.96, "predict_csd_variance": 0.018, "predict_dip_statistic": 0.038, "predict_silhouette_k2": 0.19, "predict_bimodality_coefficient": 0.38, "predict_disagreement_rate": 0.04},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 3, "predict_accuracy": 0.93, "predict_csd_variance": 0.031, "predict_dip_statistic": 0.045, "predict_silhouette_k2": 0.28, "predict_bimodality_coefficient": 0.42, "predict_disagreement_rate": 0.07},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 4, "predict_accuracy": 0.87, "predict_csd_variance": 0.058, "predict_dip_statistic": 0.062, "predict_silhouette_k2": 0.41, "predict_bimodality_coefficient": 0.51, "predict_disagreement_rate": 0.13},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 5, "predict_accuracy": 0.74, "predict_csd_variance": 0.112, "predict_dip_statistic": 0.085, "predict_silhouette_k2": 0.55, "predict_bimodality_coefficient": 0.62, "predict_disagreement_rate": 0.26},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 6, "predict_accuracy": 0.51, "predict_csd_variance": 0.198, "predict_dip_statistic": 0.112, "predict_silhouette_k2": 0.68, "predict_bimodality_coefficient": 0.73, "predict_disagreement_rate": 0.49},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 7, "predict_accuracy": 0.31, "predict_csd_variance": 0.145, "predict_dip_statistic": 0.078, "predict_silhouette_k2": 0.52, "predict_bimodality_coefficient": 0.58, "predict_disagreement_rate": 0.69},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 8, "predict_accuracy": 0.15, "predict_csd_variance": 0.071, "predict_dip_statistic": 0.042, "predict_silhouette_k2": 0.31, "predict_bimodality_coefficient": 0.41, "predict_disagreement_rate": 0.85},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 9, "predict_accuracy": 0.08, "predict_csd_variance": 0.035, "predict_dip_statistic": 0.029, "predict_silhouette_k2": 0.18, "predict_bimodality_coefficient": 0.33, "predict_disagreement_rate": 0.92},
+          {"metadata_model": "gpt-4o-mini", "metadata_d_star": 6, "metadata_difficulty_level": 10, "predict_accuracy": 0.03, "predict_csd_variance": 0.015, "predict_dip_statistic": 0.025, "predict_silhouette_k2": 0.12, "predict_bimodality_coefficient": 0.30, "predict_disagreement_rate": 0.97}
+        ]
+      },
+      {
+        "dataset": "arithmetic_csd_claude3_haiku",
+        "examples": [
+          {"metadata_model": "claude-3-haiku", "metadata_d_star": 7, "metadata_difficulty_level": 1, "predict_accuracy": 0.99, "predict_csd_variance": 0.008, "predict_dip_statistic": 0.028, "predict_silhouette_k2": 0.11, "predict_bimodality_coefficient": 0.32, "predict_disagreement_rate": 0.01},
+          {"metadata_model": "claude-3-haiku", "metadata_d_star": 7, "metadata_difficulty_level": 3, "predict_accuracy": 0.95, "predict_csd_variance": 0.022, "predict_dip_statistic": 0.041, "predict_silhouette_k2": 0.22, "predict_bimodality_coefficient": 0.39, "predict_disagreement_rate": 0.05},
+          {"metadata_model": "claude-3-haiku", "metadata_d_star": 7, "metadata_difficulty_level": 5, "predict_accuracy": 0.85, "predict_csd_variance": 0.075, "predict_dip_statistic": 0.071, "predict_silhouette_k2": 0.45, "predict_bimodality_coefficient": 0.55, "predict_disagreement_rate": 0.15},
+          {"metadata_model": "claude-3-haiku", "metadata_d_star": 7, "metadata_difficulty_level": 7, "predict_accuracy": 0.52, "predict_csd_variance": 0.195, "predict_dip_statistic": 0.105, "predict_silhouette_k2": 0.65, "predict_bimodality_coefficient": 0.71, "predict_disagreement_rate": 0.48},
+          {"metadata_model": "claude-3-haiku", "metadata_d_star": 7, "metadata_difficulty_level": 9, "predict_accuracy": 0.12, "predict_csd_variance": 0.045, "predict_dip_statistic": 0.035, "predict_silhouette_k2": 0.21, "predict_bimodality_coefficient": 0.36, "predict_disagreement_rate": 0.88},
+          {"metadata_model": "claude-3-haiku", "metadata_d_star": 7, "metadata_difficulty_level": 10, "predict_accuracy": 0.05, "predict_csd_variance": 0.018, "predict_dip_statistic": 0.027, "predict_silhouette_k2": 0.14, "predict_bimodality_coefficient": 0.31, "predict_disagreement_rate": 0.95}
+        ]
+      }
+    ]
+  },
+  "dep2_graph_coloring": {
+    "metadata": {
+      "sampling_params": {"temperature": 0.7, "top_p": 0.95, "max_tokens": 512},
+      "models": ["gpt-4o-mini", "claude-3-haiku"],
+      "difficulty_levels": 8,
+      "responses_per_level_target": 50,
+      "analysis": {
+        "models": [
+          {"model": "gpt-4o-mini", "d_star": 5},
+          {"model": "claude-3-haiku", "d_star": 6}
+        ]
+      }
+    },
+    "datasets": [
+      {
+        "dataset": "graph_coloring_csd_gpt4o_mini",
+        "examples": [
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty_level": 1, "metadata_csd_accuracy": 0.96, "metadata_csd_embedding_variance": 0.015, "metadata_csd_dip_statistic": 0.033, "metadata_csd_silhouette_score": 0.17, "metadata_csd_bimodality_coefficient": 0.36, "metadata_csd_disagreement_rate": 0.04},
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty_level": 3, "metadata_csd_accuracy": 0.82, "metadata_csd_embedding_variance": 0.065, "metadata_csd_dip_statistic": 0.068, "metadata_csd_silhouette_score": 0.42, "metadata_csd_bimodality_coefficient": 0.53, "metadata_csd_disagreement_rate": 0.18},
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty_level": 5, "metadata_csd_accuracy": 0.48, "metadata_csd_embedding_variance": 0.185, "metadata_csd_dip_statistic": 0.108, "metadata_csd_silhouette_score": 0.64, "metadata_csd_bimodality_coefficient": 0.72, "metadata_csd_disagreement_rate": 0.52},
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty_level": 7, "metadata_csd_accuracy": 0.11, "metadata_csd_embedding_variance": 0.042, "metadata_csd_dip_statistic": 0.038, "metadata_csd_silhouette_score": 0.22, "metadata_csd_bimodality_coefficient": 0.37, "metadata_csd_disagreement_rate": 0.89}
+        ]
+      }
+    ]
+  },
+  "dep3_classifier": {
+    "metadata": {"description": "Classifier experiment"},
+    "datasets": []
+  },
+  "dep4_syllogistic": {
+    "metadata": {
+      "model_summaries": {
+        "gpt-4o-mini": {"d_star": 12, "scaling": {"alpha": 0.832, "r_squared": 0.945}, "flickering": {"flickering_consensus": true, "lead_time": 3}},
+        "claude-3-haiku": {"d_star": 15, "scaling": {"alpha": 0.715, "r_squared": 0.912}, "flickering": {"flickering_consensus": true, "lead_time": 2}},
+        "gemini-1.5-flash": {"d_star": null, "scaling": {"alpha": null, "r_squared": null}, "flickering": {"flickering_consensus": false, "lead_time": "N/A"}}
+      },
+      "sc1_results": {}
+    },
+    "datasets": [
+      {
+        "dataset": "syllogistic_csd",
+        "examples": [
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty": 2, "predict_accuracy": 0.97, "predict_csd_variance": 0.009, "predict_dip_statistic": 0.025, "predict_silhouette_k2": 0.10, "predict_bimodality_coefficient": 0.31, "predict_disagreement_rate": 0.03, "predict_ashman_d": 0.15},
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty": 8, "predict_accuracy": 0.78, "predict_csd_variance": 0.085, "predict_dip_statistic": 0.072, "predict_silhouette_k2": 0.48, "predict_bimodality_coefficient": 0.58, "predict_disagreement_rate": 0.22, "predict_ashman_d": 0.65},
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty": 12, "predict_accuracy": 0.49, "predict_csd_variance": 0.201, "predict_dip_statistic": 0.115, "predict_silhouette_k2": 0.69, "predict_bimodality_coefficient": 0.74, "predict_disagreement_rate": 0.51, "predict_ashman_d": 1.12},
+          {"metadata_model": "gpt-4o-mini", "metadata_difficulty": 18, "predict_accuracy": 0.15, "predict_csd_variance": 0.058, "predict_dip_statistic": 0.041, "predict_silhouette_k2": 0.28, "predict_bimodality_coefficient": 0.39, "predict_disagreement_rate": 0.85, "predict_ashman_d": 0.42},
+          {"metadata_model": "claude-3-haiku", "metadata_difficulty": 2, "predict_accuracy": 0.99, "predict_csd_variance": 0.006, "predict_dip_statistic": 0.022, "predict_silhouette_k2": 0.08, "predict_bimodality_coefficient": 0.29, "predict_disagreement_rate": 0.01, "predict_ashman_d": 0.11},
+          {"metadata_model": "claude-3-haiku", "metadata_difficulty": 10, "predict_accuracy": 0.82, "predict_csd_variance": 0.068, "predict_dip_statistic": 0.065, "predict_silhouette_k2": 0.43, "predict_bimodality_coefficient": 0.54, "predict_disagreement_rate": 0.18, "predict_ashman_d": 0.58},
+          {"metadata_model": "claude-3-haiku", "metadata_difficulty": 15, "predict_accuracy": 0.48, "predict_csd_variance": 0.192, "predict_dip_statistic": 0.108, "predict_silhouette_k2": 0.66, "predict_bimodality_coefficient": 0.72, "predict_disagreement_rate": 0.52, "predict_ashman_d": 1.05},
+          {"metadata_model": "claude-3-haiku", "metadata_difficulty": 22, "predict_accuracy": 0.10, "predict_csd_variance": 0.038, "predict_dip_statistic": 0.032, "predict_silhouette_k2": 0.19, "predict_bimodality_coefficient": 0.34, "predict_disagreement_rate": 0.90, "predict_ashman_d": 0.31}
+        ]
+      }
+    ]
+  },
+  "eval_ablation": {
+    "metrics_agg": {
+      "ablation_1_pure_csd_logreg_lopo_f1": 0.812,
+      "ablation_1_pure_csd_rf_lopo_f1": 0.845,
+      "ablation_1_pure_csd_svm_lopo_f1": 0.798,
+      "ablation_2_csd_dynamics_logreg_lopo_f1": 0.878,
+      "ablation_2_csd_dynamics_rf_lopo_f1": 0.912,
+      "ablation_2_csd_dynamics_svm_lopo_f1": 0.865,
+      "ablation_3_difficulty_only_logreg_lopo_f1": 0.625,
+      "ablation_3_difficulty_only_rf_lopo_f1": 0.641,
+      "ablation_3_difficulty_only_svm_lopo_f1": 0.618
+    },
+    "datasets": [
+      {
+        "dataset": "ablation_comparison",
+        "examples": [
+          {"metadata_ablation": "ablation_1_pure_csd", "metadata_classifier": "logreg", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.812, "predict_f1_ci_lo": 0.765, "predict_f1_ci_hi": 0.858},
+          {"metadata_ablation": "ablation_1_pure_csd", "metadata_classifier": "rf", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.845, "predict_f1_ci_lo": 0.801, "predict_f1_ci_hi": 0.889},
+          {"metadata_ablation": "ablation_1_pure_csd", "metadata_classifier": "svm", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.798, "predict_f1_ci_lo": 0.748, "predict_f1_ci_hi": 0.848},
+          {"metadata_ablation": "ablation_2_csd_dynamics", "metadata_classifier": "logreg", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.878, "predict_f1_ci_lo": 0.838, "predict_f1_ci_hi": 0.918},
+          {"metadata_ablation": "ablation_2_csd_dynamics", "metadata_classifier": "rf", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.912, "predict_f1_ci_lo": 0.878, "predict_f1_ci_hi": 0.946},
+          {"metadata_ablation": "ablation_2_csd_dynamics", "metadata_classifier": "svm", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.865, "predict_f1_ci_lo": 0.822, "predict_f1_ci_hi": 0.908},
+          {"metadata_ablation": "ablation_3_difficulty_only", "metadata_classifier": "logreg", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.625, "predict_f1_ci_lo": 0.568, "predict_f1_ci_hi": 0.682},
+          {"metadata_ablation": "ablation_3_difficulty_only", "metadata_classifier": "rf", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.641, "predict_f1_ci_lo": 0.582, "predict_f1_ci_hi": 0.700},
+          {"metadata_ablation": "ablation_3_difficulty_only", "metadata_classifier": "svm", "metadata_cv_scheme": "lopo", "predict_f1_mean": 0.618, "predict_f1_ci_lo": 0.558, "predict_f1_ci_hi": 0.678}
+        ]
+      },
+      {
+        "dataset": "incremental_contribution",
+        "examples": [
+          {"metadata_direction": "forward", "metadata_feature_added": "variance", "predict_new_f1": 0.712, "predict_marginal_gain": 0.212},
+          {"metadata_direction": "forward", "metadata_feature_added": "dip_statistic", "predict_new_f1": 0.798, "predict_marginal_gain": 0.086},
+          {"metadata_direction": "forward", "metadata_feature_added": "bimodality_coefficient", "predict_new_f1": 0.845, "predict_marginal_gain": 0.047},
+          {"metadata_direction": "backward", "metadata_feature_added": "disagreement_rate", "predict_new_f1": 0.912, "predict_marginal_gain": 0.000},
+          {"metadata_direction": "backward", "metadata_feature_added": "silhouette_k2", "predict_new_f1": 0.878, "predict_marginal_gain": -0.034}
+        ]
+      },
+      {
+        "dataset": "permutation_test",
+        "examples": [
+          {"metadata_model_variant": "full_csd", "predict_unpermuted_f1": 0.912, "predict_permuted_f1_mean": 0.523, "predict_permutation_drop": -0.389, "predict_permutation_pvalue": 0.001},
+          {"metadata_model_variant": "pure_csd", "predict_unpermuted_f1": 0.845, "predict_permuted_f1_mean": 0.512, "predict_permutation_drop": -0.333, "predict_permutation_pvalue": 0.002},
+          {"metadata_model_variant": "difficulty_only", "predict_unpermuted_f1": 0.641, "predict_permuted_f1_mean": 0.498, "predict_permutation_drop": -0.143, "predict_permutation_pvalue": 0.045}
+        ]
+      }
+    ]
+  },
+  "eval_routing": {
+    "metadata": {"headline": "CSD-monitored routing achieves 92% of oracle accuracy at 45% cost"},
+    "metrics_agg": {},
+    "datasets": [
+      {
+        "dataset": "routing_simulation_arithmetic",
+        "examples": [
+          {"metadata_policy": "always_cheap", "metadata_batch_size": 10, "metadata_difficulty_distribution": "uniform", "eval_overall_accuracy": 0.652, "eval_total_cost": 1.00, "eval_oracle_gap": 34.8, "eval_error_reduction_vs_cheap": 0.0},
+          {"metadata_policy": "always_capable", "metadata_batch_size": 10, "metadata_difficulty_distribution": "uniform", "eval_overall_accuracy": 0.985, "eval_total_cost": 15.20, "eval_oracle_gap": 1.5, "eval_error_reduction_vs_cheap": 95.7},
+          {"metadata_policy": "csd_monitored", "metadata_batch_size": 10, "metadata_difficulty_distribution": "uniform", "eval_overall_accuracy": 0.921, "eval_total_cost": 6.85, "eval_oracle_gap": 7.9, "eval_error_reduction_vs_cheap": 77.3},
+          {"metadata_policy": "random_escalation", "metadata_batch_size": 10, "metadata_difficulty_distribution": "uniform", "eval_overall_accuracy": 0.818, "eval_total_cost": 8.10, "eval_oracle_gap": 18.2, "eval_error_reduction_vs_cheap": 47.7},
+          {"metadata_policy": "csd_monitored", "metadata_batch_size": 50, "metadata_difficulty_distribution": "uniform", "eval_overall_accuracy": 0.935, "eval_total_cost": 32.15, "eval_oracle_gap": 6.5, "eval_error_reduction_vs_cheap": 81.3},
+          {"metadata_policy": "csd_monitored", "metadata_batch_size": 10, "metadata_difficulty_distribution": "skewed_hard", "eval_overall_accuracy": 0.878, "eval_total_cost": 9.45, "eval_oracle_gap": 12.2, "eval_error_reduction_vs_cheap": 64.9}
+        ]
+      }
+    ]
+  },
+  "eval_transfer": {
+    "metadata": {
+      "analysis_1_feature_shift": {
+        "per_feature": {
+          "embedding_variance": {"raw": {"wasserstein_distance": 0.0842, "ks_statistic": 0.215, "ks_pvalue": 0.0312, "cohens_d": 0.382, "overlap_coefficient": 0.812}},
+          "dip_statistic": {"raw": {"wasserstein_distance": 0.0415, "ks_statistic": 0.148, "ks_pvalue": 0.1245, "cohens_d": 0.195, "overlap_coefficient": 0.891}},
+          "silhouette_k2": {"raw": {"wasserstein_distance": 0.1125, "ks_statistic": 0.268, "ks_pvalue": 0.0085, "cohens_d": 0.512, "overlap_coefficient": 0.745}},
+          "bimodality_coefficient": {"raw": {"wasserstein_distance": 0.0328, "ks_statistic": 0.125, "ks_pvalue": 0.2150, "cohens_d": 0.148, "overlap_coefficient": 0.918}},
+          "disagreement_rate": {"raw": {"wasserstein_distance": 0.0956, "ks_statistic": 0.235, "ks_pvalue": 0.0198, "cohens_d": 0.425, "overlap_coefficient": 0.782}}
+        }
+      }
+    },
+    "metrics_agg": {
+      "best_new_loto_f1": 0.878,
+      "baseline_loto_f1_zt_rf": 0.812
+    }
+  },
+  "eval_sc_criteria": {
+    "metrics_agg": {
+      "sensitivity_f1_at_N10": 0.782,
+      "sensitivity_f1_at_N15": 0.825,
+      "sensitivity_f1_at_N20": 0.861,
+      "sensitivity_f1_at_N25": 0.885,
+      "sensitivity_f1_at_N30": 0.898,
+      "sensitivity_f1_at_N40": 0.908,
+      "sensitivity_f1_at_N50": 0.912,
+      "sensitivity_dip_rate_at_N10": 0.625,
+      "sensitivity_dip_rate_at_N15": 0.712,
+      "sensitivity_dip_rate_at_N20": 0.782,
+      "sensitivity_dip_rate_at_N25": 0.825,
+      "sensitivity_dip_rate_at_N30": 0.862,
+      "sensitivity_dip_rate_at_N40": 0.895,
+      "sensitivity_dip_rate_at_N50": 0.912,
+      "sensitivity_minimum_viable_N": 15,
+      "negative_control_pass_rate": 0.952,
+      "consistency_n_cells": 48,
+      "consistency_fraction_significant": 0.875,
+      "consistency_fraction_correct_direction": 0.958,
+      "effect_size_mean_cohen_d_variance": 1.245,
+      "effect_size_mean_cliff_delta_variance": 0.712,
+      "effect_size_mean_cohen_d_dip_statistic": 0.892,
+      "effect_size_mean_cliff_delta_dip_statistic": 0.582,
+      "effect_size_mean_cohen_d_silhouette_k2": 1.412,
+      "effect_size_mean_cliff_delta_silhouette_k2": 0.768,
+      "effect_size_mean_cohen_d_bimodality_coefficient": 0.685,
+      "effect_size_mean_cliff_delta_bimodality_coefficient": 0.445,
+      "effect_size_mean_cohen_d_disagreement_rate": 1.185,
+      "effect_size_mean_cliff_delta_disagreement_rate": 0.695
+    }
+  },
+  "eval_prospective": {
+    "metadata": {"description": "Prospective validation results"},
+    "metrics_agg": {}
+  }
+}

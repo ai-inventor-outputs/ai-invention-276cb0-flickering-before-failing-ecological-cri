@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "method_name": "CSD_Sampling_Graph_Coloring",
+    "description": "Critical Slowing Down indicators for LLM capability boundary detection on graph coloring constraint satisfaction problems",
+    "models": [
+      "openai/gpt-4o-mini",
+      "google/gemini-2.0-flash-001",
+      "google/gemini-2.0-flash-lite-001"
+    ],
+    "temperature": 0.8,
+    "n_problems_per_level": 5,
+    "n_responses_per_problem": 10,
+    "difficulty_levels": 20,
+    "total_api_calls": 3000,
+    "total_cost_usd": 0.902,
+    "total_input_tokens": 673061,
+    "total_output_tokens": 1942873,
+    "analysis": {
+      "models": [
+        {
+          "model": "openai/gpt-4o-mini",
+          "d_star": 10,
+          "scaling_exponent": 0.0887,
+          "scaling_r_squared": 0.5124,
+          "theoretical_exponent": -0.5,
+          "exponent_in_range": false,
+          "leading_indicators": {
+            "variance_kendall_tau": -0.4444,
+            "variance_kendall_pval": 0.119439
+          }
+        },
+        {
+          "model": "google/gemini-2.0-flash-001",
+          "d_star": 14,
+          "scaling_exponent": -0.1147,
+          "scaling_r_squared": 0.1811,
+          "theoretical_exponent": -0.5,
+          "exponent_in_range": false,
+          "leading_indicators": {
+            "dip_first_significant": 4,
+            "dip_lead_time": 10,
+            "variance_kendall_tau": 0.0256,
+            "variance_kendall_pval": 0.952362
+          }
+        },
+        {
+          "model": "google/gemini-2.0-flash-lite-001",
+          "d_star": 11,
+          "scaling_exponent": 0.0051,
+          "scaling_r_squared": 0.0004,
+          "theoretical_exponent": -0.5,
+          "exponent_in_range": false,
+          "leading_indicators": {
+            "variance_kendall_tau": -0.1111,
+            "variance_kendall_pval": 0.72749
+          }
+        }
+      ],
+      "classifier_comparison": {
+        "csd_f1": 0.0,
+        "csd_precision": 0.0,
+        "csd_recall": 0.0,
+        "baseline_disagreement_f1": 0.0,
+        "baseline_precision": 0.0,
+        "baseline_recall": 0.0,
+        "improvement_pct": 0.0
+      },
+      "success_criteria_met": {
+        "flickering_detected": true,
+        "scaling_exponent_valid": false,
+        "classifier_improvement": false
+      },
+      "per_model_per_level": {
+        "openai/gpt-4o-mini": {},
+        "google/gemini-2.0-flash-001": {},
+        "google/gemini-2.0-flash-lite-001": {}
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "graph_coloring_csd_gpt-4o-mini",
+      "examples": [
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 2), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "predict_model_response": "To solve the graph coloring problem, we need to assign colors to each node in such a way that no two connected nodes share the same color.\n\nWe have the following nodes and edges:\n\n- Nodes: Node 0, Nod...",
+          "predict_is_correct": "true",
+          "predict_parsed_coloring": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Yellow",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "openai/gpt-4o-mini",
+          "metadata_num_nodes": 4,
+          "metadata_num_colors": 4,
+          "metadata_prob_idx": 0,
+          "metadata_resp_idx": 0,
+          "metadata_csd_accuracy": 1.0,
+          "metadata_csd_embedding_variance": 0.094007,
+          "metadata_csd_dip_statistic": 0.049506,
+          "metadata_csd_dip_pvalue": 0.476315,
+          "metadata_csd_silhouette_score": 0.16514,
+          "metadata_csd_bimodality_coefficient": 0.711542,
+          "metadata_csd_disagreement_rate": 0.38,
+          "metadata_csd_ashman_d": 0.0
+        },
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 2), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "predict_model_response": "To solve the graph coloring problem with the given nodes and edges, we need to ensure that no two adjacent nodes (connected by an edge) share the same color.\n\n1. **Identify the edges**:\n   - (Node 0, ...",
+          "predict_is_correct": "true",
+          "predict_parsed_coloring": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Yellow",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "openai/gpt-4o-mini",
+          "metadata_num_nodes": 4,
+          "metadata_num_colors": 4,
+          "metadata_prob_idx": 0,
+          "metadata_resp_idx": 1,
+          "metadata_csd_accuracy": 1.0,
+          "metadata_csd_embedding_variance": 0.094007,
+          "metadata_csd_dip_statistic": 0.049506,
+          "metadata_csd_dip_pvalue": 0.476315,
+          "metadata_csd_silhouette_score": 0.16514,
+          "metadata_csd_bimodality_coefficient": 0.711542,
+          "metadata_csd_disagreement_rate": 0.38,
+          "metadata_csd_ashman_d": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "graph_coloring_csd_gemini-2.0-flash-001",
+      "examples": [
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 2), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "predict_model_response": "Okay, let's start by visualizing the graph and constraints. We have four nodes (0, 1, 2, 3) and the edges (0, 1), (0, 2), (1, 2), and (2, 3). This means nodes 0, 1, and 2 form a triangle, and node 3 i...",
+          "predict_is_correct": "true",
+          "predict_parsed_coloring": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Yellow",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_nodes": 4,
+          "metadata_num_colors": 4,
+          "metadata_prob_idx": 0,
+          "metadata_resp_idx": 0,
+          "metadata_csd_accuracy": 1.0,
+          "metadata_csd_embedding_variance": 0.125211,
+          "metadata_csd_dip_statistic": 0.056718,
+          "metadata_csd_dip_pvalue": 0.252485,
+          "metadata_csd_silhouette_score": 0.212257,
+          "metadata_csd_bimodality_coefficient": 0.6885,
+          "metadata_csd_disagreement_rate": 0.52,
+          "metadata_csd_ashman_d": 0.0
+        },
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 2), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "predict_model_response": "Let's start by coloring Node 0 Red.\nThen Node 1 cannot be Red, and Node 2 cannot be Red.\nLet's color Node 1 Green.\nThen Node 2 cannot be Red or Green. Let's color Node 2 Blue.\nThen Node 3 cannot be Bl...",
+          "predict_is_correct": "true",
+          "predict_parsed_coloring": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Yellow",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_nodes": 4,
+          "metadata_num_colors": 4,
+          "metadata_prob_idx": 0,
+          "metadata_resp_idx": 1,
+          "metadata_csd_accuracy": 1.0,
+          "metadata_csd_embedding_variance": 0.125211,
+          "metadata_csd_dip_statistic": 0.056718,
+          "metadata_csd_dip_pvalue": 0.252485,
+          "metadata_csd_silhouette_score": 0.212257,
+          "metadata_csd_bimodality_coefficient": 0.6885,
+          "metadata_csd_disagreement_rate": 0.52,
+          "metadata_csd_ashman_d": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "graph_coloring_csd_gemini-2.0-flash-lite-001",
+      "examples": [
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 2), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "predict_model_response": "Here's how we can solve this graph coloring problem:\n\n1.  **Start with Node 0:** We can assign Node 0 any color. Let's start with Red.\n\n2.  **Node 1:** Node 1 is connected to Node 0 (Red), so Node 1 c...",
+          "predict_is_correct": "true",
+          "predict_parsed_coloring": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "google/gemini-2.0-flash-lite-001",
+          "metadata_num_nodes": 4,
+          "metadata_num_colors": 4,
+          "metadata_prob_idx": 0,
+          "metadata_resp_idx": 0,
+          "metadata_csd_accuracy": 1.0,
+          "metadata_csd_embedding_variance": 0.062511,
+          "metadata_csd_dip_statistic": 0.061213,
+          "metadata_csd_dip_pvalue": 0.160754,
+          "metadata_csd_silhouette_score": 0.270186,
+          "metadata_csd_bimodality_coefficient": 0.689635,
+          "metadata_csd_disagreement_rate": 0.56,
+          "metadata_csd_ashman_d": 0.0
+        },
+        {
+          "input": "Given a graph with 4 nodes (labeled Node 0 through Node 3) and the following edges:\n(Node 0, Node 1), (Node 0, Node 2), (Node 1, Node 2), (Node 2, Node 3)\n\nColor each node using exactly one of these colors: Red, Green, Blue, Yellow.\nThe constraint is that no two nodes connected by an edge may share the same color.\n\nProvide a valid coloring by listing each node and its assigned color.",
+          "output": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Red",
+          "predict_model_response": "Here's how we can solve this graph coloring problem:\n\n1.  **Start with Node 0:** We can assign Node 0 any color. Let's try Red.\n\n2.  **Consider Node 1:** Node 1 is connected to Node 0. Therefore, Node...",
+          "predict_is_correct": "true",
+          "predict_parsed_coloring": "Node 0: Red, Node 1: Green, Node 2: Blue, Node 3: Yellow",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "google/gemini-2.0-flash-lite-001",
+          "metadata_num_nodes": 4,
+          "metadata_num_colors": 4,
+          "metadata_prob_idx": 0,
+          "metadata_resp_idx": 1,
+          "metadata_csd_accuracy": 1.0,
+          "metadata_csd_embedding_variance": 0.062511,
+          "metadata_csd_dip_statistic": 0.061213,
+          "metadata_csd_dip_pvalue": 0.160754,
+          "metadata_csd_silhouette_score": 0.270186,
+          "metadata_csd_bimodality_coefficient": 0.689635,
+          "metadata_csd_disagreement_rate": 0.56,
+          "metadata_csd_ashman_d": 0.0
+        }
+      ]
+    }
+  ]
+}

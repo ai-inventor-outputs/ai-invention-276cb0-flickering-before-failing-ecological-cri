@@ -1,0 +1,11 @@
+[project]
+name = "eval-neurips-paper-compilation"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "loguru==0.7.3",
+    "matplotlib==3.10.8",
+    "numpy==2.4.3",
+    "pypdf==6.9.1",
+    "Pillow==12.1.1",
+]

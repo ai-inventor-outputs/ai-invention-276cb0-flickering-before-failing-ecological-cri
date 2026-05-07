@@ -1,0 +1,624 @@
+{
+  "metadata": {
+    "experiment_name": "multi_hop_reasoning_csd_6levels",
+    "task_family": "multi_hop_factual_reasoning",
+    "description": "CSD sampling experiment on multi-hop factual reasoning with 6 difficulty levels. Tests whether Critical Slowing Down indicators (variance, dip test, silhouette, bimodality, Ashman D) can detect approa...",
+    "models": [
+      "meta-llama/llama-3.1-8b-instruct",
+      "openai/gpt-4o-mini",
+      "google/gemini-2.0-flash-001"
+    ],
+    "model_tiers": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "n_problems_per_level": 5,
+    "n_responses_per_problem": 10,
+    "n_total_per_level": 50,
+    "difficulty_levels": [
+      1,
+      2,
+      3
+    ],
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 2048,
+    "seed": 42,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "per_model_summary": {
+      "meta-llama/llama-3.1-8b-instruct": {
+        "tier": "small",
+        "per_level_indicators": {
+          "1": {
+            "accuracy": 0.4,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 20,
+            "embedding_variance_trace": 0.737792,
+            "mean_cosine_distance": 0.737792,
+            "std_cosine_distance": 0.302804,
+            "hartigan_dip_stat": 0.083707,
+            "hartigan_dip_pval": 0.006932,
+            "silhouette_score_k2": 0.2992,
+            "bimodality_coefficient": 0.8028,
+            "ashman_d": 9.5355,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.82,
+            "pc1_variance_explained": 0.2691,
+            "unique_answers": 19,
+            "answer_entropy": 3.713
+          },
+          "2": {
+            "accuracy": 0.28,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 14,
+            "embedding_variance_trace": 0.777901,
+            "mean_cosine_distance": 0.777901,
+            "std_cosine_distance": 0.286671,
+            "hartigan_dip_stat": 0.081697,
+            "hartigan_dip_pval": 0.009392,
+            "silhouette_score_k2": 0.2435,
+            "bimodality_coefficient": 0.59,
+            "ashman_d": 4.4333,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.86,
+            "pc1_variance_explained": 0.26,
+            "unique_answers": 37,
+            "answer_entropy": 4.9406
+          },
+          "3": {
+            "accuracy": 0.02,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 1,
+            "embedding_variance_trace": 0.721706,
+            "mean_cosine_distance": 0.721706,
+            "std_cosine_distance": 0.266602,
+            "hartigan_dip_stat": 0.075158,
+            "hartigan_dip_pval": 0.027232,
+            "silhouette_score_k2": 0.2358,
+            "bimodality_coefficient": 0.6123,
+            "ashman_d": 4.2259,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.92,
+            "pc1_variance_explained": 0.2463,
+            "unique_answers": 42,
+            "answer_entropy": 5.2537
+          },
+          "4": {
+            "accuracy": 0.1,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 5,
+            "embedding_variance_trace": 0.74146,
+            "mean_cosine_distance": 0.74146,
+            "std_cosine_distance": 0.268814,
+            "hartigan_dip_stat": 0.124065,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.2292,
+            "bimodality_coefficient": 0.7058,
+            "ashman_d": 7.1218,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.9,
+            "pc1_variance_explained": 0.2349,
+            "unique_answers": 34,
+            "answer_entropy": 4.8615
+          },
+          "5": {
+            "accuracy": 0.14,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 7,
+            "embedding_variance_trace": 0.632242,
+            "mean_cosine_distance": 0.632242,
+            "std_cosine_distance": 0.264163,
+            "hartigan_dip_stat": 0.149675,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.3147,
+            "bimodality_coefficient": 0.6988,
+            "ashman_d": 6.8825,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.86,
+            "pc1_variance_explained": 0.3574,
+            "unique_answers": 33,
+            "answer_entropy": 4.6427
+          },
+          "6": {
+            "accuracy": 0.8571,
+            "n_responses": 50,
+            "n_valid_responses": 49,
+            "n_correct": 42,
+            "embedding_variance_trace": 0.735014,
+            "mean_cosine_distance": 0.735014,
+            "std_cosine_distance": 0.289546,
+            "hartigan_dip_stat": 0.0863,
+            "hartigan_dip_pval": 0.004834,
+            "silhouette_score_k2": 0.2602,
+            "bimodality_coefficient": 0.6659,
+            "ashman_d": 5.2807,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.7959,
+            "pc1_variance_explained": 0.257,
+            "unique_answers": 13,
+            "answer_entropy": 3.198
+          }
+        },
+        "trends": {
+          "kendall_tau_embedding_variance_trace": -0.3333,
+          "kendall_pval_embedding_variance_trace": 0.4694,
+          "kendall_tau_mean_cosine_distance": -0.3333,
+          "kendall_pval_mean_cosine_distance": 0.4694,
+          "kendall_tau_hartigan_dip_stat": 0.3333,
+          "kendall_pval_hartigan_dip_stat": 0.4694,
+          "kendall_tau_silhouette_score_k2": -0.0667,
+          "kendall_pval_silhouette_score_k2": 1.0,
+          "kendall_tau_bimodality_coefficient": -0.0667,
+          "kendall_pval_bimodality_coefficient": 1.0,
+          "kendall_tau_self_consistency_disagreement": -0.138,
+          "kendall_pval_self_consistency_disagreement": 0.7021,
+          "kendall_tau_accuracy": 0.0667,
+          "kendall_pval_accuracy": 1.0,
+          "kendall_tau_answer_entropy": -0.3333,
+          "kendall_pval_answer_entropy": 0.4694,
+          "kendall_tau_ashman_d": -0.2,
+          "kendall_pval_ashman_d": 0.7194
+        },
+        "variance_scaling": {
+          "scaling_status": "insufficient_points",
+          "d_star": 1
+        },
+        "leading_indicator": {
+          "d_star": 1,
+          "high_accuracy_levels": [
+            6
+          ],
+          "leading_signals_found": true,
+          "leading_signals": [
+            {
+              "level": 6,
+              "indicator": "hartigan_dip",
+              "pval": 0.004834
+            },
+            {
+              "level": 6,
+              "indicator": "bimodality_coeff",
+              "value": 0.6659
+            }
+          ],
+          "n_leading_signals": 2,
+          "caveat": "Only 6 difficulty levels - limited resolution for leading indicator detection"
+        }
+      },
+      "openai/gpt-4o-mini": {
+        "tier": "medium",
+        "per_level_indicators": {
+          "1": {
+            "accuracy": 0.42,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 21,
+            "embedding_variance_trace": 0.719899,
+            "mean_cosine_distance": 0.719899,
+            "std_cosine_distance": 0.336517,
+            "hartigan_dip_stat": 0.093869,
+            "hartigan_dip_pval": 0.001062,
+            "silhouette_score_k2": 0.363,
+            "bimodality_coefficient": 0.751,
+            "ashman_d": 8.391,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.82,
+            "pc1_variance_explained": 0.3135,
+            "unique_answers": 16,
+            "answer_entropy": 3.4921
+          },
+          "2": {
+            "accuracy": 0.12,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 6,
+            "embedding_variance_trace": 0.745527,
+            "mean_cosine_distance": 0.745527,
+            "std_cosine_distance": 0.304404,
+            "hartigan_dip_stat": 0.121398,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.2827,
+            "bimodality_coefficient": 0.6222,
+            "ashman_d": 4.5097,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.9,
+            "pc1_variance_explained": 0.2872,
+            "unique_answers": 30,
+            "answer_entropy": 4.6464
+          },
+          "3": {
+            "accuracy": 0.3,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 15,
+            "embedding_variance_trace": 0.700275,
+            "mean_cosine_distance": 0.700275,
+            "std_cosine_distance": 0.30036,
+            "hartigan_dip_stat": 0.097851,
+            "hartigan_dip_pval": 0.000477,
+            "silhouette_score_k2": 0.29,
+            "bimodality_coefficient": 0.6525,
+            "ashman_d": 6.6947,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.9,
+            "pc1_variance_explained": 0.277,
+            "unique_answers": 34,
+            "answer_entropy": 4.8366
+          },
+          "4": {
+            "accuracy": 0.32,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 16,
+            "embedding_variance_trace": 0.696854,
+            "mean_cosine_distance": 0.696854,
+            "std_cosine_distance": 0.287168,
+            "hartigan_dip_stat": 0.137532,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.2831,
+            "bimodality_coefficient": 0.7394,
+            "ashman_d": 8.9904,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.86,
+            "pc1_variance_explained": 0.2809,
+            "unique_answers": 25,
+            "answer_entropy": 4.2251
+          },
+          "5": {
+            "accuracy": 0.2,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 10,
+            "embedding_variance_trace": 0.571103,
+            "mean_cosine_distance": 0.571103,
+            "std_cosine_distance": 0.274169,
+            "hartigan_dip_stat": 0.182478,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.3891,
+            "bimodality_coefficient": 0.7949,
+            "ashman_d": 13.5716,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.74,
+            "pc1_variance_explained": 0.4215,
+            "unique_answers": 24,
+            "answer_entropy": 3.8817
+          },
+          "6": {
+            "accuracy": 0.96,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 48,
+            "embedding_variance_trace": 0.706216,
+            "mean_cosine_distance": 0.706216,
+            "std_cosine_distance": 0.307169,
+            "hartigan_dip_stat": 0.094627,
+            "hartigan_dip_pval": 0.000921,
+            "silhouette_score_k2": 0.3039,
+            "bimodality_coefficient": 0.6341,
+            "ashman_d": 4.8957,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.8,
+            "pc1_variance_explained": 0.2837,
+            "unique_answers": 10,
+            "answer_entropy": 2.9139
+          }
+        },
+        "trends": {
+          "kendall_tau_embedding_variance_trace": -0.4667,
+          "kendall_pval_embedding_variance_trace": 0.2722,
+          "kendall_tau_mean_cosine_distance": -0.4667,
+          "kendall_pval_mean_cosine_distance": 0.2722,
+          "kendall_tau_hartigan_dip_stat": 0.3333,
+          "kendall_pval_hartigan_dip_stat": 0.4694,
+          "kendall_tau_silhouette_score_k2": 0.2,
+          "kendall_pval_silhouette_score_k2": 0.7194,
+          "kendall_tau_bimodality_coefficient": 0.0667,
+          "kendall_pval_bimodality_coefficient": 1.0,
+          "kendall_tau_self_consistency_disagreement": -0.414,
+          "kendall_pval_self_consistency_disagreement": 0.2511,
+          "kendall_tau_accuracy": 0.2,
+          "kendall_pval_accuracy": 0.7194,
+          "kendall_tau_answer_entropy": -0.3333,
+          "kendall_pval_answer_entropy": 0.4694,
+          "kendall_tau_ashman_d": 0.2,
+          "kendall_pval_ashman_d": 0.7194
+        },
+        "variance_scaling": {
+          "scaling_status": "insufficient_points",
+          "d_star": 1
+        },
+        "leading_indicator": {
+          "d_star": 1,
+          "high_accuracy_levels": [
+            6
+          ],
+          "leading_signals_found": true,
+          "leading_signals": [
+            {
+              "level": 6,
+              "indicator": "hartigan_dip",
+              "pval": 0.000921
+            },
+            {
+              "level": 6,
+              "indicator": "silhouette",
+              "value": 0.3039
+            },
+            {
+              "level": 6,
+              "indicator": "bimodality_coeff",
+              "value": 0.6341
+            }
+          ],
+          "n_leading_signals": 3,
+          "caveat": "Only 6 difficulty levels - limited resolution for leading indicator detection"
+        }
+      },
+      "google/gemini-2.0-flash-001": {
+        "tier": "large",
+        "per_level_indicators": {
+          "1": {
+            "accuracy": 0.46,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 23,
+            "embedding_variance_trace": 0.725204,
+            "mean_cosine_distance": 0.725204,
+            "std_cosine_distance": 0.322954,
+            "hartigan_dip_stat": 0.095841,
+            "hartigan_dip_pval": 0.000743,
+            "silhouette_score_k2": 0.3452,
+            "bimodality_coefficient": 0.751,
+            "ashman_d": 7.6601,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.8,
+            "pc1_variance_explained": 0.3073,
+            "unique_answers": 12,
+            "answer_entropy": 3.1784
+          },
+          "2": {
+            "accuracy": 0.08,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 4,
+            "embedding_variance_trace": 0.763891,
+            "mean_cosine_distance": 0.763891,
+            "std_cosine_distance": 0.323104,
+            "hartigan_dip_stat": 0.110057,
+            "hartigan_dip_pval": 3e-05,
+            "silhouette_score_k2": 0.2917,
+            "bimodality_coefficient": 0.6203,
+            "ashman_d": 4.7267,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.84,
+            "pc1_variance_explained": 0.2829,
+            "unique_answers": 20,
+            "answer_entropy": 3.8084
+          },
+          "3": {
+            "accuracy": 0.3,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 15,
+            "embedding_variance_trace": 0.738312,
+            "mean_cosine_distance": 0.738312,
+            "std_cosine_distance": 0.2857,
+            "hartigan_dip_stat": 0.088232,
+            "hartigan_dip_pval": 0.0033,
+            "silhouette_score_k2": 0.2471,
+            "bimodality_coefficient": 0.6011,
+            "ashman_d": 6.7067,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.84,
+            "pc1_variance_explained": 0.2456,
+            "unique_answers": 34,
+            "answer_entropy": 4.8039
+          },
+          "4": {
+            "accuracy": 0.32,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 16,
+            "embedding_variance_trace": 0.705937,
+            "mean_cosine_distance": 0.705937,
+            "std_cosine_distance": 0.284837,
+            "hartigan_dip_stat": 0.145918,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.2594,
+            "bimodality_coefficient": 0.5558,
+            "ashman_d": 5.1597,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.82,
+            "pc1_variance_explained": 0.2595,
+            "unique_answers": 17,
+            "answer_entropy": 3.6657
+          },
+          "5": {
+            "accuracy": 0.16,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 8,
+            "embedding_variance_trace": 0.61855,
+            "mean_cosine_distance": 0.61855,
+            "std_cosine_distance": 0.249522,
+            "hartigan_dip_stat": 0.157169,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.2989,
+            "bimodality_coefficient": 0.7492,
+            "ashman_d": 10.0708,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.82,
+            "pc1_variance_explained": 0.3321,
+            "unique_answers": 33,
+            "answer_entropy": 4.5133
+          },
+          "6": {
+            "accuracy": 0.98,
+            "n_responses": 50,
+            "n_valid_responses": 50,
+            "n_correct": 49,
+            "embedding_variance_trace": 0.72578,
+            "mean_cosine_distance": 0.72578,
+            "std_cosine_distance": 0.311766,
+            "hartigan_dip_stat": 0.134469,
+            "hartigan_dip_pval": 0.0,
+            "silhouette_score_k2": 0.3015,
+            "bimodality_coefficient": 0.7362,
+            "ashman_d": 8.0928,
+            "bimodality_consensus": true,
+            "self_consistency_disagreement": 0.8,
+            "pc1_variance_explained": 0.278,
+            "unique_answers": 7,
+            "answer_entropy": 2.5095
+          }
+        },
+        "trends": {
+          "kendall_tau_embedding_variance_trace": -0.3333,
+          "kendall_pval_embedding_variance_trace": 0.4694,
+          "kendall_tau_mean_cosine_distance": -0.3333,
+          "kendall_pval_mean_cosine_distance": 0.4694,
+          "kendall_tau_hartigan_dip_stat": 0.4667,
+          "kendall_pval_hartigan_dip_stat": 0.2722,
+          "kendall_tau_silhouette_score_k2": 0.0667,
+          "kendall_pval_silhouette_score_k2": 1.0,
+          "kendall_tau_bimodality_coefficient": -0.2,
+          "kendall_pval_bimodality_coefficient": 0.7194,
+          "kendall_tau_self_consistency_disagreement": -0.2981,
+          "kendall_pval_self_consistency_disagreement": 0.4268,
+          "kendall_tau_accuracy": 0.2,
+          "kendall_pval_accuracy": 0.7194,
+          "kendall_tau_answer_entropy": -0.0667,
+          "kendall_pval_answer_entropy": 1.0,
+          "kendall_tau_ashman_d": 0.3333,
+          "kendall_pval_ashman_d": 0.4694
+        },
+        "variance_scaling": {
+          "scaling_status": "insufficient_points",
+          "d_star": 1
+        },
+        "leading_indicator": {
+          "d_star": 1,
+          "high_accuracy_levels": [
+            6
+          ],
+          "leading_signals_found": true,
+          "leading_signals": [
+            {
+              "level": 6,
+              "indicator": "hartigan_dip",
+              "pval": 0.0
+            },
+            {
+              "level": 6,
+              "indicator": "silhouette",
+              "value": 0.3015
+            },
+            {
+              "level": 6,
+              "indicator": "bimodality_coeff",
+              "value": 0.7362
+            }
+          ],
+          "n_leading_signals": 3,
+          "caveat": "Only 6 difficulty levels - limited resolution for leading indicator detection"
+        }
+      }
+    },
+    "cross_model_summary": {
+      "models_with_csd_signal": [
+        "meta-llama/llama-3.1-8b-instruct",
+        "openai/gpt-4o-mini",
+        "google/gemini-2.0-flash-001"
+      ],
+      "models_with_leading_indicator": [
+        "meta-llama/llama-3.1-8b-instruct",
+        "openai/gpt-4o-mini",
+        "google/gemini-2.0-flash-001"
+      ]
+    },
+    "reduced_resolution_caveat": "Only 6 difficulty levels available. Statistical power for trend detection is limited (Kendall tau with n=6, min p-value ~0.014). Results are inconclusive (not disconfirming) if no signals appear due t...",
+    "success_criteria_assessment": {
+      "flickering_detected": true,
+      "n_models_with_bimodality": 3,
+      "models_with_bimodality": [
+        "meta-llama/llama-3.1-8b-instruct",
+        "openai/gpt-4o-mini",
+        "google/gemini-2.0-flash-001"
+      ],
+      "variance_scaling_fit": false,
+      "leading_indicator_found": true,
+      "models_with_leading_indicator": [
+        "meta-llama/llama-3.1-8b-instruct",
+        "openai/gpt-4o-mini",
+        "google/gemini-2.0-flash-001"
+      ]
+    },
+    "total_cost_usd": 0.072,
+    "total_input_tokens": 87206,
+    "total_output_tokens": 192812
+  },
+  "datasets": [
+    {
+      "dataset": "multi_hop_reasoning_csd",
+      "examples": [
+        {
+          "input": "Kursk Front >> part of",
+          "output": "Red Army",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+          "metadata_model_tier": "small",
+          "metadata_problem_id": "1hop_560186",
+          "metadata_answer_aliases": "[]",
+          "metadata_csd_indicators": "{\"accuracy\": 0.4, \"n_responses\": 50, \"n_valid_responses\": 50, \"n_correct\": 20, \"embedding_variance_trace\": 0.737792, \"mean_cosine_distance\": 0.737792, \"std_cosine_distance\": 0.302804, \"hartigan_dip_st...",
+          "predict_responses": "[\"To find the answer, we need to understand what the Kursk Front was. \\n\\nThe Kursk Front was a major military formation of the Red Army during World War II. \\n\\nGiven that it was a military formation...",
+          "predict_extracted_answers": "[\"Soviet forces\", \"Central Front, Voronezh Front, Southwestern Front, Bryansk Front\", \"Central Front\", \"Voronezh Front\", \"Stavka\", \"Stavka\", \"Voronezh Front\", \"Voronezh Front\", \"Southwestern Strategic...",
+          "predict_correctness": "[false, false, false, false, false, false, false, false, false, false]",
+          "predict_f1_scores": "[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+          "predict_accuracy": "0.0",
+          "predict_n_correct": "0",
+          "predict_n_total": "10"
+        },
+        {
+          "input": "who owned the louisiana territory before the us",
+          "output": "France",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+          "metadata_model_tier": "small",
+          "metadata_problem_id": "1hop_90918",
+          "metadata_answer_aliases": "[]",
+          "metadata_csd_indicators": "{\"accuracy\": 0.4, \"n_responses\": 50, \"n_valid_responses\": 50, \"n_correct\": 20, \"embedding_variance_trace\": 0.737792, \"mean_cosine_distance\": 0.737792, \"std_cosine_distance\": 0.302804, \"hartigan_dip_st...",
+          "predict_responses": "[\"To answer this question, let's break it down into smaller sub-questions and reason through them step by step:\\n\\n1. **What was the Louisiana Territory?**\\n   The Louisiana Territory was a large area...",
+          "predict_extracted_answers": "[\"France and Spain\", \"France\", \"France\", \"Spain then France\", \"France\", \"France and Spain\", \"Spain (and France)\", \"France\", \"France\", \"France and Spain\"]",
+          "predict_correctness": "[true, true, true, true, true, true, true, true, true, true]",
+          "predict_f1_scores": "[0.9, 1.0, 1.0, 0.9, 1.0, 0.9, 0.9, 1.0, 1.0, 0.9]",
+          "predict_accuracy": "1.0",
+          "predict_n_correct": "10",
+          "predict_n_total": "10"
+        },
+        {
+          "input": "Yorke Bay >> country",
+          "output": "Falkland Islands",
+          "metadata_difficulty_level": 1,
+          "metadata_model": "meta-llama/llama-3.1-8b-instruct",
+          "metadata_model_tier": "small",
+          "metadata_problem_id": "1hop_389060",
+          "metadata_answer_aliases": "[]",
+          "metadata_csd_indicators": "{\"accuracy\": 0.4, \"n_responses\": 50, \"n_valid_responses\": 50, \"n_correct\": 20, \"embedding_variance_trace\": 0.737792, \"mean_cosine_distance\": 0.737792, \"std_cosine_distance\": 0.302804, \"hartigan_dip_st...",
+          "predict_responses": "[\"To determine the country associated with Yorke Bay, we need to identify the geographical location of Yorke Bay.\\n\\nStep 1: Yorke Bay is located in the southern part of the Australian state of South ...",
+          "predict_extracted_answers": "[\"Australia\", \"Australia\", \"Australia\", \"Australia\", \"Australia\", \"Australia\", \"Australia\", \"Australia\", \"England\", \"Australia\"]",
+          "predict_correctness": "[false, false, false, false, false, false, false, false, false, false]",
+          "predict_f1_scores": "[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+          "predict_accuracy": "0.0",
+          "predict_n_correct": "0",
+          "predict_n_total": "10"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "eval_id5_it6__opus",
+  "type": "code",
+  "title": "CSD-Based Model Routing Simulation: Downstream Value Quantification",
+  "summary": "Demo notebook reproducing the CSD-based model routing Monte Carlo simulation. Loads pre-processed per-model per-level accuracy and CSD indicator data for arithmetic (3 LLMs, 24 levels) and graph coloring (3 LLMs, 20 levels) tasks. Compares 4 routing policies (always-cheap, always-capable, CSD-monitored, oracle) across 5 batch sizes x 3 difficulty distributions x 100 MC runs each. Uses full original parameters (1000 queries/run, 100 MC runs). Produces summary tables and cost-vs-accuracy visualizations. Headline: CSD routing achieves ~59% of oracle improvement at ~63% of capable cost. Runs in ~31s.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_6/gen_art/eval_id5_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id5_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id5_it6__opus/eval_code_demo.ipynb"
+}

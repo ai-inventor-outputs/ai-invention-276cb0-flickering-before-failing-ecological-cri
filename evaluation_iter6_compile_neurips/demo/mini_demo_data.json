@@ -1,0 +1,864 @@
+{
+  "experiment_data": {
+    "dep1_arithmetic_csd": {
+      "datasets": [
+        {
+          "dataset": "csd_indicators__llama-3.1-8b-instruct",
+          "examples": [
+            {
+              "predict_accuracy": "0.6",
+              "predict_csd_variance": "0.310874",
+              "predict_dip_statistic": "0.124337",
+              "predict_bimodality_coefficient": "0.6224",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_accuracy": "0.64",
+              "predict_csd_variance": "0.196748",
+              "predict_dip_statistic": "0.070435",
+              "predict_bimodality_coefficient": "0.6249",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 5
+            },
+            {
+              "predict_accuracy": "0.76",
+              "predict_csd_variance": "0.241725",
+              "predict_dip_statistic": "0.110365",
+              "predict_bimodality_coefficient": "0.6613",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 8
+            },
+            {
+              "predict_accuracy": "0.6",
+              "predict_csd_variance": "0.1604",
+              "predict_dip_statistic": "0.076278",
+              "predict_bimodality_coefficient": "0.5909",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 11
+            },
+            {
+              "predict_accuracy": "0.7143",
+              "predict_csd_variance": "0.185122",
+              "predict_dip_statistic": "0.065051",
+              "predict_bimodality_coefficient": "0.6192",
+              "predict_disagreement_rate": "0.8095",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_accuracy": "0.7",
+              "predict_csd_variance": "0.14107",
+              "predict_dip_statistic": "0.085341",
+              "predict_bimodality_coefficient": "0.6602",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 17
+            },
+            {
+              "predict_accuracy": "0.46",
+              "predict_csd_variance": "0.189244",
+              "predict_dip_statistic": "0.09581",
+              "predict_bimodality_coefficient": "0.5384",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 20
+            },
+            {
+              "predict_accuracy": "0.74",
+              "predict_csd_variance": "0.18808",
+              "predict_dip_statistic": "0.086664",
+              "predict_bimodality_coefficient": "0.667",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 23
+            }
+          ]
+        },
+        {
+          "dataset": "csd_indicators__gemini-2.0-flash-001",
+          "examples": [
+            {
+              "predict_accuracy": "0.5",
+              "predict_csd_variance": "0.305137",
+              "predict_dip_statistic": "0.155132",
+              "predict_bimodality_coefficient": "0.7056",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_accuracy": "0.52",
+              "predict_csd_variance": "0.1868",
+              "predict_dip_statistic": "0.077822",
+              "predict_bimodality_coefficient": "0.6919",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 5
+            },
+            {
+              "predict_accuracy": "0.66",
+              "predict_csd_variance": "0.244",
+              "predict_dip_statistic": "0.10584",
+              "predict_bimodality_coefficient": "0.5117",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 8
+            },
+            {
+              "predict_accuracy": "0.54",
+              "predict_csd_variance": "0.175544",
+              "predict_dip_statistic": "0.067992",
+              "predict_bimodality_coefficient": "0.8548",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 11
+            },
+            {
+              "predict_accuracy": "0.64",
+              "predict_csd_variance": "0.188312",
+              "predict_dip_statistic": "0.09092",
+              "predict_bimodality_coefficient": "0.6548",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_accuracy": "0.72",
+              "predict_csd_variance": "0.165487",
+              "predict_dip_statistic": "0.075826",
+              "predict_bimodality_coefficient": "0.4812",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 17
+            },
+            {
+              "predict_accuracy": "0.54",
+              "predict_csd_variance": "0.181084",
+              "predict_dip_statistic": "0.07643",
+              "predict_bimodality_coefficient": "0.4961",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 20
+            },
+            {
+              "predict_accuracy": "0.5",
+              "predict_csd_variance": "0.169557",
+              "predict_dip_statistic": "0.070987",
+              "predict_bimodality_coefficient": "0.6085",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 23
+            }
+          ]
+        },
+        {
+          "dataset": "csd_indicators__gpt-4o-mini",
+          "examples": [
+            {
+              "predict_accuracy": "0.0",
+              "predict_csd_variance": "0.232089",
+              "predict_dip_statistic": "0.148804",
+              "predict_bimodality_coefficient": "0.6984",
+              "predict_disagreement_rate": "0.8",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_accuracy": "0.08",
+              "predict_csd_variance": "0.216639",
+              "predict_dip_statistic": "0.053264",
+              "predict_bimodality_coefficient": "0.4156",
+              "predict_disagreement_rate": "0.8",
+              "metadata_difficulty_level": 5
+            },
+            {
+              "predict_accuracy": "0.3",
+              "predict_csd_variance": "0.275808",
+              "predict_dip_statistic": "0.058198",
+              "predict_bimodality_coefficient": "0.5161",
+              "predict_disagreement_rate": "0.78",
+              "metadata_difficulty_level": 8
+            },
+            {
+              "predict_accuracy": "0.28",
+              "predict_csd_variance": "0.193779",
+              "predict_dip_statistic": "0.049484",
+              "predict_bimodality_coefficient": "0.5226",
+              "predict_disagreement_rate": "0.88",
+              "metadata_difficulty_level": 11
+            },
+            {
+              "predict_accuracy": "0.2",
+              "predict_csd_variance": "0.189283",
+              "predict_dip_statistic": "0.089519",
+              "predict_bimodality_coefficient": "0.6338",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_accuracy": "0.3",
+              "predict_csd_variance": "0.17046",
+              "predict_dip_statistic": "0.049572",
+              "predict_bimodality_coefficient": "0.6",
+              "predict_disagreement_rate": "0.88",
+              "metadata_difficulty_level": 17
+            },
+            {
+              "predict_accuracy": "0.42",
+              "predict_csd_variance": "0.169621",
+              "predict_dip_statistic": "0.067149",
+              "predict_bimodality_coefficient": "0.5448",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 20
+            },
+            {
+              "predict_accuracy": "0.32",
+              "predict_csd_variance": "0.157723",
+              "predict_dip_statistic": "0.048655",
+              "predict_bimodality_coefficient": "0.3357",
+              "predict_disagreement_rate": "0.88",
+              "metadata_difficulty_level": 23
+            }
+          ]
+        }
+      ]
+    },
+    "dep2_graph_coloring_csd": {
+      "datasets": [
+        {
+          "dataset": "graph_coloring_csd_gpt-4o-mini",
+          "examples": [
+            {
+              "metadata_difficulty_level": 1,
+              "metadata_csd_accuracy": 1.0,
+              "metadata_csd_embedding_variance": 0.094007,
+              "metadata_csd_dip_statistic": 0.049506,
+              "metadata_csd_bimodality_coefficient": 0.711542,
+              "metadata_csd_disagreement_rate": 0.38
+            },
+            {
+              "metadata_difficulty_level": 5,
+              "metadata_csd_accuracy": 0.6,
+              "metadata_csd_embedding_variance": 0.096993,
+              "metadata_csd_dip_statistic": 0.053863,
+              "metadata_csd_bimodality_coefficient": 0.704697,
+              "metadata_csd_disagreement_rate": 0.86
+            },
+            {
+              "metadata_difficulty_level": 9,
+              "metadata_csd_accuracy": 0.68,
+              "metadata_csd_embedding_variance": 0.103673,
+              "metadata_csd_dip_statistic": 0.035767,
+              "metadata_csd_bimodality_coefficient": 0.29984,
+              "metadata_csd_disagreement_rate": 0.9
+            },
+            {
+              "metadata_difficulty_level": 13,
+              "metadata_csd_accuracy": 0.06,
+              "metadata_csd_embedding_variance": 0.104602,
+              "metadata_csd_dip_statistic": 0.049679,
+              "metadata_csd_bimodality_coefficient": 0.360045,
+              "metadata_csd_disagreement_rate": 0.88
+            },
+            {
+              "metadata_difficulty_level": 17,
+              "metadata_csd_accuracy": 0.36,
+              "metadata_csd_embedding_variance": 0.109864,
+              "metadata_csd_dip_statistic": 0.037121,
+              "metadata_csd_bimodality_coefficient": 0.627483,
+              "metadata_csd_disagreement_rate": 0.96
+            }
+          ]
+        },
+        {
+          "dataset": "graph_coloring_csd_gemini-2.0-flash-001",
+          "examples": [
+            {
+              "metadata_difficulty_level": 1,
+              "metadata_csd_accuracy": 1.0,
+              "metadata_csd_embedding_variance": 0.125211,
+              "metadata_csd_dip_statistic": 0.056718,
+              "metadata_csd_bimodality_coefficient": 0.6885,
+              "metadata_csd_disagreement_rate": 0.52
+            },
+            {
+              "metadata_difficulty_level": 5,
+              "metadata_csd_accuracy": 0.94,
+              "metadata_csd_embedding_variance": 0.13768,
+              "metadata_csd_dip_statistic": 0.069165,
+              "metadata_csd_bimodality_coefficient": 0.610032,
+              "metadata_csd_disagreement_rate": 0.84
+            },
+            {
+              "metadata_difficulty_level": 9,
+              "metadata_csd_accuracy": 1.0,
+              "metadata_csd_embedding_variance": 0.140336,
+              "metadata_csd_dip_statistic": 0.059391,
+              "metadata_csd_bimodality_coefficient": 0.642723,
+              "metadata_csd_disagreement_rate": 0.88
+            },
+            {
+              "metadata_difficulty_level": 13,
+              "metadata_csd_accuracy": 0.54,
+              "metadata_csd_embedding_variance": 0.198909,
+              "metadata_csd_dip_statistic": 0.049711,
+              "metadata_csd_bimodality_coefficient": 0.46193,
+              "metadata_csd_disagreement_rate": 0.84
+            },
+            {
+              "metadata_difficulty_level": 17,
+              "metadata_csd_accuracy": 0.54,
+              "metadata_csd_embedding_variance": 0.17878,
+              "metadata_csd_dip_statistic": 0.060956,
+              "metadata_csd_bimodality_coefficient": 0.493712,
+              "metadata_csd_disagreement_rate": 0.92
+            }
+          ]
+        },
+        {
+          "dataset": "graph_coloring_csd_gemini-2.0-flash-lite-001",
+          "examples": [
+            {
+              "metadata_difficulty_level": 1,
+              "metadata_csd_accuracy": 1.0,
+              "metadata_csd_embedding_variance": 0.062511,
+              "metadata_csd_dip_statistic": 0.061213,
+              "metadata_csd_bimodality_coefficient": 0.689635,
+              "metadata_csd_disagreement_rate": 0.56
+            },
+            {
+              "metadata_difficulty_level": 5,
+              "metadata_csd_accuracy": 0.9,
+              "metadata_csd_embedding_variance": 0.085995,
+              "metadata_csd_dip_statistic": 0.031416,
+              "metadata_csd_bimodality_coefficient": 0.791736,
+              "metadata_csd_disagreement_rate": 0.68
+            },
+            {
+              "metadata_difficulty_level": 9,
+              "metadata_csd_accuracy": 0.74,
+              "metadata_csd_embedding_variance": 0.059693,
+              "metadata_csd_dip_statistic": 0.064117,
+              "metadata_csd_bimodality_coefficient": 0.537484,
+              "metadata_csd_disagreement_rate": 0.88
+            },
+            {
+              "metadata_difficulty_level": 13,
+              "metadata_csd_accuracy": 0.24,
+              "metadata_csd_embedding_variance": 0.054108,
+              "metadata_csd_dip_statistic": 0.041218,
+              "metadata_csd_bimodality_coefficient": 0.459871,
+              "metadata_csd_disagreement_rate": 0.84
+            },
+            {
+              "metadata_difficulty_level": 17,
+              "metadata_csd_accuracy": 0.6,
+              "metadata_csd_embedding_variance": 0.092714,
+              "metadata_csd_dip_statistic": 0.033401,
+              "metadata_csd_bimodality_coefficient": 0.306768,
+              "metadata_csd_disagreement_rate": 0.92
+            }
+          ]
+        }
+      ]
+    },
+    "dep3_classifier_cost": {
+      "datasets": [
+        {
+          "dataset": "classifier_comparison",
+          "examples": [
+            {
+              "predict_lopo_f1": "0.949317",
+              "predict_loto_f1": "0.94359",
+              "metadata_classifier_variant": "csd_zt_reldist",
+              "metadata_model_type": "rf",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.888347",
+              "predict_loto_f1": "0.851613",
+              "metadata_classifier_variant": "csd_pct_t_reldiff",
+              "metadata_model_type": "rf",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.883725",
+              "predict_loto_f1": "0.861905",
+              "metadata_classifier_variant": "csd_zt_full",
+              "metadata_model_type": "rf",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.879577",
+              "predict_loto_f1": "0.79912",
+              "metadata_classifier_variant": "csd_zt_reldist",
+              "metadata_model_type": "logreg",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.869223",
+              "predict_loto_f1": "0.859776",
+              "metadata_classifier_variant": "csd_zt_reldiff",
+              "metadata_model_type": "rf",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.862025",
+              "predict_loto_f1": "0.767145",
+              "metadata_classifier_variant": "csd_zt_spuq",
+              "metadata_model_type": "rf",
+              "metadata_is_csd": "False",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.860946",
+              "predict_loto_f1": "0.819562",
+              "metadata_classifier_variant": "csd_pct_t_reldiff",
+              "metadata_model_type": "logreg",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.85991",
+              "predict_loto_f1": "0.74238",
+              "metadata_classifier_variant": "csd_raw_diff",
+              "metadata_model_type": "svm",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.844104",
+              "predict_loto_f1": "0.74238",
+              "metadata_classifier_variant": "csd_raw_diff",
+              "metadata_model_type": "logreg",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.837511",
+              "predict_loto_f1": "0.85929",
+              "metadata_classifier_variant": "csd_pct_t_reldiff",
+              "metadata_model_type": "svm",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.812191",
+              "predict_loto_f1": "0.801606",
+              "metadata_classifier_variant": "csd_raw_diff",
+              "metadata_model_type": "rf",
+              "metadata_is_csd": "True",
+              "metadata_is_spuq": "False"
+            },
+            {
+              "predict_lopo_f1": "0.750667",
+              "predict_loto_f1": "0.540199",
+              "metadata_classifier_variant": "csd_zt_spuq",
+              "metadata_model_type": "logreg",
+              "metadata_is_csd": "False",
+              "metadata_is_spuq": "False"
+            }
+          ]
+        },
+        {
+          "dataset": "cost_comparison",
+          "examples": [
+            {
+              "input": "Cost analysis: CSD (all variants)",
+              "output": "Extra calls=0, Cost=$0.0000",
+              "predict_best_lopo_f1": "0.949317",
+              "predict_best_loto_f1": "0.94359",
+              "predict_extra_api_calls": "0",
+              "predict_extra_cost_usd": "0.0",
+              "metadata_method": "CSD (all variants)"
+            },
+            {
+              "input": "Cost analysis: SPUQ (paraphrase)",
+              "output": "Extra calls=1520, Cost=$0.2414",
+              "predict_best_lopo_f1": "0.712531",
+              "predict_best_loto_f1": "0.698997",
+              "predict_extra_api_calls": "1520",
+              "predict_extra_cost_usd": "0.2414",
+              "metadata_method": "SPUQ (paraphrase)"
+            },
+            {
+              "input": "Cost analysis: CSD+SPUQ combined",
+              "output": "Extra calls=1520, Cost=$0.2414",
+              "predict_best_lopo_f1": "0.862025",
+              "predict_best_loto_f1": "0.767145",
+              "predict_extra_api_calls": "1520",
+              "predict_extra_cost_usd": "0.2414",
+              "metadata_method": "CSD+SPUQ combined"
+            }
+          ]
+        }
+      ]
+    },
+    "dep4_temperature": {
+      "datasets": [
+        {
+          "dataset": "csd_temp_T0.4__gemini-2.0-flash-001",
+          "examples": [
+            {
+              "predict_csd_variance": "0.294744",
+              "predict_disagreement_rate": "0.8",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_csd_variance": "0.233251",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 6
+            },
+            {
+              "predict_csd_variance": "0.150156",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 10
+            },
+            {
+              "predict_csd_variance": "0.165429",
+              "predict_disagreement_rate": "0.8",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_csd_variance": "0.159769",
+              "predict_disagreement_rate": "0.8",
+              "metadata_difficulty_level": 18
+            },
+            {
+              "predict_csd_variance": "0.147895",
+              "predict_disagreement_rate": "0.8",
+              "metadata_difficulty_level": 22
+            }
+          ]
+        },
+        {
+          "dataset": "csd_temp_T0.7__gemini-2.0-flash-001",
+          "examples": [
+            {
+              "predict_csd_variance": "0.306527",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_csd_variance": "0.243057",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 6
+            },
+            {
+              "predict_csd_variance": "0.178682",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 10
+            },
+            {
+              "predict_csd_variance": "0.179806",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_csd_variance": "0.16027",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 18
+            },
+            {
+              "predict_csd_variance": "0.148004",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 22
+            }
+          ]
+        },
+        {
+          "dataset": "csd_temp_T1.0__gemini-2.0-flash-001",
+          "examples": [
+            {
+              "predict_csd_variance": "0.312364",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_csd_variance": "0.239558",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 6
+            },
+            {
+              "predict_csd_variance": "0.18464",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 10
+            },
+            {
+              "predict_csd_variance": "0.182427",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_csd_variance": "0.16799",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 18
+            },
+            {
+              "predict_csd_variance": "0.162458",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 22
+            }
+          ]
+        },
+        {
+          "dataset": "csd_temp_T1.3__gemini-2.0-flash-001",
+          "examples": [
+            {
+              "predict_csd_variance": "0.308154",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 2
+            },
+            {
+              "predict_csd_variance": "0.248962",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 6
+            },
+            {
+              "predict_csd_variance": "0.169948",
+              "predict_disagreement_rate": "0.88",
+              "metadata_difficulty_level": 10
+            },
+            {
+              "predict_csd_variance": "0.189642",
+              "predict_disagreement_rate": "0.86",
+              "metadata_difficulty_level": 14
+            },
+            {
+              "predict_csd_variance": "0.159003",
+              "predict_disagreement_rate": "0.82",
+              "metadata_difficulty_level": 18
+            },
+            {
+              "predict_csd_variance": "0.169874",
+              "predict_disagreement_rate": "0.84",
+              "metadata_difficulty_level": 22
+            }
+          ]
+        }
+      ]
+    },
+    "dep5_model_fitting": {
+      "datasets": [
+        {
+          "dataset": "model_comparison_all_series",
+          "examples": [
+            {
+              "predict_mixture_R2": "0.1559",
+              "predict_fold_R2": "-0.2212",
+              "predict_cusp_R2_variance": "0.5578",
+              "predict_ddm_R2_variance": "0.0994",
+              "metadata_task": "arithmetic",
+              "metadata_model": "google/gemini-2.0-flash-001"
+            },
+            {
+              "predict_mixture_R2": "0.2469",
+              "predict_fold_R2": "nan",
+              "predict_cusp_R2_variance": "0.0",
+              "predict_ddm_R2_variance": "-0.0",
+              "metadata_task": "arithmetic",
+              "metadata_model": "openai/gpt-4o-mini"
+            },
+            {
+              "predict_mixture_R2": "-0.0",
+              "predict_fold_R2": "-0.155",
+              "predict_cusp_R2_variance": "0.0",
+              "predict_ddm_R2_variance": "-0.0",
+              "metadata_task": "arithmetic",
+              "metadata_model": "meta-llama/llama-3.1-8b-instruct"
+            },
+            {
+              "predict_mixture_R2": "0.6611",
+              "predict_fold_R2": "0.2481",
+              "predict_cusp_R2_variance": "0.636",
+              "predict_ddm_R2_variance": "0.5975",
+              "metadata_task": "graph_coloring",
+              "metadata_model": "google/gemini-2.0-flash-001"
+            },
+            {
+              "predict_mixture_R2": "0.1091",
+              "predict_fold_R2": "-0.099",
+              "predict_cusp_R2_variance": "0.0",
+              "predict_ddm_R2_variance": "-0.0",
+              "metadata_task": "graph_coloring",
+              "metadata_model": "google/gemini-2.0-flash-lite-001"
+            },
+            {
+              "predict_mixture_R2": "0.3973",
+              "predict_fold_R2": "0.0221",
+              "predict_cusp_R2_variance": "0.0041",
+              "predict_ddm_R2_variance": "-0.0",
+              "metadata_task": "graph_coloring",
+              "metadata_model": "openai/gpt-4o-mini"
+            },
+            {
+              "predict_mixture_R2": "0.0273",
+              "predict_fold_R2": "-2.7706",
+              "predict_cusp_R2_variance": "0.0",
+              "predict_ddm_R2_variance": "0.2307",
+              "metadata_task": "temp_sweep",
+              "metadata_model": "google/gemini-2.0-flash-001"
+            },
+            {
+              "predict_mixture_R2": "0.1886",
+              "predict_fold_R2": "nan",
+              "predict_cusp_R2_variance": "0.584",
+              "predict_ddm_R2_variance": "0.0685",
+              "metadata_task": "temp_sweep",
+              "metadata_model": "google/gemini-2.0-flash-001"
+            },
+            {
+              "predict_mixture_R2": "0.1353",
+              "predict_fold_R2": "nan",
+              "predict_cusp_R2_variance": "0.0",
+              "predict_ddm_R2_variance": "0.0431",
+              "metadata_task": "temp_sweep",
+              "metadata_model": "google/gemini-2.0-flash-001"
+            },
+            {
+              "predict_mixture_R2": "0.0",
+              "predict_fold_R2": "nan",
+              "predict_cusp_R2_variance": "0.0",
+              "predict_ddm_R2_variance": "-0.0",
+              "metadata_task": "temp_sweep",
+              "metadata_model": "google/gemini-2.0-flash-001"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "eval_results": {
+    "metadata": {
+      "evaluation_name": "neurips_paper_compilation",
+      "description": "Compile NeurIPS 2026 submission PDF from experiment data + manuscript text",
+      "manuscript_source": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_5/gen_art/research_id4_it5__opus/research_out.json",
+      "n_dependency_experiments": 5,
+      "n_figures_target": 8,
+      "n_tables_target": 3,
+      "n_bib_entries_target": 38,
+      "compilation_tool": "pdflatex + bibtex",
+      "scaling_stage_reached": "full",
+      "total_runtime_seconds": 14.05
+    },
+    "metrics_agg": {
+      "pdf_compiled": 1,
+      "page_count": 25,
+      "main_body_pages": 22,
+      "total_figures_included": 8,
+      "total_tables_included": 1,
+      "bibliography_entries_total": 38,
+      "bibliography_entries_resolved": 37,
+      "missing_citations": 0,
+      "latex_warnings_count": 2,
+      "overfull_hbox_count": 3,
+      "all_figures_pass_size_check": 1,
+      "neurips_dimension_compliance": 1,
+      "no_placeholder_text": 1,
+      "compilation_success_rate": 0.3333333333333333,
+      "total_data_points_in_figures": 919
+    },
+    "datasets": [
+      {
+        "dataset": "figure_quality",
+        "examples": [
+          {
+            "input": "Generate figure: fig1",
+            "output": "Generated successfully: fig1",
+            "eval_figure_generated": 1,
+            "eval_figure_included_in_pdf": 1,
+            "eval_filesize_png_kb": 202.24,
+            "eval_width_inches": 6.75,
+            "eval_height_inches": 3.5,
+            "eval_dimension_compliance": 1,
+            "eval_n_data_points": 72,
+            "eval_size_check_pass": 1,
+            "metadata_figure_name": "fig1",
+            "metadata_fold": "test"
+          },
+          {
+            "input": "Generate figure: fig2",
+            "output": "Generated successfully: fig2",
+            "eval_figure_generated": 1,
+            "eval_figure_included_in_pdf": 1,
+            "eval_filesize_png_kb": 494.66,
+            "eval_width_inches": 6.75,
+            "eval_height_inches": 5.0,
+            "eval_dimension_compliance": 1,
+            "eval_n_data_points": 288,
+            "eval_size_check_pass": 1,
+            "metadata_figure_name": "fig2",
+            "metadata_fold": "test"
+          },
+          {
+            "input": "Generate figure: fig3",
+            "output": "Generated successfully: fig3",
+            "eval_figure_generated": 1,
+            "eval_figure_included_in_pdf": 1,
+            "eval_filesize_png_kb": 222.71,
+            "eval_width_inches": 6.75,
+            "eval_height_inches": 3.5,
+            "eval_dimension_compliance": 1,
+            "eval_n_data_points": 60,
+            "eval_size_check_pass": 1,
+            "metadata_figure_name": "fig3",
+            "metadata_fold": "test"
+          }
+        ]
+      },
+      {
+        "dataset": "compilation_summary",
+        "examples": [
+          {
+            "input": "Compile NeurIPS paper PDF from experiment data and manuscript",
+            "output": "PDF compiled=YES, pages=25, figures=8/8",
+            "eval_pdf_compiled": 1,
+            "eval_page_count": 25,
+            "eval_main_body_pages": 22,
+            "eval_total_figures": 8,
+            "eval_total_tables": 1,
+            "eval_bib_resolved": 37,
+            "eval_missing_citations": 0,
+            "eval_warnings": 2,
+            "eval_overfull_hbox": 3,
+            "eval_compilation_success_rate": 0.3333333333333333,
+            "eval_no_placeholder_text": 1,
+            "metadata_scaling_stage": "full",
+            "metadata_fold": "test"
+          }
+        ]
+      },
+      {
+        "dataset": "cost_comparison",
+        "examples": [
+          {
+            "input": "Cost analysis: CSD (all variants)",
+            "output": "Extra calls=0, Cost=$0.0000",
+            "predict_best_lopo_f1": "0.949317",
+            "predict_best_loto_f1": "0.94359",
+            "predict_extra_api_calls": "0",
+            "predict_extra_cost_usd": "0.0",
+            "eval_cost_effectiveness": 949.317,
+            "metadata_method": "CSD (all variants)",
+            "metadata_fold": "test"
+          },
+          {
+            "input": "Cost analysis: SPUQ (paraphrase)",
+            "output": "Extra calls=1520, Cost=$0.2414",
+            "predict_best_lopo_f1": "0.712531",
+            "predict_best_loto_f1": "0.698997",
+            "predict_extra_api_calls": "1520",
+            "predict_extra_cost_usd": "0.2414",
+            "eval_cost_effectiveness": 0.4685,
+            "metadata_method": "SPUQ (paraphrase)",
+            "metadata_fold": "test"
+          },
+          {
+            "input": "Cost analysis: CSD+SPUQ combined",
+            "output": "Extra calls=1520, Cost=$0.2414",
+            "predict_best_lopo_f1": "0.862025",
+            "predict_best_loto_f1": "0.767145",
+            "predict_extra_api_calls": "1520",
+            "predict_extra_cost_usd": "0.2414",
+            "eval_cost_effectiveness": 0.5667,
+            "metadata_method": "CSD+SPUQ combined",
+            "metadata_fold": "test"
+          }
+        ]
+      }
+    ]
+  }
+}

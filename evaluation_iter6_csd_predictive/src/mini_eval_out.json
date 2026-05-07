@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "evaluation_name": "CSD_Predictive_Independence_Ablation",
+    "n_total_rows": 108,
+    "n_model_task_pairs": 5,
+    "n_bootstrap": 1000,
+    "n_permutations": 100,
+    "run_mode": "full",
+    "classifiers": [
+      "logreg",
+      "rf",
+      "svm"
+    ],
+    "cv_schemes": [
+      "lopo",
+      "loto",
+      "lomo"
+    ],
+    "ablation_details": {
+      "ablation_1_pure_csd": {
+        "description": "Pure CSD features, zero difficulty knowledge",
+        "features": [
+          "csd_variance",
+          "dip_statistic",
+          "silhouette_k2",
+          "bimodality_coefficient",
+          "disagreement_rate"
+        ]
+      },
+      "ablation_2_csd_dynamics": {
+        "description": "CSD + dynamics (deltas + trends), no position features",
+        "features": [
+          "csd_variance",
+          "dip_statistic",
+          "silhouette_k2",
+          "bimodality_coefficient",
+          "disagreement_rate",
+          "csd_variance_delta",
+          "dip_statistic_delta",
+          "silhouette_k2_delta",
+          "bimodality_coefficient_delta",
+          "disagreement_rate_delta",
+          "csd_variance_trend3",
+          "dip_statistic_trend3",
+          "silhouette_k2_trend3",
+          "bimodality_coefficient_trend3",
+          "disagreement_rate_trend3"
+        ]
+      },
+      "ablation_3_difficulty_only": {
+        "description": "Difficulty position features only, no CSD",
+        "features": [
+          "difficulty_level",
+          "difficulty_level_squared",
+          "relative_position_in_range"
+        ]
+      },
+      "ablation_4_incremental": {
+        "description": "Incremental contribution: forward feature addition",
+        "features": []
+      },
+      "ablation_5_permutation": {
+        "description": "Permutation test: shuffle CSD within task_family to break CSD-boundary correlation",
+        "features": []
+      }
+    },
+    "summary_metrics_detail": {
+      "csd_contribution_ratio": 0.143,
+      "csd_lift_above_random": 0.1808,
+      "dynamics_lift": 0.0444,
+      "permutation_pvalue": 1.0,
+      "permutation_drop": -0.0125,
+      "pure_csd_best_f1": 0.69,
+      "difficulty_only_best_f1": 0.8861,
+      "full_model_f1": 0.949,
+      "random_baseline_f1": 0.5093,
+      "pure_csd_above_random": true,
+      "csd_adds_to_difficulty": true,
+      "dynamics_add_to_static": true,
+      "top_csd_feature_over_difficulty": "dip_statistic",
+      "top_csd_marginal_gain": 0.027,
+      "scientific_verdict": "CSD indicators beat random chance; CSD provides modest unique signal beyond difficulty position; Dynamics do not substantially improve over static CSD; Permutation test inconclusive (p=1.000)"
+    }
+  },
+  "metrics_agg": {
+    "csd_contribution_ratio": 0.143,
+    "csd_lift_above_random": 0.1808,
+    "dynamics_lift": 0.0444,
+    "permutation_pvalue": 1.0,
+    "permutation_drop": -0.0125,
+    "pure_csd_best_f1": 0.69,
+    "difficulty_only_best_f1": 0.8861,
+    "full_model_f1": 0.949,
+    "random_baseline_f1": 0.5093,
+    "pure_csd_above_random": 1,
+    "csd_adds_to_difficulty": 1,
+    "dynamics_add_to_static": 1,
+    "top_csd_marginal_gain": 0.027,
+    "ablation_1_pure_csd_logreg_lopo_f1": 0.6704,
+    "ablation_1_pure_csd_logreg_loto_f1": 0.5672,
+    "ablation_1_pure_csd_logreg_lomo_f1": 0.67,
+    "ablation_1_pure_csd_rf_lopo_f1": 0.6526,
+    "ablation_1_pure_csd_rf_loto_f1": 0.592,
+    "ablation_1_pure_csd_rf_lomo_f1": 0.69,
+    "ablation_1_pure_csd_svm_lopo_f1": 0.5944,
+    "ablation_1_pure_csd_svm_loto_f1": 0.3541,
+    "ablation_1_pure_csd_svm_lomo_f1": 0.5909,
+    "ablation_2_csd_dynamics_logreg_lopo_f1": 0.7084,
+    "ablation_2_csd_dynamics_logreg_loto_f1": 0.627,
+    "ablation_2_csd_dynamics_logreg_lomo_f1": 0.7344,
+    "ablation_2_csd_dynamics_rf_lopo_f1": 0.6842,
+    "ablation_2_csd_dynamics_rf_loto_f1": 0.6209,
+    "ablation_2_csd_dynamics_rf_lomo_f1": 0.7274,
+    "ablation_2_csd_dynamics_svm_lopo_f1": 0.6544,
+    "ablation_2_csd_dynamics_svm_loto_f1": 0.5955,
+    "ablation_2_csd_dynamics_svm_lomo_f1": 0.6449,
+    "ablation_3_difficulty_only_logreg_lopo_f1": 0.8629,
+    "ablation_3_difficulty_only_logreg_loto_f1": 0.7913,
+    "ablation_3_difficulty_only_logreg_lomo_f1": 0.864,
+    "ablation_3_difficulty_only_rf_lopo_f1": 0.8215,
+    "ablation_3_difficulty_only_rf_loto_f1": 0.81,
+    "ablation_3_difficulty_only_rf_lomo_f1": 0.824,
+    "ablation_3_difficulty_only_svm_lopo_f1": 0.8842,
+    "ablation_3_difficulty_only_svm_loto_f1": 0.7913,
+    "ablation_3_difficulty_only_svm_lomo_f1": 0.8861
+  },
+  "datasets": [
+    {
+      "dataset": "ablation_comparison",
+      "examples": [
+        {
+          "input": "Ablation: ablation_1_pure_csd, Classifier: logreg, CV: lomo",
+          "output": "F1=0.6700 [0.5544, 0.7679]",
+          "predict_f1_mean": "0.669991",
+          "predict_f1_ci_lo": "0.554424",
+          "predict_f1_ci_hi": "0.767861",
+          "predict_auroc_mean": "0.79727",
+          "predict_precision_mean": "0.693381",
+          "predict_recall_mean": "0.652079",
+          "metadata_ablation": "ablation_1_pure_csd",
+          "metadata_classifier": "logreg",
+          "metadata_cv_scheme": "lomo",
+          "metadata_n_features": "5",
+          "metadata_fold": "test",
+          "eval_f1_mean": 0.669991,
+          "eval_auroc_mean": 0.79727
+        },
+        {
+          "input": "Ablation: ablation_1_pure_csd, Classifier: logreg, CV: lopo",
+          "output": "F1=0.6704 [0.5607, 0.7692]",
+          "predict_f1_mean": "0.670425",
+          "predict_f1_ci_lo": "0.560729",
+          "predict_f1_ci_hi": "0.769231",
+          "predict_auroc_mean": "0.78251",
+          "predict_precision_mean": "0.691234",
+          "predict_recall_mean": "0.654832",
+          "metadata_ablation": "ablation_1_pure_csd",
+          "metadata_classifier": "logreg",
+          "metadata_cv_scheme": "lopo",
+          "metadata_n_features": "5",
+          "metadata_fold": "test",
+          "eval_f1_mean": 0.670425,
+          "eval_auroc_mean": 0.78251
+        },
+        {
+          "input": "Ablation: ablation_1_pure_csd, Classifier: logreg, CV: loto",
+          "output": "F1=0.5672 [0.4565, 0.6719]",
+          "predict_f1_mean": "0.567243",
+          "predict_f1_ci_lo": "0.456512",
+          "predict_f1_ci_hi": "0.671878",
+          "predict_auroc_mean": "0.490487",
+          "predict_precision_mean": "0.555775",
+          "predict_recall_mean": "0.583531",
+          "metadata_ablation": "ablation_1_pure_csd",
+          "metadata_classifier": "logreg",
+          "metadata_cv_scheme": "loto",
+          "metadata_n_features": "5",
+          "metadata_fold": "test",
+          "eval_f1_mean": 0.567243,
+          "eval_auroc_mean": 0.490487
+        }
+      ]
+    },
+    {
+      "dataset": "incremental_contribution",
+      "examples": [
+        {
+          "input": "Add dip_statistic to difficulty-only baseline",
+          "output": "F1=0.8485 (gain=+0.0270)",
+          "predict_new_f1": "0.848469",
+          "predict_marginal_gain": "0.026966",
+          "predict_new_f1_ci_lo": "0.773573",
+          "predict_new_f1_ci_hi": "0.915254",
+          "metadata_direction": "forward_from_difficulty",
+          "metadata_feature_added": "dip_statistic",
+          "metadata_fold": "test",
+          "eval_marginal_gain": 0.026966
+        },
+        {
+          "input": "Add csd_variance to difficulty-only baseline",
+          "output": "F1=0.8355 (gain=+0.0140)",
+          "predict_new_f1": "0.835458",
+          "predict_marginal_gain": "0.013956",
+          "predict_new_f1_ci_lo": "0.763618",
+          "predict_new_f1_ci_hi": "0.90372",
+          "metadata_direction": "forward_from_difficulty",
+          "metadata_feature_added": "csd_variance",
+          "metadata_fold": "test",
+          "eval_marginal_gain": 0.013956
+        },
+        {
+          "input": "Add bimodality_coefficient to difficulty-only baseline",
+          "output": "F1=0.8353 (gain=+0.0138)",
+          "predict_new_f1": "0.83533",
+          "predict_marginal_gain": "0.013827",
+          "predict_new_f1_ci_lo": "0.756284",
+          "predict_new_f1_ci_hi": "0.903226",
+          "metadata_direction": "forward_from_difficulty",
+          "metadata_feature_added": "bimodality_coefficient",
+          "metadata_fold": "test",
+          "eval_marginal_gain": 0.013827
+        }
+      ]
+    },
+    {
+      "dataset": "permutation_test",
+      "examples": [
+        {
+          "input": "Permutation test: full_model",
+          "output": "Unpermuted F1=0.9546, Permuted F1=0.9671, p=1.0000",
+          "predict_unpermuted_f1": "0.954591",
+          "predict_permuted_f1_mean": "0.967097",
+          "predict_permuted_f1_std": "0.004385",
+          "predict_permutation_drop": "-0.012506",
+          "predict_permutation_pvalue": "1.0",
+          "metadata_model_variant": "full_model",
+          "metadata_n_permutations": "100",
+          "metadata_fold": "test",
+          "eval_permutation_drop": -0.012506,
+          "eval_permutation_pvalue": 1.0
+        },
+        {
+          "input": "Permutation test: pure_csd",
+          "output": "Unpermuted F1=0.6526, Permuted F1=0.4889, p=0.0100",
+          "predict_unpermuted_f1": "0.652606",
+          "predict_permuted_f1_mean": "0.488852",
+          "predict_permuted_f1_std": "0.062876",
+          "predict_permutation_drop": "0.163754",
+          "predict_permutation_pvalue": "0.01",
+          "metadata_model_variant": "pure_csd",
+          "metadata_n_permutations": "100",
+          "metadata_fold": "test",
+          "eval_permutation_drop": 0.163754,
+          "eval_permutation_pvalue": 0.01
+        }
+      ]
+    }
+  ]
+}

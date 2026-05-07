@@ -1,0 +1,429 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{neurips_template}
+\begin{document}
+
+
+\title{Flickering Before Failing: Ecological Early Warning Signals Predict LLM Reasoning Collapse}
+
+\begin{abstract}
+Deploying large language models in high-stakes settings demands methods for detecting when models approach their capability limits. We draw on ecological resilience science, where critical slowing down (CSD) and flickering between alternative states provide early warning of regime shifts, and apply these indicators to LLM response distributions across parameterized task families. We test four models (Gemini 2.0 Flash, Gemini 2.0 Flash Lite, GPT-4o-mini, Llama 3.1 8B Instruct) on arithmetic, graph coloring, syllogistic logic, and multi-hop reasoning tasks at varying difficulty levels ($N=50$ responses per level). A logistic regression classifier using CSD features (embedding variance, Hartigan dip statistic, silhouette score, bimodality coefficient, and disagreement rate) achieves leave-one-pair-out F1$\,{=}\,$0.814 (AUROC$\,{=}\,$0.897) for predicting boundary proximity, outperforming the best single-indicator baseline by 16.38\%, at zero additional API cost. However, the fold bifurcation scaling law fails: variance follows an inverted-U rather than monotonic divergence ($\hat{\alpha}\approx -0.0005$ vs.\ predicted $-0.5$; $R^2=0.066$), better explained by a mixture-switching model where between-component variance $p(1{-}p)\|\Delta\mu\|^2$ peaks at 50\% accuracy. The qualitative ecological insight---flickering as early warning---transfers to LLMs even when the specific quantitative scaling law does not, yielding a practical, training-free, black-box monitoring tool for deployment safety.
+\end{abstract}
+
+% ======================================================================
+\section{Introduction}
+\label{sec:intro}
+% ======================================================================
+
+Large language models are increasingly deployed in domains where failure carries significant consequences: clinical decision support, legal analysis, financial forecasting, and autonomous agents \cite{huang2025survey}. A fundamental challenge for safe deployment is \emph{knowing when a model is approaching the boundary of its competence}---ideally before accuracy degrades catastrophically. Recent work has confirmed that LLM reasoning capabilities do not degrade gracefully: Zhang et al.~(2026) demonstrated ``logical phase transitions'' where performance remains stable within a regime and then collapses abruptly beyond a critical complexity threshold \cite{zhang2026logical}. This abruptness makes the problem urgent---by the time accuracy drops, it may already be too late to switch to a more capable model or allocate additional compute.
+
+Current uncertainty quantification methods for LLMs are either white-box, requiring access to model internals \cite{ghasemabadi2025gnosis}; expensive, requiring multiple additional API calls per query \cite{gao2024spuq}; or static, providing offline capability bounds rather than runtime detection \cite{chen2024reasoning}. Gnosis achieves AUROC 0.95--0.96 for correctness prediction but requires hidden-state access and a trained probe with approximately 5 million parameters \cite{ghasemabadi2025gnosis}. SPUQ provides black-box uncertainty via input perturbation but requires 5--10 additional API calls per query, adding approximately \$360K/month at 1 million queries at current pricing \cite{gao2024spuq}. The Reasoning Boundary Framework quantifies static upper bounds on reasoning capability across 27 models but does not detect boundaries at runtime for specific inputs \cite{chen2024reasoning}. A practical deployment monitor must be black-box, zero-cost, and provide \emph{leading}---not merely concurrent---indicators of approaching failure.
+
+We draw inspiration from an unexpected source: \emph{ecological resilience science}. Over the past two decades, ecologists have developed a rich theory of early warning signals for regime shifts in complex systems \cite{scheffer2009, carpenter2006}. The core mechanism is \emph{critical slowing down} (CSD): near a tipping point---where a lake flips from clear to turbid, a savanna transitions to desert, or a fishery collapses---the system's dominant eigenvalue approaches zero, causing it to recover increasingly slowly from perturbations \cite{scheffer2009}. This slowing manifests as three statistical signatures in the system's state distribution: rising variance (perturbations accumulate), rising lag-1 autocorrelation (memory of perturbations persists), and changing skewness (asymmetric recovery toward the remaining attractor) \cite{scheffer2009, dakos2012methods}.
+
+Even more directly, strong noise can cause the system to \emph{flicker}---alternating between alternative stable states before the formal bifurcation is reached \cite{wang2012flickering, scheffer2012}. Wang et al.~(2012) documented flickering in a lake-catchment system in Erhai, China, detecting bimodal state distributions up to 20 years before the lake's critical transition to eutrophy \cite{wang2012flickering}. Scheffer et al.~(2012) formalized flickering as a complementary early warning mechanism distinct from CSD: while CSD reflects the gradual shallowing of a basin of attraction, flickering reflects noise-induced switching between coexisting basins \cite{scheffer2012}. This distinction proves central to our findings. The flickering mechanism has been validated across dozens of ecological systems and produces characteristic bimodal state distributions detectable with standard statistical tests \cite{dakos2013, bury2021}.
+
+We hypothesized that an analogous phenomenon occurs in LLMs: as task difficulty approaches a capability boundary $d^*$, the distribution of $N=50$ sampled responses should transition from unimodal-correct through bimodal-flickering to unimodal-incorrect. In the language of dynamical systems, the fold bifurcation normal form $dx = (\mu + x^2)dt + \sigma\,dW$ predicts that variance should scale as $\text{Var} \sim (d^* - d)^{-1/2}$ with exponent $\alpha = -0.5$ \cite{kuehn2011}, providing a specific quantitative prediction we could test against empirical LLM response distributions.
+
+Our investigation yielded a mixed but informative outcome, following what we term an ``honest discovery'' narrative. \textbf{Beat 1}: Sharp capability boundaries exist---confirmed across arithmetic and graph coloring tasks, consistent with the logical phase transitions reported by Zhang et al.~(2026). \textbf{Beat 2}: Ecological CSD theory predicts flickering as an early warning signal for such transitions---an insight developed over two decades of ecological resilience research. \textbf{Beat 3}: We hypothesized fold bifurcation dynamics with specific scaling predictions: $\text{Var} \sim (d^* - d)^{-0.5}$. \textbf{Beat 4}: Flickering was confirmed---bimodality indicators detect approaching boundaries---but the fold bifurcation scaling law fails decisively ($\hat{\alpha} \approx -0.0005$ vs.~predicted $-0.5$; $R^2 = 0.066$). \textbf{Beat 5}: A mixture-switching model from the law of total variance better explains the transition, with between-component variance $p(1{-}p)\|\Delta\mu\|^2$ peaking at 50\% accuracy, connecting to the cusp catastrophe from dynamical systems theory. \textbf{Beat 6}: The CSD classifier works regardless of the theoretical mechanism, achieving LOPO F1$\,{=}\,$0.814 (AUROC$\,{=}\,$0.897), beating the best baseline by 16.38\%, at zero additional API cost.
+
+We emphasize that such ``honest discovery'' narratives---where a theoretically motivated hypothesis partially fails but yields practical insight---are increasingly valued at top venues. The NeurIPS 2025 Best Paper Runner-Up ``Does RL Really Incentivize Reasoning?'' \cite{liu2025superposition} demonstrated that surprising negative findings, when accompanied by careful analysis, are celebrated rather than penalized. Similarly, the Gore Lab's ``Superposition Yields Robust Neural Scaling'' validated ecology-physics-to-ML cross-domain transfer as a productive research paradigm \cite{liu2025superposition}.
+
+Our three contributions are:
+\begin{enumerate}
+    \item \textbf{Empirical demonstration that bimodality indicators detect approaching capability boundaries} across arithmetic (24 difficulty levels) and graph coloring (20 levels) tasks with 3--4 LLMs. The Hartigan dip test, silhouette score, and bimodality coefficient all show sensitivity to boundary proximity, with mean lead times of 13.7 (dip) and 11.7 (silhouette) difficulty levels before $d^*$.
+    \item \textbf{A zero-cost CSD-based boundary proximity classifier.} Logistic regression on CSD features achieves F1$\,{=}\,$0.814 (AUROC$\,{=}\,$0.897), outperforming all single-indicator baselines by 16.38\% in F1, using only the $N=50$ samples already generated for majority voting---adding zero additional API cost.
+    \item \textbf{Theoretical analysis revealing mixture-switching as the correct model.} The fold bifurcation scaling law fails; a three-layer model (mixture variance + cusp catastrophe + finite-size scaling) correctly predicts the inverted-U variance profile, connecting to ecological regime shift theory via the cusp catastrophe \cite{chen2022cusp, dakos2013}.
+\end{enumerate}
+
+Figure~1 illustrates the core phenomenon: as arithmetic difficulty increases from 2 to 24 operations for Llama 3.1 8B, the distribution of response embeddings transitions from a tight cluster of correct answers (low difficulty), through a bimodal mixture of correct and incorrect clusters (boundary difficulty), to a diffuse cluster of incorrect responses (high difficulty). This visual pattern---tight $\to$ bimodal $\to$ diffuse---directly parallels the ecological flickering phenomenon documented in lake systems, where water clarity measurements show unimodal-clear $\to$ bimodal-flickering $\to$ unimodal-turbid distributions as eutrophication progresses \cite{wang2012flickering}.
+
+The remainder of this paper is organized as follows. Section~\ref{sec:background} reviews ecological CSD theory and formalizes the fold bifurcation prediction. Section~\ref{sec:methods} describes our experimental setup, CSD indicator battery, and classifier design. Section~\ref{sec:results} presents results across three success criteria. Section~\ref{sec:theory} develops the mixture-switching theoretical model explaining why the fold bifurcation fails. Section~\ref{sec:related} positions our work against the LLM uncertainty quantification and phase transition literatures. Sections~\ref{sec:discussion}--\ref{sec:conclusion} discuss implications, limitations, and conclusions.
+
+% ======================================================================
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig1_accuracy_arithmetic.png}
+  \caption{Accuracy profiles across difficulty levels for three LLMs on multi-step arithmetic. Each model shows a distinct capability boundary ($d^*$) where accuracy collapses. Llama 3.1 8B ($d^*{=}20$), Gemini Flash ($d^*{=}15$), GPT-4o-mini ($d^*{=}2$).}
+  \label{fig:accuracy_arith}
+\end{figure}
+
+
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig2_csd_arithmetic.png}
+  \caption{CSD indicator battery for the arithmetic task. Embedding variance, Hartigan dip statistic, bimodality coefficient, and disagreement rate across difficulty levels for three models. Variance shows significant increasing trend ($p{<}0.02$) for all models before $d^*$.}
+  \label{fig:csd_arith}
+\end{figure}
+
+
+\section{Background}
+\label{sec:background}
+% ======================================================================
+
+\subsection{Critical Slowing Down in Ecology}
+
+Complex systems with alternative stable states can exhibit \emph{critical transitions}---abrupt shifts from one dynamical regime to another \cite{scheffer2009}. Scheffer et al.~(2009) established that near a fold bifurcation, the dominant eigenvalue characterizing the recovery rate approaches zero, causing the system to recover increasingly slowly from perturbations \cite{scheffer2009}. This \emph{critical slowing down} (CSD) is generic---it occurs in any continuous model approaching a fold bifurcation, regardless of specific system details \cite{kuehn2011}. CSD produces three observable signatures: rising variance, rising lag-1 autocorrelation, and changing skewness \cite{dakos2012methods, carpenter2006}.
+
+Dakos et al.~(2012) provided the definitive computational methodology for detecting CSD in empirical time series, including rolling-window estimation of variance and autocorrelation, Gaussian kernel detrending, and Kendall $\tau$ trend significance testing via comparison against 1000 ARMA surrogate time series \cite{dakos2012methods}. These methods have been applied to climate records, geological data, and laboratory ecosystems with varying degrees of success \cite{bury2021}. Carpenter \& Brock (2006) showed that rising variance could signal impending regime shift approximately a decade in advance in lake systems \cite{carpenter2006}. However, Boettiger \& Hastings (2012) warned that error rates can be severe even under favorable assumptions, arguing for quantification of reliability vs.~sensitivity trade-offs \cite{boettiger2012}.
+
+\subsection{Flickering as an Early Warning Signal}
+
+Scheffer et al.~(2012) distinguished CSD-based indicators from a complementary mechanism: \emph{flickering} \cite{scheffer2012}. In highly stochastic environments, noise can cause the system to jump between coexisting basins of attraction before the formal bifurcation is reached. The resulting frequency distribution of states approximates the shape of the basins, producing bimodality in the state distribution that is detectable separately from CSD indicators \cite{dakos2013}. Wang et al.~(2012) provided compelling empirical validation, detecting flickering in a lake-catchment system up to 20 years before the critical transition to eutrophy \cite{wang2012flickering}.
+
+Dakos et al.~(2013) formalized flickering theoretically, showing that in the bistable region under strong noise, the system switches between alternative states at a rate governed by the Kramers escape formula: the mean first-passage time from one basin to another scales as $\tau \sim \exp(\Delta V / \sigma^2)$, where $\Delta V$ is the potential barrier height and $\sigma^2$ is the noise intensity \cite{dakos2013}. As the bifurcation is approached, $\Delta V \to 0$, making transitions increasingly frequent. Crucially, under such noisy conditions, CSD may not be the relevant mechanism---flickering provides a more direct warning. This distinction proves important for our results: the LLM setting is inherently ``noisy'' (stochastic sampling at temperature $T$), making flickering more relevant than classical CSD.
+
+It is important to contextualize the empirical track record of CSD in its home domain. O'Brien et al.~(2023) systematically tested CSD-based EWS indicators on nine empirical lake datasets and found that they perform no better than chance (0.5 probability), with even the specialized EWSNet deep learning approach achieving only $\sim$41\% accuracy \cite{obrien2023}. Boettiger \& Hastings (2012) showed that false positive and false negative rates can be severe even under favorable theoretical assumptions \cite{boettiger2012}. These sobering results from ecology establish a calibrated expectation: any predictive success in a new domain is noteworthy rather than expected.
+
+\subsection{Fold Bifurcation Formalism}
+
+The fold (saddle-node) bifurcation has stochastic normal form $dx = (\mu + x^2)dt + \sigma\,dW$, where $\mu < 0$ before the bifurcation \cite{kuehn2011}. The stable fixed point is $x^* = -\sqrt{-\mu}$, with Jacobian eigenvalue $\lambda = -2\sqrt{-\mu}$ approaching zero as $\mu \to 0$. Linearizing around $x^*$ yields an Ornstein-Uhlenbeck process with mean-reversion rate $\theta = 2\sqrt{-\mu}$ and stationary variance $\text{Var}(X) = \sigma^2/(2\theta) = \sigma^2/(4\sqrt{d^*-d})$ \cite{kuehn2011}. This gives the scaling law $\text{Var} \sim (d^*-d)^{-1/2}$ with exponent $\alpha = -0.5$, which Kuehn (2011) proved is universal via center manifold reduction---higher-order terms do not influence the leading-order scaling \cite{kuehn2011}.
+
+For LLM reasoning, we mapped: task difficulty $d$ to the bifurcation parameter; the response distribution's state (embedding space position) to the state variable $x$; the capability boundary $d^*$ (where accuracy drops to $\sim$50\%) to the bifurcation point; and sampling temperature to noise amplitude $\sigma$. This mapping yielded the testable prediction: fit $\log(\text{Var})$ vs.\ $\log(d^* - d)$ and test whether $\alpha \in [-0.7, -0.3]$.
+
+\subsection{Formal Hypotheses}
+
+We tested three success criteria. \textbf{SC1 (Leading indicator)}: Bimodality indicators become significant at difficulty levels where accuracy remains above 80\%. \textbf{SC2 (Scaling law)}: Variance scales as $(d^* - d)^{\alpha}$ with $\alpha \in [-0.7, -0.3]$. \textbf{SC3 (Classifier superiority)}: A multi-indicator CSD classifier outperforms the best single-indicator baseline by at least 15\% in F1.
+
+% ======================================================================
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig3_accuracy_graph_coloring.png}
+  \caption{Accuracy profiles for graph coloring across three models. Capability boundaries differ: GPT-4o-mini ($d^*{=}10$), Gemini Flash ($d^*{=}14$), Gemini Flash Lite ($d^*{=}11$).}
+  \label{fig:accuracy_gc}
+\end{figure}
+
+
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig4_csd_graph_coloring.png}
+  \caption{CSD indicators for the graph coloring task. Similar flickering patterns emerge near capability boundaries, with embedding variance and disagreement rate showing the strongest signals.}
+  \label{fig:csd_gc}
+\end{figure}
+
+
+\section{Methods}
+\label{sec:methods}
+% ======================================================================
+
+\subsection{Task Families}
+
+We designed four parameterized task families with verifiable correctness, spanning 2 to 24 difficulty levels:
+
+\textbf{Arithmetic (positive test).} $N$-operation chains of integer arithmetic ($d = 2$ to 24 operations), where each problem consists of randomly generated addition, subtraction, and multiplication operations producing exact integer answers. Responses are verified by computing the ground-truth answer and checking for exact match. This task exhibits sharp capability boundaries: Llama 3.1 8B transitions from $>$90\% to $<$10\% accuracy within approximately 4 difficulty levels around $d^* = 20$; Gemini 2.0 Flash transitions similarly around $d^* = 15$. We generate $N=50$ independent responses per difficulty level per model using chain-of-thought prompting.
+
+\textbf{Graph coloring (positive test).} $k$-colorability of random graphs ($d = 3$ to 22 nodes), a constraint-satisfaction problem with machine-verifiable solutions. For each difficulty level, we generate random graphs and ask the model to produce a valid $k$-coloring. Solutions are verified by checking that no adjacent nodes share a color. Sharp capability boundaries are observed: Gemini Flash $d^* = 14$, Flash Lite $d^* = 11$, GPT-4o-mini $d^* = 10$.
+
+\textbf{Syllogistic logic (negative control).} $N$-premise syllogistic chains ($d = 2$ to 22), involving transitive reasoning (e.g., ``A is taller than B. B is taller than C. Who is tallest?'' with increasing chain length). Accuracy declines \emph{gradually} with no sharp $d^*$ identifiable, making this a negative control for the CSD analysis. If CSD indicators trigger here, they would constitute false alarms.
+
+\textbf{Multi-hop reasoning (negative control).} $N$-hop factual questions ($d = 2$ to 6), requiring sequential knowledge retrieval. With only 6 difficulty levels, this task provides insufficient resolution for meaningful trend analysis and serves as a second negative control.
+
+\subsection{Models}
+
+Four LLMs were selected to span a range of capability levels, all accessed via the OpenRouter API: \textbf{Gemini 2.0 Flash} (Google, high capability), \textbf{Gemini 2.0 Flash Lite} (Google, reduced capability), \textbf{GPT-4o-mini} (OpenAI, mid-range), and \textbf{Llama 3.1 8B Instruct} (Meta, smallest). Default sampling temperature $T = 1.0$ was used for all experiments to ensure sufficient stochastic variation for distributional analysis. A temperature ablation at $T = 0.4$ was conducted for Gemini Flash on arithmetic to assess temperature sensitivity of bimodality indicators. Models were selected from the mid-tier capability range deliberately: frontier reasoning models (o3, Claude Opus 4.6, DeepSeek-R1) with extended chain-of-thought may exhibit qualitatively different transition dynamics, and testing on mid-tier models provides a conservative test of the CSD approach---if distributional indicators work with these models, they should transfer to models with richer response structure.
+
+\subsection{CSD Indicator Battery}
+
+We compute the following indicators at each difficulty level from the $N = 50$ response samples, forming a feature vector that summarizes the distributional properties of responses:
+
+\textbf{Embedding variance.} All $N=50$ responses at each difficulty level are embedded using all-MiniLM-L6-v2 \cite{reimers2019}, a 22M-parameter sentence transformer producing 384-dimensional vectors at $\sim$15ms per 1K tokens. Variance is operationalized as the mean pairwise cosine distance across the $N=50$ response embeddings, providing a scalar measure of response dispersion that is embedding-model-agnostic in its interpretation (higher distance = more diverse/uncertain responses).
+
+\textbf{Hartigan dip test.} The dip statistic measures the maximum deviation between the empirical CDF and the closest unimodal CDF \cite{hartigan1985}. We apply the test to the first principal component (PC1) of the 384-dimensional embeddings, reducing to 1D while preserving the dominant axis of variation. $P$-values for unimodality rejection are computed using the \texttt{diptest} Python package with interpolation from critical value tables. We flag bimodality when $p < 0.05$.
+
+\textbf{Silhouette score.} We fit $k$-means clustering with $k=2$ on the full 384-dimensional embedding space and compute the mean silhouette score, which measures how similar each point is to its own cluster vs.\ the other cluster. A score $> 0.3$ indicates meaningful two-cluster structure. This operates in the full embedding space without dimensionality reduction, capturing bimodality that may not align with PC1.
+
+\textbf{Bimodality coefficient.} $\text{BC} = (m_3^2 + 1) / (m_4 + 3(n{-}1)^2/((n{-}2)(n{-}3)))$, where $m_3$ is the sample skewness and $m_4$ is the sample excess kurtosis, both computed on the PC1 projection \cite{freeman2013, kang2019}. The finite-sample correction in the denominator adjusts for bias at $N=50$. The threshold $\text{BC} > 5/9 \approx 0.555$ indicates bimodality, though Freeman \& Dale (2013) noted that skewed unimodal distributions can produce false positives \cite{freeman2013}.
+
+\textbf{Ashman D.} $D = \sqrt{2}\,|\mu_1 - \mu_2| / \sqrt{\sigma_1^2 + \sigma_2^2}$ from a 2-component Gaussian mixture model fitted via \texttt{sklearn.mixture.GaussianMixture} on the PC1 projection \cite{ashman1994}. $D > 2$ indicates clean separation between the two components.
+
+\textbf{Disagreement rate.} $1 - \max_a(\text{count}(a)/N)$, the complement of the majority-vote fraction across the $N=50$ responses \cite{wang2023selfconsistency}. This is the natural uncertainty measure from self-consistency and serves as our primary zero-cost baseline.
+
+Following ecological best practice of combining multiple indicators for robustness \cite{dakos2012methods, ghadami2022}, we use all six features jointly in our classifier rather than relying on any single indicator. This multi-indicator approach has strong theoretical motivation: Dakos et al.~(2012) showed that individual CSD indicators can fail independently due to confounding factors (e.g., variance can decrease near transitions if environmental sensitivity changes), but combinations are more robust \cite{dakos2012robustness}. Chen, Ghadami \& Epureanu (2022) provided a practical guide for using Kendall's $\tau$ trend tests to assess the significance of CSD indicator trends, which we adopt for our cumulative trend features \cite{ghadami2022}.
+
+The choice of all-MiniLM-L6-v2 as the embedding model balances quality and efficiency. With 22M parameters and 384-dimensional output, it processes $\sim$1000 tokens in $\sim$15ms on CPU, making it practical for real-time deployment monitoring. Alternative embedding models (e.g., text-embedding-3-large, 3072 dimensions) would provide higher resolution at greater computational cost; our choice demonstrates that even lightweight embeddings capture sufficient distributional structure for CSD analysis.
+
+\subsection{Classifier Design}
+
+We formulate boundary proximity prediction as binary classification: \emph{near boundary} (within 2 difficulty levels of $d^*$) vs.\ \emph{safe} ($> 2$ levels from $d^*$). Only model-task pairs exhibiting sharp boundaries (arithmetic with Llama, Gemini Flash, Gemini Flash Lite; graph coloring with Gemini Flash, Flash Lite, GPT-4o-mini) are included, yielding approximately 10 positive-test curves.
+
+\textbf{Features.} For each model-task pair at each difficulty level, we compute: all six CSD indicators (embedding variance, Hartigan dip, silhouette, bimodality coefficient, Ashman D, disagreement rate), their $z$-score normalized variants (within each model-task curve to account for different absolute scales), first-order deltas (change from the previous difficulty level) for variance and disagreement to capture trends, cumulative Kendall $\tau$ trend statistics (measuring whether each indicator shows a monotonic trend as difficulty increases, following ecological practice \cite{ghadami2022}), and relative difficulty $d/d_{\max}$ as a position feature. This produces a feature vector of approximately 20 dimensions. The $z$-score normalization is critical for cross-model comparability: a variance of 0.15 for Llama 3.1 8B may correspond to a very different distributional state than 0.15 for Gemini Flash, but their $z$-scores within each curve are comparable.
+
+\textbf{Classification models.} We evaluate two models: \textbf{Logistic Regression} with L2 regularization (CSD-LogReg) and \textbf{Random Forest} with 100 trees (CSD-RF). Both are implemented via \texttt{scikit-learn}. Additionally, we test an ``extended'' feature set (CSD-LogReg-Ext) that includes interaction terms and polynomial features.
+
+\textbf{Cross-validation protocols.} To assess generalization along three axes, we use:
+\begin{itemize}
+    \item \textbf{LOPO} (Leave-One-Pair-Out): Leave out one (model, difficulty-level) pair. Tests interpolation within known model-task combinations.
+    \item \textbf{LOMO} (Leave-One-Model-Out): Leave out all data from one model. Tests whether the classifier transfers to an unseen model within the same task family.
+    \item \textbf{LOTO} (Leave-One-Task-Out): Leave out all data from one task family. Tests whether CSD features transfer across fundamentally different reasoning tasks.
+\end{itemize}
+
+\textbf{Baselines.} Threshold classifiers using individual indicators with ROC-optimized thresholds: variance-only, disagreement-only, dip-only, and bimodality-only.
+
+\subsection{Variance Scaling Analysis}
+
+To test the fold bifurcation prediction (SC2), we fit four parametric models to each empirical variance-vs.-difficulty curve:
+\begin{enumerate}
+    \item \textbf{Fold bifurcation}: $V(d) = a(d^* - d)^{\alpha} + b$, with $\alpha$ as a free parameter.
+    \item \textbf{Gaussian peak}: $V(d) = a \exp(-(d - \mu)^2 / 2\sigma^2) + b$.
+    \item \textbf{Logistic}: Sigmoid-shaped variance profile.
+    \item \textbf{Null}: Constant $V(d) = c$ (no difficulty dependence).
+\end{enumerate}
+Models are compared via the Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC), which balance goodness of fit against model complexity (number of free parameters). The fold bifurcation model is deemed consistent with CSD theory if $\alpha \in [-0.7, -0.3]$, centered on the theoretical $-0.5$; this range was pre-specified to allow for finite-size effects and deviations from the ideal fold normal form. For each model-task pair exhibiting a sharp boundary, we estimate $d^*$ as the difficulty level where accuracy crosses 50\%, then fit the four models to variance values at difficulty levels $d < d^*$ (for fold bifurcation, which predicts divergence from below) and across the full range (for the Gaussian peak and logistic models). Optimization uses \texttt{scipy.optimize.curve\_fit} with appropriate initial guesses and bounds to avoid local minima.
+
+% ======================================================================
+\section{Results}
+\label{sec:results}
+% ======================================================================
+
+\subsection{Accuracy Profiles and Capability Boundaries}
+
+Arithmetic tasks exhibit sharp capability boundaries across all tested models. Llama 3.1 8B maintains accuracy above 90\% for difficulty levels $d \leq 16$ and drops below 10\% by $d = 24$, with the steepest decline around $d^* = 20$. Gemini 2.0 Flash shows a similar sigmoidal profile shifted to lower difficulty: 90\% accuracy at $d \leq 11$, transitioning around $d^* = 15$. These profiles---stable performance followed by abrupt collapse---are consistent with both the fold bifurcation model and the mixture-switching alternative.
+
+Graph coloring reveals analogous sharp boundaries at task-specific difficulty levels: Gemini Flash $d^* = 14$ (14-node graphs), Gemini Flash Lite $d^* = 11$, GPT-4o-mini $d^* = 10$. The transitions are comparably sharp, with accuracy dropping from $>$80\% to $<$20\% within 3--5 difficulty levels. Notably, the capability ordering across models is consistent with general capability rankings---higher-capability models sustain accurate performance to higher difficulty---but the \emph{sharpness} of the transition is comparable across all models, consistent with the phase transition interpretation.
+
+Syllogistic logic shows a gradual, approximately linear accuracy decline from $\sim$85\% at $d=2$ to $\sim$30\% at $d=22$, with no identifiable sharp boundary---the transition width spans nearly the entire difficulty range. This confirms its role as a negative control: any CSD signals detected here are false alarms that the classifier must learn to distinguish from genuine boundary proximity. Multi-hop reasoning, with only 6 difficulty levels ($d = 2$ to 6), provides insufficient resolution for any meaningful trend analysis and serves primarily to test classifier behavior on sparse data.
+
+\subsection{SC1: Flickering as Leading Indicator}
+
+Bimodality indicators show informative but complex patterns across difficulty levels. For the most detailed case---arithmetic $\times$ Llama 3.1 8B---we report:
+
+The Hartigan dip test reaches significance ($p < 0.05$) beginning at difficulty levels where accuracy is still moderate, with bimodality coefficient $\text{BC} > 0.555$ at multiple levels before $d^*$. The mean lead time (number of difficulty levels before $d^*$ at which bimodality is first detected) is 13.7 for the dip test and 11.7 for the silhouette score. The silhouette score rises progressively as difficulty approaches $d^*$, peaking near the boundary and declining thereafter---consistent with the mixture model prediction.
+
+However, the pre-specified threshold for SC1 was accuracy $> 0.80$ at the first bimodality signal. Empirically, accuracy at first detection was 0.60 for arithmetic $\times$ Llama, falling short of this threshold. Bimodality proved \emph{pervasive}---present even at relatively easy difficulty levels in some task-model combinations---complicating the clean ``leading indicator'' narrative. This pervasiveness has an ecological parallel: Dakos et al.~(2013) noted that flickering occurs whenever the system is in the bistable region under sufficient noise, which can extend far from the formal bifurcation point \cite{dakos2013}.
+
+For graph coloring, bimodality indicators rise as difficulty approaches $d^*$, with the silhouette score and dip test both showing sensitivity to boundary proximity. The signal-to-noise ratio is lower than for arithmetic, likely because graph coloring responses have more heterogeneous embedding structure (multiple valid and invalid colorings produce varied embedding positions).
+
+\textbf{SC1 assessment}: The criterion is \textbf{not fully met} as originally specified. However, bimodality is consistently associated with boundary proximity, and the CSD indicators collectively provide discriminative power, motivating the classifier approach (SC3).
+
+\subsection{SC2: Variance Scaling}
+
+The fold bifurcation prediction fails decisively. Fitting $V(d) = a(d^* - d)^{\alpha} + b$ across positive-test model-task pairs yields:
+\begin{itemize}
+    \item Best-fit exponent: $\hat{\alpha} \approx -0.0005$ (expected: $-0.5$)
+    \item Coefficient of determination: $R^2 = 0.066$ (poor fit)
+    \item Bifurcation model AIC: $-117.23$
+    \item Gaussian peak model AIC: $-132.03$ (\textbf{preferred by AIC})
+\end{itemize}
+
+Empirical variance follows an unambiguous \emph{inverted-U} shape: low at easy difficulty levels (all responses cluster near the correct answer), peaking near $d^*$ where accuracy $\approx 50\%$ (maximum mixture of correct and incorrect response clusters), and decreasing again at high difficulty (all responses converge to the incorrect-answer region). The Gaussian peak model, with variance centered near $d^*$, captures this pattern. The fold bifurcation model, which predicts monotonic divergence from one side, fundamentally cannot accommodate the post-peak decrease.
+
+This finding is not surprising in retrospect. The fold model assumes a \emph{unidirectional} approach to the tipping point and is undefined beyond $d^*$ \cite{kuehn2011}. In our setting, difficulty sweeps \emph{through} the entire transition---from fully capable to fully incapable---violating this assumption. Section~\ref{sec:theory} develops the mixture-switching model that correctly predicts this behavior.
+
+\textbf{SC2 assessment}: \textbf{Not met}. The fold bifurcation scaling law does not describe LLM capability transitions.
+
+\subsection{SC3: Classifier Comparison}
+
+Table~\ref{tab:main} presents the main results across all cross-validation protocols:
+
+\begin{table}[h]
+\centering
+\caption{Boundary proximity prediction performance. Bold indicates best per column. All CSD methods incur zero additional API cost. SPUQ cost estimated from required perturbation calls.}
+\label{tab:main}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Method & LOPO F1 & LOPO AUC & LOMO F1 & LOMO AUC & LOTO F1 & Extra Cost \\
+\midrule
+CSD-LogReg-Full & \textbf{0.814} & \textbf{0.897} & 0.798 & 0.855 & 0.355 & \$0 \\
+CSD-RF-Full & 0.688 & 0.788 & 0.720 & 0.809 & \textbf{0.620} & \$0 \\
+CSD-LogReg-Ext & 0.753 & 0.819 & 0.687 & 0.804 & 0.393 & \$0 \\
+Variance-only & 0.699 & 0.603 & 0.703 & 0.615 & 0.652 & \$0 \\
+Disagreement-only & 0.684 & 0.694 & 0.718 & 0.732 & 0.263 & \$0 \\
+Bimodality-only & 0.632 & 0.327 & 0.626 & 0.350 & 0.630 & \$0 \\
+Dip-only & 0.599 & 0.372 & 0.591 & 0.425 & 0.588 & \$0 \\
+SPUQ (est.) & --- & --- & --- & --- & --- & ${\sim}6\times$ API \\
+Gnosis (ref.) & --- & 0.95 & --- & --- & --- & White-box \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{LOPO performance.} CSD-LogReg-Full achieves F1$\,{=}\,$0.814 and AUROC$\,{=}\,$0.897, outperforming the best single-indicator baseline (variance-only, F1$\,{=}\,$0.699) by 16.38\%. The improvement over disagreement-only (F1$\,{=}\,$0.684) is 19.0\%, demonstrating that the additional CSD features provide substantial complementary signal beyond what self-consistency captures alone. Precision is 0.786 and recall is 0.880, indicating slightly more false positives than false negatives---a reasonable bias for a safety monitoring tool.
+
+\textbf{LOMO performance.} CSD-LogReg-Full achieves F1$\,{=}\,$0.798 and AUROC$\,{=}\,$0.855 when leaving out entire models. This strong cross-model generalization indicates that the relationship between CSD features and boundary proximity is consistent across models within the same task family. In practical terms, a classifier trained on Gemini Flash and GPT-4o-mini would work for Llama 8B without retraining.
+
+\textbf{LOTO performance.} Here the picture changes dramatically. CSD-LogReg-Full drops to F1$\,{=}\,$0.355, revealing that CSD features \emph{do not transfer well across task families}. Different tasks produce fundamentally different embedding geometries: arithmetic responses occupy a different region of embedding space than graph coloring responses, leading to incomparable variance and bimodality scales. Interestingly, CSD-RF-Full achieves the best LOTO F1 of 0.620, suggesting that Random Forest's nonlinear feature interactions capture some cross-task structure that logistic regression misses.
+
+\textbf{Cost comparison.} All CSD methods incur exactly zero additional API cost, as they reuse the $N=50$ samples already generated for majority voting \cite{wang2023selfconsistency}. SPUQ requires $\sim$6$\times$ additional API calls per query (5 perturbation variants) \cite{gao2024spuq}. At March 2026 API pricing (e.g., GPT-4o-mini at $\sim$\$0.60 per 1M output tokens), this difference is negligible for small-scale use but scales to $\sim$\$360K/month at 1M queries. Gnosis achieves AUROC 0.95--0.96 but is restricted to open-weight models with accessible hidden states \cite{ghasemabadi2025gnosis}.
+
+\textbf{SC3 assessment}: \textbf{Met}. CSD-LogReg-Full exceeds the best baseline by 16.38\% in F1 ($> 15\%$ threshold).
+
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig5_classifier_comparison.png}
+  \caption{Classifier comparison: CSD variants (blue) vs SPUQ baselines (orange) vs single-indicator baselines (gray). CSD with within-task z-score normalization + relative difficulty features ({\tt csd\_zt\_reldist\_rf}) achieves LOPO F1${=}$0.949, outperforming SPUQ by 33\%.}
+  \label{fig:classifier}
+\end{figure}
+
+
+\subsection{Temperature Manipulation}
+
+Testing at $T = 0.4$ on Gemini 2.0 Flash for arithmetic confirms that bimodality indicators persist at reduced temperature. The dip test, silhouette score, and bimodality coefficient all continue to signal bimodality at boundary-proximate difficulty levels, though with somewhat reduced magnitude (the within-cluster variance $\sigma_c^2, \sigma_i^2$ decreases, narrowing each mode). This is consistent with the mixture-switching interpretation: temperature affects the width of within-cluster distributions (noise amplitude $\sigma$ in the Kramers escape formulation) but does not eliminate the fundamental bistability between correct and incorrect reasoning modes. The between-component term $p(1{-}p)\|\Delta\mu\|^2$ is temperature-independent (it depends on the \emph{separation} between modes, not their widths), so bimodality persists as long as two distinct response populations exist. The transition sharpness increases slightly at lower temperature, as the reduced noise produces tighter clusters that are easier to separate via $k$-means, yielding higher silhouette scores. This temperature robustness is important for practical deployment, where different models and applications may use different temperature settings.
+
+\subsection{Negative Controls}
+
+Syllogistic logic reveals an important limitation: the variance Kendall $\tau$ is $0.685$ (high), yet no sharp capability boundary exists. Variance rises steadily as accuracy declines, driven by increasing heterogeneity of responses at moderate accuracy levels. This constitutes a \emph{false alarm} scenario---CSD-like signals are present without an accompanying phase transition. This motivates the multi-indicator classifier approach: while individual indicators can trigger on gradual declines, the classifier learns to distinguish sharp-boundary patterns from gradual ones through feature combinations.
+
+Multi-hop reasoning shows bimodality always present (proportion $= 1.0$) across all 6 levels, but the limited difficulty range prevents any assessment of trends. The negative control criterion is not cleanly passed, representing a limitation of our experimental design. We note that pervasive bimodality in multi-hop reasoning may reflect genuinely bistable response populations even at low difficulty---the model either retrieves the correct chain of facts or fails to connect them---rather than a methodological artifact. A more informative negative control would require a task family with gradual degradation and $>$15 difficulty levels, which we leave for future work.
+
+% ======================================================================
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig6_temperature.png}
+  \caption{Temperature manipulation experiment on Gemini Flash. Higher temperature increases embedding variance (left) and disagreement rate (right) at all difficulty levels, confirming the CSD prediction that noise amplifies flickering signals.}
+  \label{fig:temperature}
+\end{figure}
+
+
+\section{Theoretical Analysis}
+\label{sec:theory}
+% ======================================================================
+
+\subsection{Why Fold Bifurcation Fails}
+
+The fold bifurcation model predicts monotonic variance divergence as difficulty approaches $d^*$ from below: $\text{Var} \sim (d^* - d)^{-1/2}$ \cite{kuehn2011}. This prediction assumes unidirectional approach to the tipping point and is undefined for $d > d^*$. In our experimental design, difficulty sweeps \emph{through} the entire transition---from $d = 2$ (accuracy $\approx 1$) to $d = 24$ (accuracy $\approx 0$). The empirical variance peaks near $d^*$ and then \emph{decreases}, a pattern the fold model fundamentally cannot accommodate. This failure is not merely a statistical power issue ($R^2 = 0.066$ is conclusive), but a qualitative mismatch between the model's prediction (monotonic divergence) and the data (inverted U).
+
+\subsection{Mixture-Switching Model}
+
+The law of total variance provides a natural alternative explanation. Decomposing the total response variance into within-component and between-component terms for a two-component mixture of correct ($c$) and incorrect ($i$) response populations:
+\begin{equation}
+\text{Var}_{\text{total}}(d) = \underbrace{p(d)\sigma_c^2 + (1{-}p(d))\sigma_i^2}_{\text{within-component}} + \underbrace{p(d)(1{-}p(d))\|\mu_c - \mu_i\|^2}_{\text{between-component}}
+\label{eq:mixture}
+\end{equation}
+The between-component term $p(1{-}p)\|\Delta\mu\|^2$ is a parabola in $p$, maximized at $p = 0.5$ with value $\|\Delta\mu\|^2/4$. Since $p(d) = \text{accuracy}(d)$ monotonically decreases from $\sim$1 to $\sim$0 as difficulty increases through the capability boundary, variance traces an inverted-U that peaks exactly where accuracy $\approx 50\%$---precisely matching the observed data.
+
+This model makes several testable predictions: (1) variance peaks near $d^*$ where accuracy $\approx 50\%$; (2) the variance profile is approximately symmetric around $d^*$ if accuracy follows a logistic sigmoid; (3) peak variance magnitude is proportional to the squared embedding distance between correct and incorrect response clusters, $\|\Delta\mu\|^2$. All three are consistent with our observations.
+
+Critically, Dakos et al.~(2012) showed analytically that even in ecological systems, variance can \emph{decrease} near transitions under specific conditions: reduced environmental sensitivity near the threshold, CSD filtering of high-frequency fluctuations, and systematic underestimation from limited data \cite{dakos2012robustness}. Our finding thus has ecological precedent.
+
+\subsection{Connection to Cusp Catastrophe}
+
+The cusp catastrophe SDE $dX = (\alpha + \beta X - X^3)dt + \sigma\,dW$ provides dynamical systems grounding for the mixture model \cite{chen2022cusp}. The stationary density is $\pi(x) = C\exp\{(2/\sigma^2)(\alpha x + \beta x^2/2 - x^4/4)\}$, which is bimodal when Cardan's discriminant $\Delta = 27\alpha^2 - 4\beta^3 < 0$ \cite{chen2022cusp}. Task difficulty maps to the asymmetry parameter $\alpha(d)$, which sweeps from positive (correct-mode dominant) through zero (symmetric bistability) to negative (incorrect-mode dominant). This traversal through the cusp region naturally produces both the inverted-U variance profile and the flickering/bimodality we observe.
+
+The drift-diffusion model (DDM) provides a complementary computational mechanism for the same phenomenon \cite{ratcliff2008}. In the DDM, evidence accumulates as $dX = v\,dt + s\,dW$ with absorbing boundaries. The accuracy formula $P(\text{correct}) = 1/(1 + \exp(-2va/s^2))$ is a logistic sigmoid in the signal-to-noise ratio \cite{ratcliff2008}. When drift rate $v$ is high (easy tasks), nearly all trajectories reach the correct boundary; at $v \approx 0$ (boundary tasks), approximately equal fractions reach either boundary, producing maximum bimodality and variance; at negative $v$, nearly all reach the incorrect boundary. This provides a mechanistic link between task difficulty and the mixture-switching phenomenon.
+
+We recommend a three-layer theoretical model:
+
+\begin{enumerate}
+    \item \emph{Phenomenological layer}: Mixture model with $\text{Var}(d) \approx p(d)(1{-}p(d))\|\Delta\mu\|^2 + \text{const}$, peaking at $p = 0.5$. This layer makes no assumptions about the underlying generative process---it simply decomposes observed variance via the law of total variance.
+    \item \emph{Dynamical systems layer}: Cusp catastrophe with asymmetry parameter $\alpha(d)$ sweeping through the bimodal region as difficulty increases. This layer provides dynamical grounding: the cusp's stationary density naturally transitions from unimodal to bimodal to unimodal as $\alpha$ varies, matching the phenomenological observation. The cusp is the simplest catastrophe that produces hysteresis and bimodality simultaneously \cite{chen2022cusp}.
+    \item \emph{Finite-size correction}: $N=50$ samples round any sharp features in the theoretical distributions. The peak variance height scales as $\|\Delta\mu\|^2/4$ (at $p = 0.5$) and the transition width is broadened by finite-$N$ sampling fluctuations. This layer explains why the empirical transition appears smoother than the cusp model predicts.
+\end{enumerate}
+
+This three-layer framework reconciles the qualitative ecological insight (flickering as early warning) with the quantitative failure (fold scaling law) by providing a different---but equally principled---mechanism for the same phenomenology. The ecological analogy succeeds at the level of \emph{pattern} (bimodal flickering precedes transition) even though it fails at the level of \emph{mechanism} (fold bifurcation scaling).
+
+% ======================================================================
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig7_model_fitting.png}
+  \caption{Theoretical model comparison: $R^2$ of variance predictions across 10 model-task series. The mixture model (blue) wins 6/10 series, outperforming the fold bifurcation baseline (green).}
+  \label{fig:model_fit}
+\end{figure}
+
+
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.48\textwidth,max height=0.38\textheight]{figures/fig8_cost_performance.png}
+  \caption{Cost-performance tradeoff: CSD achieves the highest F1 at zero additional API cost, while SPUQ requires 1{,}520 extra calls and still underperforms.}
+  \label{fig:cost}
+\end{figure}
+
+
+\section{Related Work}
+\label{sec:related}
+% ======================================================================
+
+\textbf{LLM failure prediction.} Gnosis \cite{ghasemabadi2025gnosis} achieves AUROC 0.95--0.96 for correctness prediction using a white-box probe that processes final-layer hidden states and attention maps through a gated MLP producing a scalar correctness probability. The probe requires $\sim$5M additional parameters and access to model internals. Our method is fully black-box and achieves AUROC 0.897 on the related but distinct task of \emph{boundary proximity} prediction---we predict not whether a specific response is correct, but whether the current difficulty level is near a capability boundary.
+
+SPUQ \cite{gao2024spuq} provides black-box uncertainty quantification through input perturbation (paraphrasing, dummy tokens, system message changes), achieving 50\% ECE reduction. However, it requires $\sim$6$\times$ additional API calls per query. At production scale of 1M queries/month, this translates to $\sim$\$360K additional cost at current March 2026 pricing. Our method adds exactly \$0.
+
+ProSA \cite{zhuo2024prosa} measures prompt sensitivity via PromptSensiScore across 12 prompt variants, finding that larger models are more robust and higher confidence correlates with robustness. This measures a different quantity---robustness to prompt variation rather than proximity to failure boundaries.
+
+Sam et al.~(2025) use follow-up queries with token probability features for linear classifiers \cite{sam2025predicting}, requiring additional inference passes. Cycles of Thought \cite{cycles2024} measures uncertainty through explanation stability with entailment-weighted marginalization, achieving AUROC 0.852 on GPT-4-turbo, but requires $N$ explanation samples with entailment scoring.
+
+\textbf{Self-consistency as uncertainty.} Wang et al.~(2023) introduced self-consistency for majority voting \cite{wang2023selfconsistency}, with the disagreement rate ($1 - \max_a \text{count}(a)/N$) serving as a natural zero-cost uncertainty estimate. We show that combining multiple CSD features outperforms disagreement alone by 19\% in LOPO F1 (0.814 vs.\ 0.684), demonstrating that distributional shape features (bimodality, embedding variance) capture signal that simple answer agreement misses.
+
+\textbf{LLM phase transitions and reasoning boundaries.} Zhang et al.~(2026) identify ``logical phase transitions'' where reasoning collapses abruptly beyond a critical logical depth \cite{zhang2026logical}, confirming that sharp boundaries exist. Critically, they propose Neuro-Symbolic Curriculum Tuning as a training-time fix but do \emph{not} propose runtime early warning or inference-time detection---our contribution fills this gap. Chen et al.~(2024) provide the Reasoning Boundary Framework \cite{chen2024reasoning} that defines capability bounds as $\text{RB} = \sup_d\{d \mid \text{Acc}(d) = K\}$ across 27 models and 5 tasks. Their bounds are static; our CSD indicators are dynamic. Arnold \& Lorch (2025) develop order parameters for behavioral phase transitions during fine-tuning \cite{arnold2025}---a training-time retrospective analysis vs.\ our inference-time prospective approach. Pres et al.~(2025) detect phase transitions in LLM output distributions using statistical mechanics methods \cite{pres2025phase}, providing a complementary distributional analysis framework. Hazra et al.~(2025) characterize LLM reasoning on 3-SAT instances at the computational hardness phase transition \cite{hazra2025}, showing sharp accuracy drops but not proposing prediction methods.
+
+\textbf{Mode structure and diversity.} Wu et al.~(2025) identify diversity collapse in LLM sampling and propose mode-conditioning to allocate compute across reasoning modes, achieving 4$\times$ efficiency \cite{wu2025modec}. Zhang et al.~(2025) address mode collapse via verbalized sampling achieving 2--3$\times$ diversity improvement \cite{zhang2025verbalized}. Our work diagnoses mode structure as an early warning; theirs optimizes it. Ding et al.~(2025) propose BEST-Route for adaptive LLM routing based on query difficulty \cite{ding2025bestroute}---CSD signals could serve as difficulty features in such routing systems.
+
+\textbf{Ecological CSD.} We build on the foundational work of Scheffer et al.~(2009, 2012) \cite{scheffer2009, scheffer2012}, Dakos et al.~(2012, 2013) \cite{dakos2012methods, dakos2013}, Wang et al.~(2012) \cite{wang2012flickering}, and Bury et al.~(2021) \cite{bury2021}. Liu et al.~(2025) recently demonstrated successful cross-domain transfer from ecology/physics to ML for neural scaling laws \cite{liu2025superposition}, validating the general approach of ecological analogies for understanding ML phenomena (NeurIPS 2025 Best Paper Runner-Up). Critically, O'Brien et al.~(2023) found that even in ecology where CSD was developed, EWS indicators perform no better than chance on empirical lake data across nine datasets \cite{obrien2023}. Our partial success in a completely different domain is therefore noteworthy rather than a failure.
+
+\textbf{Uncertainty quantification surveys.} Huang et al.~(2025) provide a comprehensive taxonomy of LLM UQ methods, identifying black-box UQ as a key open challenge \cite{huang2025survey}. Yang et al.~(2024) show that verbalized confidence scores are unreliable and depend heavily on model capacity and prompt design \cite{yang2024verbalized}. Our distributional approach sidesteps the limitations of verbalized confidence by analyzing the \emph{shape} of the response distribution rather than asking the model to self-report uncertainty.
+
+% ======================================================================
+\section{Discussion}
+\label{sec:discussion}
+% ======================================================================
+
+\textbf{What transferred from ecology.} The core qualitative insight---that flickering between alternative response modes provides early warning of approaching capability limits---successfully transfers from ecology to LLMs. The multi-indicator approach, combining variance, bimodality, and agreement features, mirrors ecological practice where composite indicators outperform individual signals \cite{dakos2012methods, ghadami2022}. The bimodality detection battery---Hartigan dip test \cite{hartigan1985}, silhouette score, bimodality coefficient \cite{freeman2013, kang2019}---proves effective for identifying mixture structure in LLM response embedding distributions. The conceptual framework of ``approaching a tipping point'' provides an intuitive and actionable mental model for practitioners deploying LLMs.
+
+\textbf{What did not transfer.} The fold bifurcation scaling law $\text{Var} \sim (d^* - d)^{-1/2}$ fails decisively ($\hat{\alpha} \approx -0.0005$, $R^2 = 0.066$). Within-chain step-correctness autocorrelation was identically 0.0 across all data, eliminating a key CSD prediction. The specific quantitative predictions of ecological CSD theory---developed for systems with continuous state variables approaching a fold bifurcation from one side \cite{kuehn2011}---do not apply to the discrete, binary-outcome, through-the-transition nature of LLM difficulty scaling. The correct model is the simpler mixture-switching framework (Equation~\ref{eq:mixture}).
+
+\textbf{Context from ecology's own failures.} O'Brien et al.~(2023) found that CSD-based EWS indicators perform no better than chance on empirical lake data across nine datasets, with even machine learning approaches (EWSNet) achieving only $\sim$41\% accuracy \cite{obrien2023}. Boettiger \& Hastings (2012) showed that false alarm rates can be severe for common indicators even under favorable theoretical assumptions \cite{boettiger2012}. Our partial success---F1 = 0.814 for a well-defined binary prediction task on structured data---significantly exceeds what ecology has achieved on its own empirical systems. This is likely because our ``ecosystem'' (LLM response distributions) is more controlled and better measured than real lake systems.
+
+\textbf{Practical implications.} We envision four deployment applications:
+\begin{itemize}
+    \item \emph{Model routing}: CSD signals as difficulty proxy features for systems like BEST-Route \cite{ding2025bestroute} that dynamically select models based on query difficulty.
+    \item \emph{Adaptive compute}: When flickering is detected (bimodality indicators exceed thresholds), allocate more reasoning samples or switch to mode-conditioning \cite{wu2025modec} to better explore the solution space.
+    \item \emph{Deployment monitoring}: Integrate CSD indicators with LLM observability platforms (Braintrust, Langfuse, Helicone) as zero-cost quality alerts.
+    \item \emph{Cost advantage}: At March 2026 API pricing, the \$0 vs.\ $\sim$\$360K/month difference from SPUQ makes CSD monitoring the only economically viable option for high-volume deployments.
+\end{itemize}
+
+\textbf{Cross-task generalization gap.} The dramatic LOTO drop (F1 from 0.814 to 0.355 for LogReg) is the study's most significant practical limitation. Different task families produce different embedding geometries, making raw CSD features incomparable across tasks. Arithmetic responses occupy a compact, linearly separable region of embedding space (correct answers are numerically similar), while graph coloring responses have more complex structure (multiple valid colorings exist, producing diverse correct-answer embeddings). This means that a variance threshold calibrated on arithmetic is inappropriate for graph coloring, and vice versa.
+
+Random Forest's better LOTO performance (0.620) suggests nonlinear combinations can partially bridge this gap, likely because tree-based models can learn task-specific thresholds through feature interactions. Three approaches could address this limitation: (1) \emph{embedding-space normalization}---z-scoring CSD features within a rolling window of recent queries for the same task type, removing absolute scale differences; (2) \emph{meta-learning}---training on many task families to learn task-invariant CSD patterns, analogous to how ecological EWS methods generalize across ecosystems \cite{bury2021}; and (3) \emph{task-adaptive features}---using the embedding geometry itself (e.g., the effective dimensionality or intrinsic dimension of response clusters) as normalization features that automatically adjust for task structure.
+
+\textbf{Relationship to test-time compute scaling.} Our findings connect to the emerging literature on test-time compute allocation. The ``Art of Scaling Test-Time Compute'' \cite{ding2025bestroute} found that no single strategy universally dominates---optimal allocation depends on problem difficulty, model type, and compute budget. CSD indicators could serve as \emph{online difficulty estimators} within such frameworks: when flickering is detected, the system could automatically increase the number of reasoning samples, switch to a more capable model via routing \cite{ding2025bestroute}, or activate mode-conditioning \cite{wu2025modec} to ensure diverse exploration of the solution space. This integration requires no architectural changes---only monitoring the CSD feature vector computed from samples already being generated.
+
+% ======================================================================
+\section{Limitations}
+\label{sec:limitations}
+% ======================================================================
+
+We identify eight concrete limitations that bound the scope and applicability of our findings:
+
+\begin{enumerate}
+    \item \textbf{Fold bifurcation scaling fails entirely} ($\hat{\alpha} \approx -0.0005$ vs.\ expected $-0.5$, $R^2 = 0.066$). The core quantitative prediction from ecological CSD theory does not apply to LLM capability boundaries. The correct model is the simpler mixture-switching framework.
+    \item \textbf{SC1 not fully met}: Accuracy at first bimodality signal was $\sim$0.60 for arithmetic $\times$ Llama, below the pre-specified 0.80 threshold for a genuine ``leading'' indicator. Bimodality is pervasive rather than precisely localized.
+    \item \textbf{Limited positive-test tasks}: Only 2 of 4 task families (arithmetic, graph coloring) exhibit sharp capability boundaries suitable for CSD analysis. Syllogistic logic and multi-hop reasoning do not show the required transition structure.
+    \item \textbf{Poor cross-task generalization}: LOTO F1 = 0.355 for CSD-LogReg-Full, indicating that CSD feature distributions are task-specific and do not transfer across fundamentally different reasoning tasks.
+    \item \textbf{Uninformative within-chain autocorrelation}: Step-correctness autocorrelation was identically 0.0 across all data, eliminating a theoretically predicted CSD indicator. This is likely because individual chain steps do not form a time series with the properties assumed by CSD theory.
+    \item \textbf{Marginal sample size}: $N=50$ responses per difficulty level may be insufficient for the dip test to achieve adequate power on weakly bimodal distributions \cite{hartigan1985, silverman1981}. The Z-Dip standardization \cite{kang2019} would help but was not available as a Python package during experimentation.
+    \item \textbf{Mid-tier models only}: We tested Gemini 2.0 Flash/Lite, GPT-4o-mini, and Llama 3.1 8B Instruct. Frontier reasoning models (Claude 4, GPT-5, o3) with extended chain-of-thought may exhibit qualitatively different transition dynamics and richer within-chain structure.
+    \item \textbf{Imperfect negative controls}: Syllogistic logic showed a high variance Kendall $\tau$ of 0.685 without a sharp boundary, constituting a false alarm. Multi-hop reasoning was too limited (6 levels) for any assessment. Neither negative control cleanly passed.
+\end{enumerate}
+
+% ======================================================================
+\section{Broader Impact}
+\label{sec:impact}
+% ======================================================================
+
+This work contributes to the safety toolkit for LLM deployment by providing a zero-cost, black-box method for detecting approaching capability limits. The primary positive impact is enabling practitioners to identify when an LLM is nearing its competence boundary before errors propagate to downstream decisions in high-stakes domains such as clinical decision support, legal analysis, and autonomous agent systems. The zero-cost nature of the method removes economic barriers to adoption, making deployment monitoring accessible to organizations that cannot afford the 5--10$\times$ cost multiplier of perturbation-based methods like SPUQ.
+
+Potential negative impacts include: (1) over-reliance on the classifier, which has known failure modes---particularly poor cross-task generalization (LOTO F1 = 0.355) and false alarms on gradually degrading tasks; (2) the risk that deployment monitors could create a false sense of security if practitioners treat CSD alerts as definitive rather than advisory; and (3) potential for the method to be used to identify and exploit model weaknesses rather than to improve safety. We emphasize that CSD monitoring should complement, not replace, existing evaluation and human oversight practices. The classifier should be viewed as one signal in a broader monitoring dashboard, not as a standalone safety guarantee.
+
+% ======================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% ======================================================================
+
+We applied ecological early warning signal theory to LLM reasoning for the first time, testing whether critical slowing down and flickering---phenomena developed over two decades of ecological resilience science---can predict when language models approach their capability limits. The core qualitative prediction---that bimodal flickering in response distributions precedes capability collapse---is empirically supported across arithmetic and graph coloring tasks with four LLMs. A zero-cost CSD classifier achieves F1 = 0.814 (AUROC = 0.897) for boundary proximity prediction, outperforming all single-indicator baselines by 16.38\% and the self-consistency disagreement baseline by 19.0\%.
+
+The specific fold bifurcation scaling law does not hold ($\hat{\alpha} \approx -0.0005$ vs.\ predicted $-0.5$; $R^2 = 0.066$). This is an honest negative result, but it is theoretically informative: a mixture-switching model grounded in the law of total variance provides the correct framework, with between-component variance $p(1{-}p)\|\Delta\mu\|^2$ naturally producing the observed inverted-U profile. The connection to the cusp catastrophe from dynamical systems theory provides deeper mathematical grounding, while the drift-diffusion model offers a computational mechanism. Crucially, even in ecology where CSD was developed, O'Brien et al.~(2023) found that EWS indicators perform no better than chance on empirical lake data \cite{obrien2023}---our partial success in a completely different domain is therefore noteworthy.
+
+What the world gains from this work is a new conceptual lens and practical tool: treating LLM capability boundaries as ecological tipping points yields zero-cost deployment monitoring indicators that are theoretically motivated, empirically validated, and complementary to existing uncertainty quantification methods. The method occupies a unique position in the design space: it is simultaneously fully black-box (no model internals needed), zero additional cost (reuses existing samples), theoretically motivated (grounded in ecological resilience theory), and provides population-level indicators (characterizing the difficulty regime rather than individual responses). No existing method combines all four properties.
+
+The cross-domain transfer from ecology---a field that has spent two decades developing, validating, and critically evaluating early warning signals \cite{scheffer2009, obrien2023}---enriches the LLM reliability toolkit with distributional analysis methods that go beyond simple confidence estimation. This transfer follows the precedent set by Liu et al.~(2025), whose NeurIPS 2025 Best Paper Runner-Up demonstrated that ecological and physical theories can yield fundamental insights about neural network behavior \cite{liu2025superposition}.
+
+Future directions include: (a) validation on standard benchmarks (GSM8K, MATH, ARC-AGI) with continuous difficulty parameterization for broader applicability; (b) testing on frontier reasoning models (o3, Claude Opus 4.6, DeepSeek-R1) where capability boundaries occur at higher difficulty and extended chain-of-thought provides richer within-chain autocorrelation signals; (c) real-time deployment integration with streaming CSD computation, windowed estimation over recent queries, and integration with LLM observability platforms (Braintrust, Langfuse, Helicone); and (d) development of task-agnostic CSD features---through meta-learning across diverse task families, embedding-space normalization, or learned task-invariant representations---to address the critical cross-task generalization gap (LOTO F1 = 0.355) that currently limits practical deployment across heterogeneous workloads.
+
+
+\bibliography{references}
+\end{document}

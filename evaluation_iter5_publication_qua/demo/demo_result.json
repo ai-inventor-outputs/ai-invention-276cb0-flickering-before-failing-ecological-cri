@@ -1,0 +1,13 @@
+{
+  "id": "eval_id2_it5__opus",
+  "type": "code",
+  "title": "Publication-Quality Figure Generation (8 Figures) for CSD-LLM Paper",
+  "summary": "Demo notebook for the CSD-LLM paper's publication-quality figure evaluation artifact. Generates 2 self-contained NeurIPS-styled figures (Fig 1: Conceptual Overview with ecological/LLM CSD analogs, Fig 8: Prospective Protocol Schematic flowchart) using 300 DPI, serif fonts, and colorblind-safe palette. Loads pre-computed evaluation metrics for all 8 paper figures from mini_demo_data.json, displays a compliance summary table (sizes, dimensions, data points), and visualizes file sizes, data points per figure, and NeurIPS dimension compliance in a 3-panel chart. Uses full original parameters (DPI=300, 500 curve points, 200 distribution points). Runs in under 5 minutes.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_5/gen_art/eval_id2_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id2_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/eval_id2_it5__opus/eval_code_demo.ipynb"
+}

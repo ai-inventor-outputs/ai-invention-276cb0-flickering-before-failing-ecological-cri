@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "evaluation_name": "Manuscript v2 Quantitative Integrity Audit",
+    "description": "Automated integrity audit that extracts every quantitative claim from the v2 manuscript and cross-references it against source experiment/evaluation JSON files.",
+    "audit_categories": [
+      "mismatches",
+      "stale_numbers",
+      "ci_anomalies",
+      "arithmetic_errors",
+      "consistency_errors",
+      "unsourced_claims"
+    ]
+  },
+  "metrics_agg": {
+    "total_claims_checked": 19,
+    "verified_count": 19,
+    "overall_integrity_score": 1.0,
+    "n_mismatches": 0,
+    "n_stale_numbers": 18,
+    "n_unsourced": 0,
+    "n_rounding_issues": 0,
+    "n_ci_anomalies": 0,
+    "n_arithmetic_errors": 1,
+    "n_consistency_errors": 4,
+    "critical_error_count": 19,
+    "submission_ready": 0,
+    "paper_claims_count": 175,
+    "supp_claims_count": 287
+  },
+  "datasets": [
+    {
+      "dataset": "verified_claims",
+      "examples": [
+        {
+          "input": "Verify claim: Fig5: best CSD LOPO F1 = 0.949",
+          "output": "VERIFIED: paper=0.949, source=0.949317",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.949",
+          "predict_source_value": "0.949317",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_f1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: Fig5: best CSD LOPO AUROC",
+          "output": "VERIFIED: paper=0.996, source=0.995604",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.996",
+          "predict_source_value": "0.995604",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_auroc",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOPO precision",
+          "output": "VERIFIED: paper=0.96, source=0.96",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.96",
+          "predict_source_value": "0.96",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_precision",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOPO recall",
+          "output": "VERIFIED: paper=0.946, source=0.946",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.946",
+          "predict_source_value": "0.946",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.lopo_recall",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: best CSD LOTO F1",
+          "output": "VERIFIED: paper=0.944, source=0.944",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "0.944",
+          "predict_source_value": "0.944",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "best_csd_results.loto_f1",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: iter_4: improvement over SPUQ LOPO %",
+          "output": "VERIFIED: paper=33.23, source=33.23",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "33.23",
+          "predict_source_value": "33.23",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "metadata.improvement_csd_over_spuq_lopo_pct",
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Verify claim: SPUQ required 1520 API calls",
+          "output": "VERIFIED: paper=1520, source=1520",
+          "eval_verified": 1,
+          "eval_delta": 0.0,
+          "predict_paper_value": "1520",
+          "predict_source_value": "1520",
+          "metadata_source_file": "dep1/full_method_out.json",
+          "metadata_source_key": "metadata.spuq_api_cost.total_calls",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "mismatches",
+      "examples": [
+        {
+          "input": "No mismatches detected",
+          "output": "All checked claims match source data",
+          "predict_status": "none",
+          "eval_is_mismatch": 0,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "stale_numbers",
+      "examples": [
+        {
+          "input": "Check stale: F1=0.814 in abstract for LOPO cross-validation",
+          "output": "STALE: 0.814 should be 0.949 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.814",
+          "predict_correct_value": "0.949",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "abstract",
+          "metadata_line_no": 9,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: AUROC=0.897 in abstract",
+          "output": "STALE: 0.897 should be 0.996 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "0.897",
+          "predict_correct_value": "0.996",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "abstract",
+          "metadata_line_no": 9,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check stale: improvement 16.38% in abstract",
+          "output": "STALE: 16.38 should be 33.23 (from iter_3)",
+          "eval_is_stale": 1,
+          "predict_stale_value": "16.38",
+          "predict_correct_value": "33.23",
+          "metadata_source_iter": "iter_3",
+          "metadata_section": "abstract",
+          "metadata_line_no": 9,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "ci_anomalies",
+      "examples": [
+        {
+          "input": "No CI anomalies detected",
+          "output": "All confidence intervals are valid",
+          "predict_status": "none",
+          "eval_is_ci_anomaly": 0,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "arithmetic_errors",
+      "examples": [
+        {
+          "input": "Check arithmetic: iter_3: F1=0.814 from P=0.786, R=0.88",
+          "output": "ARITHMETIC_ERROR: expected=0.8303, got=0.814",
+          "eval_is_arithmetic_error": 1,
+          "eval_delta": 0.0163,
+          "predict_expected_result": "0.8303",
+          "predict_actual_paper_value": "0.814",
+          "metadata_formula": "2 * 0.786 * 0.88 / (0.786 + 0.88)",
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "consistency_errors",
+      "examples": [
+        {
+          "input": "Check consistency: best_csd_lopo_f1",
+          "output": "INCONSISTENT: Introduction=0.814; SC3: Classifier Comparison=0.814; SC3: Classifier Comparison=0.949",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "best_csd_lopo_f1",
+          "metadata_n_occurrences": 3,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check consistency: best_csd_lopo_f1 (stale vs updated)",
+          "output": "INCONSISTENT: abstract/body/table=0.814; figure_5_caption=0.949",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "best_csd_lopo_f1",
+          "metadata_n_occurrences": 2,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "Check consistency: improvement_percentage",
+          "output": "INCONSISTENT: abstract/body=16.38%; iter_4_source=33.23%",
+          "eval_is_consistency_error": 1,
+          "predict_quantity": "improvement_percentage",
+          "metadata_n_occurrences": 2,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "unsourced_claims",
+      "examples": [
+        {
+          "input": "No unsourced claims detected",
+          "output": "All claims have source data",
+          "predict_status": "none",
+          "eval_is_unsourced": 0,
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ],
+  "sample_tex": "\\begin{abstract}\nA logistic-regression classifier trained on CSD features (response variance,\nJaccard similarity coefficient, and disagreement rate) achieves\nleave-one-pair-out F1$\\,{=}\\,$0.814 (AUROC$\\,{=}\\,$0.897) for predicting\nboundary proximity, outperforming the best single-indicator baseline by\n16.38\\%, at zero additional API cost.\n\\end{abstract}\n\n\\section{Introduction}\nOur CSD classifier achieves LOPO F1 of 0.814, representing a 16.38\\%\nimprovement over the variance-only baseline (F1=0.699). The disagreement-only\nbaseline achieves F1=0.684. Precision is 0.786 and recall is 0.880 under LOPO\nvalidation. We evaluate N=40 model-task pairs across 5 difficulty levels with\n200 responses per configuration.\n\n\\section{SC3: Classifier Comparison}\nTable 1 shows our best method achieves LOPO F1=0.949 and AUROC=0.996.\nThe CSD approach with task-normalized features outperforms SPUQ by 33.23\\%.\nThe SPUQ baseline required 1520 additional API calls at a cost of $0.45.\nResults with F1=0.949 [0.940, 0.947] demonstrate strong performance.\nThe improvement of 33.2\\% [22.4\\%, 26.2\\%] is statistically significant.",
+  "source_registry": {
+    "classifier_comparison": {
+      "csd_zt_reldist_rf": {
+        "lopo_f1": 0.949317,
+        "lopo_auroc": 0.995604,
+        "lopo_precision": 0.96,
+        "lopo_recall": 0.946,
+        "loto_f1": 0.944,
+        "lomo_f1": 0.940
+      },
+      "spuq_accuracy_rf": {
+        "lopo_f1": 0.713,
+        "lopo_auroc": 0.82
+      },
+      "disagreement_only_logreg": {
+        "lopo_f1": 0.680,
+        "lopo_auroc": 0.75
+      }
+    },
+    "best_csd_method": "csd_zt_reldist_rf",
+    "best_csd_results": {
+      "lopo_f1": 0.949317,
+      "lopo_auroc": 0.995604,
+      "lopo_precision": 0.96,
+      "lopo_recall": 0.946,
+      "loto_f1": 0.944,
+      "lomo_f1": 0.940
+    },
+    "improvement_csd_over_spuq_lopo_pct": 33.23,
+    "improvement_csd_over_spuq_loto_pct": 34.99,
+    "spuq_api_cost": {
+      "total_calls": 1520,
+      "total_usd": 0.45
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it2__opus",
+  "type": "code",
+  "title": "Graph Coloring CSD Sampling Experiment: 3 LLMs \u00d7 20 Difficulty Levels \u00d7 N=50 Responses",
+  "summary": "Demo notebook for the CSD (Critical Slowing Down) sampling experiment on graph coloring. Loads pre-generated LLM responses from 3 models (GPT-4o-mini, Gemini-2.0-Flash, Gemini-2.0-Flash-Lite) across 20 difficulty levels. Demonstrates the full analysis pipeline: response parsing with multi-strategy coloring extraction, constraint satisfaction evaluation, TF-IDF embedding, CSD indicator computation (variance, dip test, silhouette, bimodality coefficient, Ashman D, disagreement rate), d* capability boundary estimation, scaling exponent fitting, and classifier comparison (CSD vs disagreement-only baseline). Visualizes accuracy degradation and CSD indicators across difficulty levels with 4-panel matplotlib plots. Uses 60 curated examples (1 per model per level) with pre-computed CSD indicators from the full 3000-call experiment.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id3_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id3_it2__opus/method_code_demo.ipynb"
+}

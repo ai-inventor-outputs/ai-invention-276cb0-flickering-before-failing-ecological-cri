@@ -1,0 +1,14 @@
+[project]
+name = "syllogistic-logic-csd"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "loguru==0.7.3",
+    "httpx==0.28.1",
+    "numpy==2.4.3",
+    "sentence-transformers==5.3.0",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "diptest==0.10.0",
+    "tenacity==9.1.4",
+]

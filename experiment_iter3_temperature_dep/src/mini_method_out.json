@@ -1,0 +1,1265 @@
+{
+  "datasets": [
+    {
+      "dataset": "csd_temp_T0.4__gemini-2.0-flash-001",
+      "examples": [
+        {
+          "input": "CSD temp analysis at T=0.4 d=2 for gemini-2.0-flash-001",
+          "output": "300",
+          "predict_accuracy": "0.68",
+          "predict_csd_variance": "0.294744",
+          "predict_dip_statistic": "0.162417",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.4259",
+          "predict_bimodality_coefficient": "0.6985",
+          "predict_disagreement_rate": "0.8",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.8",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 2,
+          "metadata_temperature": 0.4,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 5,
+          "metadata_d_lead_relaxed": 2,
+          "metadata_lead_time_relaxed": 3,
+          "metadata_scaling_exponent": 0.24510400845540503,
+          "metadata_scaling_r2": 0.5842953883763384,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=0.4 d=3 for gemini-2.0-flash-001",
+          "output": "-2",
+          "predict_accuracy": "0.56",
+          "predict_csd_variance": "0.215478",
+          "predict_dip_statistic": "0.149424",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.316",
+          "predict_bimodality_coefficient": "0.7999",
+          "predict_disagreement_rate": "0.84",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.84",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 3,
+          "metadata_temperature": 0.4,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 5,
+          "metadata_d_lead_relaxed": 2,
+          "metadata_lead_time_relaxed": 3,
+          "metadata_scaling_exponent": 0.24510400845540503,
+          "metadata_scaling_r2": 0.5842953883763384,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=0.4 d=4 for gemini-2.0-flash-001",
+          "output": "146",
+          "predict_accuracy": "0.68",
+          "predict_csd_variance": "0.217564",
+          "predict_dip_statistic": "0.09791",
+          "predict_dip_pvalue": "0.0005",
+          "predict_silhouette_k2": "0.3328",
+          "predict_bimodality_coefficient": "0.576",
+          "predict_disagreement_rate": "0.82",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.82",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 4,
+          "metadata_temperature": 0.4,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 5,
+          "metadata_d_lead_relaxed": 2,
+          "metadata_lead_time_relaxed": 3,
+          "metadata_scaling_exponent": 0.24510400845540503,
+          "metadata_scaling_r2": 0.5842953883763384,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "csd_temp_T0.7__gemini-2.0-flash-001",
+      "examples": [
+        {
+          "input": "CSD temp analysis at T=0.7 d=2 for gemini-2.0-flash-001",
+          "output": "300",
+          "predict_accuracy": "0.4",
+          "predict_csd_variance": "0.306527",
+          "predict_dip_statistic": "0.160632",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.4141",
+          "predict_bimodality_coefficient": "0.6892",
+          "predict_disagreement_rate": "0.82",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.82",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 2,
+          "metadata_temperature": 0.7,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 4,
+          "metadata_lead_time_relaxed": -2,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=0.7 d=3 for gemini-2.0-flash-001",
+          "output": "-2",
+          "predict_accuracy": "0.48",
+          "predict_csd_variance": "0.214111",
+          "predict_dip_statistic": "0.15322",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.2993",
+          "predict_bimodality_coefficient": "0.7909",
+          "predict_disagreement_rate": "0.86",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.86",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 3,
+          "metadata_temperature": 0.7,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 4,
+          "metadata_lead_time_relaxed": -2,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=0.7 d=4 for gemini-2.0-flash-001",
+          "output": "146",
+          "predict_accuracy": "0.66",
+          "predict_csd_variance": "0.231667",
+          "predict_dip_statistic": "0.106987",
+          "predict_dip_pvalue": "0.0001",
+          "predict_silhouette_k2": "0.3061",
+          "predict_bimodality_coefficient": "0.6163",
+          "predict_disagreement_rate": "0.82",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.82",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 4,
+          "metadata_temperature": 0.7,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 4,
+          "metadata_lead_time_relaxed": -2,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "csd_temp_T1.0__gemini-2.0-flash-001",
+      "examples": [
+        {
+          "input": "CSD temp analysis at T=1.0 d=2 for gemini-2.0-flash-001",
+          "output": "300",
+          "predict_accuracy": "0.28",
+          "predict_csd_variance": "0.312364",
+          "predict_dip_statistic": "0.152269",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.4101",
+          "predict_bimodality_coefficient": "0.7152",
+          "predict_disagreement_rate": "0.82",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.82",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 2,
+          "metadata_temperature": 1.0,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 4,
+          "metadata_lead_time_relaxed": -2,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=1.0 d=3 for gemini-2.0-flash-001",
+          "output": "-2",
+          "predict_accuracy": "0.56",
+          "predict_csd_variance": "0.220953",
+          "predict_dip_statistic": "0.143622",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.2869",
+          "predict_bimodality_coefficient": "0.7847",
+          "predict_disagreement_rate": "0.86",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.86",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 3,
+          "metadata_temperature": 1.0,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 4,
+          "metadata_lead_time_relaxed": -2,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=1.0 d=4 for gemini-2.0-flash-001",
+          "output": "146",
+          "predict_accuracy": "0.64",
+          "predict_csd_variance": "0.240627",
+          "predict_dip_statistic": "0.112544",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.2829",
+          "predict_bimodality_coefficient": "0.6143",
+          "predict_disagreement_rate": "0.84",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.84",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 4,
+          "metadata_temperature": 1.0,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 4,
+          "metadata_lead_time_relaxed": -2,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        }
+      ]
+    },
+    {
+      "dataset": "csd_temp_T1.3__gemini-2.0-flash-001",
+      "examples": [
+        {
+          "input": "CSD temp analysis at T=1.3 d=2 for gemini-2.0-flash-001",
+          "output": "300",
+          "predict_accuracy": "0.36",
+          "predict_csd_variance": "0.308154",
+          "predict_dip_statistic": "0.144473",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.4051",
+          "predict_bimodality_coefficient": "0.7148",
+          "predict_disagreement_rate": "0.82",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.82",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 2,
+          "metadata_temperature": 1.3,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 12,
+          "metadata_lead_time_relaxed": -10,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=1.3 d=3 for gemini-2.0-flash-001",
+          "output": "-2",
+          "predict_accuracy": "0.54",
+          "predict_csd_variance": "0.217988",
+          "predict_dip_statistic": "0.144665",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.2946",
+          "predict_bimodality_coefficient": "0.782",
+          "predict_disagreement_rate": "0.84",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.84",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 3,
+          "metadata_temperature": 1.3,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 12,
+          "metadata_lead_time_relaxed": -10,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        },
+        {
+          "input": "CSD temp analysis at T=1.3 d=4 for gemini-2.0-flash-001",
+          "output": "146",
+          "predict_accuracy": "0.54",
+          "predict_csd_variance": "0.239463",
+          "predict_dip_statistic": "0.1188",
+          "predict_dip_pvalue": "0.0",
+          "predict_silhouette_k2": "0.3025",
+          "predict_bimodality_coefficient": "0.6552",
+          "predict_disagreement_rate": "0.84",
+          "predict_extraction_rate": "1.0",
+          "predict_step_correctness_autocorr": "0.0",
+          "predict_baseline_disagreement": "0.84",
+          "predict_baseline_extraction_rate": "1.0",
+          "metadata_difficulty_level": 4,
+          "metadata_temperature": 1.3,
+          "metadata_model": "google/gemini-2.0-flash-001",
+          "metadata_num_responses": 50,
+          "metadata_d_star": 2,
+          "metadata_d_lead_relaxed": 12,
+          "metadata_lead_time_relaxed": -10,
+          "metadata_scaling_exponent": 0.0,
+          "metadata_scaling_r2": 0.0,
+          "metadata_fold": "test"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "method_name": "CSD_Temperature_Manipulation_Experiment",
+    "description": "Tests CSD prediction that higher temperature produces earlier flickering signals in LLM response distributions. Compares d_lead (onset) and d* (boundary) across 4 temperature settings.",
+    "model": "google/gemini-2.0-flash-001",
+    "temperatures": [
+      0.4,
+      0.7,
+      1.0,
+      1.3
+    ],
+    "difficulty_levels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "responses_per_level_target": 50,
+    "embed_model": "all-MiniLM-L6-v2",
+    "sampling_params": {
+      "top_p": 0.95,
+      "max_tokens": 2048
+    },
+    "per_temperature_analysis": {
+      "0.4": {
+        "temperature": 0.4,
+        "d_star": 5,
+        "d_lead_strict": 12,
+        "d_lead_relaxed": 2,
+        "d_lead_sil": 2,
+        "lead_time_strict": -7,
+        "lead_time_relaxed": 3,
+        "scaling_exponent": 0.24510400845540503,
+        "scaling_r2": 0.5842953883763384,
+        "tau_variance": -0.5869565217391304,
+        "p_tau_variance": 2.271276851286088e-05,
+        "tau_dip": -0.17391304347826086,
+        "p_tau_dip": 0.24661869116843957,
+        "tau_silhouette": -0.13768115942028986,
+        "p_tau_silhouette": 0.3626613999876752,
+        "tau_disagreement": -0.19599332879098552,
+        "p_tau_disagreement": 0.22971096122239676,
+        "bimodal_levels": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          25
+        ],
+        "num_bimodal_levels": 20,
+        "max_accuracy": 0.86,
+        "accuracy_curve": [
+          [
+            2,
+            0.68
+          ],
+          [
+            3,
+            0.56
+          ],
+          [
+            4,
+            0.68
+          ],
+          [
+            5,
+            0.48
+          ],
+          [
+            6,
+            0.66
+          ],
+          [
+            7,
+            0.72
+          ],
+          [
+            8,
+            0.8
+          ],
+          [
+            9,
+            0.8
+          ],
+          [
+            10,
+            0.6
+          ],
+          [
+            11,
+            0.72
+          ],
+          [
+            12,
+            0.86
+          ],
+          [
+            13,
+            0.72
+          ],
+          [
+            14,
+            0.78
+          ],
+          [
+            15,
+            0.64
+          ],
+          [
+            16,
+            0.74
+          ],
+          [
+            17,
+            0.7
+          ],
+          [
+            18,
+            0.8
+          ],
+          [
+            19,
+            0.56
+          ],
+          [
+            20,
+            0.68
+          ],
+          [
+            21,
+            0.54
+          ],
+          [
+            22,
+            0.84
+          ],
+          [
+            23,
+            0.72
+          ],
+          [
+            24,
+            0.84
+          ],
+          [
+            25,
+            0.66
+          ]
+        ]
+      },
+      "0.7": {
+        "temperature": 0.7,
+        "d_star": 2,
+        "d_lead_strict": null,
+        "d_lead_relaxed": 4,
+        "d_lead_sil": 4,
+        "lead_time_strict": null,
+        "lead_time_relaxed": -2,
+        "scaling_exponent": null,
+        "scaling_r2": null,
+        "tau_variance": -0.4492753623188406,
+        "p_tau_variance": 0.0017278578267285898,
+        "tau_dip": -0.31884057971014496,
+        "p_tau_dip": 0.029805605290680832,
+        "tau_silhouette": -0.48550724637681164,
+        "p_tau_silhouette": 0.0006432240729288161,
+        "tau_disagreement": 0.1526010006110512,
+        "p_tau_disagreement": 0.337197189412471,
+        "bimodal_levels": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          11,
+          12,
+          14,
+          21,
+          22
+        ],
+        "num_bimodal_levels": 11,
+        "max_accuracy": 0.74,
+        "accuracy_curve": [
+          [
+            2,
+            0.4
+          ],
+          [
+            3,
+            0.48
+          ],
+          [
+            4,
+            0.66
+          ],
+          [
+            5,
+            0.48
+          ],
+          [
+            6,
+            0.44
+          ],
+          [
+            7,
+            0.64
+          ],
+          [
+            8,
+            0.62
+          ],
+          [
+            9,
+            0.68
+          ],
+          [
+            10,
+            0.58
+          ],
+          [
+            11,
+            0.54
+          ],
+          [
+            12,
+            0.6
+          ],
+          [
+            13,
+            0.66
+          ],
+          [
+            14,
+            0.54
+          ],
+          [
+            15,
+            0.52
+          ],
+          [
+            16,
+            0.64
+          ],
+          [
+            17,
+            0.56
+          ],
+          [
+            18,
+            0.62
+          ],
+          [
+            19,
+            0.46
+          ],
+          [
+            20,
+            0.54
+          ],
+          [
+            21,
+            0.54
+          ],
+          [
+            22,
+            0.74
+          ],
+          [
+            23,
+            0.54
+          ],
+          [
+            24,
+            0.66
+          ],
+          [
+            25,
+            0.54
+          ]
+        ]
+      },
+      "1.0": {
+        "temperature": 1.0,
+        "d_star": 2,
+        "d_lead_strict": null,
+        "d_lead_relaxed": 4,
+        "d_lead_sil": null,
+        "lead_time_strict": null,
+        "lead_time_relaxed": -2,
+        "scaling_exponent": null,
+        "scaling_r2": null,
+        "tau_variance": -0.5289855072463768,
+        "p_tau_variance": 0.00017174773071472962,
+        "tau_dip": -0.2536231884057971,
+        "p_tau_dip": 0.08702802518525976,
+        "tau_silhouette": -0.4275362318840579,
+        "p_tau_silhouette": 0.002989415703746229,
+        "tau_disagreement": -0.05547052459090777,
+        "p_tau_disagreement": 0.7328344723584973,
+        "bimodal_levels": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          14,
+          16,
+          17,
+          19,
+          20,
+          23
+        ],
+        "num_bimodal_levels": 12,
+        "max_accuracy": 0.66,
+        "accuracy_curve": [
+          [
+            2,
+            0.28
+          ],
+          [
+            3,
+            0.56
+          ],
+          [
+            4,
+            0.64
+          ],
+          [
+            5,
+            0.5
+          ],
+          [
+            6,
+            0.46
+          ],
+          [
+            7,
+            0.66
+          ],
+          [
+            8,
+            0.54
+          ],
+          [
+            9,
+            0.48
+          ],
+          [
+            10,
+            0.52
+          ],
+          [
+            11,
+            0.48
+          ],
+          [
+            12,
+            0.66
+          ],
+          [
+            13,
+            0.64
+          ],
+          [
+            14,
+            0.56
+          ],
+          [
+            15,
+            0.58
+          ],
+          [
+            16,
+            0.6
+          ],
+          [
+            17,
+            0.48
+          ],
+          [
+            18,
+            0.66
+          ],
+          [
+            19,
+            0.58
+          ],
+          [
+            20,
+            0.58
+          ],
+          [
+            21,
+            0.5
+          ],
+          [
+            22,
+            0.64
+          ],
+          [
+            23,
+            0.48
+          ],
+          [
+            24,
+            0.52
+          ],
+          [
+            25,
+            0.52
+          ]
+        ]
+      },
+      "1.3": {
+        "temperature": 1.3,
+        "d_star": 2,
+        "d_lead_strict": null,
+        "d_lead_relaxed": 12,
+        "d_lead_sil": null,
+        "lead_time_strict": null,
+        "lead_time_relaxed": -10,
+        "scaling_exponent": null,
+        "scaling_r2": null,
+        "tau_variance": -0.40579710144927533,
+        "p_tau_variance": 0.00501237859238273,
+        "tau_dip": -0.28985507246376807,
+        "p_tau_dip": 0.04925402223617705,
+        "tau_silhouette": -0.463768115942029,
+        "p_tau_silhouette": 0.0011772109119610658,
+        "tau_disagreement": -0.03821113515845007,
+        "p_tau_disagreement": 0.8127580737986156,
+        "bimodal_levels": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          12,
+          14,
+          18
+        ],
+        "num_bimodal_levels": 9,
+        "max_accuracy": 0.7,
+        "accuracy_curve": [
+          [
+            2,
+            0.36
+          ],
+          [
+            3,
+            0.54
+          ],
+          [
+            4,
+            0.54
+          ],
+          [
+            5,
+            0.5
+          ],
+          [
+            6,
+            0.52
+          ],
+          [
+            7,
+            0.56
+          ],
+          [
+            8,
+            0.58
+          ],
+          [
+            9,
+            0.5
+          ],
+          [
+            10,
+            0.52
+          ],
+          [
+            11,
+            0.52
+          ],
+          [
+            12,
+            0.7
+          ],
+          [
+            13,
+            0.56
+          ],
+          [
+            14,
+            0.54
+          ],
+          [
+            15,
+            0.52
+          ],
+          [
+            16,
+            0.54
+          ],
+          [
+            17,
+            0.6
+          ],
+          [
+            18,
+            0.58
+          ],
+          [
+            19,
+            0.56
+          ],
+          [
+            20,
+            0.48
+          ],
+          [
+            21,
+            0.44
+          ],
+          [
+            22,
+            0.62
+          ],
+          [
+            23,
+            0.48
+          ],
+          [
+            24,
+            0.46
+          ],
+          [
+            25,
+            0.44
+          ]
+        ]
+      }
+    },
+    "dose_response_analysis": {
+      "d_star_analysis": {
+        "d_stars_by_temp": {
+          "0.4": 5,
+          "0.7": 2,
+          "1.0": 2,
+          "1.3": 2
+        },
+        "d_star_stable": true,
+        "d_star_mean": 2.75,
+        "d_star_std": 1.299038105676658
+      },
+      "lead_time_dose_response": {
+        "slope": -13.0,
+        "r_value": -0.93629966384632,
+        "p_value": 0.06370033615367997,
+        "significant": false,
+        "data_points": [
+          [
+            0.4,
+            3
+          ],
+          [
+            0.7,
+            -2
+          ],
+          [
+            1.0,
+            -2
+          ],
+          [
+            1.3,
+            -10
+          ]
+        ]
+      },
+      "dip_temperature_effect": {
+        "per_level": {
+          "2": {
+            "spearman_rho": -1.0,
+            "p_value": 0.0
+          },
+          "3": {
+            "spearman_rho": -0.6000000000000001,
+            "p_value": 0.4
+          },
+          "4": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "5": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "6": {
+            "spearman_rho": 0.19999999999999998,
+            "p_value": 0.8
+          },
+          "7": {
+            "spearman_rho": -1.0,
+            "p_value": 0.0
+          },
+          "8": {
+            "spearman_rho": 0.39999999999999997,
+            "p_value": 0.6
+          },
+          "9": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "10": {
+            "spearman_rho": -1.0,
+            "p_value": 0.0
+          },
+          "11": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "12": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "13": {
+            "spearman_rho": -0.6000000000000001,
+            "p_value": 0.4
+          },
+          "14": {
+            "spearman_rho": -0.39999999999999997,
+            "p_value": 0.6
+          },
+          "15": {
+            "spearman_rho": -0.39999999999999997,
+            "p_value": 0.6
+          },
+          "16": {
+            "spearman_rho": 0.6000000000000001,
+            "p_value": 0.4
+          },
+          "17": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "18": {
+            "spearman_rho": 0.0,
+            "p_value": 1.0
+          },
+          "19": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "20": {
+            "spearman_rho": -1.0,
+            "p_value": 0.0
+          },
+          "21": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "22": {
+            "spearman_rho": -1.0,
+            "p_value": 0.0
+          },
+          "23": {
+            "spearman_rho": -0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "24": {
+            "spearman_rho": 0.39999999999999997,
+            "p_value": 0.6
+          },
+          "25": {
+            "spearman_rho": -0.19999999999999998,
+            "p_value": 0.8
+          }
+        },
+        "frac_positive_trend": 0.25
+      },
+      "variance_temperature_effect": {
+        "per_level": {
+          "2": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "3": {
+            "spearman_rho": 0.6000000000000001,
+            "p_value": 0.4
+          },
+          "4": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "5": {
+            "spearman_rho": -0.39999999999999997,
+            "p_value": 0.6
+          },
+          "6": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "7": {
+            "spearman_rho": 0.39999999999999997,
+            "p_value": 0.6
+          },
+          "8": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "9": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "10": {
+            "spearman_rho": 0.39999999999999997,
+            "p_value": 0.6
+          },
+          "11": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "12": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "13": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "14": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "15": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "16": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "17": {
+            "spearman_rho": 0.6000000000000001,
+            "p_value": 0.4
+          },
+          "18": {
+            "spearman_rho": -0.19999999999999998,
+            "p_value": 0.8
+          },
+          "19": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "20": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "21": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "22": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "23": {
+            "spearman_rho": 1.0,
+            "p_value": 0.0
+          },
+          "24": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "25": {
+            "spearman_rho": 0.19999999999999998,
+            "p_value": 0.8
+          }
+        },
+        "frac_positive_trend": 0.9166666666666666
+      },
+      "disagreement_temperature_effect": {
+        "per_level": {
+          "2": {
+            "spearman_rho": 0.7745966692414834,
+            "p_value": 0.22540333075851665
+          },
+          "3": {
+            "spearman_rho": 0.0,
+            "p_value": 1.0
+          },
+          "4": {
+            "spearman_rho": 0.8944271909999159,
+            "p_value": 0.10557280900008414
+          },
+          "5": {
+            "spearman_rho": -0.7745966692414834,
+            "p_value": 0.22540333075851665
+          },
+          "6": {
+            "spearman_rho": 0.7745966692414834,
+            "p_value": 0.22540333075851665
+          },
+          "7": {
+            "spearman_rho": 0.632455532033676,
+            "p_value": 0.367544467966324
+          },
+          "8": {
+            "spearman_rho": 0.7745966692414834,
+            "p_value": 0.22540333075851665
+          },
+          "9": {
+            "spearman_rho": 0.9486832980505139,
+            "p_value": 0.05131670194948613
+          },
+          "10": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "11": {
+            "spearman_rho": 0.632455532033676,
+            "p_value": 0.367544467966324
+          },
+          "12": {
+            "spearman_rho": 0.9486832980505139,
+            "p_value": 0.05131670194948613
+          },
+          "13": {
+            "spearman_rho": 0.7999999999999999,
+            "p_value": 0.2000000000000001
+          },
+          "14": {
+            "spearman_rho": 0.9486832980505139,
+            "p_value": 0.05131670194948613
+          },
+          "15": {
+            "spearman_rho": 0.0,
+            "p_value": 1.0
+          },
+          "16": {
+            "spearman_rho": -0.2581988897471611,
+            "p_value": 0.741801110252839
+          },
+          "17": {
+            "spearman_rho": 0.632455532033676,
+            "p_value": 0.367544467966324
+          },
+          "18": {
+            "spearman_rho": 0.7745966692414834,
+            "p_value": 0.22540333075851665
+          },
+          "19": {
+            "spearman_rho": -0.316227766016838,
+            "p_value": 0.683772233983162
+          },
+          "20": {
+            "spearman_rho": 0.9486832980505139,
+            "p_value": 0.05131670194948613
+          },
+          "21": {
+            "spearman_rho": 0.316227766016838,
+            "p_value": 0.683772233983162
+          },
+          "22": {
+            "spearman_rho": 0.9486832980505139,
+            "p_value": 0.05131670194948613
+          },
+          "23": {
+            "spearman_rho": 0.39999999999999997,
+            "p_value": 0.6
+          },
+          "24": {
+            "spearman_rho": 0.632455532033676,
+            "p_value": 0.367544467966324
+          },
+          "25": {
+            "spearman_rho": 0.9486832980505139,
+            "p_value": 0.05131670194948613
+          }
+        },
+        "frac_positive_trend": 0.7916666666666666
+      },
+      "bimodal_zone_widening": {
+        "counts_by_temp": {
+          "0.4": 20,
+          "0.7": 11,
+          "1.0": 12,
+          "1.3": 9
+        },
+        "spearman_rho": -0.7999999999999999,
+        "p_value": 0.2000000000000001
+      },
+      "evidence_checks": {
+        "d_star_stable": true,
+        "lead_time_increases_with_T": false,
+        "dip_increases_with_T_majority": false,
+        "variance_increases_with_T_majority": true,
+        "bimodal_zone_widens_with_T": false,
+        "disagreement_increases_with_T_majority": true
+      },
+      "csd_evidence_score": 0.5
+    },
+    "total_cost_usd": 1.056259600000005
+  }
+}

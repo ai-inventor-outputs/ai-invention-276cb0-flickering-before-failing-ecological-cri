@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it3__opus",
+  "type": "code",
+  "title": "Temperature-Dependent CSD Flickering: Causal Evidence via Noise Intensity Manipulation",
+  "summary": "Demo notebook analyzing pre-computed CSD (Critical Slowing Down) flickering experiment results across 4 LLM sampling temperatures (0.4, 0.7, 1.0, 1.3). Loads 32 examples (8 difficulty levels x 4 temperatures) from gemini-2.0-flash-001 experiment output. Reproduces per-temperature analysis (d* determination, Kendall tau trends, bimodality consensus) and cross-temperature dose-response tests (variance/dip/disagreement scaling with temperature). Generates 4-panel visualization of accuracy curves, embedding variance, disagreement rates, and CSD evidence checks. Computes overall CSD evidence score (0.50). No API calls needed - works entirely on pre-computed data.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neurips-open/3_invention_loop/iter_3/gen_art/exp_id3_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id3_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neurips-open/4_gen_paper_repo/exp_id3_it3__opus/method_code_demo.ipynb"
+}
