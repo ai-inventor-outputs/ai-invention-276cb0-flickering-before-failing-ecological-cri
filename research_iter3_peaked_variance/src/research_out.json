@@ -1,0 +1,295 @@
+{
+  "title": "Theoretical Frameworks for Non-Monotonic Peaked Variance Near LLM Capability Boundaries",
+  "summary": "Identifies five theoretical frameworks that predict non-monotonic (peaked) variance near critical transitions, recommends a three-layer model (mixture model + cusp catastrophe traversal + finite-size correction) to replace the failed fold bifurcation monotonic-increase prediction. The mixture model's between-component variance p(1-p)||Delta_mu||^2 peaks at accuracy=50%, providing the simplest explanation. The cusp catastrophe provides dynamical systems grounding via SDE dX=(alpha+beta*X-X^3)dt+sigma*dW where alpha(d) sweeps through zero. Ecological precedent from Dakos et al. (2012) confirms variance can decrease near transitions.",
+  "question": "What theoretical frameworks from dynamical systems, statistical mechanics, and decision theory predict non-monotonic (peaked) variance near critical transitions, and which best replaces the failed fold bifurcation monotonic-increase prediction for LLM reasoning collapse?",
+  "answer": "The fold bifurcation model predicted Var proportional to (d*-d)^{-1/2}, a monotonic divergence as difficulty approaches d*. Empirical data contradicts this: variance PEAKS near d* and then DECREASES. Five theoretical frameworks explain this non-monotonic behavior, and a three-layer synthesis provides the recommended replacement model.\n\n## Why the Fold Bifurcation Model Failed\n\nThe TIPMOC framework formalizes the fold prediction as V(u) = a(u_c - u)^{-0.5} + b for saddle-node bifurcations [1]. This model assumes unidirectional approach to the tipping point and is undefined beyond it [1]. LLM difficulty sweeps traverse THROUGH the transition (from easy to beyond-capability), violating this assumption.\n\n## Framework 1: Mixture Model / Law of Total Variance (RECOMMENDED PRIMARY MODEL)\n\nThe law of total variance states Var(X) = E[Var(X|Theta)] + Var[E(X|Theta)] [2, 3]. For a two-component mixture of correct and incorrect responses:\n\nVar_total(d) = p(d)*sigma^2_c + (1-p(d))*sigma^2_i + p(d)*(1-p(d))*(mu_c - mu_i)^2\n\nThe between-component term p(1-p)*(Delta_mu)^2 is a parabola in p, MAXIMIZED at p = 0.5, with maximum value (Delta_mu)^2/4 [2, 3]. Since p(d) = accuracy(d) decreases from ~1 to ~0 across the capability boundary, variance traces an inverted-U that peaks at d* where accuracy is approximately 50%. This is the simplest and most direct explanation.\n\nFor binary scoring, this reduces to Bernoulli variance p(1-p), which peaks at p=0.5, giving the characteristic inverted-U shape [4].\n\n## Framework 2: Stochastic Cusp Catastrophe Traversal (MECHANISTIC GROUNDING)\n\nThe stochastic cusp catastrophe is described by dX = (alpha + beta*X - X^3)dt + sigma*dW [5, 6]. The stationary density is pi(x) = C*exp{(2/sigma^2)(alpha*x + beta*x^2/2 - x^4/4)} [5]. Bimodality occurs when Cardan's discriminant Delta = 27*alpha^2 - 4*beta^3 < 0 [5, 6, 7].\n\nThe key insight: task difficulty maps to the asymmetry parameter alpha(d), which sweeps from positive (correct-mode dominates) through zero (symmetric bistability) to negative (incorrect-mode dominates) [5, 6]. This traversal THROUGH the cusp region naturally produces peaked variance. Gilmore's catastrophe flags include 'anomalous variance' as a recognized phenomenon near the bifurcation set [6, 8].\n\n## Framework 3: Kramers Escape / Double-Well Switching\n\nIn a double-well potential, the Kramers escape rate is r proportional to exp(-2*Delta_V/sigma^2) [9, 10]. When the barrier is high (easy tasks), the system stays in the correct well (low variance). When the barrier is low (boundary tasks), frequent switching occurs (high variance through flickering). When the barrier vanishes (beyond capability), the system falls into the incorrect well (low variance again). This connects to stochastic resonance, where variance peaks at moderate barrier heights [11].\n\n## Framework 4: Drift-Diffusion Model (DECISION-THEORETIC MECHANISM)\n\nThe DDM describes evidence accumulation as dX = v*dt + s*dW with absorbing boundaries at +/-a [12, 13]. The accuracy formula P(correct) = 1/(1+exp(-2va/s^2)) is a logistic sigmoid in the signal-to-noise ratio [14]. At high drift rate (easy), almost all trajectories reach the correct boundary (low variance). At drift rate near zero (boundary), approximately equal trajectories reach either boundary (maximum variance through bimodality). At negative drift (beyond capability), almost all trajectories reach the incorrect boundary (low variance). This provides a computational mechanism underlying the mixture model [12, 13].\n\nThe Leaky Competing Accumulator model adds neural plausibility through mutual inhibition and attractor dynamics [15].\n\n## Framework 5: Finite-Size Scaling (CORRECTION LAYER)\n\nIn finite systems, divergences are replaced by finite rounded peaks [16, 17]. The peak position shifts from the true critical point as T*(L) - T_c proportional to L^{-1/nu} [16]. Peak height scales as chi_max proportional to L^{gamma/nu} [16]. Neural network output variance shows the same finite-size scaling, with peak width following sigma(L) ~ 1/L^{1/nu_sigma} [17]. For N=50 LLM samples, this means the variance peak is finite and shifted from the true capability boundary.\n\n## Ecological Precedent: Non-Monotonic Variance Is Known\n\nDakos et al. (2012) showed ANALYTICALLY that variance can decrease near a transition under three conditions: (a) reduced sensitivity to environmental factors near threshold, (b) CSD filtering of high-frequency fluctuations, (c) systematic underestimation from limited data [18, 19]. Crucially, autocorrelation ALWAYS increases, making it more robust [18]. Scheffer et al. (2012) distinguished CSD-based indicators from flickering-based indicators, with flickering providing more direct evidence of bistability [20]. Dakos et al. (2013) showed flickering occurs in the bistable region under strong noise, and CSD may not be relevant in such conditions [21].\n\n## The Recommended Three-Layer Model\n\n**Layer 1 (Phenomenological):** Mixture model with Var(d) approximately equal to p(d)*(1-p(d))*||Delta_mu||^2 + constant. Peaks at p=0.5.\n\n**Layer 2 (Dynamical Systems):** Cusp catastrophe with alpha(d) sweeping through the bimodal region. Provides mechanistic justification for why accuracy follows a sigmoid and why bimodality emerges.\n\n**Layer 3 (Finite-Size Correction):** N=50 samples round any sharp features. Peak height and width scale with N.\n\n## Key Revised Predictions\n1. Variance follows inverted-U: Var(d) proportional to p(d)*(1-p(d))*||Delta_mu||^2\n2. Variance peaks at d* where accuracy is approximately 50%\n3. Bimodality (flickering) is the PRIMARY leading indicator, detectable before variance peaks\n4. Variance profile is approximately symmetric around d* if accuracy follows a sigmoid\n5. Autocorrelation should increase monotonically even when variance peaks\n6. Peak variance value is approximately (Delta_mu)^2/4",
+  "frameworks_compared": {
+    "fold_bifurcation": {
+      "prediction": "Var proportional to (d*-d)^{-1/2}, monotonic increase",
+      "matches_data": false,
+      "limitation": "Only models one-sided approach; undefined beyond d*"
+    },
+    "mixture_model": {
+      "prediction": "Var proportional to p(1-p)*||Delta_mu||^2, inverted-U peaked at p=0.5",
+      "matches_data": true,
+      "strength": "Simplest explanation; directly testable; well-established theory"
+    },
+    "cusp_catastrophe": {
+      "prediction": "Peaked variance from traversal through bimodal region as alpha sweeps through zero",
+      "matches_data": true,
+      "strength": "Provides dynamical systems grounding; explains WHY accuracy is sigmoid-shaped"
+    },
+    "kramers_double_well": {
+      "prediction": "Peaked variance from barrier-height-dependent switching frequency",
+      "matches_data": true,
+      "strength": "Physical mechanism for flickering; connects to stochastic resonance"
+    },
+    "drift_diffusion": {
+      "prediction": "Peaked variance from bimodal boundary-hitting at low drift rates",
+      "matches_data": true,
+      "strength": "Computational mechanism; P(correct)=1/(1+exp(-2va/s^2)) is testable"
+    },
+    "finite_size_scaling": {
+      "prediction": "Divergences rounded into finite peaks with height ~ N^{gamma/nu}",
+      "matches_data": true,
+      "role": "Supplementary correction layer, not primary explanation"
+    }
+  },
+  "key_equations": {
+    "law_of_total_variance": "Var(X) = E[Var(X|Theta)] + Var[E(X|Theta)]",
+    "mixture_variance": "Var_total(d) = p(d)*sigma^2_c + (1-p(d))*sigma^2_i + p(d)*(1-p(d))*(mu_c - mu_i)^2",
+    "between_component_peak": "max_{p} p(1-p) = 1/4 at p = 1/2",
+    "cusp_SDE": "dX = (alpha + beta*X - X^3)dt + sigma*dW",
+    "cusp_stationary_density": "pi(x) = C*exp{(2/sigma^2)(alpha*x + beta*x^2/2 - x^4/4)}",
+    "cardan_discriminant": "Delta = 27*alpha^2 - 4*beta^3; bimodal when Delta < 0",
+    "cusp_potential": "V(x; alpha, beta) = -alpha*x - beta*x^2/2 + x^4/4",
+    "kramers_rate": "k = (omega_R * omega_bar)/(2*pi*zeta) * exp(-E_f/(k_B*T))",
+    "DDM_SDE": "dX = v*dt + s*dW",
+    "DDM_accuracy": "P(correct) = 1/(1 + exp(-2*v*a/s^2))",
+    "EZ_mean_RT": "MRT = a/v",
+    "EZ_variance_RT": "VRT = a^2/v^3",
+    "FSS_peak_shift": "T*(L) - T_c proportional to L^{-1/nu}",
+    "FSS_peak_height": "chi_max proportional to L^{gamma/nu}",
+    "FSS_peak_width": "sigma(L) ~ L^{-1/nu}",
+    "TIPMOC_fold": "V(u) = a*(u_c - u)^{-0.5} + b (saddle-node)",
+    "TIPMOC_transcritical": "V(u) = a*(u_c - u)^{-1} + b (transcritical/Hopf)"
+  },
+  "recommended_model": {
+    "name": "Three-Layer Cusp-Mixture Model",
+    "layer1_phenomenological": "Mixture model: Var(d) = p(d)*(1-p(d))*||Delta_mu||^2 + within-component terms",
+    "layer2_dynamical": "Cusp catastrophe: dX = (alpha(d) + beta*X - X^3)dt + sigma*dW with alpha(d) decreasing",
+    "layer3_finite_size": "FSS correction: peaks rounded and shifted by N=50 sample size",
+    "replaces": "Fold bifurcation model Var proportional to (d*-d)^{-1/2}",
+    "advantages": [
+      "Explains peaked AND decreasing variance (fold model cannot)",
+      "Maintains flickering/bimodality as leading indicator",
+      "Provides simple testable equation (mixture variance formula)",
+      "Grounded in established theory (cusp catastrophe, law of total variance, DDM)",
+      "Connects to ecological precedent (Scheffer flickering, Dakos non-monotonic variance)",
+      "Consistent with finite-size effects from N=50 samples"
+    ]
+  },
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://arxiv.org/abs/2602.10817",
+      "title": "TIPMOC: Detecting and forecasting tipping points from sample variance alone",
+      "authors": "Masuda, N.",
+      "year": 2026,
+      "summary": "Formalizes power-law variance divergence V(u)=a(uc-u)^{-gamma}+b near bifurcations; gamma=0.5 for saddle-node. Assumes unidirectional approach."
+    },
+    {
+      "index": 2,
+      "url": "https://en.wikipedia.org/wiki/Law_of_total_variance",
+      "title": "Law of total variance - Wikipedia",
+      "authors": "Wikipedia",
+      "year": null,
+      "summary": "States Var(X) = E[Var(X|Theta)] + Var[E(X|Theta)]; foundation for mixture variance decomposition."
+    },
+    {
+      "index": 3,
+      "url": "https://statisticalmodeling.wordpress.com/2011/06/16/the-variance-of-a-mixture/",
+      "title": "The variance of a mixture",
+      "authors": "Statistical Modeling blog",
+      "year": 2011,
+      "summary": "Derives between-component variance p(1-p)*w^2 for two-component mixture; proves maximized at equal proportions."
+    },
+    {
+      "index": 4,
+      "url": "https://arxiv.org/abs/2601.13885",
+      "title": "Confident Rankings with Fewer Items: Adaptive LLM Evaluation with Continuous Scores",
+      "authors": null,
+      "year": 2026,
+      "summary": "Leverages Bernoulli variance p(1-p) peaking at p=0.5 for LLM evaluation; confirms inverted-U shape."
+    },
+    {
+      "index": 5,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9041743/",
+      "title": "Stochastic cusp catastrophe model and its Bayesian computations",
+      "authors": "Chen, D.G., Lio, Y., Jiang, X.",
+      "year": 2022,
+      "summary": "Provides SDE dX=(alpha+beta*X-X^3)dt+sigma*dW; stationary density; Cardan discriminant Delta=27*alpha^2-4*beta^3 for bimodality."
+    },
+    {
+      "index": 6,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5664721/",
+      "title": "Cusp Catastrophe Regression and Its Application in Public Health and Behavioral Research",
+      "authors": "Chen, D.G. et al.",
+      "year": 2017,
+      "summary": "Potential V(Y;alpha,beta) = alpha*Y + beta*Y^2/2 - Y^4/4; five catastrophe flags including anomalous variance; Cardan discriminant."
+    },
+    {
+      "index": 7,
+      "url": "https://www.sciencedirect.com/topics/mathematics/catastrophe-theory",
+      "title": "Catastrophe Theory - ScienceDirect Topics",
+      "authors": "ScienceDirect",
+      "year": null,
+      "summary": "Overview of catastrophe theory including cusp catastrophe structure and bifurcation set properties."
+    },
+    {
+      "index": 8,
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/3527600434.eap052.pub2",
+      "title": "Catastrophe Theory - Gilmore",
+      "authors": "Gilmore, R.",
+      "year": 1993,
+      "summary": "Defines catastrophe flags: bimodality, sudden jumps, inaccessibility, hysteresis, divergence, anomalous variance."
+    },
+    {
+      "index": 9,
+      "url": "https://chem.libretexts.org/Bookshelves/Biological_Chemistry/Concepts_in_Biophysical_Chemistry_(Tokmakoff)/06:_Dynamics_and_Kinetics/23:_Barrier_Crossing_and_Activated_Processes/23.02:_Kramers_Theory",
+      "title": "Kramers' Theory - Chemistry LibreTexts",
+      "authors": "Tokmakoff, A.",
+      "year": null,
+      "summary": "Kramers escape rate k = prefactor * exp(-E_f/k_BT); overdamped and underdamped regimes; Fokker-Planck foundation."
+    },
+    {
+      "index": 10,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28009196/",
+      "title": "Dissipative Double-Well Potential for Cold Atoms: Kramers Rate and Stochastic Resonance",
+      "authors": "Dutta, P.S. et al.",
+      "year": 2016,
+      "summary": "Experimental Kramers rate in double-well potential; stochastic resonance in system response."
+    },
+    {
+      "index": 11,
+      "url": "https://en.wikipedia.org/wiki/Stochastic_resonance",
+      "title": "Stochastic resonance - Wikipedia",
+      "authors": "Wikipedia",
+      "year": null,
+      "summary": "SNR peak at moderate noise in bistable systems; periodic switching between wells at optimal noise intensity."
+    },
+    {
+      "index": 12,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2474742/",
+      "title": "The Diffusion Decision Model: Theory and Data for Two-Choice Decision Tasks",
+      "authors": "Ratcliff, R. & McKoon, G.",
+      "year": 2008,
+      "summary": "Comprehensive DDM review: drift rate v determines accuracy and RT; accumulation to boundary with noise."
+    },
+    {
+      "index": 13,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9784241/",
+      "title": "A practical introduction to using the drift diffusion model",
+      "authors": "Lerche, V. & Voss, A.",
+      "year": 2022,
+      "summary": "Practical DDM introduction: drift rate relates to task difficulty; boundary separation governs speed-accuracy tradeoff."
+    },
+    {
+      "index": 14,
+      "url": "https://www.tqmp.org/RegularArticles/vol16-2/p154/p154.pdf",
+      "title": "The EZ Diffusion Model: An overview with derivation",
+      "authors": "EZ-diffusion model overview",
+      "year": null,
+      "summary": "EZ equations: P(correct)=1/(1+exp(-2va/s^2)), MRT=a/v, VRT=a^2/v^3. Derived via exponential martingale."
+    },
+    {
+      "index": 15,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11488378/",
+      "title": "The time course of perceptual choice: the leaky, competing accumulator model",
+      "authors": "Usher, M. & McClelland, J.L.",
+      "year": 2001,
+      "summary": "LCA model: mutual inhibition creates attractor dynamics; inhibition-dominant regime produces bimodal decision states."
+    },
+    {
+      "index": 16,
+      "url": "https://www.mv.helsinki.fi/home/rummukai/simu/fss.pdf",
+      "title": "Phase transitions and finite size scaling",
+      "authors": "Rummukainen, K.",
+      "year": null,
+      "summary": "FSS theory: susceptibility peaks are rounded and shifted; T*(L)-Tc ~ L^{-1/nu}; chi_max ~ L^{gamma/nu}."
+    },
+    {
+      "index": 17,
+      "url": "https://arxiv.org/html/2305.03342",
+      "title": "Finite-size analysis in neural network classification of critical phenomena",
+      "authors": "Bachtis, D. et al.",
+      "year": 2023,
+      "summary": "NN output variance shows FSS: peak width sigma(L) ~ 1/L^{1/nu}; peak position shift T*-Tc ~ 1/L^{1/nu}."
+    },
+    {
+      "index": 18,
+      "url": "https://esajournals.onlinelibrary.wiley.com/doi/10.1890/11-0889.1",
+      "title": "Robustness of variance and autocorrelation as indicators of critical slowing down",
+      "authors": "Dakos, V., van Nes, E.H., D'Odorico, P., & Scheffer, M.",
+      "year": 2012,
+      "summary": "Variance can DECREASE near transitions under three conditions; autocorrelation always increases; variance is not always robust."
+    },
+    {
+      "index": 19,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22624308/",
+      "title": "Dakos et al. 2012 - PubMed",
+      "authors": "Dakos, V. et al.",
+      "year": 2012,
+      "summary": "Three conditions for variance decrease: reduced environmental sensitivity, CSD high-frequency filtering, data limitation effects."
+    },
+    {
+      "index": 20,
+      "url": "https://www.science.org/doi/abs/10.1126/science.1225244",
+      "title": "Anticipating Critical Transitions",
+      "authors": "Scheffer, M. et al.",
+      "year": 2012,
+      "summary": "Distinguishes CSD-based vs flickering-based warnings; bimodality as direct diagnostic; flickering in highly stochastic systems."
+    },
+    {
+      "index": 21,
+      "url": "https://link.springer.com/article/10.1007/s12080-013-0186-4",
+      "title": "Flickering as an early warning signal",
+      "authors": "Dakos, V., van Nes, E.H., & Scheffer, M.",
+      "year": 2013,
+      "summary": "Flickering occurs in bistable region under strong noise; CSD not relevant in noisy conditions; reflects rising variance and bimodality."
+    },
+    {
+      "index": 22,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4247400/",
+      "title": "Resilience indicators review",
+      "authors": "van den Ende, O.S. & Dakos, V.",
+      "year": 2014,
+      "summary": "Comprehensive review of CSD indicators; conditions where each works; CSD only detects gradually approached bifurcations."
+    },
+    {
+      "index": 23,
+      "url": "https://arxiv.org/abs/2501.16241",
+      "title": "Phase Transitions in Large Language Models and the O(N) Model",
+      "authors": "Sun, Y. & Haghighat, B.",
+      "year": 2025,
+      "summary": "Maps Transformer to O(N) model; two phase transitions (temperature Tc~1.2, parameter size ~7B); specific heat divergence."
+    },
+    {
+      "index": 24,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5882727/",
+      "title": "Experiments and modelling of rate-dependent transition delay in a stochastic subcritical bifurcation",
+      "authors": "Bonciolini, G. et al.",
+      "year": 2018,
+      "summary": "Finite ramping rates cause rate-dependent delays in tipping points; dynamic hysteresis when parameter ramped back."
+    },
+    {
+      "index": 25,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5073343/",
+      "title": "Early warning signals for critical transitions in a thermoacoustic system",
+      "authors": "Nair, V., Thampi, G., & Sujith, R.I.",
+      "year": 2016,
+      "summary": "Subcritical Hopf bifurcation: variance increases monotonically; autocorrelation behavior inconsistent."
+    },
+    {
+      "index": 26,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2218663120",
+      "title": "Non-equilibrium early-warning signals for critical transitions in ecological systems",
+      "authors": "Jiang, D.Q. et al.",
+      "year": 2023,
+      "summary": "Non-equilibrium systems require multi-dimensional indicators beyond 1D CSD; flux component affects stability assessment."
+    },
+    {
+      "index": 27,
+      "url": "https://www.nature.com/articles/nature11655",
+      "title": "Flickering gives early warning signals of a critical transition to a eutrophic lake state",
+      "authors": "Wang, R. et al.",
+      "year": 2012,
+      "summary": "Empirical detection of flickering in lake-catchment system; increasing bimodality as early warning; sparse data sufficient."
+    }
+  ],
+  "follow_up_questions": [
+    "How well does the mixture variance formula Var(d) = p(d)*(1-p(d))*||Delta_mu||^2 fit the actual empirical variance data across different LLM models and benchmark tasks, and what is the residual pattern?",
+    "Can the cusp catastrophe parameters (alpha, beta, sigma) be estimated from the empirical LLM data, and does the fitted Cardan discriminant correctly predict which difficulty levels show bimodal response distributions?",
+    "Is the simpler mixture model sufficient for the paper, or does the added complexity of the cusp catastrophe formalism provide measurably better predictions that justify its inclusion?"
+  ]
+}
